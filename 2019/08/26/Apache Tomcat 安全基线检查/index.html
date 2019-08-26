@@ -17,16 +17,21 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>养码哥</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="养码哥">
-<meta property="og:url" content="http://www.ithelei.com/index.html">
+  <title>Apache Tomcat 安全基线检查 | 养码哥</title>
+  <meta name="description" content="设置用户权限配置文件的权限 | 文件权限描述 设置用户权限配置文件的权限加固建议 执行以下5条命令： chown root:root /etc/passwd /etc/shadow /etc/group /etc/gshadow chmod 0644 /etc/group  chmod 0644 /etc/passwd  chmod 0400 /etc/shadow  chmod 0400 /et">
+<meta name="keywords" content="Apache Tomcat,基线">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Apache Tomcat 安全基线检查">
+<meta property="og:url" content="http://www.ithelei.com/2019/08/26/Apache Tomcat 安全基线检查/index.html">
 <meta property="og:site_name" content="养码哥">
+<meta property="og:description" content="设置用户权限配置文件的权限 | 文件权限描述 设置用户权限配置文件的权限加固建议 执行以下5条命令： chown root:root /etc/passwd /etc/shadow /etc/group /etc/gshadow chmod 0644 /etc/group  chmod 0644 /etc/passwd  chmod 0400 /etc/shadow  chmod 0400 /et">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-26T14:36:58.507Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="养码哥">
+<meta name="twitter:title" content="Apache Tomcat 安全基线检查">
+<meta name="twitter:description" content="设置用户权限配置文件的权限 | 文件权限描述 设置用户权限配置文件的权限加固建议 执行以下5条命令： chown root:root /etc/passwd /etc/shadow /etc/group /etc/gshadow chmod 0644 /etc/group  chmod 0644 /etc/passwd  chmod 0400 /etc/shadow  chmod 0400 /et">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://www.ithelei.com/index.html">
+  <link rel="canonical" href="http://www.ithelei.com/2019/08/26/Apache Tomcat 安全基线检查/index.html">
   
     <link rel="alternate" href="/atom.xml" title="养码哥" type="application/atom+xml">
   
@@ -278,18 +283,17 @@
 </aside>
 
   
-  <main class="main" role="main">
   
-  
-    <div class="content">
+<main class="main" role="main">
+  <div class="content">
   <article id="post-Apache Tomcat 安全基线检查" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/26/Apache Tomcat 安全基线检查/">Apache Tomcat 安全基线检查</a>
+    <h1 class="article-title" itemprop="name">
+      Apache Tomcat 安全基线检查
     </h1>
   
 
@@ -412,11 +416,82 @@
     </div>
   </article>
   
-</div>
+    
+  <section id="comments">
+  	
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NjI4My8yMjc5NA">
+        <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+      </div>    
+    
+  </section>
+
 
   
+</div>
 
-   
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>$</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>Maybe you could buy me a cup of coffee.</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open alipay app scan this qrcode, buy me a coffee!</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open wechat app scan this qrcode, buy me a coffee!</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> alipay</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> wechat payment</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -474,6 +549,24 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
    
 
+
+
+
+   
+    
+<script defer type="text/javascript">
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
 
 
 
