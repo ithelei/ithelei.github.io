@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ithelei.com/"/>
-  <updated>2019-08-27T13:20:42.155Z</updated>
+  <updated>2019-08-27T13:36:34.131Z</updated>
   <id>http://www.ithelei.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阿里云标准-Apache Tomcat 安全基线检查</title>
+    <link href="http://www.ithelei.com/2019/08/27/%E9%98%BF%E9%87%8C%E4%BA%91%E6%A0%87%E5%87%86-Apache%20Tomcat%20%E5%AE%89%E5%85%A8%E5%9F%BA%E7%BA%BF%E6%A3%80%E6%9F%A5/"/>
+    <id>http://www.ithelei.com/2019/08/27/阿里云标准-Apache Tomcat 安全基线检查/</id>
+    <published>2019-08-27T13:27:24.000Z</published>
+    <updated>2019-08-27T13:36:34.131Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Tomcat进程运行权限检测-访问控制&quot;&gt;&lt;a href=&quot;#Tomcat进程运行权限检测-访问控制&quot; class=&quot;headerlink&quot; title=&quot;Tomcat进程运行权限检测 | 访问控制&quot;&gt;&lt;/a&gt;Tomcat进程运行权限检测 | 访问控制&lt;/h3&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="安全" scheme="http://www.ithelei.com/categories/%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="基线" scheme="http://www.ithelei.com/tags/%E5%9F%BA%E7%BA%BF/"/>
+    
+      <category term="Apache Tomcat" scheme="http://www.ithelei.com/tags/Apache-Tomcat/"/>
+    
+  </entry>
   
   <entry>
     <title>CentOS Linux 7安全基线检查</title>

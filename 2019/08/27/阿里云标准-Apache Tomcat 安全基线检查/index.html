@@ -17,21 +17,21 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>CentOS Linux 7安全基线检查 | 养码哥</title>
-  <meta name="description" content="设置用户权限配置文件的权限 | 文件权限描述 设置用户权限配置文件的权限 加固建议 执行以下5条命令 chown root:root /etc/passwd /etc/shadow /etc/group /etc/gshadow  chmod 0644 /etc/group  chmod 0644 /etc/passwd  chmod 0400 /etc/shadow  chmod 0400 /e">
-<meta name="keywords" content="CentOS Linux 7,基线">
+  <title>阿里云标准-Apache Tomcat 安全基线检查 | 养码哥</title>
+  <meta name="description" content="Tomcat进程运行权限检测 | 访问控制描述 在运行Internet服务时，最好尽可能避免使用root用户运行，降低攻击者拿到服务器控制权限的机会。 加固建议 创建低权限的账号运行Tomcat 操作时建议做好记录或备份 Tomcat目录权限检测 | 访问控制描述 在运行Tomcat服务时，避免使用root用户运行，tomcat目录(catalina.home、 catalina.base目录)所">
+<meta name="keywords" content="基线,Apache Tomcat">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS Linux 7安全基线检查">
-<meta property="og:url" content="http://www.ithelei.com/2019/08/26/CentOS Linux 7安全基线检查/index.html">
+<meta property="og:title" content="阿里云标准-Apache Tomcat 安全基线检查">
+<meta property="og:url" content="http://www.ithelei.com/2019/08/27/阿里云标准-Apache Tomcat 安全基线检查/index.html">
 <meta property="og:site_name" content="养码哥">
-<meta property="og:description" content="设置用户权限配置文件的权限 | 文件权限描述 设置用户权限配置文件的权限 加固建议 执行以下5条命令 chown root:root /etc/passwd /etc/shadow /etc/group /etc/gshadow  chmod 0644 /etc/group  chmod 0644 /etc/passwd  chmod 0400 /etc/shadow  chmod 0400 /e">
+<meta property="og:description" content="Tomcat进程运行权限检测 | 访问控制描述 在运行Internet服务时，最好尽可能避免使用root用户运行，降低攻击者拿到服务器控制权限的机会。 加固建议 创建低权限的账号运行Tomcat 操作时建议做好记录或备份 Tomcat目录权限检测 | 访问控制描述 在运行Tomcat服务时，避免使用root用户运行，tomcat目录(catalina.home、 catalina.base目录)所">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-27T13:20:42.155Z">
+<meta property="og:updated_time" content="2019-08-27T13:36:34.131Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS Linux 7安全基线检查">
-<meta name="twitter:description" content="设置用户权限配置文件的权限 | 文件权限描述 设置用户权限配置文件的权限 加固建议 执行以下5条命令 chown root:root /etc/passwd /etc/shadow /etc/group /etc/gshadow  chmod 0644 /etc/group  chmod 0644 /etc/passwd  chmod 0400 /etc/shadow  chmod 0400 /e">
+<meta name="twitter:title" content="阿里云标准-Apache Tomcat 安全基线检查">
+<meta name="twitter:description" content="Tomcat进程运行权限检测 | 访问控制描述 在运行Internet服务时，最好尽可能避免使用root用户运行，降低攻击者拿到服务器控制权限的机会。 加固建议 创建低权限的账号运行Tomcat 操作时建议做好记录或备份 Tomcat目录权限检测 | 访问控制描述 在运行Tomcat服务时，避免使用root用户运行，tomcat目录(catalina.home、 catalina.base目录)所">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://www.ithelei.com/2019/08/26/CentOS Linux 7安全基线检查/index.html">
+  <link rel="canonical" href="http://www.ithelei.com/2019/08/27/阿里云标准-Apache Tomcat 安全基线检查/index.html">
   
     <link rel="alternate" href="/atom.xml" title="养码哥" type="application/atom+xml">
   
@@ -304,14 +304,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-CentOS Linux 7安全基线检查" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-阿里云标准-Apache Tomcat 安全基线检查" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      CentOS Linux 7安全基线检查
+      阿里云标准-Apache Tomcat 安全基线检查
     </h1>
   
 
@@ -319,8 +319,8 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2019/08/26/CentOS Linux 7安全基线检查/" class="article-date">
-	  <time datetime="2019-08-26T14:25:24.000Z" itemprop="datePublished">2019-08-26</time>
+	<a href="/2019/08/27/阿里云标准-Apache Tomcat 安全基线检查/" class="article-date">
+	  <time datetime="2019-08-27T13:27:24.000Z" itemprop="datePublished">2019-08-27</time>
 	</a>
 </span>
         
@@ -332,75 +332,77 @@
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/CentOS-Linux-7/">CentOS Linux 7</a>, <a class="article-tag-link" href="/tags/基线/">基线</a>
+	<a class="article-tag-link" href="/tags/Apache-Tomcat/">Apache Tomcat</a>, <a class="article-tag-link" href="/tags/基线/">基线</a>
   </span>
 
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/08/26/CentOS Linux 7安全基线检查/#comments" class="article-comment-link">Comments</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/08/27/阿里云标准-Apache Tomcat 安全基线检查/#comments" class="article-comment-link">Comments</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 767(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1.1k(words)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2(minutes)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 3(minutes)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h3 id="设置用户权限配置文件的权限-文件权限"><a href="#设置用户权限配置文件的权限-文件权限" class="headerlink" title="设置用户权限配置文件的权限 | 文件权限"></a>设置用户权限配置文件的权限 | 文件权限</h3><p>描述</p>
-<p>设置用户权限配置文件的权限</p>
+        <h3 id="Tomcat进程运行权限检测-访问控制"><a href="#Tomcat进程运行权限检测-访问控制" class="headerlink" title="Tomcat进程运行权限检测 | 访问控制"></a>Tomcat进程运行权限检测 | 访问控制</h3><p>描述</p>
+<p>在运行Internet服务时，最好尽可能避免使用root用户运行，降低攻击者拿到服务器控制权限的机会。</p>
 <p>加固建议</p>
-<p>执行以下5条命令</p>
-<p>chown root:root /etc/passwd /etc/shadow /etc/group /etc/gshadow </p>
-<p>chmod 0644 /etc/group </p>
-<p>chmod 0644 /etc/passwd </p>
-<p>chmod 0400 /etc/shadow </p>
-<p>chmod 0400 /etc/gshadow</p>
+<p>创建低权限的账号运行Tomcat</p>
 <p>操作时建议做好记录或备份</p>
-<h3 id="确保SSH-LogLevel设置为INFO-服务配置"><a href="#确保SSH-LogLevel设置为INFO-服务配置" class="headerlink" title="确保SSH LogLevel设置为INFO | 服务配置"></a>确保SSH LogLevel设置为INFO | 服务配置</h3><p>描述</p>
-<p>确保SSH LogLevel设置为INFO,记录登录和注销活动</p>
+<h3 id="Tomcat目录权限检测-访问控制"><a href="#Tomcat目录权限检测-访问控制" class="headerlink" title="Tomcat目录权限检测 | 访问控制"></a>Tomcat目录权限检测 | 访问控制</h3><p>描述</p>
+<p>在运行Tomcat服务时，避免使用root用户运行，tomcat目录(catalina.home、 catalina.base目录)所有者应改为非root的运行用户</p>
 <p>加固建议</p>
-<p>编辑 /etc/ssh/sshd_config 文件以按如下方式设置参数(取消注释): LogLevel INFO</p>
+<p>使用chown -R &lt;Tomcat启动用户所属组&gt;:&lt;Tomcat启动用户&gt; &lt;Tomcat目录&gt;修改tomcat目录文件所有者，如chown -R tomcat:tomcat /usr/local/tomcat</p>
 <p>操作时建议做好记录或备份</p>
-<h3 id="设置SSH空闲超时退出时间-服务配置"><a href="#设置SSH空闲超时退出时间-服务配置" class="headerlink" title="设置SSH空闲超时退出时间 | 服务配置"></a>设置SSH空闲超时退出时间 | 服务配置</h3><p>描述</p>
-<p>设置SSH空闲超时退出时间,可降低未授权用户访问其他用户ssh会话的风险</p>
+<h3 id="限制服务器平台信息泄漏-服务配置"><a href="#限制服务器平台信息泄漏-服务配置" class="headerlink" title="限制服务器平台信息泄漏 | 服务配置"></a>限制服务器平台信息泄漏 | 服务配置</h3><p>描述</p>
+<p>限制服务器平台信息泄漏会使攻击者更难确定哪些漏洞会影响服务器平台。</p>
 <p>加固建议</p>
-<p>编辑/etc/ssh/sshd_config，将ClientAliveInterval 设置为300到900，即5-15分钟，将ClientAliveCountMax设置为0。 ClientAliveInterval 900 ClientAliveCountMax 0</p>
+<p>1、进入Tomcat安装主目录的lib目录下，比如 cd /usr/local/tomcat7/lib</p>
+<p>2、执行：jar xf catalina.jar org/apache/catalina/util/ServerInfo.properties，修改文件ServerInfo.properties中的server.info和server.number的值，如分别改为：Apache/11.0.92、11.0.92.0 </p>
+<p>3、执行：jar uf catalina.jar org/apache/catalina/util/ServerInfo.properties </p>
+<p>4、重启Tomcat服务</p>
 <p>操作时建议做好记录或备份</p>
-<h3 id="SSHD强制使用V2安全协议-服务配置"><a href="#SSHD强制使用V2安全协议-服务配置" class="headerlink" title="SSHD强制使用V2安全协议 | 服务配置"></a>SSHD强制使用V2安全协议 | 服务配置</h3><p>描述</p>
-<p>SSHD强制使用V2安全协议</p>
+<h3 id="禁止自动部署-服务配置"><a href="#禁止自动部署-服务配置" class="headerlink" title="禁止自动部署 | 服务配置"></a>禁止自动部署 | 服务配置</h3><p>描述</p>
+<p>配置自动部署，容易被部署恶意或未经测试的应用程序，应将其禁用</p>
 <p>加固建议</p>
-<p>编辑 /etc/ssh/sshd_config 文件以按如下方式设置参数： Protocol 2</p>
+<p>修改Tomcat 跟目录下的配置文件conf/server.xml，将host节点的autoDeploy属性设置为“false”，如果host的deployOnStartup属性(如没有deployOnStartup配置可以忽略)为“true”，则也将其更改为“false”</p>
 <p>操作时建议做好记录或备份</p>
-<h3 id="确保SSH-MaxAuthTries设置为3到6之间-服务配置"><a href="#确保SSH-MaxAuthTries设置为3到6之间-服务配置" class="headerlink" title="确保SSH MaxAuthTries设置为3到6之间 | 服务配置"></a>确保SSH MaxAuthTries设置为3到6之间 | 服务配置</h3><p>描述</p>
-<p>设置较低的Max AuthTrimes参数将降低SSH服务器被暴力攻击成功的风险。</p>
+<h3 id="禁止显示异常调试信息-服务配置"><a href="#禁止显示异常调试信息-服务配置" class="headerlink" title="禁止显示异常调试信息 | 服务配置"></a>禁止显示异常调试信息 | 服务配置</h3><p>描述</p>
+<p>当请求处理期间发生运行时错误时，ApacheTomcat将向请求者显示调试信息。建议不要向请求者提供此类调试信息。</p>
 <p>加固建议</p>
-<p>在/etc/ssh/sshd_config中取消MaxAuthTries注释符号#，设置最大密码尝试失败次数3-6，建议为4： MaxAuthTries 4</p>
+<p>在Tomcat根目录下的conf/web.xml文件里面的web-app添加子节点：<error-page><exception-type>java.lang.Throwable</exception-type><location>/error.jsp</location></error-page>，在webapps目录下创建error.jsp，定义自定义错误信息</p>
 <p>操作时建议做好记录或备份</p>
-<h3 id="设置密码修改最小间隔时间-身份鉴别"><a href="#设置密码修改最小间隔时间-身份鉴别" class="headerlink" title="设置密码修改最小间隔时间 | 身份鉴别"></a>设置密码修改最小间隔时间 | 身份鉴别</h3><p>描述</p>
-<p>设置密码修改最小间隔时间，限制密码更改过于频繁</p>
+<h3 id="开启日志记录-安全审计"><a href="#开启日志记录-安全审计" class="headerlink" title="开启日志记录 | 安全审计"></a>开启日志记录 | 安全审计</h3><p>描述</p>
+<p>Tomcat需要保存输出日志，以便于排除错误和发生安全事件时，进行分析和定位</p>
 <p>加固建议</p>
-<p>在 /etc/login.defs 中将 PASS_MIN_DAYS 参数设置为7-14之间,建议为7： PASS_MIN_DAYS 7 需同时执行命令为root用户设置： chage –mindays 7 root</p>
+<p>1、修改Tomcat根目录下的conf/server.xml文件。</p>
+<p>2、取消Host节点下Valve节点的注释(如没有则添加)。<br><valve classname="org.apache.catalina.valves.AccessLogValve" directory="logs" prefix="localhost_access_log" suffix=".txt" pattern="%h %l %u %t &quot;%r&quot; %s %b"> </valve></p>
+<p>3、重新启动Tomcat</p>
 <p>操作时建议做好记录或备份</p>
-<h3 id="设置密码失效时间-身份鉴别"><a href="#设置密码失效时间-身份鉴别" class="headerlink" title="设置密码失效时间 | 身份鉴别"></a>设置密码失效时间 | 身份鉴别</h3><p>描述</p>
-<p>设置密码失效时间，强制定期修改密码，减少密码被泄漏和猜测风险，使用非密码登陆方式(如密钥对)请忽略此项。</p>
+<h3 id="禁止Tomcat显示目录文件列表-服务配置"><a href="#禁止Tomcat显示目录文件列表-服务配置" class="headerlink" title="禁止Tomcat显示目录文件列表 | 服务配置"></a>禁止Tomcat显示目录文件列表 | 服务配置</h3><p>描述</p>
+<p>Tomcat允许显示目录文件列表会引发目录遍历漏洞</p>
 <p>加固建议</p>
-<p>使用非密码登陆方式如密钥对，请忽略此项。在 /etc/login.defs 中将 PASS_MAX_DAYS 参数设置为 60-180之间，如 PASS_MAX_DAYS 90。需同时执行命令设置root密码失效时间： chage –maxdays 90 root。</p>
+<p>修改Tomcat 跟目录下的配置文件conf/web.xml，将listings的值设置为false。 <param-name>listings</param-name> <param-value>false</param-value></p>
 <p>操作时建议做好记录或备份</p>
-<h3 id="禁止SSH空密码用户登录-服务配置"><a href="#禁止SSH空密码用户登录-服务配置" class="headerlink" title="禁止SSH空密码用户登录  | 服务配置"></a>禁止SSH空密码用户登录  | 服务配置</h3><p>描述</p>
-<p>禁止SSH空密码用户登录</p>
+<h3 id="删除项目无关文件和目录-访问控制"><a href="#删除项目无关文件和目录-访问控制" class="headerlink" title="删除项目无关文件和目录 | 访问控制"></a>删除项目无关文件和目录 | 访问控制</h3><p>描述</p>
+<p>Tomcat安装提供了示例应用程序、文档和其他可能不用于生产程序及目录，存在极大安全风险，建议移除</p>
 <p>加固建议</p>
-<p>在/etc/ssh/sshd_config中取消PermitEmptyPasswords no注释符号#</p>
+<p>请删除Tomcat示例程序和目录、管理控制台等，即从Tomcat根目录的webapps目录，移出或删除docs、examples、host-manager、manager目录。</p>
 <p>操作时建议做好记录或备份</p>
-<h3 id="确保root是唯一的UID为0的帐户-身份鉴别"><a href="#确保root是唯一的UID为0的帐户-身份鉴别" class="headerlink" title="确保root是唯一的UID为0的帐户 | 身份鉴别"></a>确保root是唯一的UID为0的帐户 | 身份鉴别</h3><p>描述</p>
-<p>除root以外其他UID为0的用户都应该删除，或者为其分配新的UID</p>
+<h3 id="避免为tomcat配置manager-gui弱口令-访问控制"><a href="#避免为tomcat配置manager-gui弱口令-访问控制" class="headerlink" title="避免为tomcat配置manager-gui弱口令 | 访问控制"></a>避免为tomcat配置manager-gui弱口令 | 访问控制</h3><p>描述</p>
+<p>tomcat-manger是Tomcat提供的web应用热部署功能，该功能具有较高权限，会直接控制Tomcat应用，应尽量避免使用此功能。如有特殊需求，请务必确保为该功能配置了强口令</p>
 <p>加固建议</p>
-<p>除root以外其他UID为0的用户(查看命令cat /etc/passwd | awk -F: ‘($3 == 0) { print $1 }’|grep -v ‘^root$’ )都应该删除，或者为其分配新的UID</p>
-<p>操作时建议做好记录或备份</p>
+<p>编辑Tomcat根目录下的配置文件conf/tomcat-user.xml，修改user节点的password属性值为复杂密码, 密码应符合复杂性要求：</p>
+<p>1、长度8位以上</p>
+<p>2、包含以下四类字符中的三类字符:<br>英文大写字母(A 到 Z)<br>英文小写字母(a 到 z)<br>10 个基本数字(0 到 9)<br>非字母字符(例如 !、$、#、%、@、^、&amp;)</p>
+<p>3、避免使用已公开的弱密码，如：abcd.1234 、admin@123等<br>操作时建议做好记录或备份</p>
 
       
     </div>
@@ -410,7 +412,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://www.ithelei.com/2019/08/26/CentOS Linux 7安全基线检查/" title="CentOS Linux 7安全基线检查" target="_blank" rel="external">http://www.ithelei.com/2019/08/26/CentOS Linux 7安全基线检查/</a>
+      <a href="http://www.ithelei.com/2019/08/27/阿里云标准-Apache Tomcat 安全基线检查/" title="阿里云标准-Apache Tomcat 安全基线检查" target="_blank" rel="external">http://www.ithelei.com/2019/08/27/阿里云标准-Apache Tomcat 安全基线检查/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -458,10 +460,10 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2019/08/27/阿里云标准-Apache Tomcat 安全基线检查/" title="阿里云标准-Apache Tomcat 安全基线检查"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
-    </li>
     
+    <li class="next">
+      <a href="/2019/08/26/CentOS Linux 7安全基线检查/" title="CentOS Linux 7安全基线检查"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
     
     
   </ul>
