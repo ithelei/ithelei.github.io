@@ -17,21 +17,21 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>阿里云标准-Apache Tomcat 安全基线检查 | 养码哥</title>
-  <meta name="description" content="Tomcat进程运行权限检测 | 访问控制描述 在运行Internet服务时，最好尽可能避免使用root用户运行，降低攻击者拿到服务器控制权限的机会。 加固建议 创建低权限的账号运行Tomcat 操作时建议做好记录或备份 Tomcat目录权限检测 | 访问控制描述 在运行Tomcat服务时，避免使用root用户运行，tomcat目录(catalina.home、 catalina.base目录)所">
-<meta name="keywords" content="基线,Apache Tomcat">
+  <title>MySQL基础规范 | 养码哥</title>
+  <meta name="description" content="一、基础规范 表存储引擎必须使用InnoDB 表字符集默认使用utf8，必要时候使用utf8mb4  解读： （1）通用，无乱码风险，汉字3字节，英文1字节。 （2）utf8mb4是utf8的超集，有存储4字节例如表情符号时，使用它。  禁止使用存储过程，视图，触发器，Event。  解读： （1）对数据库性能影响较大，互联网业务，能让站点层和服务层干的事情，不要交到数据库层。 （2）调试，排错，">
+<meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="阿里云标准-Apache Tomcat 安全基线检查">
-<meta property="og:url" content="http://www.ithelei.com/2019/08/27/阿里云标准-Apache Tomcat 安全基线检查/index.html">
+<meta property="og:title" content="MySQL基础规范">
+<meta property="og:url" content="http://www.ithelei.com/2019/08/27/MySQL基础规范/index.html">
 <meta property="og:site_name" content="养码哥">
-<meta property="og:description" content="Tomcat进程运行权限检测 | 访问控制描述 在运行Internet服务时，最好尽可能避免使用root用户运行，降低攻击者拿到服务器控制权限的机会。 加固建议 创建低权限的账号运行Tomcat 操作时建议做好记录或备份 Tomcat目录权限检测 | 访问控制描述 在运行Tomcat服务时，避免使用root用户运行，tomcat目录(catalina.home、 catalina.base目录)所">
+<meta property="og:description" content="一、基础规范 表存储引擎必须使用InnoDB 表字符集默认使用utf8，必要时候使用utf8mb4  解读： （1）通用，无乱码风险，汉字3字节，英文1字节。 （2）utf8mb4是utf8的超集，有存储4字节例如表情符号时，使用它。  禁止使用存储过程，视图，触发器，Event。  解读： （1）对数据库性能影响较大，互联网业务，能让站点层和服务层干的事情，不要交到数据库层。 （2）调试，排错，">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-27T13:36:34.131Z">
+<meta property="og:updated_time" content="2019-08-27T14:09:38.438Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="阿里云标准-Apache Tomcat 安全基线检查">
-<meta name="twitter:description" content="Tomcat进程运行权限检测 | 访问控制描述 在运行Internet服务时，最好尽可能避免使用root用户运行，降低攻击者拿到服务器控制权限的机会。 加固建议 创建低权限的账号运行Tomcat 操作时建议做好记录或备份 Tomcat目录权限检测 | 访问控制描述 在运行Tomcat服务时，避免使用root用户运行，tomcat目录(catalina.home、 catalina.base目录)所">
+<meta name="twitter:title" content="MySQL基础规范">
+<meta name="twitter:description" content="一、基础规范 表存储引擎必须使用InnoDB 表字符集默认使用utf8，必要时候使用utf8mb4  解读： （1）通用，无乱码风险，汉字3字节，英文1字节。 （2）utf8mb4是utf8的超集，有存储4字节例如表情符号时，使用它。  禁止使用存储过程，视图，触发器，Event。  解读： （1）对数据库性能影响较大，互联网业务，能让站点层和服务层干的事情，不要交到数据库层。 （2）调试，排错，">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://www.ithelei.com/2019/08/27/阿里云标准-Apache Tomcat 安全基线检查/index.html">
+  <link rel="canonical" href="http://www.ithelei.com/2019/08/27/MySQL基础规范/index.html">
   
     <link rel="alternate" href="/atom.xml" title="养码哥" type="application/atom+xml">
   
@@ -319,14 +319,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-阿里云标准-Apache Tomcat 安全基线检查" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-MySQL基础规范" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      阿里云标准-Apache Tomcat 安全基线检查
+      MySQL基础规范
     </h1>
   
 
@@ -334,90 +334,160 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2019/08/27/阿里云标准-Apache Tomcat 安全基线检查/" class="article-date">
-	  <time datetime="2019-08-27T13:27:24.000Z" itemprop="datePublished">2019-08-27</time>
+	<a href="/2019/08/27/MySQL基础规范/" class="article-date">
+	  <time datetime="2019-08-27T13:45:00.000Z" itemprop="datePublished">2019-08-27</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/安全/">安全</a>
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/Apache-Tomcat/">Apache Tomcat</a>, <a class="article-tag-link" href="/tags/基线/">基线</a>
+	<a class="article-tag-link" href="/tags/MySQL/">MySQL</a>
   </span>
 
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/08/27/阿里云标准-Apache Tomcat 安全基线检查/#comments" class="article-comment-link">Comments</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/08/27/MySQL基础规范/#comments" class="article-comment-link">Comments</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1.1k(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1.3k(words)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 3(minutes)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 4(minutes)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h3 id="Tomcat进程运行权限检测-访问控制"><a href="#Tomcat进程运行权限检测-访问控制" class="headerlink" title="Tomcat进程运行权限检测 | 访问控制"></a>Tomcat进程运行权限检测 | 访问控制</h3><p>描述</p>
-<p>在运行Internet服务时，最好尽可能避免使用root用户运行，降低攻击者拿到服务器控制权限的机会。</p>
-<p>加固建议</p>
-<p>创建低权限的账号运行Tomcat</p>
-<p>操作时建议做好记录或备份</p>
-<h3 id="Tomcat目录权限检测-访问控制"><a href="#Tomcat目录权限检测-访问控制" class="headerlink" title="Tomcat目录权限检测 | 访问控制"></a>Tomcat目录权限检测 | 访问控制</h3><p>描述</p>
-<p>在运行Tomcat服务时，避免使用root用户运行，tomcat目录(catalina.home、 catalina.base目录)所有者应改为非root的运行用户</p>
-<p>加固建议</p>
-<p>使用chown -R &lt;Tomcat启动用户所属组&gt;:&lt;Tomcat启动用户&gt; &lt;Tomcat目录&gt;修改tomcat目录文件所有者，如chown -R tomcat:tomcat /usr/local/tomcat</p>
-<p>操作时建议做好记录或备份</p>
-<h3 id="限制服务器平台信息泄漏-服务配置"><a href="#限制服务器平台信息泄漏-服务配置" class="headerlink" title="限制服务器平台信息泄漏 | 服务配置"></a>限制服务器平台信息泄漏 | 服务配置</h3><p>描述</p>
-<p>限制服务器平台信息泄漏会使攻击者更难确定哪些漏洞会影响服务器平台。</p>
-<p>加固建议</p>
-<p>1、进入Tomcat安装主目录的lib目录下，比如 cd /usr/local/tomcat7/lib</p>
-<p>2、执行：jar xf catalina.jar org/apache/catalina/util/ServerInfo.properties，修改文件ServerInfo.properties中的server.info和server.number的值，如分别改为：Apache/11.0.92、11.0.92.0 </p>
-<p>3、执行：jar uf catalina.jar org/apache/catalina/util/ServerInfo.properties </p>
-<p>4、重启Tomcat服务</p>
-<p>操作时建议做好记录或备份</p>
-<h3 id="禁止自动部署-服务配置"><a href="#禁止自动部署-服务配置" class="headerlink" title="禁止自动部署 | 服务配置"></a>禁止自动部署 | 服务配置</h3><p>描述</p>
-<p>配置自动部署，容易被部署恶意或未经测试的应用程序，应将其禁用</p>
-<p>加固建议</p>
-<p>修改Tomcat 跟目录下的配置文件conf/server.xml，将host节点的autoDeploy属性设置为“false”，如果host的deployOnStartup属性(如没有deployOnStartup配置可以忽略)为“true”，则也将其更改为“false”</p>
-<p>操作时建议做好记录或备份</p>
-<h3 id="禁止显示异常调试信息-服务配置"><a href="#禁止显示异常调试信息-服务配置" class="headerlink" title="禁止显示异常调试信息 | 服务配置"></a>禁止显示异常调试信息 | 服务配置</h3><p>描述</p>
-<p>当请求处理期间发生运行时错误时，ApacheTomcat将向请求者显示调试信息。建议不要向请求者提供此类调试信息。</p>
-<p>加固建议</p>
-<p>在Tomcat根目录下的conf/web.xml文件里面的web-app添加子节点：<error-page><exception-type>java.lang.Throwable</exception-type><location>/error.jsp</location></error-page>，在webapps目录下创建error.jsp，定义自定义错误信息</p>
-<p>操作时建议做好记录或备份</p>
-<h3 id="开启日志记录-安全审计"><a href="#开启日志记录-安全审计" class="headerlink" title="开启日志记录 | 安全审计"></a>开启日志记录 | 安全审计</h3><p>描述</p>
-<p>Tomcat需要保存输出日志，以便于排除错误和发生安全事件时，进行分析和定位</p>
-<p>加固建议</p>
-<p>1、修改Tomcat根目录下的conf/server.xml文件。</p>
-<p>2、取消Host节点下Valve节点的注释(如没有则添加)。<br><valve classname="org.apache.catalina.valves.AccessLogValve" directory="logs" prefix="localhost_access_log" suffix=".txt" pattern="%h %l %u %t &quot;%r&quot; %s %b"> </valve></p>
-<p>3、重新启动Tomcat</p>
-<p>操作时建议做好记录或备份</p>
-<h3 id="禁止Tomcat显示目录文件列表-服务配置"><a href="#禁止Tomcat显示目录文件列表-服务配置" class="headerlink" title="禁止Tomcat显示目录文件列表 | 服务配置"></a>禁止Tomcat显示目录文件列表 | 服务配置</h3><p>描述</p>
-<p>Tomcat允许显示目录文件列表会引发目录遍历漏洞</p>
-<p>加固建议</p>
-<p>修改Tomcat 跟目录下的配置文件conf/web.xml，将listings的值设置为false。 <param-name>listings</param-name> <param-value>false</param-value></p>
-<p>操作时建议做好记录或备份</p>
-<h3 id="删除项目无关文件和目录-访问控制"><a href="#删除项目无关文件和目录-访问控制" class="headerlink" title="删除项目无关文件和目录 | 访问控制"></a>删除项目无关文件和目录 | 访问控制</h3><p>描述</p>
-<p>Tomcat安装提供了示例应用程序、文档和其他可能不用于生产程序及目录，存在极大安全风险，建议移除</p>
-<p>加固建议</p>
-<p>请删除Tomcat示例程序和目录、管理控制台等，即从Tomcat根目录的webapps目录，移出或删除docs、examples、host-manager、manager目录。</p>
-<p>操作时建议做好记录或备份</p>
-<h3 id="避免为tomcat配置manager-gui弱口令-访问控制"><a href="#避免为tomcat配置manager-gui弱口令-访问控制" class="headerlink" title="避免为tomcat配置manager-gui弱口令 | 访问控制"></a>避免为tomcat配置manager-gui弱口令 | 访问控制</h3><p>描述</p>
-<p>tomcat-manger是Tomcat提供的web应用热部署功能，该功能具有较高权限，会直接控制Tomcat应用，应尽量避免使用此功能。如有特殊需求，请务必确保为该功能配置了强口令</p>
-<p>加固建议</p>
-<p>编辑Tomcat根目录下的配置文件conf/tomcat-user.xml，修改user节点的password属性值为复杂密码, 密码应符合复杂性要求：</p>
-<p>1、长度8位以上</p>
-<p>2、包含以下四类字符中的三类字符:<br>英文大写字母(A 到 Z)<br>英文小写字母(a 到 z)<br>10 个基本数字(0 到 9)<br>非字母字符(例如 !、$、#、%、@、^、&amp;)</p>
-<p>3、避免使用已公开的弱密码，如：abcd.1234 、admin@123等<br>操作时建议做好记录或备份</p>
+        <h3 id="一、基础规范"><a href="#一、基础规范" class="headerlink" title="一、基础规范"></a>一、基础规范</h3><ul>
+<li>表存储引擎必须使用InnoDB</li>
+<li>表字符集默认使用utf8，必要时候使用utf8mb4</li>
+</ul>
+<p>解读：</p>
+<p>（1）通用，无乱码风险，汉字3字节，英文1字节。</p>
+<p>（2）utf8mb4是utf8的超集，有存储4字节例如表情符号时，使用它。</p>
+<ul>
+<li>禁止使用存储过程，视图，触发器，Event。</li>
+</ul>
+<p>解读：</p>
+<p>（1）对数据库性能影响较大，互联网业务，能让站点层和服务层干的事情，不要交到数据库层。</p>
+<p>（2）调试，排错，迁移都比较困难，扩展性较差。</p>
+<ul>
+<li>禁止在数据库中存储大文件，例如照片，可以将大文件存储在对象存储系统，数据库中存储路径。</li>
+<li>禁止在线上环境做数据库压力测试。</li>
+<li>测试，开发，线上数据库环境必须隔离。</li>
+</ul>
+<h3 id="二、命名规范"><a href="#二、命名规范" class="headerlink" title="二、命名规范"></a>二、命名规范</h3><ul>
+<li>库名，表名，列名必须用小写，采用下划线分隔。</li>
+</ul>
+<p>解读：abc，Abc，ABC都是不允许的。</p>
+<ul>
+<li>库名，表名，列名必须见名知义，长度不要超过32字符。</li>
+</ul>
+<p>解读：tmp，wujun谁TM知道这些库是干嘛的。</p>
+<ul>
+<li>库备份必须以bak为前缀，以日期为后缀。</li>
+<li>从库必须以-s为后缀。</li>
+<li>备库必须以-ss为后缀。</li>
+</ul>
+<h3 id="三、表设计规范"><a href="#三、表设计规范" class="headerlink" title="三、表设计规范"></a>三、表设计规范</h3><ul>
+<li>单实例表个数必须控制在2000个以内。</li>
+<li>单表分表个数必须控制在1024个以内。</li>
+<li>必须有主键，推荐使用UNSIGNED整数为主键。</li>
+</ul>
+<p>潜在坑：删除无主键的表，如果是row模式的主从架构，从库会挂住</p>
+<ul>
+<li>禁止使用外键，如果要保证完整性，应由应用程式实现。</li>
+</ul>
+<p>解读：外键使得表之间相互耦合，影响update/delete等SQL性能，有可能造成死锁，高并发情况下容易成为数据库瓶颈</p>
+<ul>
+<li>建议将大字段，访问频度低的字段拆分到单独的表中存储，分离冷热数据。</li>
+</ul>
+<h3 id="四、列设计规范"><a href="#四、列设计规范" class="headerlink" title="四、列设计规范"></a>四、列设计规范</h3><ul>
+<li>根据业务区分使用tinyint/int/bigint，分别会占用1/4/8字节。</li>
+<li>根据业务区分使用char/varchar。</li>
+</ul>
+<p>解读：</p>
+<p>（1）字段长度固定，或者长度近似的业务场景，适合使用char，能够减少碎片，查询性能高</p>
+<p>（2）字段长度相差较大，或者更新较少的业务场景，适合使用varchar，能够减少空间。</p>
+<ul>
+<li>根据业务区分使用datetime/timestamp。</li>
+</ul>
+<p>解读：前者占用5个字节，后者占用4个字节，存储年使用YEAR，存储日期使用DATE，存储时间使用datetime。</p>
+<ul>
+<li>必须把字段定义为NOT NULL并设默认值。</li>
+</ul>
+<p>解读：</p>
+<p>（1）NULL的列使用索引，索引统计，值都更加复杂，MySQL更难优化</p>
+<p>（2）NULL需要更多的存储空间</p>
+<p>（3）NULL只能采用IS NULL或者IS NOT NULL，而在=/!=/in/not in时有大坑</p>
+<ul>
+<li>使用INT UNSIGNED存储IPv4，不要用char(15)。</li>
+<li>使用varchar(20)存储手机号，不要使用整数。</li>
+</ul>
+<p>解读：</p>
+<p>（1）牵扯到国家代号，可能出现+/-/()等字符，例如+86</p>
+<p>（2）手机号不会用来做数学运算</p>
+<p>（3）varchar可以模糊查询，例如like ‘138%’</p>
+<ul>
+<li>使用TINYINT来代替ENUM。</li>
+</ul>
+<p>解读：ENUM增加新值要进行DDL操作。</p>
+<h3 id="五、索引规范"><a href="#五、索引规范" class="headerlink" title="五、索引规范"></a>五、索引规范</h3><ul>
+<li>唯一索引使用uniq_[字段名]来命名。</li>
+<li>非唯一索引使用idx_[字段名]来命名。</li>
+<li>单张表索引数量建议控制在5个以内。</li>
+</ul>
+<p>解读：</p>
+<p>（1）互联网高并发业务，太多索引会影响写性能。</p>
+<p>（2）生成执行计划时，如果索引太多，会降低性能，并可能导致MySQL选择不到最优索引。</p>
+<p>（3）异常复杂的查询需求，可以选择ES等更为适合的方式存储。</p>
+<ul>
+<li>组合索引字段数不建议超过5个。</li>
+</ul>
+<p>解读：如果5个字段还不能极大缩小row范围，八成是设计有问题</p>
+<ul>
+<li>不建议在频繁更新的字段上建立索引。</li>
+<li>非必要不要进行JOIN查询，如果要进行JOIN查询，被JOIN的字段必须类型相同，并建立索引。</li>
+</ul>
+<p>解读：因为JOIN字段类型不一致，而导致全表扫描。</p>
+<ul>
+<li>理解组合索引最左前缀原则，避免重复建设索引，如果建立了(a,b,c)，相当于建立了(a), (a,b), (a,b,c)。</li>
+</ul>
+<p>###　六、SQL规范</p>
+<ul>
+<li>禁止使用select *，只获取必要字段。</li>
+</ul>
+<p>解读：</p>
+<p>（1）select *会增加cpu/io/内存/带宽的消耗。</p>
+<p>（2）指定字段能有效利用索引覆盖。</p>
+<p>（3）指定字段查询，在表结构变更时，能保证对应用程序无影响。</p>
+<ul>
+<li>insert必须指定字段，禁止使用insert into T values()。</li>
+</ul>
+<p>解读：指定字段插入，在表结构变更时，能保证对应用程序无影响。</p>
+<ul>
+<li>隐式类型转换会使索引失效，导致全表扫描。</li>
+<li>禁止在where条件列使用函数或者表达式。</li>
+</ul>
+<p>解读：导致不能命中索引，全表扫描</p>
+<ul>
+<li>禁止负向查询以及%开头的模糊查询。</li>
+</ul>
+<p>解读：导致不能命中索引，全表扫描。</p>
+<ul>
+<li>禁止大表JOIN和子查询。</li>
+<li>同一个字段上的OR必须改写问IN，IN的值必须少于50个。</li>
+<li>应用程序必须捕获SQL异常。</li>
+</ul>
+<p>解读：方便定位线上问题</p>
 
       
     </div>
@@ -427,7 +497,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://www.ithelei.com/2019/08/27/阿里云标准-Apache Tomcat 安全基线检查/" title="阿里云标准-Apache Tomcat 安全基线检查" target="_blank" rel="external">http://www.ithelei.com/2019/08/27/阿里云标准-Apache Tomcat 安全基线检查/</a>
+      <a href="http://www.ithelei.com/2019/08/27/MySQL基础规范/" title="MySQL基础规范" target="_blank" rel="external">http://www.ithelei.com/2019/08/27/MySQL基础规范/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -475,13 +545,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2019/08/27/MySQL基础规范/" title="MySQL基础规范"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/2019/08/26/CentOS Linux 7安全基线检查/" title="CentOS Linux 7安全基线检查"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2019/08/27/阿里云标准-Apache Tomcat 安全基线检查/" title="阿里云标准-Apache Tomcat 安全基线检查"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
