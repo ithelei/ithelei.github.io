@@ -41,6 +41,30 @@
   </entry>
   
   <entry>
+    <title>MySQL优化(2)</title>
+    <link href="http://www.ithelei.com/2019/08/28/MySQL%E4%BC%98%E5%8C%96(2)/"/>
+    <id>http://www.ithelei.com/2019/08/28/MySQL优化(2)/</id>
+    <published>2019-08-28T13:36:45.000Z</published>
+    <updated>2019-08-28T14:03:47.468Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;继MySQL优化-1&quot;&gt;&lt;a href=&quot;#继MySQL优化-1&quot; class=&quot;headerlink&quot; title=&quot;继MySQL优化(1)&quot;&gt;&lt;/a&gt;继MySQL优化(1)&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;并不是所有索引对查询都有效，sql语句是根军表中数据来进行优
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MySQL规范</title>
     <link href="http://www.ithelei.com/2019/08/27/MySQL%E8%A7%84%E8%8C%83/"/>
     <id>http://www.ithelei.com/2019/08/27/MySQL规范/</id>
