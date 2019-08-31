@@ -17,21 +17,23 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>Tomcat记录客户端真实IP | 养码哥</title>
-  <meta name="description" content="需求：让后端Tomcat日志获取真实的IP，而不是Nginx服务器的IP。 Tomcat前面是Nginx做的反向代理，所以Tomcat取到的是Nginx的IP 日志名称是localhost_access_log.txt 解决方案: 修改Nginx的配置文件  在server或者location中添加  proxy_set_header X-Forwarded-For $remote_addr;">
+  <title>Tomcat服务启动非常缓慢 | 养码哥</title>
+  <meta name="description" content="概述：本文主要介绍Tomcat服务启动非常缓慢的解决方法。 问题症状 Tomcat启动非常缓慢，查看日志如下。  问题原因 SecureRandom这个jre的工具类的问题。 解决方案：在Tomcat环境中解决。  可以通过配置JRE使用非阻塞的Entropy Source。  在catalina.sh文件中加入如下内容  -Djava.security.egd=file:/dev/./urand">
 <meta name="keywords" content="Tomcat">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Tomcat记录客户端真实IP">
-<meta property="og:url" content="http://www.ithelei.com/2019/08/31/Tomcat记录客户端真实IP/index.html">
+<meta property="og:title" content="Tomcat服务启动非常缓慢">
+<meta property="og:url" content="http://www.ithelei.com/2019/08/31/Tomcat服务启动非常缓慢/index.html">
 <meta property="og:site_name" content="养码哥">
-<meta property="og:description" content="需求：让后端Tomcat日志获取真实的IP，而不是Nginx服务器的IP。 Tomcat前面是Nginx做的反向代理，所以Tomcat取到的是Nginx的IP 日志名称是localhost_access_log.txt 解决方案: 修改Nginx的配置文件  在server或者location中添加  proxy_set_header X-Forwarded-For $remote_addr;">
+<meta property="og:description" content="概述：本文主要介绍Tomcat服务启动非常缓慢的解决方法。 问题症状 Tomcat启动非常缓慢，查看日志如下。  问题原因 SecureRandom这个jre的工具类的问题。 解决方案：在Tomcat环境中解决。  可以通过配置JRE使用非阻塞的Entropy Source。  在catalina.sh文件中加入如下内容  -Djava.security.egd=file:/dev/./urand">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-31T12:01:25.159Z">
+<meta property="og:image" content="https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/kdTZMWCpkXQxhWztwerL.png">
+<meta property="og:updated_time" content="2019-08-31T12:12:32.768Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tomcat记录客户端真实IP">
-<meta name="twitter:description" content="需求：让后端Tomcat日志获取真实的IP，而不是Nginx服务器的IP。 Tomcat前面是Nginx做的反向代理，所以Tomcat取到的是Nginx的IP 日志名称是localhost_access_log.txt 解决方案: 修改Nginx的配置文件  在server或者location中添加  proxy_set_header X-Forwarded-For $remote_addr;">
+<meta name="twitter:title" content="Tomcat服务启动非常缓慢">
+<meta name="twitter:description" content="概述：本文主要介绍Tomcat服务启动非常缓慢的解决方法。 问题症状 Tomcat启动非常缓慢，查看日志如下。  问题原因 SecureRandom这个jre的工具类的问题。 解决方案：在Tomcat环境中解决。  可以通过配置JRE使用非阻塞的Entropy Source。  在catalina.sh文件中加入如下内容  -Djava.security.egd=file:/dev/./urand">
+<meta name="twitter:image" content="https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/kdTZMWCpkXQxhWztwerL.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://www.ithelei.com/2019/08/31/Tomcat记录客户端真实IP/index.html">
+  <link rel="canonical" href="http://www.ithelei.com/2019/08/31/Tomcat服务启动非常缓慢/index.html">
   
     <link rel="alternate" href="/atom.xml" title="养码哥" type="application/atom+xml">
   
@@ -358,14 +360,14 @@ var _hmt = _hmt || [];
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-Tomcat记录客户端真实IP" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-Tomcat服务启动非常缓慢" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      Tomcat记录客户端真实IP
+      Tomcat服务启动非常缓慢
     </h1>
   
 
@@ -373,8 +375,8 @@ var _hmt = _hmt || [];
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2019/08/31/Tomcat记录客户端真实IP/" class="article-date">
-	  <time datetime="2019-08-31T11:36:45.000Z" itemprop="datePublished">2019-08-31</time>
+	<a href="/2019/08/31/Tomcat服务启动非常缓慢/" class="article-date">
+	  <time datetime="2019-08-31T11:36:44.000Z" itemprop="datePublished">2019-08-31</time>
 	</a>
 </span>
         
@@ -392,72 +394,46 @@ var _hmt = _hmt || [];
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/08/31/Tomcat记录客户端真实IP/#comments" class="article-comment-link">Comments</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/08/31/Tomcat服务启动非常缓慢/#comments" class="article-comment-link">Comments</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 584(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 166(words)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2(minutes)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1(minutes)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h3 id="需求："><a href="#需求：" class="headerlink" title="需求："></a>需求：</h3><p>让后端Tomcat日志获取真实的IP，而不是Nginx服务器的IP。</p>
-<p>Tomcat前面是Nginx做的反向代理，所以Tomcat取到的是Nginx的IP</p>
-<p>日志名称是localhost_access_log.txt</p>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案:"></a>解决方案:</h3><ol>
-<li><p>修改Nginx的配置文件</p>
-<p> 在server或者location中添加</p>
-<p> proxy_set_header X-Forwarded-For $remote_addr;</p>
+        <h3 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h3><p>本文主要介绍Tomcat服务启动非常缓慢的解决方法。</p>
+<p>问题症状</p>
+<p>Tomcat启动非常缓慢，查看日志如下。</p>
+<p><img src="https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/kdTZMWCpkXQxhWztwerL.png" alt></p>
+<p>问题原因</p>
+<p>SecureRandom这个jre的工具类的问题。</p>
+<h3 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h3><p>在Tomcat环境中解决。</p>
+<ol>
+<li><p>可以通过配置JRE使用非阻塞的Entropy Source。</p>
 </li>
-<li><p>修改Tomcat配置文件</p>
-<p> 修改server.xml文件，在该文件中</p>
-<p> 把className=”org.apache.catalina.valves.AccessLogValve” directory=”logs”块中的pattern参数里的内容修改为下面内容，即：</p>
-<p> pattern=”%{X-FORWARDED-FOR}i %l %u %t %r %s %b %D %q %{User-Agent}i” resolveHosts=”false”</p>
+<li><p>在catalina.sh文件中加入如下内容</p>
+<p> <code>-Djava.security.egd=file:/dev/./urandom</code></p>
+</li>
+<li><p>加入后重启Tomcat，查看Tomcat服务启动日志，启动耗时下降。</p>
 </li>
 </ol>
-<pre><code>修改完后的完整配置：
-
- `&lt;Valve className=&quot;org.apache.catalina.valves.AccessLogValve&quot; directory=&quot;logs&quot;
-           prefix=&quot;localhost_access_log&quot; suffix=&quot;.txt&quot;
-           pattern=&quot;%{X-FORWARDED-FOR}i %l %u %t %r %s %b %D %q %{User-Agent}i&quot; resolveHosts=&quot;false&quot; /&gt;`</code></pre><p>pattern配置参数详解：</p>
-<p>pattern配置段，用于指定日志的输出格式。日志参数如下：</p>
-<pre><code>`
-％a - 远程IP地址
-％A - 本地IP地址
-％b - 发送的字节数，不包括HTTP头，或“ - ”如果没有发送字节
-％B - 发送的字节数，不包括HTTP头
-％h - 远程主机名
-％H - 请求协议
-％l (小写的L)- 远程逻辑从identd的用户名（总是返回&apos; - &apos;）
-％m - 请求方法
-％p - 本地端口
-％q - 查询字符串（在前面加上一个“？”如果它存在，否则是一个空字符串
-％r - 第一行的要求
-％s - 响应的HTTP状态代码
-％S - 用户会话ID
-％t - 日期和时间，在通用日志格式
-％u - 远程用户身份验证
-％U - 请求的URL路径
-％v - 本地服务器名
-％D - 处理请求的时间（以毫秒为单位）
-％T - 处理请求的时间（以秒为单位）
-％I （大写的i） - 当前请求的线程名称
-此外，您可以指定以下别名来设置为普遍使用的模式之一：
-common - %h %l %u %t &quot;%r&quot; %s %b
-combined - %h %l %u %t &quot;%r&quot; %s %b &quot;%{Referer}i&quot; &quot;%{User-Agent}i&quot;
-`</code></pre><p>另外，还可以将request请求的查询参数、session会话变量值、cookie值或HTTP请求/响应头内容的变量值等内容写入到日志文件。</p>
-<p>它仿照了apache的语法：</p>
-<ul>
-<li>％{XXX}i xxx代表传入的头(HTTP Request)</li>
-<li>％{XXX}o xxx代表传出的响应头(Http Resonse)</li>
-<li>％{XXX}c  xxx代表特定的Cookie名</li>
-<li>％{XXX}r  xxx代表ServletRequest属性名</li>
-<li>％{XXX}s xxx代表HttpSession中的属性名</li>
-</ul>
+<p>在JVM环境中解决</p>
+<ol>
+<li><p>打开 <code>$JAVA_PATH/jre/lib/security/java.security</code>这个文件。</p>
+</li>
+<li><p>在文件中找到如下内容。</p>
+<p> <code>securerandom.source=file:/dev/urandom</code></p>
+</li>
+<li><p>将内容替换成如下内容</p>
+<p> <code>securerandom.source=file:/dev/./urandom</code></p>
+</li>
+</ol>
 
       
     </div>
@@ -467,7 +443,7 @@ combined - %h %l %u %t &quot;%r&quot; %s %b &quot;%{Referer}i&quot; &quot;%{User
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://www.ithelei.com/2019/08/31/Tomcat记录客户端真实IP/" title="Tomcat记录客户端真实IP" target="_blank" rel="external">http://www.ithelei.com/2019/08/31/Tomcat记录客户端真实IP/</a>
+      <a href="http://www.ithelei.com/2019/08/31/Tomcat服务启动非常缓慢/" title="Tomcat服务启动非常缓慢" target="_blank" rel="external">http://www.ithelei.com/2019/08/31/Tomcat服务启动非常缓慢/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -515,9 +491,13 @@ combined - %h %l %u %t &quot;%r&quot; %s %b &quot;%{Referer}i&quot; &quot;%{User
   
   <ul class="pager pull-left">
     
+    <li class="prev">
+      <a href="/2019/08/31/Tomcat记录客户端真实IP/" title="Tomcat记录客户端真实IP"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+    </li>
+    
     
     <li class="next">
-      <a href="/2019/08/31/Tomcat服务启动非常缓慢/" title="Tomcat服务启动非常缓慢"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2019/08/28/MySQL优化(1)/" title="MySQL优化(1)"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
