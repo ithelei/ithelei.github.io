@@ -27,7 +27,7 @@
 <meta property="og:description" content="本文介绍在CentOS系统上部署Docker的过程。 背景信息本教程适用于熟悉Linux操作系统。 本教程示例步骤中使用的操作系统版本为CentOS 7.2 64 3.10.0-514.6.2.el7.x86_64 说明 Docker要求64位的系统且内核版本至少为3.10。部署Docker完成以下操作，部署Docker： 添加yum源。  yum install epel-release –y">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/156689253712347_zh-CN.png">
-<meta property="og:updated_time" content="2019-08-31T14:56:29.990Z">
+<meta property="og:updated_time" content="2019-08-31T15:02:39.023Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ECS上搭建Docker（CentOS7）">
 <meta name="twitter:description" content="本文介绍在CentOS系统上部署Docker的过程。 背景信息本教程适用于熟悉Linux操作系统。 本教程示例步骤中使用的操作系统版本为CentOS 7.2 64 3.10.0-514.6.2.el7.x86_64 说明 Docker要求64位的系统且内核版本至少为3.10。部署Docker完成以下操作，部署Docker： 添加yum源。  yum install epel-release –y">
@@ -431,25 +431,25 @@ var _hmt = _hmt || [];
 <h3 id="使用Docker"><a href="#使用Docker" class="headerlink" title="使用Docker"></a>使用Docker</h3><p>Docker有以下基本用法：</p>
 <p>管理Docker守护进程。</p>
 <ul>
-<li><h1 id="systemctl-start-docker-运行Docker守护进程"><a href="#systemctl-start-docker-运行Docker守护进程" class="headerlink" title="systemctl start docker     #运行Docker守护进程"></a>systemctl start docker     #运行Docker守护进程</h1></li>
-<li><h1 id="systemctl-stop-docker-停止Docker守护进程"><a href="#systemctl-stop-docker-停止Docker守护进程" class="headerlink" title="systemctl stop docker      #停止Docker守护进程"></a>systemctl stop docker      #停止Docker守护进程</h1></li>
-<li><h1 id="systemctl-restart-docker-重启Docker守护进程"><a href="#systemctl-restart-docker-重启Docker守护进程" class="headerlink" title="systemctl restart docker   #重启Docker守护进程"></a>systemctl restart docker   #重启Docker守护进程</h1></li>
+<li>systemctl start docker     运行Docker守护进程</li>
+<li>systemctl stop docker      停止Docker守护进程</li>
+<li>systemctl restart docker   重启Docker守护进程</li>
 </ul>
 <p>管理镜像。本文使用的是来自阿里云仓库的Apache镜像。</p>
 <ul>
-<li><h1 id="docker-pull-registry-cn-hangzhou-aliyuncs-com-lxepoo-apache-php5"><a href="#docker-pull-registry-cn-hangzhou-aliyuncs-com-lxepoo-apache-php5" class="headerlink" title="docker pull registry.cn-hangzhou.aliyuncs.com/lxepoo/apache-php5"></a>docker pull registry.cn-hangzhou.aliyuncs.com/lxepoo/apache-php5</h1></li>
+<li>docker pull registry.cn-hangzhou.aliyuncs.com/lxepoo/apache-php5</li>
 </ul>
 <p>修改标签。由于阿里云仓库镜像的镜像名称很长，可以修改镜像标签以便记忆区分。</p>
 <ul>
-<li><h1 id="docker-tag-registry-cn-hangzhou-aliyuncs-com-lxepoo-apache-php5-latest-aliweb-v1"><a href="#docker-tag-registry-cn-hangzhou-aliyuncs-com-lxepoo-apache-php5-latest-aliweb-v1" class="headerlink" title="docker tag registry.cn-hangzhou.aliyuncs.com/lxepoo/apache-php5:latest aliweb:v1"></a>docker tag registry.cn-hangzhou.aliyuncs.com/lxepoo/apache-php5:latest aliweb:v1</h1></li>
+<li>docker tag registry.cn-hangzhou.aliyuncs.com/lxepoo/apache-php5:latest aliweb:v1</li>
 </ul>
 <p>查看已有镜像。</p>
 <ul>
-<li><h1 id="docker-images"><a href="#docker-images" class="headerlink" title="docker images"></a>docker images</h1></li>
+<li>docker images</li>
 </ul>
 <p>强制删除镜像。</p>
 <ul>
-<li><h1 id="docker-rmi-–f-registry-cn-hangzhou-aliyuncs-com-lxepoo-apache-php5"><a href="#docker-rmi-–f-registry-cn-hangzhou-aliyuncs-com-lxepoo-apache-php5" class="headerlink" title="docker rmi –f registry.cn-hangzhou.aliyuncs.com/lxepoo/apache-php5"></a>docker rmi –f registry.cn-hangzhou.aliyuncs.com/lxepoo/apache-php5</h1></li>
+<li>docker rmi –f registry.cn-hangzhou.aliyuncs.com/lxepoo/apache-php5</li>
 </ul>
 <p>管理容器。</p>
 <p>进入容器。e1xxxxxxxxxe是执行docker images命令查询到的ImageId，使用docker run命令进入容器。</p>
@@ -461,23 +461,23 @@ var _hmt = _hmt || [];
 </ul>
 <p>run命令加上–d参数可以在后台运行容器，–name指定容器命名为apache。</p>
 <ul>
-<li><h1 id="docker-run-d-–name-apache-e1xxxxxxxxxe"><a href="#docker-run-d-–name-apache-e1xxxxxxxxxe" class="headerlink" title="docker run -d –name apache e1xxxxxxxxxe"></a>docker run -d –name apache e1xxxxxxxxxe</h1></li>
+<li>docker run -d –name apache e1xxxxxxxxxe</li>
 </ul>
 <p>进入后台运行的容器。</p>
 <ul>
-<li><h1 id="docker-exec-ti-apache-bin-bash"><a href="#docker-exec-ti-apache-bin-bash" class="headerlink" title="docker exec -ti apache /bin/bash"></a>docker exec -ti apache /bin/bash</h1></li>
+<li>docker exec -ti apache /bin/bash</li>
 </ul>
 <p>将容器做成镜像。</p>
 <ul>
-<li><h1 id="docker-commit-containerID-containerName-newImageName-tag"><a href="#docker-commit-containerID-containerName-newImageName-tag" class="headerlink" title="docker commit containerID/containerName newImageName:tag"></a>docker commit containerID/containerName newImageName:tag</h1></li>
+<li>docker commit containerID/containerName newImageName:tag</li>
 </ul>
 <p>为了方便测试和恢复，将源镜像运行起来后，再做一个命名简单的镜像做测试。</p>
 <ul>
-<li><h1 id="docker-commit-4c8066cd8c01-apachephp-v1"><a href="#docker-commit-4c8066cd8c01-apachephp-v1" class="headerlink" title="docker commit 4c8066cd8c01 apachephp:v1"></a>docker commit 4c8066cd8c01 apachephp:v1</h1></li>
+<li>docker commit 4c8066cd8c01 apachephp:v1</li>
 </ul>
 <p>运行容器并将宿主机的8080端口映射到容器里去。</p>
 <ul>
-<li><h1 id="docker-run-d-p-8080-80-apachephp-v1"><a href="#docker-run-d-p-8080-80-apachephp-v1" class="headerlink" title="docker run -d -p 8080:80 apachephp:v1"></a>docker run -d -p 8080:80 apachephp:v1</h1></li>
+<li>docker run -d -p 8080:80 apachephp:v1</li>
 </ul>
 <p>在浏览器输入宿主机IP加8080端口访问测试，出现以下内容则说明运行成功。</p>
 <h3 id="制作镜像"><a href="#制作镜像" class="headerlink" title="制作镜像"></a>制作镜像</h3><p>完成以下操作，制作镜像：</p>
