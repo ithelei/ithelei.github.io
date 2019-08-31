@@ -17,16 +17,21 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>Category: MySQL | 养码哥</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="养码哥">
-<meta property="og:url" content="http://www.ithelei.com/categories/MySQL/index.html">
+  <title>Tomcat记录客户端真实IP | 养码哥</title>
+  <meta name="description" content="需求：让后端Tomcat日志获取真实的IP，而不是Nginx服务器的IP。 Tomcat前面是Nginx做的反向代理，所以Tomcat取到的是Nginx的IP 日志名称是localhost_access_log.txt 解决方案: 修改Nginx的配置文件  在server或者location中添加  proxy_set_header X-Forwarded-For $remote_addr;">
+<meta name="keywords" content="Tomcat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tomcat记录客户端真实IP">
+<meta property="og:url" content="http://www.ithelei.com/2019/08/31/Tomcat记录客户端真实IP/index.html">
 <meta property="og:site_name" content="养码哥">
+<meta property="og:description" content="需求：让后端Tomcat日志获取真实的IP，而不是Nginx服务器的IP。 Tomcat前面是Nginx做的反向代理，所以Tomcat取到的是Nginx的IP 日志名称是localhost_access_log.txt 解决方案: 修改Nginx的配置文件  在server或者location中添加  proxy_set_header X-Forwarded-For $remote_addr;">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-31T12:01:25.159Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="养码哥">
+<meta name="twitter:title" content="Tomcat记录客户端真实IP">
+<meta name="twitter:description" content="需求：让后端Tomcat日志获取真实的IP，而不是Nginx服务器的IP。 Tomcat前面是Nginx做的反向代理，所以Tomcat取到的是Nginx的IP 日志名称是localhost_access_log.txt 解决方案: 修改Nginx的配置文件  在server或者location中添加  proxy_set_header X-Forwarded-For $remote_addr;">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://www.ithelei.com/categories/MySQL/index.html">
+  <link rel="canonical" href="http://www.ithelei.com/2019/08/31/Tomcat记录客户端真实IP/index.html">
   
     <link rel="alternate" href="/atom.xml" title="养码哥" type="application/atom+xml">
   
@@ -350,71 +355,234 @@ var _hmt = _hmt || [];
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="content article article-categories article-type-list" itemscope="">
-    <header class="article-header">
-      <h1 itemprop="name" class="hidden-xs">Category: MySQL</h1>
-      <p class="hidden-xs">Total 3 articles</p>
-      <nav role="navigation" id="nav-main" class="okayNav">
-        <ul>
-          <li><a href="/categories">All</a></li>
-          
-          <li><a href="/categories/安全/">安全</a></li>
-          
-          <li><a href="/categories/MySQL/">MySQL</a></li>
-          
-          <li><a href="/categories/Tomcat/">Tomcat</a></li>
-          
-        </ul>
-      </nav>
-    </header>
-    <!-- /header -->
-    <div class="article-body">
-      <div class="panel panel-default b-no">
-    <div class="panel-heading" role="tab">
-        <h4 class="panel-title">
-            <a data-toggle="collapse" href="#collapseMySQL" aria-expanded="true">
-              <i class="icon icon-folder text-active"></i><i class="icon icon-folder-open text"></i>
-              MySQL
-            </a>
-            <small class="text-muted">(Total 3 articles)</small>
-        </h4>
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-Tomcat记录客户端真实IP" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Tomcat记录客户端真实IP
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2019/08/31/Tomcat记录客户端真实IP/" class="article-date">
+	  <time datetime="2019-08-31T11:36:45.000Z" itemprop="datePublished">2019-08-31</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Tomcat/">Tomcat</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/Tomcat/">Tomcat</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/08/31/Tomcat记录客户端真实IP/#comments" class="article-comment-link">Comments</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 584(words)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2(minutes)</span>
+	
+
+      </div>
     </div>
-    <div id="collapseMySQL" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingMySQL">
-        <div class="panel-body">
-            <div class="collection">
-              
-                
-<a href="/2019/08/28/MySQL优化(1)/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2019-08-28T14:39:45.000Z" itemprop="datePublished">2019-08-28</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> MySQL优化(1)
-</a>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h3 id="需求："><a href="#需求：" class="headerlink" title="需求："></a>需求：</h3><p>让后端Tomcat日志获取真实的IP，而不是Nginx服务器的IP。</p>
+<p>Tomcat前面是Nginx做的反向代理，所以Tomcat取到的是Nginx的IP</p>
+<p>日志名称是localhost_access_log.txt</p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案:"></a>解决方案:</h3><ol>
+<li><p>修改Nginx的配置文件</p>
+<p> 在server或者location中添加</p>
+<p> proxy_set_header X-Forwarded-For $remote_addr;</p>
+</li>
+<li><p>修改Tomcat配置文件</p>
+<p> 修改server.xml文件，在该文件中</p>
+<p> 把className=”org.apache.catalina.valves.AccessLogValve” directory=”logs”块中的pattern参数里的内容修改为下面内容，即：</p>
+<p> pattern=”%{X-FORWARDED-FOR}i %l %u %t %r %s %b %D %q %{User-Agent}i” resolveHosts=”false”</p>
+</li>
+</ol>
+<pre><code>修改完后的完整配置：
 
+ `&lt;Valve className=&quot;org.apache.catalina.valves.AccessLogValve&quot; directory=&quot;logs&quot;
+           prefix=&quot;localhost_access_log&quot; suffix=&quot;.txt&quot;
+           pattern=&quot;%{X-FORWARDED-FOR}i %l %u %t %r %s %b %D %q %{User-Agent}i&quot; resolveHosts=&quot;false&quot; /&gt;`</code></pre><p>pattern配置参数详解：</p>
+<p>pattern配置段，用于指定日志的输出格式。日志参数如下：</p>
+<pre><code>`
+％a - 远程IP地址
+％A - 本地IP地址
+％b - 发送的字节数，不包括HTTP头，或“ - ”如果没有发送字节
+％B - 发送的字节数，不包括HTTP头
+％h - 远程主机名
+％H - 请求协议
+％l (小写的L)- 远程逻辑从identd的用户名（总是返回&apos; - &apos;）
+％m - 请求方法
+％p - 本地端口
+％q - 查询字符串（在前面加上一个“？”如果它存在，否则是一个空字符串
+％r - 第一行的要求
+％s - 响应的HTTP状态代码
+％S - 用户会话ID
+％t - 日期和时间，在通用日志格式
+％u - 远程用户身份验证
+％U - 请求的URL路径
+％v - 本地服务器名
+％D - 处理请求的时间（以毫秒为单位）
+％T - 处理请求的时间（以秒为单位）
+％I （大写的i） - 当前请求的线程名称
+此外，您可以指定以下别名来设置为普遍使用的模式之一：
+common - %h %l %u %t &quot;%r&quot; %s %b
+combined - %h %l %u %t &quot;%r&quot; %s %b &quot;%{Referer}i&quot; &quot;%{User-Agent}i&quot;
+`</code></pre><p>另外，还可以将request请求的查询参数、session会话变量值、cookie值或HTTP请求/响应头内容的变量值等内容写入到日志文件。</p>
+<p>它仿照了apache的语法：</p>
+<ul>
+<li>％{XXX}i xxx代表传入的头(HTTP Request)</li>
+<li>％{XXX}o xxx代表传出的响应头(Http Resonse)</li>
+<li>％{XXX}c  xxx代表特定的Cookie名</li>
+<li>％{XXX}r  xxx代表ServletRequest属性名</li>
+<li>％{XXX}s xxx代表HttpSession中的属性名</li>
+</ul>
 
-              
-                
-<a href="/2019/08/28/MySQL优化(2)/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2019-08-28T13:36:45.000Z" itemprop="datePublished">2019-08-28</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> MySQL优化(2)
-</a>
-
-
-              
-                
-<a href="/2019/08/27/MySQL规范/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2019-08-27T13:45:00.000Z" itemprop="datePublished">2019-08-27</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> MySQL规范
-</a>
-
-
-              
-            </div>
-        </div>
+      
     </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://www.ithelei.com/2019/08/31/Tomcat记录客户端真实IP/" title="Tomcat记录客户端真实IP" target="_blank" rel="external">http://www.ithelei.com/2019/08/31/Tomcat记录客户端真实IP/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/ithelei" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/ithelei" target="_blank"><span class="text-dark">养码哥</span><small class="ml-1x">Developer</small></a></h3>
+        <div>创业者，喜欢读书，喜欢分享，希望有一天可以赚很多的钱，去干够风骚有意义的事情。我是养码哥，一个仍然在路上，向往自由和梦想的人！</div>
+      </div>
+    </figure>
+  </div>
 </div>
+
+
     </div>
   </article>
-   
+  
+    
+  <section id="comments">
+  	
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NjI4My8yMjc5NA">
+        <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+      </div>    
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2019/08/28/MySQL优化(1)/" title="MySQL优化(1)"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>$</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>Maybe you could buy me a cup of coffee.</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open alipay app scan this qrcode, buy me a coffee!</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open wechat app scan this qrcode, buy me a coffee!</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> alipay</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> wechat payment</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -475,6 +643,28 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+
+   
+
+
+
+
+   
+    
+<script defer type="text/javascript">
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
 
 
 

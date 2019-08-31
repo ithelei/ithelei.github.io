@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ithelei.com/"/>
-  <updated>2019-08-28T13:21:45.209Z</updated>
+  <updated>2019-08-31T12:01:25.159Z</updated>
   <id>http://www.ithelei.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Tomcat记录客户端真实IP</title>
+    <link href="http://www.ithelei.com/2019/08/31/Tomcat%E8%AE%B0%E5%BD%95%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9C%9F%E5%AE%9EIP/"/>
+    <id>http://www.ithelei.com/2019/08/31/Tomcat记录客户端真实IP/</id>
+    <published>2019-08-31T11:36:45.000Z</published>
+    <updated>2019-08-31T12:01:25.159Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;需求：&quot;&gt;&lt;a href=&quot;#需求：&quot; class=&quot;headerlink&quot; title=&quot;需求：&quot;&gt;&lt;/a&gt;需求：&lt;/h3&gt;&lt;p&gt;让后端Tomcat日志获取真实的IP，而不是Nginx服务器的IP。&lt;/p&gt;
+&lt;p&gt;Tomcat前面是Nginx做的反向代理，所以T
+      
+    
+    </summary>
+    
+      <category term="Tomcat" scheme="http://www.ithelei.com/categories/Tomcat/"/>
+    
+    
+      <category term="Tomcat" scheme="http://www.ithelei.com/tags/Tomcat/"/>
+    
+  </entry>
   
   <entry>
     <title>MySQL优化(1)</title>
