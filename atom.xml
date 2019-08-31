@@ -93,6 +93,32 @@
   </entry>
   
   <entry>
+    <title>到底应该怎么理解（平均负载）？</title>
+    <link href="http://www.ithelei.com/2019/08/30/%E5%88%B0%E5%BA%95%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E7%90%86%E8%A7%A3%EF%BC%88%E5%B9%B3%E5%9D%87%E8%B4%9F%E8%BD%BD%EF%BC%89/"/>
+    <id>http://www.ithelei.com/2019/08/30/到底应该怎么理解（平均负载）/</id>
+    <published>2019-08-30T13:27:24.000Z</published>
+    <updated>2019-08-31T13:52:38.931Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt; 每次发现系统变慢时，我们通常做的第一件事，就是执行 top 或者 uptime 命令，来了解系统的负载情况。比如像下面这样，我在命令行里输入了 uptime 命令，系统也随即给出了结果。    &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;`
+ $uptime
+ 02:34:03 up
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.ithelei.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.ithelei.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MySQL优化(1)</title>
     <link href="http://www.ithelei.com/2019/08/28/MySQL%E4%BC%98%E5%8C%96(1)/"/>
     <id>http://www.ithelei.com/2019/08/28/MySQL优化(1)/</id>
