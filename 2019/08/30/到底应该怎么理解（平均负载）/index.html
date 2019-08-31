@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="养码哥">
 <meta property="og:description" content="每次发现系统变慢时，我们通常做的第一件事，就是执行 top 或者 uptime 命令，来了解系统的负载情况。比如像下面这样，我在命令行里输入了 uptime 命令，系统也随即给出了结果。     `  $uptime  02:34:03 up 2 days, 20:14,  1 user,  load average: 0.63, 0.83, 0.88 `但我想问的是，你真的知道这里每列输出的含">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-31T13:52:38.931Z">
+<meta property="og:updated_time" content="2019-08-31T14:08:59.255Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="到底应该怎么理解（平均负载）？">
 <meta name="twitter:description" content="每次发现系统变慢时，我们通常做的第一件事，就是执行 top 或者 uptime 命令，来了解系统的负载情况。比如像下面这样，我在命令行里输入了 uptime 命令，系统也随即给出了结果。     `  $uptime  02:34:03 up 2 days, 20:14,  1 user,  load average: 0.63, 0.83, 0.88 `但我想问的是，你真的知道这里每列输出的含">
@@ -395,7 +395,7 @@ var _hmt = _hmt || [];
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/08/30/到底应该怎么理解（平均负载）/#comments" class="article-comment-link">Comments</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 4k(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 3.9k(words)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 15(minutes)</span>
@@ -416,9 +416,9 @@ var _hmt = _hmt || [];
 up 2 days, 20:14      // 系统运行时间
 1 user                // 正在登录用户数
 `</code></pre><p>而最后三个数字呢，依次则是过去 1 分钟、5 分钟、15 分钟的平均负载（Load Average）。</p>
-<p>平均负载？这个词对很多人来说，可能既熟悉又陌生，我们每天的工作中，也都会提到这个词，但你真正理解它背后的含义吗？如果你们团队来了一个实习生，他揪住你不放，你能给他讲清楚什么是平均负载吗？</p>
-<p>今天，我就带你来学习下，如何观测和理解这个最常见、也是最重要的系统指标。</p>
-<p>我猜一定有人会说，平均负载不就是单位时间内的 CPU 使用率吗？上面的 0.63，就代表 CPU 使用率是 63%。其实并不是这样，如果你方便的话，可以通过执行 man uptime 命令，来了解平均负载的详细解释。</p>
+<p>平均负载？这个词对很多人来说，可能既熟悉又陌生，我们每天的工作中，也都会提到这个词，但你真正理解它背后的含义吗？</p>
+<p>如何观测和理解这个最常见、也是最重要的系统指标。</p>
+<p>平均负载不就是单位时间内的 CPU 使用率吗？上面的 0.63，就代表 CPU 使用率是 63%。其实并不是这样，如果你方便的话，可以通过执行 man uptime 命令，来了解平均负载的详细解释。</p>
 <p>简单来说，平均负载是指单位时间内，系统处于<strong>可运行状态</strong> 和<strong>不可中断状态</strong>的平均进程数，也就是<strong>平均活跃进程数</strong> ，它和 CPU 使用率并没有直接关系。这里我先解释下，可运行状态和不可中断状态这俩词儿。</p>
 <p>所谓可运行状态的进程，是指正在使用 CPU 或者正在等待 CPU 的进程，也就是我们常用 ps 命令看到的，处于 R 状态（Running 或 Runnable）的进程。</p>
 <p>不可中断状态的进程则是正处于内核态关键流程中的进程，并且这些流程是不可打断的，比如最常见的是等待硬件设备的 I/O 响应，也就是我们在 ps 命令中看到的 D 状态（Uninterruptible Sleep，也称为 Disk Sleep）的进程。</p>
@@ -431,9 +431,10 @@ up 2 days, 20:14      // 系统运行时间
 <li>在 4 个 CPU 的系统上，意味着 CPU 有 50% 的空闲。</li>
 <li>而在只有 1 个 CPU 的系统中，则意味着有一半的进程竞争不到 CPU。</li>
 </ul>
-<h2 id="平均负载为多少时合理"><a href="#平均负载为多少时合理" class="headerlink" title="平均负载为多少时合理"></a>平均负载为多少时合理</h2><p>讲完了什么是平均负载，现在我们再回到最开始的例子，不知道你能否判断出，在 uptime 命令的结果里，那三个时间段的平均负载数，多大的时候能说明系统负载高？或是多小的时候就能说明系统负载很低呢？</p>
+<h3 id="平均负载为多少时合理"><a href="#平均负载为多少时合理" class="headerlink" title="平均负载为多少时合理"></a>平均负载为多少时合理</h3><p>说完了什么是平均负载，现在我们再回到最开始的例子，在 uptime 命令的结果里，那三个时间段的平均负载数，多大的时候能说明系统负载高？或是多小的时候就能说明系统负载很低呢？</p>
 <p>我们知道，平均负载最理想的情况是等于 CPU 个数。所以在评判平均负载时，<strong>首先你要知道系统有几个 CPU</strong> ，这可以通过 top 命令或者从文件 /proc/cpuinfo 中读取，比如：</p>
-<pre><code>`# 关于 grep 和 wc 的用法请查询它们的手册或者网络搜索
+<pre><code>`
+ # 关于 grep 和 wc 的用法请查询它们的手册或者网络搜索
  $ grep &apos;model name&apos; /proc/cpuinfo | wc -l
  2
 `</code></pre><p>有了 CPU 个数，我们就可以判断出，当平均负载比 CPU 个数还大的时候，系统已经出现了过载。</p>
@@ -450,7 +451,7 @@ up 2 days, 20:14      // 系统运行时间
 <p>那么，在实际生产环境中，平均负载多高时，需要我们重点关注呢？</p>
 <p>在我看来，<strong>当平均负载高于 CPU 数量 70% 的时候</strong> ，你就应该分析排查负载高的问题了。一旦负载过高，就可能导致进程响应变慢，进而影响服务的正常功能。</p>
 <p>但 70% 这个数字并不是绝对的，最推荐的方法，还是把系统的平均负载监控起来，然后根据更多的历史数据，判断负载的变化趋势。当发现负载有明显升高趋势时，比如说负载翻倍了，你再去做分析和调查。</p>
-<h2 id="平均负载与-CPU-使用率"><a href="#平均负载与-CPU-使用率" class="headerlink" title="平均负载与 CPU 使用率"></a>平均负载与 CPU 使用率</h2><p>现实工作中，我们经常容易把平均负载和 CPU 使用率混淆，所以在这里，我也做一个区分。</p>
+<h3 id="平均负载与-CPU-使用率"><a href="#平均负载与-CPU-使用率" class="headerlink" title="平均负载与 CPU 使用率"></a>平均负载与 CPU 使用率</h3><p>现实工作中，我们经常容易把平均负载和 CPU 使用率混淆，所以在这里，我也做一个区分。</p>
 <p>可能你会疑惑，既然平均负载代表的是活跃进程数，那平均负载高了，不就意味着 CPU 使用率高吗？</p>
 <p>我们还是要回到平均负载的含义上来，平均负载是指单位时间内，处于可运行状态和不可中断状态的进程数。所以，它不仅包括了</p>
 <p>而 CPU 使用率，是单位时间内 CPU 繁忙情况的统计，跟平均负载并不一定完全对应。比如：</p>
@@ -459,7 +460,7 @@ up 2 days, 20:14      // 系统运行时间
 <li>I/O 密集型进程，等待 I/O 也会导致平均负载升高，但 CPU 使用率不一定很高；</li>
 <li>大量等待 CPU 的进程调度也会导致平均负载升高，此时的 CPU 使用率也会比较高。</li>
 </ul>
-<h2 id="平均负载案例分析"><a href="#平均负载案例分析" class="headerlink" title="平均负载案例分析"></a>平均负载案例分析</h2><p>下面，我们以三个示例分别来看这三种情况，并用 iostat、mpstat、pidstat 等工具，找出平均负载升高的根源。</p>
+<h3 id="平均负载案例分析"><a href="#平均负载案例分析" class="headerlink" title="平均负载案例分析"></a>平均负载案例分析</h3><p>下面，我们以三个示例分别来看这三种情况，并用 iostat、mpstat、pidstat 等工具，找出平均负载升高的根源。</p>
 <p>因为案例分析都是基于机器上的操作，所以不要只是听听、看看就够了，最好还是跟着我实际操作一下。</p>
 <h3 id="你的准备"><a href="#你的准备" class="headerlink" title="你的准备"></a>你的准备</h3><p>下面的案例都是基于 Ubuntu 18.04，当然，同样适用于其他 Linux 系统。我使用的案例环境如下所示。</p>
 <ul>
@@ -479,8 +480,9 @@ up 2 days, 20:14      // 系统运行时间
 <p>如果上面的要求都已经完成了，你可以先用 uptime 命令，看一下测试前的平均负载情况：</p>
 <pre><code>`$uptame
 ...,  load average: 0.11, 0.15, 0.09
-`</code></pre><p>###场景一：CPU  密集型进程  ###<br>首先，我们在第一个终端运行  stress  命令，模拟一个  CPU  使用率 100% 的场景：</p>
-<pre><code>`$ stress --cpu 1 --timeout 600
+`</code></pre><h3 id="场景一：CPU-密集型进程"><a href="#场景一：CPU-密集型进程" class="headerlink" title="场景一：CPU  密集型进程"></a>场景一：CPU  密集型进程</h3><p>首先，我们在第一个终端运行  stress  命令，模拟一个  CPU  使用率 100% 的场景：</p>
+<pre><code>`
+$ stress --cpu 1 --timeout 600
 
 `</code></pre><p>接着，在第二个终端运行 uptime 查看平均负载的变化情况：</p>
 <pre><code>` 
@@ -498,7 +500,8 @@ Linux 4.15.0 (ubuntu) 09/22/18 _x86_64_ (2 CPU)
 13:30:11       1  100.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00
 `</code></pre><p>从终端二中可以看到，1 分钟的平均负载会慢慢增加到 1.00，而从终端三中还可以看到，正好有一个 CPU 的使用率为 100%，但它的 iowait 只有 0。这说明，平均负载的升高正是由于 CPU 使用率为 100% 。</p>
 <p>那么，到底是哪个进程导致了 CPU 使用率为 100% 呢？你可以使用 pidstat 来查询：</p>
-<pre><code>`# 间隔 5 秒后输出一组数据
+<pre><code>`
+# 间隔 5 秒后输出一组数据
 $ pidstat -u 5 1
 13:37:07      UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
 13:37:12        0      2962  100.00    0.00    0.00    0.00  100.00     1  stress
@@ -547,7 +550,7 @@ $ pidstat -u 5 1
 14:23:30        0      3197   24.80    0.00    0.00   74.80   24.80     1  stress
 14:23:30        0      3200    0.00    0.20    0.00    0.20    0.20     0  pidstat
 `</code></pre><p>可以看出，8 个进程在争抢 2 个 CPU，每个进程等待 CPU 的时间（也就是代码块中的 %wait 列）高达 75%。这些超出 CPU 计算能力的进程，最终导致 CPU 过载。</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>分析完这三个案例，我再来归纳一下<strong>平均负载的理解</strong></p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>分析完这三个案例，我再来归纳一下<strong>平均负载的理解</strong></p>
 <p>平均负载提供了一个快速查看系统整体性能的手段，反映了整体的负载情况。但只看平均负载本身，我们并不能直接发现，到底是哪里出现了瓶颈。所以，在理解平均负载时，也要注意：</p>
 <ul>
 <li>平均负载高有可能是 CPU 密集型进程导致的；</li>
