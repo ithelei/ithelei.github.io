@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/f526.png">
 <meta property="og:image" content="https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/4689aaaa.png">
 <meta property="og:image" content="https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/77.png">
-<meta property="og:updated_time" content="2019-09-01T11:30:21.062Z">
+<meta property="og:updated_time" content="2019-09-01T11:48:34.973Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="经常说的-CPU-上下文切换是什么意思？（下）">
 <meta name="twitter:description" content="CPU 上下文切换的工作原理。简单回顾一下，CPU 上下文切换是保证 Linux 系统正常工作的一个核心功能，按照不同场景，可以分为进程上下文切换、线程上下文切换和中断上下文切换。具体的概念和区别，你也要在脑海中过一遍，忘了的话及时查看上一篇。 怎么查看系统的上下文切换情况过多的上下文切换，会把 CPU 时间消耗在寄存器、内核栈以及虚拟内存等数据的保存和恢复上，缩短进程真正运行的时间，成了系统性能">
@@ -439,8 +439,8 @@ var _hmt = _hmt || [];
 <li><p><strong>而非自愿上下文切换，则是指进程由于时间片已到等原因，被系统强制调度，进而发生的上下文切换。比如说，大量进程都在争抢 CPU 时，就容易发生非自愿上下文切换。</strong></p>
 </li>
 </ul>
-<p>###案例分析<br>知道了怎么查看这些指标，另一个问题又来了，上下文切换频率是多少次才算正常呢？别急着要答案，同样的，我们先来看一个上下文切换的案例。通过案例实战演练，你自己就可以分析并找出这个标准了。</p>
-<p>#####准备<br>我们将使用 sysbench 来模拟系统多线程调度切换的情况。</p>
+<h3 id="案例分析"><a href="#案例分析" class="headerlink" title="案例分析"></a>案例分析</h3><p>知道了怎么查看这些指标，另一个问题又来了，上下文切换频率是多少次才算正常呢？别急着要答案，同样的，我们先来看一个上下文切换的案例。通过案例实战演练，你自己就可以分析并找出这个标准了。</p>
+<h5 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h5><p>我们将使用 sysbench 来模拟系统多线程调度切换的情况。</p>
 <p>sysbench 是一个多线程的基准测试工具，一般用来评估不同系统参数下的数据库负载情况。当然，在这次案例中，我们只把它当成一个异常进程来看，作用是模拟上下文切换过多的问题。</p>
 <p>下面的案例基于 Ubuntu 18.04，当然，其他的 Linux 系统同样适用。我使用的案例环境如下所示：</p>
 <p>机器配置：2 CPU，8GB 内存</p>
@@ -450,7 +450,7 @@ var _hmt = _hmt || [];
 <p>安装完成后，你可以先用 vmstat 看一下空闲系统的上下文切换次数：<br>vmstat 1 1</p>
 <p><img src="https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/4689aaaa.png" alt></p>
 <p>这里你可以看到，现在的上下文切换次数 cs 是 0，而中断次数 in 是 0，r 和 b 都是 0。因为这会儿我并没有运行其他任务，所以它们就是空闲系统的上下文切换次数。</p>
-<p>###操作和分析<br>接下来，我们正式进入实战操作。</p>
+<h3 id="操作和分析"><a href="#操作和分析" class="headerlink" title="操作和分析"></a>操作和分析</h3><p>接下来，我们正式进入实战操作。</p>
 <p>首先，在第一个终端里运行 sysbench ，模拟系统多线程调度的瓶颈：</p>
 <p># 以 10 个线程运行 5 分钟的基准测试，模拟多线程切换的问题<br>$ sysbench –threads=10 –max-time=300 threads run</p>
 <p>接着，在第二个终端运行 vmstat ，观察上下文切换情况：</p>
@@ -527,8 +527,7 @@ RES:    2450431    5279697   Rescheduling interrupts
 <li><p>中断次数变多了，说明 CPU 被中断处理程序占用，还需要通过查看 /proc/interrupts 文件来分析具体的中断类型。</p>
 </li>
 </ul>
-<p>###小结</p>
-<p>今天，我通过一个 sysbench 的案例，给你讲了上下文切换问题的分析思路。碰到上下文切换次数过多的问题时，<strong>我们可以借助 vmstat 、 pidstat 和 /proc/interrupts 等工具</strong>，来辅助排查性能问题的根源。</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>今天，我通过一个 sysbench 的案例，给你讲了上下文切换问题的分析思路。碰到上下文切换次数过多的问题时，<strong>我们可以借助 vmstat 、 pidstat 和 /proc/interrupts 等工具</strong>，来辅助排查性能问题的根源。</p>
 
       
     </div>
