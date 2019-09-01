@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ithelei.com/"/>
-  <updated>2019-08-31T15:02:39.023Z</updated>
+  <updated>2019-09-01T01:24:41.711Z</updated>
   <id>http://www.ithelei.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>能力图谱</title>
+    <link href="http://www.ithelei.com/2019/09/01/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
+    <id>http://www.ithelei.com/2019/09/01/能力图谱/</id>
+    <published>2019-09-01T01:20:45.000Z</published>
+    <updated>2019-09-01T01:24:41.711Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;工程师能力图谱：&quot;&gt;&lt;a href=&quot;#工程师能力图谱：&quot; class=&quot;headerlink&quot; title=&quot;工程师能力图谱：&quot;&gt;&lt;/a&gt;工程师能力图谱：&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijin
+      
+    
+    </summary>
+    
+      <category term="能力图谱" scheme="http://www.ithelei.com/categories/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
+    
+    
+      <category term="能力图谱" scheme="http://www.ithelei.com/tags/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
+    
+  </entry>
   
   <entry>
     <title>ECS上搭建Docker（CentOS7）</title>
@@ -38,30 +61,6 @@
     
     
       <category term="Docker" scheme="http://www.ithelei.com/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Tomcat记录客户端真实IP</title>
-    <link href="http://www.ithelei.com/2019/08/31/Tomcat%E8%AE%B0%E5%BD%95%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9C%9F%E5%AE%9EIP/"/>
-    <id>http://www.ithelei.com/2019/08/31/Tomcat记录客户端真实IP/</id>
-    <published>2019-08-31T11:36:45.000Z</published>
-    <updated>2019-08-31T12:01:25.159Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;需求：&quot;&gt;&lt;a href=&quot;#需求：&quot; class=&quot;headerlink&quot; title=&quot;需求：&quot;&gt;&lt;/a&gt;需求：&lt;/h3&gt;&lt;p&gt;让后端Tomcat日志获取真实的IP，而不是Nginx服务器的IP。&lt;/p&gt;
-&lt;p&gt;Tomcat前面是Nginx做的反向代理，所以T
-      
-    
-    </summary>
-    
-      <category term="Tomcat" scheme="http://www.ithelei.com/categories/Tomcat/"/>
-    
-    
-      <category term="Tomcat" scheme="http://www.ithelei.com/tags/Tomcat/"/>
     
   </entry>
   
