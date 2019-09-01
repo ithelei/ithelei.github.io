@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.ithelei.com/about/index.html</loc>
+    
+    <lastmod>2019-09-01T01:41:45.787Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.ithelei.com/2019/09/01/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/</loc>
     
     <lastmod>2019-09-01T01:24:41.711Z</lastmod>
@@ -68,13 +75,6 @@
     <loc>http://www.ithelei.com/2019/08/26/CentOS%20Linux%207%E5%AE%89%E5%85%A8%E5%9F%BA%E7%BA%BF%E6%A3%80%E6%9F%A5/</loc>
     
     <lastmod>2019-08-27T13:20:42.155Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ithelei.com/about/index.html</loc>
-    
-    <lastmod>2019-08-26T15:43:12.807Z</lastmod>
     
   </url>
   
