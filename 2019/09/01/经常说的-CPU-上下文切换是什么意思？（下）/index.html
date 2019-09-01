@@ -26,15 +26,15 @@
 <meta property="og:site_name" content="养码哥">
 <meta property="og:description" content="CPU 上下文切换的工作原理。简单回顾一下，CPU 上下文切换是保证 Linux 系统正常工作的一个核心功能，按照不同场景，可以分为进程上下文切换、线程上下文切换和中断上下文切换。具体的概念和区别，你也要在脑海中过一遍，忘了的话及时查看上一篇。 怎么查看系统的上下文切换情况过多的上下文切换，会把 CPU 时间消耗在寄存器、内核栈以及虚拟内存等数据的保存和恢复上，缩短进程真正运行的时间，成了系统性能">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4689931-9b88f71f8178fd9b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4689931-dfc665a42265f526.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4689931-05ad864e1264da34.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4689931-01ed3a2e7293be77.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-09-01T11:15:58.434Z">
+<meta property="og:image" content="https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/4689931-9b88f71f8178fd9b.png">
+<meta property="og:image" content="https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/f526.png">
+<meta property="og:image" content="https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/4689aaaa.png">
+<meta property="og:image" content="https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/77.png">
+<meta property="og:updated_time" content="2019-09-01T11:30:21.062Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="经常说的-CPU-上下文切换是什么意思？（下）">
 <meta name="twitter:description" content="CPU 上下文切换的工作原理。简单回顾一下，CPU 上下文切换是保证 Linux 系统正常工作的一个核心功能，按照不同场景，可以分为进程上下文切换、线程上下文切换和中断上下文切换。具体的概念和区别，你也要在脑海中过一遍，忘了的话及时查看上一篇。 怎么查看系统的上下文切换情况过多的上下文切换，会把 CPU 时间消耗在寄存器、内核栈以及虚拟内存等数据的保存和恢复上，缩短进程真正运行的时间，成了系统性能">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/4689931-9b88f71f8178fd9b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:image" content="https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/4689931-9b88f71f8178fd9b.png">
   <!-- Canonical links -->
   <link rel="canonical" href="http://www.ithelei.com/2019/09/01/经常说的-CPU-上下文切换是什么意思？（下）/index.html">
   
@@ -415,8 +415,8 @@ var _hmt = _hmt || [];
 <p>既然上下文切换对系统性能影响那么大，你肯定迫不及待想知道，到底要怎么查看上下文切换呢？在这里，我们可以使用 vmstat 这个工具，来查询系统的上下文切换情况。</p>
 <p>vmstat 是一个常用的系统性能分析工具，主要用来分析系统的内存使用情况，也常用来分析 CPU 上下文切换和中断的次数。</p>
 <p>比如，下面就是一个 vmstat 的使用示例：</p>
-<p># 每隔 5 秒输出 1 组数据<br><img src="https://upload-images.jianshu.io/upload_images/4689931-9b88f71f8178fd9b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>我们一起来看这个结果，你可以先试着自己解读每列的含义。在这里，我重点强调下，需要特别关注的四列内容：</p>
+<p># 每隔 5 秒输出 1 组数据</p>
+<p><img src="https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/4689931-9b88f71f8178fd9b.png" alt><br>我们一起来看这个结果，你可以先试着自己解读每列的含义。在这里，我重点强调下，需要特别关注的四列内容：</p>
 <ul>
 <li><p>cs（context switch）是每秒上下文切换的次数。</p>
 </li>
@@ -430,7 +430,7 @@ var _hmt = _hmt || [];
 <p>可以看到，这个例子中的上下文切换次数 cs 是 2 次，而系统中断次数 in 则是 3 次，而就绪队列长度 r 和不可中断状态进程数 b 都是 0。</p>
 <p>vmstat 只给出了系统总体的上下文切换情况，要想查看每个进程的详细情况，就需要使用我们前面提到过的 pidstat 了。给它加上 -w 选项，你就可以查看每个进程上下文切换的情况了。</p>
 <p>比如说：<br>pidstat -w 5</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/4689931-dfc665a42265f526.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/f526.png" alt></p>
 <p>这个结果中有两列内容是我们的重点关注对象。一个是 cswch ，表示每秒自愿上下文切换（voluntary context switches）的次数，另一个则是 nvcswch ，表示每秒非自愿上下文切换（non voluntary context switches）的次数。</p>
 <p>这两个概念你一定要牢牢记住，因为它们意味着不同的性能问题：</p>
 <ul>
@@ -448,14 +448,14 @@ var _hmt = _hmt || [];
 <p>正式操作开始前，你需要打开三个终端，登录到同一台 Linux 机器中，并安装好上面提到的两个软件包。包的安装，可以先 Google 一下自行解决，如果仍然有问题的，在留言区写下你的情况。</p>
 <p>另外注意，下面所有命令，<strong>都默认以 root 用户运行</strong>。所以，如果你是用普通用户登陆的系统，记住先运行 sudo su root 命令切换到 root 用户。</p>
 <p>安装完成后，你可以先用 vmstat 看一下空闲系统的上下文切换次数：<br>vmstat 1 1</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/4689931-05ad864e1264da34.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/4689aaaa.png" alt></p>
 <p>这里你可以看到，现在的上下文切换次数 cs 是 0，而中断次数 in 是 0，r 和 b 都是 0。因为这会儿我并没有运行其他任务，所以它们就是空闲系统的上下文切换次数。</p>
 <p>###操作和分析<br>接下来，我们正式进入实战操作。</p>
 <p>首先，在第一个终端里运行 sysbench ，模拟系统多线程调度的瓶颈：</p>
 <p># 以 10 个线程运行 5 分钟的基准测试，模拟多线程切换的问题<br>$ sysbench –threads=10 –max-time=300 threads run</p>
 <p>接着，在第二个终端运行 vmstat ，观察上下文切换情况：</p>
 <p>vmstat 1</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/4689931-01ed3a2e7293be77.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/77.png" alt></p>
 <p>你应该可以发现，cs 列的上下文切换次数从之前的 35 骤然上升到了 139 万。同时，注意观察其他几个指标：</p>
 <ul>
 <li><p>r 列：就绪队列的长度已经到了 8，远远超过了系统 CPU 的个数 2，所以肯定会有大量的 CPU 竞争。</p>
