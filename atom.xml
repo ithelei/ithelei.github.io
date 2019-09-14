@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ithelei.com/"/>
-  <updated>2019-09-08T14:51:07.944Z</updated>
+  <updated>2019-09-08T13:14:27.365Z</updated>
   <id>http://www.ithelei.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>产业互联网时代的企业数字化</title>
+    <link href="http://www.ithelei.com/2019/09/08/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3%E7%9A%84%E4%BC%81%E4%B8%9A%E6%95%B0%E5%AD%97%E5%8C%96/"/>
+    <id>http://www.ithelei.com/2019/09/08/产业互联网时代的企业数字化/</id>
+    <published>2019-09-08T01:20:45.000Z</published>
+    <updated>2019-09-08T13:14:27.365Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;企业数字化的主要特征包括3个方面：&lt;strong&gt;第一是连接，&lt;/strong&gt;连接员工、连接客户、连接机器设备；&lt;strong&gt;第二是数据，&lt;/strong&gt;也就是连接之后实时产生的数据；&lt;strong&gt;第三是智能，&lt;/strong&gt;是数据驱动的智能应用。&lt;/p&gt;
+&lt;p&gt;
+      
+    
+    </summary>
+    
+      <category term="产业互联网" scheme="http://www.ithelei.com/categories/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    
+    
+      <category term="产业互联网" scheme="http://www.ithelei.com/tags/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    
+  </entry>
   
   <entry>
     <title>中台成为构架企业数字营销的主要模式</title>
@@ -61,30 +85,6 @@
     
     
       <category term="数字营销" scheme="http://www.ithelei.com/tags/%E6%95%B0%E5%AD%97%E8%90%A5%E9%94%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>产业互联网时代的企业数字化</title>
-    <link href="http://www.ithelei.com/2019/09/08/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3%E7%9A%84%E4%BC%81%E4%B8%9A%E6%95%B0%E5%AD%97%E5%8C%96/"/>
-    <id>http://www.ithelei.com/2019/09/08/产业互联网时代的企业数字化/</id>
-    <published>2019-09-08T01:20:45.000Z</published>
-    <updated>2019-09-08T13:14:27.365Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;企业数字化的主要特征包括3个方面：&lt;strong&gt;第一是连接，&lt;/strong&gt;连接员工、连接客户、连接机器设备；&lt;strong&gt;第二是数据，&lt;/strong&gt;也就是连接之后实时产生的数据；&lt;strong&gt;第三是智能，&lt;/strong&gt;是数据驱动的智能应用。&lt;/p&gt;
-&lt;p&gt;
-      
-    
-    </summary>
-    
-      <category term="产业互联网" scheme="http://www.ithelei.com/categories/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91/"/>
-    
-    
-      <category term="产业互联网" scheme="http://www.ithelei.com/tags/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
   </entry>
   
@@ -185,29 +185,6 @@
   </entry>
   
   <entry>
-    <title>能力图谱</title>
-    <link href="http://www.ithelei.com/2019/09/01/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
-    <id>http://www.ithelei.com/2019/09/01/能力图谱/</id>
-    <published>2019-09-01T01:20:45.000Z</published>
-    <updated>2019-09-01T01:24:41.711Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;工程师能力图谱：&quot;&gt;&lt;a href=&quot;#工程师能力图谱：&quot; class=&quot;headerlink&quot; title=&quot;工程师能力图谱：&quot;&gt;&lt;/a&gt;工程师能力图谱：&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijin
-      
-    
-    </summary>
-    
-      <category term="能力图谱" scheme="http://www.ithelei.com/categories/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
-    
-    
-      <category term="能力图谱" scheme="http://www.ithelei.com/tags/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
-    
-  </entry>
-  
-  <entry>
     <title>经常说的-CPU-上下文切换是什么意思？（上）</title>
     <link href="http://www.ithelei.com/2019/09/01/%E7%BB%8F%E5%B8%B8%E8%AF%B4%E7%9A%84-CPU-%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%87%E6%8D%A2%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D%EF%BC%9F%EF%BC%88%E4%B8%8A%EF%BC%89/"/>
     <id>http://www.ithelei.com/2019/09/01/经常说的-CPU-上下文切换是什么意思？（上）/</id>
@@ -227,6 +204,29 @@
     
     
       <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>能力图谱</title>
+    <link href="http://www.ithelei.com/2019/09/01/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
+    <id>http://www.ithelei.com/2019/09/01/能力图谱/</id>
+    <published>2019-09-01T01:20:45.000Z</published>
+    <updated>2019-09-01T01:24:41.711Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;工程师能力图谱：&quot;&gt;&lt;a href=&quot;#工程师能力图谱：&quot; class=&quot;headerlink&quot; title=&quot;工程师能力图谱：&quot;&gt;&lt;/a&gt;工程师能力图谱：&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijin
+      
+    
+    </summary>
+    
+      <category term="能力图谱" scheme="http://www.ithelei.com/categories/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
+    
+    
+      <category term="能力图谱" scheme="http://www.ithelei.com/tags/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
     
   </entry>
   
