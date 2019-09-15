@@ -17,16 +17,21 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>养码哥</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="养码哥">
-<meta property="og:url" content="http://www.ithelei.com/index.html">
+  <title>怎么理解Linux软中断？ | 养码哥</title>
+  <meta name="description" content="从“取外卖”看中断说到中断，我在前面关于“上下文切换”的文章，简单说过中断的含义，先来回顾一下。中断是系统用来响应硬件设备请求的一种机制，它会打断进程的正常调度和执行，然后调用内核中的中断处理程序来响应设备的请求。 你可能要问了，为什么要有中断呢？我可以举个生活中的例子，让你感受一下中断的魅力。 比如说你订了一份外卖，但是不确定外卖什么时候送到，也没有别的方法了解外卖的进度，但是，配送员送外卖是不">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="怎么理解Linux软中断？">
+<meta property="og:url" content="http://www.ithelei.com/2019/09/15/怎么理解Linux软中断？/index.html">
 <meta property="og:site_name" content="养码哥">
+<meta property="og:description" content="从“取外卖”看中断说到中断，我在前面关于“上下文切换”的文章，简单说过中断的含义，先来回顾一下。中断是系统用来响应硬件设备请求的一种机制，它会打断进程的正常调度和执行，然后调用内核中的中断处理程序来响应设备的请求。 你可能要问了，为什么要有中断呢？我可以举个生活中的例子，让你感受一下中断的魅力。 比如说你订了一份外卖，但是不确定外卖什么时候送到，也没有别的方法了解外卖的进度，但是，配送员送外卖是不">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-15T06:29:22.462Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="养码哥">
+<meta name="twitter:title" content="怎么理解Linux软中断？">
+<meta name="twitter:description" content="从“取外卖”看中断说到中断，我在前面关于“上下文切换”的文章，简单说过中断的含义，先来回顾一下。中断是系统用来响应硬件设备请求的一种机制，它会打断进程的正常调度和执行，然后调用内核中的中断处理程序来响应设备的请求。 你可能要问了，为什么要有中断呢？我可以举个生活中的例子，让你感受一下中断的魅力。 比如说你订了一份外卖，但是不确定外卖什么时候送到，也没有别的方法了解外卖的进度，但是，配送员送外卖是不">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://www.ithelei.com/index.html">
+  <link rel="canonical" href="http://www.ithelei.com/2019/09/15/怎么理解Linux软中断？/index.html">
   
     <link rel="alternate" href="/atom.xml" title="养码哥" type="application/atom+xml">
   
@@ -350,43 +355,45 @@ var _hmt = _hmt || [];
 </aside>
 
   
-  <main class="main" role="main">
   
-  <div class="content article-list">
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-怎么理解Linux软中断？" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
-      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="article-header">
-    
+    <div class="article-header">
+      
+        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/15/怎么理解Linux软中断？/">怎么理解Linux软中断？</a>
+    <h1 class="article-title" itemprop="name">
+      怎么理解Linux软中断？
     </h1>
   
 
-  </div>
-  
-  <p class="article-meta">
-    <span class="article-date">
+      
+      <div class="article-meta">
+        <span class="article-date">
     <i class="icon icon-calendar-check"></i>
 	<a href="/2019/09/15/怎么理解Linux软中断？/" class="article-date">
-	  <time datetime="2019-09-15T01:20:45.000Z" itemprop="datePublished">Sep 15</time>
+	  <time datetime="2019-09-15T01:20:45.000Z" itemprop="datePublished">2019-09-15</time>
 	</a>
 </span>
-    
+        
   <span class="article-category">
     <i class="icon icon-folder"></i>
     <a class="article-category-link" href="/categories/Linux/">Linux</a>
   </span>
 
-    
+        
   <span class="article-tag">
     <i class="icon icon-tags"></i>
 	<a class="article-tag-link" href="/tags/Linux/">Linux</a>
   </span>
 
 
-    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/09/15/怎么理解Linux软中断？/#comments" class="article-comment-link">Comments</a></span>
-    
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/09/15/怎么理解Linux软中断？/#comments" class="article-comment-link">Comments</a></span>
+        
 	
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 2.3k(words)</span>
 	
@@ -394,435 +401,208 @@ var _hmt = _hmt || [];
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 7(minutes)</span>
 	
 
-  </p>
-</article>
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h3 id="从“取外卖”看中断"><a href="#从“取外卖”看中断" class="headerlink" title="从“取外卖”看中断"></a>从“取外卖”看中断</h3><p>说到中断，我在前面关于“上下文切换”的文章，简单说过中断的含义，先来回顾一下。中断是系统用来响应硬件设备请求的一种机制，它会打断进程的正常调度和执行，然后调用内核中的中断处理程序来响应设备的请求。</p>
+<p>你可能要问了，为什么要有中断呢？我可以举个生活中的例子，让你感受一下中断的魅力。</p>
+<p>比如说你订了一份外卖，但是不确定外卖什么时候送到，也没有别的方法了解外卖的进度，但是，配送员送外卖是不等人的，到了你这儿没人取的话，就直接走人了。所以你只能苦苦等着，时不时去门口看看外卖送到没，而不能干其他事情。</p>
+<p>不过呢，如果在订外卖的时候，你就跟配送员约定好，让他送到后给你打个电话，那你就不用苦苦等待了，就可以去忙别的事情，直到电话一响，接电话、取外卖就可以了。</p>
+<p>这里的“打电话”，其实就是一个中断。没接到电话的时候，你可以做其他的事情；只有接到了电话（也就是发生中断），你才要进行另一个动作：取外卖。</p>
+<p>这个例子你就可以发现，<strong>中断其实是一种异步的事件处理机制，可以提高系统的并发处理能力。</strong></p>
+<p>由于中断处理程序会打断其他进程的运行，所以，<strong>为了减少对正常进程运行调度的影响，中断处理程序就需要尽可能快地运行。</strong>如果中断本身要做的事情不多，那么处理起来也不会有太大问题；但如果中断要处理的事情很多，中断服务程序就有可能要运行很长时间。</p>
+<p>特别是，中断处理程序在响应中断时，还会临时关闭中断。这就会导致上一次中断处理完成之前，其他中断都不能响应，也就是说中断有可能会丢失。</p>
+<p>那么还是以取外卖为例。假如你订了 2 份外卖，一份主食和一份饮料，并且是由 2 个不同的配送员来配送。这次你不用时时等待着，两份外卖都约定了电话取外卖的方式。但是，问题又来了。</p>
+<p>当第一份外卖送到时，配送员给你打了个长长的电话，商量发票的处理方式。与此同时，第二个配送员也到了，也想给你打电话。</p>
+<p>但是很明显，因为电话占线（也就是关闭了中断响应），第二个配送员的电话是打不通的。所以，第二个配送员很可能试几次后就走掉了（也就是丢失了一次中断）。</p>
+<h3 id="软中断"><a href="#软中断" class="headerlink" title="软中断"></a>软中断</h3><p>如果你弄清楚了“取外卖”的模式，那对系统的中断机制就很容易理解了。事实上，为了解决中断处理程序执行过长和中断丢失的问题，Linux 将中断处理过程分成了两个阶段，<strong>也就是上半部和下半部</strong>：</p>
+<ul>
+<li><p><strong>上半部用来快速处理中断，它在中断禁止模式下运行，主要处理跟硬件紧密相关的或时间敏感的工作。</strong></p>
+</li>
+<li><p><strong>下半部用来延迟处理上半部未完成的工作，通常以内核线程的方式运行。</strong></p>
+</li>
+</ul>
+<p>比如说前面取外卖的例子，上半部就是你接听电话，告诉配送员你已经知道了，其他事儿见面再说，然后电话就可以挂断了；下半部才是取外卖的动作，以及见面后商量发票处理的动作。</p>
+<p>这样，第一个配送员不会占用你太多时间，当第二个配送员过来时，照样能正常打通你的电话。</p>
+<p>除了取外卖，我再举个最常见的网卡接收数据包的例子，让你更好地理解。</p>
+<p>网卡接收到数据包后，会通过<strong>硬件中断</strong>的方式，通知内核有新的数据到了。这时，内核就应该调用中断处理程序来响应它。你可以自己先想一下，这种情况下的上半部和下半部分别负责什么工作呢？</p>
+<p>对上半部来说，既然是快速处理，其实就是要把网卡的数据读到内存中，然后更新一下硬件寄存器的状态（表示数据已经读好了），最后再发送一个<strong>软中断</strong>信号，通知下半部做进一步的处理。</p>
+<p>而下半部被软中断信号唤醒后，需要从内存中找到网络数据，再按照网络协议栈，对数据进行逐层解析和处理，直到把它送给应用程序。</p>
+<p>所以，这两个阶段你也可以这样理解：</p>
+<ul>
+<li><p>上半部直接处理硬件请求，也就是我们常说的硬中断，特点是快速执行；</p>
+</li>
+<li><p>而下半部则是由内核触发，也就是我们常说的软中断，特点是延迟执行。</p>
+</li>
+</ul>
+<p>实际上，上半部会打断 CPU 正在执行的任务，然后立即执行中断处理程序。而下半部以内核线程的方式执行，并且每个 CPU 都对应一个软中断内核线程，名字为 “ksoftirqd/CPU 编号”，比如说， 0 号 CPU 对应的软中断内核线程的名字就是 ksoftirqd/0。</p>
+<p>不过要注意的是，软中断不只包括了刚刚所讲的硬件设备中断处理程序的下半部，一些内核自定义的事件也属于软中断，比如内核调度和 RCU 锁（Read-Copy Update 的缩写，RCU 是 Linux 内核中最常用的锁之一）等。</p>
+<p>那要怎么知道你的系统里有哪些软中断呢？</p>
+<h3 id="查看软中断和内核线程"><a href="#查看软中断和内核线程" class="headerlink" title="查看软中断和内核线程"></a>查看软中断和内核线程</h3><p>不知道你还记不记得，前面提到过的 proc 文件系统。它是一种内核空间和用户空间进行通信的机制，可以用来查看内核的数据结构，或者用来动态修改内核的配置。其中：</p>
+<ul>
+<li><p>/proc/softirqs 提供了软中断的运行情况；</p>
+</li>
+<li><p>/proc/interrupts 提供了硬中断的运行情况。</p>
+</li>
+</ul>
+<p>运行下面的命令，查看 /proc/softirqs 文件的内容，你就可以看到各种类型软中断在不同 CPU 上的累积运行次数：</p>
+<pre><code>`cat /proc/softirqs
+                CPU0       CPU1
+      HI:          0          0
+   TIMER:     811613    1972736
+  NET_TX:         49          7
+  NET_RX:    1136736    1506885
+   BLOCK:          0          0
+IRQ_POLL:          0          0
+ TASKLET:     304787       3691
+   SCHED:     689718    1897539
+ HRTIMER:          0          0
+     RCU:    1330771    1354737
+`</code></pre><p>在查看 /proc/softirqs 文件内容时，你要特别注意以下这两点。</p>
+<p>第一，要注意软中断的类型，也就是这个界面中第一列的内容。从第一列你可以看到，软中断包括了 10 个类别，分别对应不同的工作类型。比如 NETRX 表示网络接收中断，而 NETTX 表示网络发送中断。</p>
+<p>第二，要注意同一种软中断在不同 CPU 上的分布情况，也就是同一行的内容。正常情况下，同一种中断在不同 CPU 上的累积次数应该差不多。比如这个界面中，NETRX 在 CPU0 和 CPU1 上的中断次数基本是同一个数量级，相差不大。</p>
+<p>不过你可能发现，TASKLET 在不同 CPU 上的分布并不均匀。TASKLET 是最常用的软中断实现机制，每个 TASKLET 只运行一次就会结束 ，并且只在调用它的函数所在的 CPU 上运行。</p>
+<p>因此，使用 TASKLET 特别简便，当然也会存在一些问题，比如说由于只在一个 CPU 上运行导致的调度不均衡，再比如因为不能在多个 CPU 上并行运行带来了性能限制。</p>
+<p>另外，刚刚提到过，软中断实际上是以内核线程的方式运行的，每个 CPU 都对应一个软中断内核线程，这个软中断内核线程就叫做 ksoftirqd/CPU 编号。那要怎么查看这些线程的运行状况呢？</p>
+<p>其实用 ps 命令就可以做到，比如执行下面的指令：</p>
+<pre><code>`ps aux | grep softirq
+root         7  0.0  0.0      0     0 ?        S    Oct10   0:01 [ksoftirqd/0]
+root        16  0.0  0.0      0     0 ?        S    Oct10   0:01 [ksoftirqd/1]
+`</code></pre><p>注意，这些线程的名字外面都有中括号，这说明 ps 无法获取它们的命令行参数（cmline）。一般来说，ps 的输出中，名字括在中括号里的，一般都是内核线程。</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>Linux 中的中断处理程序分为上半部和下半部：</p>
+<ol>
+<li><p>上半部对应硬件中断，用来快速处理中断。</p>
+</li>
+<li><p>下半部对应软中断，用来异步处理上半部未完成的工作。</p>
+</li>
+</ol>
+<p>Linux 中的软中断包括网络收发、定时、调度、RCU 锁等各种类型，可以通过查看 /proc/softirqs 来观察软中断的运行情况。</p>
 
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
     
-      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="article-header">
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://www.ithelei.com/2019/09/15/怎么理解Linux软中断？/" title="怎么理解Linux软中断？" target="_blank" rel="external">http://www.ithelei.com/2019/09/15/怎么理解Linux软中断？/</a>
+    </li>
     
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/15/系统中出现大量不可中断进程和僵尸进程怎么办？（上）/">系统中出现大量不可中断进程和僵尸进程怎么办？（上）</a>
-    </h1>
-  
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
 
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/ithelei" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/ithelei" target="_blank"><span class="text-dark">养码哥</span><small class="ml-1x">Developer</small></a></h3>
+        <div>创业者，喜欢读书，喜欢分享，希望有一天可以赚很多的钱，去干够风骚有意义的事情。我是养码哥，一个仍然在路上，向往自由和梦想的人！</div>
+      </div>
+    </figure>
   </div>
+</div>
+
+
+    </div>
+  </article>
   
-  <p class="article-meta">
-    <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2019/09/15/系统中出现大量不可中断进程和僵尸进程怎么办？（上）/" class="article-date">
-	  <time datetime="2019-09-15T01:20:45.000Z" itemprop="datePublished">Sep 15</time>
-	</a>
-</span>
     
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/CPU/">CPU</a>
-  </span>
-
+  <section id="comments">
+  	
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NjI4My8yMjc5NA">
+        <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+      </div>    
     
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/CPU/">CPU</a>
-  </span>
+  </section>
 
 
-    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/09/15/系统中出现大量不可中断进程和僵尸进程怎么办？（上）/#comments" class="article-comment-link">Comments</a></span>
-    
-	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 3.1k(words)</span>
-	
-	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 12(minutes)</span>
-	
-
-  </p>
-</article>
-
-    
-      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="article-header">
-    
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/15/系统中出现大量不可中断进程和僵尸进程怎么办？（下）/">系统中出现大量不可中断进程和僵尸进程怎么办？（下）</a>
-    </h1>
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
   
-
-  </div>
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2019/09/15/系统中出现大量不可中断进程和僵尸进程怎么办？（上）/" title="系统中出现大量不可中断进程和僵尸进程怎么办？（上）"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
   
-  <p class="article-meta">
-    <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2019/09/15/系统中出现大量不可中断进程和僵尸进程怎么办？（下）/" class="article-date">
-	  <time datetime="2019-09-15T01:20:45.000Z" itemprop="datePublished">Sep 15</time>
-	</a>
-</span>
-    
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/CPU/">CPU</a>
-  </span>
-
-    
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/CPU/">CPU</a>
-  </span>
-
-
-    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/09/15/系统中出现大量不可中断进程和僵尸进程怎么办？（下）/#comments" class="article-comment-link">Comments</a></span>
-    
-	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 3.7k(words)</span>
-	
-	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 15(minutes)</span>
-	
-
-  </p>
-</article>
-
-    
-      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="article-header">
-    
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/08/中台成为构架企业数字营销的主要模式/">中台成为构架企业数字营销的主要模式</a>
-    </h1>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>$</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
   
-
-  </div>
   
-  <p class="article-meta">
-    <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2019/09/08/中台成为构架企业数字营销的主要模式/" class="article-date">
-	  <time datetime="2019-09-08T01:20:45.000Z" itemprop="datePublished">Sep 8</time>
-	</a>
-</span>
+  <div class="bar-right">
     
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/中台/">中台</a>
-  </span>
-
-    
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/中台/">中台</a>
-  </span>
-
-
-    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/09/08/中台成为构架企业数字营销的主要模式/#comments" class="article-comment-link">Comments</a></span>
-    
-	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 625(words)</span>
-	
-	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2(minutes)</span>
-	
-
-  </p>
-</article>
-
-    
-      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="article-header">
-    
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/08/产业互联网时代的企业数字化/">产业互联网时代的企业数字化</a>
-    </h1>
-  
-
-  </div>
-  
-  <p class="article-meta">
-    <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2019/09/08/产业互联网时代的企业数字化/" class="article-date">
-	  <time datetime="2019-09-08T01:20:45.000Z" itemprop="datePublished">Sep 8</time>
-	</a>
-</span>
-    
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/产业互联网/">产业互联网</a>
-  </span>
-
-    
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/产业互联网/">产业互联网</a>
-  </span>
-
-
-    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/09/08/产业互联网时代的企业数字化/#comments" class="article-comment-link">Comments</a></span>
-    
-	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 563(words)</span>
-	
-	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1(minutes)</span>
-	
-
-  </p>
-</article>
-
-    
-      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="article-header">
-    
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/08/数字营销是企业数字化转型的重要突破口/">数字营销是企业数字化转型的重要突破口</a>
-    </h1>
-  
-
-  </div>
-  
-  <p class="article-meta">
-    <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2019/09/08/数字营销是企业数字化转型的重要突破口/" class="article-date">
-	  <time datetime="2019-09-08T01:20:45.000Z" itemprop="datePublished">Sep 8</time>
-	</a>
-</span>
-    
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/数字营销/">数字营销</a>
-  </span>
-
-    
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/数字营销/">数字营销</a>
-  </span>
-
-
-    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/09/08/数字营销是企业数字化转型的重要突破口/#comments" class="article-comment-link">Comments</a></span>
-    
-	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 751(words)</span>
-	
-	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2(minutes)</span>
-	
-
-  </p>
-</article>
-
-    
-      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="article-header">
-    
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/02/传统xml配置方式/">传统xml配置方式</a>
-    </h1>
-  
-
-  </div>
-  
-  <p class="article-meta">
-    <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2019/09/02/传统xml配置方式/" class="article-date">
-	  <time datetime="2019-09-02T01:20:45.000Z" itemprop="datePublished">Sep 2</time>
-	</a>
-</span>
-    
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/SpringBoot/">SpringBoot</a>
-  </span>
-
-    
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/SpringBoot/">SpringBoot</a>
-  </span>
-
-
-    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/09/02/传统xml配置方式/#comments" class="article-comment-link">Comments</a></span>
-    
-	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 736(words)</span>
-	
-	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 4(minutes)</span>
-	
-
-  </p>
-</article>
-
-    
-      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="article-header">
-    
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/02/CPU使用率居然打满/">某个应用的CPU使用率居然打满,我该怎么办？</a>
-    </h1>
-  
-
-  </div>
-  
-  <p class="article-meta">
-    <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2019/09/02/CPU使用率居然打满/" class="article-date">
-	  <time datetime="2019-09-02T01:20:45.000Z" itemprop="datePublished">Sep 2</time>
-	</a>
-</span>
-    
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/CPU/">CPU</a>
-  </span>
-
-    
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/CPU/">CPU</a>
-  </span>
-
-
-    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/09/02/CPU使用率居然打满/#comments" class="article-comment-link">Comments</a></span>
-    
-	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 5.4k(words)</span>
-	
-	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 21(minutes)</span>
-	
-
-  </p>
-</article>
-
-    
-      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="article-header">
-    
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/01/系统的 CPU 使用率很高，但为啥却找不到高 CPU 的应用？/">系统的 CPU 使用率很高，但为啥却找不到高 CPU 的应用？</a>
-    </h1>
-  
-
-  </div>
-  
-  <p class="article-meta">
-    <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2019/09/01/系统的 CPU 使用率很高，但为啥却找不到高 CPU 的应用？/" class="article-date">
-	  <time datetime="2019-09-01T01:20:45.000Z" itemprop="datePublished">Sep 1</time>
-	</a>
-</span>
-    
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/CPU/">CPU</a>
-  </span>
-
-    
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/CPU/">CPU</a>
-  </span>
-
-
-    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/09/01/系统的 CPU 使用率很高，但为啥却找不到高 CPU 的应用？/#comments" class="article-comment-link">Comments</a></span>
-    
-	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 4.9k(words)</span>
-	
-	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 20(minutes)</span>
-	
-
-  </p>
-</article>
-
-    
-      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="article-header">
-    
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/01/经常说的-CPU-上下文切换是什么意思？（下）/">经常说的-CPU-上下文切换是什么意思？（下）</a>
-    </h1>
-  
-
-  </div>
-  
-  <p class="article-meta">
-    <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2019/09/01/经常说的-CPU-上下文切换是什么意思？（下）/" class="article-date">
-	  <time datetime="2019-09-01T01:20:45.000Z" itemprop="datePublished">Sep 1</time>
-	</a>
-</span>
-    
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/CPU/">CPU</a>
-  </span>
-
-    
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/CPU/">CPU</a>
-  </span>
-
-
-    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/09/01/经常说的-CPU-上下文切换是什么意思？（下）/#comments" class="article-comment-link">Comments</a></span>
-    
-	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 3.2k(words)</span>
-	
-	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 11(minutes)</span>
-	
-
-  </p>
-</article>
-
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
     
   </div>
-
+  </div>
+</nav>
   
-    
-    <nav class="bar bar-footer clearfix" data-stick-bottom>
-        <div class="bar-inner">
-        <ul class="pager pull-left">
-            
-            <li class="prev disabled">
-                <a href="javascript:;">
-                    <i class="icon icon-angle-left"></i>
-                    Prev
-                </a>
-            </li>
-            
-            
-            <li class="next">
-                <a href="/page/2/">
-                    Next
-                    <i class="icon icon-angle-right"></i>
-                </a>
-            </li>
-            
-        </ul>
-        <div class="total-article bar-right">Page 1 of 3</div>
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>Maybe you could buy me a cup of coffee.</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open alipay app scan this qrcode, buy me a coffee!</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open wechat app scan this qrcode, buy me a coffee!</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> alipay</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> wechat payment</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
-    
- 
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -887,6 +667,24 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
    
 
+
+
+
+   
+    
+<script defer type="text/javascript">
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
 
 
 

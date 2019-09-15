@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ithelei.com/"/>
-  <updated>2019-09-15T05:34:08.608Z</updated>
+  <updated>2019-09-15T06:29:22.462Z</updated>
   <id>http://www.ithelei.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>怎么理解Linux软中断？</title>
+    <link href="http://www.ithelei.com/2019/09/15/%E6%80%8E%E4%B9%88%E7%90%86%E8%A7%A3Linux%E8%BD%AF%E4%B8%AD%E6%96%AD%EF%BC%9F/"/>
+    <id>http://www.ithelei.com/2019/09/15/怎么理解Linux软中断？/</id>
+    <published>2019-09-15T01:20:45.000Z</published>
+    <updated>2019-09-15T06:29:22.462Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;从“取外卖”看中断&quot;&gt;&lt;a href=&quot;#从“取外卖”看中断&quot; class=&quot;headerlink&quot; title=&quot;从“取外卖”看中断&quot;&gt;&lt;/a&gt;从“取外卖”看中断&lt;/h3&gt;&lt;p&gt;说到中断，我在前面关于“上下文切换”的文章，简单说过中断的含义，先来回顾一下。中断是
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.ithelei.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.ithelei.com/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>系统中出现大量不可中断进程和僵尸进程怎么办？（上）</title>
@@ -65,6 +88,29 @@
   </entry>
   
   <entry>
+    <title>中台成为构架企业数字营销的主要模式</title>
+    <link href="http://www.ithelei.com/2019/09/08/%E4%B8%AD%E5%8F%B0%E6%88%90%E4%B8%BA%E6%9E%84%E6%9E%B6%E4%BC%81%E4%B8%9A%E6%95%B0%E5%AD%97%E8%90%A5%E9%94%80%E7%9A%84%E4%B8%BB%E8%A6%81%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.ithelei.com/2019/09/08/中台成为构架企业数字营销的主要模式/</id>
+    <published>2019-09-08T01:20:45.000Z</published>
+    <updated>2019-09-08T14:51:07.944Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在产业互联网时代，当数字化成为企业的核心战略后，如何实现业务数据化?如何使数据赋能企业推动业务转型升级?如何提升企业数字资产的价值?这些都成为制约企业发展的难题。在此背景下，&lt;strong&gt;数字中台&lt;br&gt;成为指导企业数字化转型、实现数字营销的主流方法。&lt;/strong&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="中台" scheme="http://www.ithelei.com/categories/%E4%B8%AD%E5%8F%B0/"/>
+    
+    
+      <category term="中台" scheme="http://www.ithelei.com/tags/%E4%B8%AD%E5%8F%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>产业互联网时代的企业数字化</title>
     <link href="http://www.ithelei.com/2019/09/08/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3%E7%9A%84%E4%BC%81%E4%B8%9A%E6%95%B0%E5%AD%97%E5%8C%96/"/>
     <id>http://www.ithelei.com/2019/09/08/产业互联网时代的企业数字化/</id>
@@ -85,29 +131,6 @@
     
     
       <category term="产业互联网" scheme="http://www.ithelei.com/tags/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>中台成为构架企业数字营销的主要模式</title>
-    <link href="http://www.ithelei.com/2019/09/08/%E4%B8%AD%E5%8F%B0%E6%88%90%E4%B8%BA%E6%9E%84%E6%9E%B6%E4%BC%81%E4%B8%9A%E6%95%B0%E5%AD%97%E8%90%A5%E9%94%80%E7%9A%84%E4%B8%BB%E8%A6%81%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.ithelei.com/2019/09/08/中台成为构架企业数字营销的主要模式/</id>
-    <published>2019-09-08T01:20:45.000Z</published>
-    <updated>2019-09-08T14:51:07.944Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;在产业互联网时代，当数字化成为企业的核心战略后，如何实现业务数据化?如何使数据赋能企业推动业务转型升级?如何提升企业数字资产的价值?这些都成为制约企业发展的难题。在此背景下，&lt;strong&gt;数字中台&lt;br&gt;成为指导企业数字化转型、实现数字营销的主流方法。&lt;/strong&gt;&lt;
-      
-    
-    </summary>
-    
-      <category term="中台" scheme="http://www.ithelei.com/categories/%E4%B8%AD%E5%8F%B0/"/>
-    
-    
-      <category term="中台" scheme="http://www.ithelei.com/tags/%E4%B8%AD%E5%8F%B0/"/>
     
   </entry>
   
@@ -137,29 +160,6 @@
   </entry>
   
   <entry>
-    <title>某个应用的CPU使用率居然打满,我该怎么办？</title>
-    <link href="http://www.ithelei.com/2019/09/02/CPU%E4%BD%BF%E7%94%A8%E7%8E%87%E5%B1%85%E7%84%B6%E6%89%93%E6%BB%A1/"/>
-    <id>http://www.ithelei.com/2019/09/02/CPU使用率居然打满/</id>
-    <published>2019-09-02T01:20:45.000Z</published>
-    <updated>2019-09-08T11:54:18.694Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;CPU 使用率是单位时间内 CPU 使用情况的统计，以百分比的方式展示。那么，作为最常用也是最熟悉的 CPU 指标，你能说出 CPU 使用率到底是怎么算出来的吗？再有，诸如 top、ps 之类的性能工具展示的 %user、%nice、 %system、%iowait 、%s
-      
-    
-    </summary>
-    
-      <category term="CPU" scheme="http://www.ithelei.com/categories/CPU/"/>
-    
-    
-      <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
-    
-  </entry>
-  
-  <entry>
     <title>传统xml配置方式</title>
     <link href="http://www.ithelei.com/2019/09/02/%E4%BC%A0%E7%BB%9Fxml%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F/"/>
     <id>http://www.ithelei.com/2019/09/02/传统xml配置方式/</id>
@@ -184,17 +184,17 @@
   </entry>
   
   <entry>
-    <title>经常说的-CPU-上下文切换是什么意思？（上）</title>
-    <link href="http://www.ithelei.com/2019/09/01/%E7%BB%8F%E5%B8%B8%E8%AF%B4%E7%9A%84-CPU-%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%87%E6%8D%A2%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D%EF%BC%9F%EF%BC%88%E4%B8%8A%EF%BC%89/"/>
-    <id>http://www.ithelei.com/2019/09/01/经常说的-CPU-上下文切换是什么意思？（上）/</id>
-    <published>2019-09-01T01:20:45.000Z</published>
-    <updated>2019-09-01T11:47:28.043Z</updated>
+    <title>某个应用的CPU使用率居然打满,我该怎么办？</title>
+    <link href="http://www.ithelei.com/2019/09/02/CPU%E4%BD%BF%E7%94%A8%E7%8E%87%E5%B1%85%E7%84%B6%E6%89%93%E6%BB%A1/"/>
+    <id>http://www.ithelei.com/2019/09/02/CPU使用率居然打满/</id>
+    <published>2019-09-02T01:20:45.000Z</published>
+    <updated>2019-09-08T11:54:18.694Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;理解平均负载（ Load Average），并用三个案例展示了不同场景下平均负载升高的分析方法。这其中，多个进程竞争 CPU 就是一个经常被我们忽视的问题。&lt;br&gt;我想你一定很好奇，进程在竞争 CPU 的时候并没有真正运行，为什么还会导致系统的负载升高呢？看到今天的主题，你
+        &lt;p&gt;CPU 使用率是单位时间内 CPU 使用情况的统计，以百分比的方式展示。那么，作为最常用也是最熟悉的 CPU 指标，你能说出 CPU 使用率到底是怎么算出来的吗？再有，诸如 top、ps 之类的性能工具展示的 %user、%nice、 %system、%iowait 、%s
       
     
     </summary>
@@ -244,6 +244,29 @@
       
         &lt;p&gt;CPU 上下文切换的工作原理。简单回顾一下，CPU 上下文切换是保证 Linux 系统正常工作的一个核心功能，按照不同场景，可以分为进程上下文切换、线程上下文切换和中断上下文切换。具体的概念和区别，你也要在脑海中过一遍，忘了的话及时查看上一篇。&lt;/p&gt;
 &lt;h3 id=&quot;怎么
+      
+    
+    </summary>
+    
+      <category term="CPU" scheme="http://www.ithelei.com/categories/CPU/"/>
+    
+    
+      <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>经常说的-CPU-上下文切换是什么意思？（上）</title>
+    <link href="http://www.ithelei.com/2019/09/01/%E7%BB%8F%E5%B8%B8%E8%AF%B4%E7%9A%84-CPU-%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%87%E6%8D%A2%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D%EF%BC%9F%EF%BC%88%E4%B8%8A%EF%BC%89/"/>
+    <id>http://www.ithelei.com/2019/09/01/经常说的-CPU-上下文切换是什么意思？（上）/</id>
+    <published>2019-09-01T01:20:45.000Z</published>
+    <updated>2019-09-01T11:47:28.043Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;理解平均负载（ Load Average），并用三个案例展示了不同场景下平均负载升高的分析方法。这其中，多个进程竞争 CPU 就是一个经常被我们忽视的问题。&lt;br&gt;我想你一定很好奇，进程在竞争 CPU 的时候并没有真正运行，为什么还会导致系统的负载升高呢？看到今天的主题，你
       
     
     </summary>
@@ -382,17 +405,17 @@
   </entry>
   
   <entry>
-    <title>百度云智峰会（实战环节）</title>
-    <link href="http://www.ithelei.com/2019/08/29/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%99%BA%E5%B3%B0%E4%BC%9A%20%EF%BC%88%E5%AE%9E%E6%88%98%EF%BC%89%E6%9C%AC/"/>
-    <id>http://www.ithelei.com/2019/08/29/百度云智峰会 （实战）本/</id>
+    <title>百度云智峰会</title>
+    <link href="http://www.ithelei.com/2019/08/29/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%99%BA%E5%B3%B0%E4%BC%9A/"/>
+    <id>http://www.ithelei.com/2019/08/29/百度云智峰会/</id>
     <published>2019-08-29T01:20:45.000Z</published>
-    <updated>2019-09-01T12:50:52.310Z</updated>
+    <updated>2019-09-01T12:36:57.939Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;百度云智峰会，上机实战环节。&quot;&gt;&lt;a href=&quot;#百度云智峰会，上机实战环节。&quot; class=&quot;headerlink&quot; title=&quot;百度云智峰会，上机实战环节。&quot;&gt;&lt;/a&gt;百度云智峰会，上机实战环节。&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;在这里由于表现突出，得了一个
+        &lt;h3 id=&quot;百度云智峰会，科技为更好。&quot;&gt;&lt;a href=&quot;#百度云智峰会，科技为更好。&quot; class=&quot;headerlink&quot; title=&quot;百度云智峰会，科技为更好。&quot;&gt;&lt;/a&gt;百度云智峰会，科技为更好。&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://jishu-re
       
     
     </summary>
@@ -405,17 +428,17 @@
   </entry>
   
   <entry>
-    <title>百度云智峰会</title>
-    <link href="http://www.ithelei.com/2019/08/29/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%99%BA%E5%B3%B0%E4%BC%9A/"/>
-    <id>http://www.ithelei.com/2019/08/29/百度云智峰会/</id>
+    <title>百度云智峰会（实战环节）</title>
+    <link href="http://www.ithelei.com/2019/08/29/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%99%BA%E5%B3%B0%E4%BC%9A%20%EF%BC%88%E5%AE%9E%E6%88%98%EF%BC%89%E6%9C%AC/"/>
+    <id>http://www.ithelei.com/2019/08/29/百度云智峰会 （实战）本/</id>
     <published>2019-08-29T01:20:45.000Z</published>
-    <updated>2019-09-01T12:36:57.939Z</updated>
+    <updated>2019-09-01T12:50:52.310Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;百度云智峰会，科技为更好。&quot;&gt;&lt;a href=&quot;#百度云智峰会，科技为更好。&quot; class=&quot;headerlink&quot; title=&quot;百度云智峰会，科技为更好。&quot;&gt;&lt;/a&gt;百度云智峰会，科技为更好。&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://jishu-re
+        &lt;h3 id=&quot;百度云智峰会，上机实战环节。&quot;&gt;&lt;a href=&quot;#百度云智峰会，上机实战环节。&quot; class=&quot;headerlink&quot; title=&quot;百度云智峰会，上机实战环节。&quot;&gt;&lt;/a&gt;百度云智峰会，上机实战环节。&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;在这里由于表现突出，得了一个
       
     
     </summary>
@@ -464,31 +487,6 @@
       
         &lt;h3 id=&quot;继MySQL优化-1&quot;&gt;&lt;a href=&quot;#继MySQL优化-1&quot; class=&quot;headerlink&quot; title=&quot;继MySQL优化(1)&quot;&gt;&lt;/a&gt;继MySQL优化(1)&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;并不是所有索引对查询都有效，sql语句是根军表中数据来进行优
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL规范</title>
-    <link href="http://www.ithelei.com/2019/08/27/MySQL%E8%A7%84%E8%8C%83/"/>
-    <id>http://www.ithelei.com/2019/08/27/MySQL规范/</id>
-    <published>2019-08-27T13:45:00.000Z</published>
-    <updated>2019-08-27T14:16:51.451Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;一、基础规范&quot;&gt;&lt;a href=&quot;#一、基础规范&quot; class=&quot;headerlink&quot; title=&quot;一、基础规范&quot;&gt;&lt;/a&gt;一、基础规范&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;表存储引擎必须使用InnoDB&lt;/li&gt;
-&lt;li&gt;表字符集默认使用utf8，必要时候使用utf8
       
     
     </summary>
