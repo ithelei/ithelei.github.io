@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ithelei.com/"/>
-  <updated>2019-09-15T05:34:08.608Z</updated>
+  <updated>2019-09-15T06:06:23.953Z</updated>
   <id>http://www.ithelei.com/</id>
   
   <author>
@@ -15,29 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>系统中出现大量不可中断进程和僵尸进程怎么办？（上）</title>
-    <link href="http://www.ithelei.com/2019/09/15/%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%87%BA%E7%8E%B0%E5%A4%A7%E9%87%8F%E4%B8%8D%E5%8F%AF%E4%B8%AD%E6%96%AD%E8%BF%9B%E7%A8%8B%E5%92%8C%E5%83%B5%E5%B0%B8%E8%BF%9B%E7%A8%8B%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F%EF%BC%88%E4%B8%8A%EF%BC%89/"/>
-    <id>http://www.ithelei.com/2019/09/15/系统中出现大量不可中断进程和僵尸进程怎么办？（上）/</id>
-    <published>2019-09-15T01:20:45.000Z</published>
-    <updated>2019-09-15T05:34:08.608Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;进程状态&quot;&gt;&lt;a href=&quot;#进程状态&quot; class=&quot;headerlink&quot; title=&quot;进程状态&quot;&gt;&lt;/a&gt;进程状态&lt;/h3&gt;&lt;p&gt;当 iowait 升高时，进程很可能因为得不到硬件的响应，而长时间处于不可中断状态。从 ps 或者 top 命令的输出中，你
-      
-    
-    </summary>
-    
-      <category term="CPU" scheme="http://www.ithelei.com/categories/CPU/"/>
-    
-    
-      <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
-    
-  </entry>
   
   <entry>
     <title>系统中出现大量不可中断进程和僵尸进程怎么办？（下）</title>
@@ -53,6 +30,29 @@
         &lt;p&gt;使用 ps 或者 top 可以查看进程的状态，这些状态包括运行、空闲、不可中断睡眠、可中断睡眠、僵尸以及暂停等。其中，我们重点学习了不可中断状态和僵尸进程：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;不可中断状态，一般表示进程正在跟硬件交互，为了保护进程数据与硬件一致，系统不允许其他
+      
+    
+    </summary>
+    
+      <category term="CPU" scheme="http://www.ithelei.com/categories/CPU/"/>
+    
+    
+      <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>系统中出现大量不可中断进程和僵尸进程怎么办？（上）</title>
+    <link href="http://www.ithelei.com/2019/09/15/%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%87%BA%E7%8E%B0%E5%A4%A7%E9%87%8F%E4%B8%8D%E5%8F%AF%E4%B8%AD%E6%96%AD%E8%BF%9B%E7%A8%8B%E5%92%8C%E5%83%B5%E5%B0%B8%E8%BF%9B%E7%A8%8B%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F%EF%BC%88%E4%B8%8A%EF%BC%89/"/>
+    <id>http://www.ithelei.com/2019/09/15/系统中出现大量不可中断进程和僵尸进程怎么办？（上）/</id>
+    <published>2019-09-15T01:20:45.000Z</published>
+    <updated>2019-09-15T05:34:08.608Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;进程状态&quot;&gt;&lt;a href=&quot;#进程状态&quot; class=&quot;headerlink&quot; title=&quot;进程状态&quot;&gt;&lt;/a&gt;进程状态&lt;/h3&gt;&lt;p&gt;当 iowait 升高时，进程很可能因为得不到硬件的响应，而长时间处于不可中断状态。从 ps 或者 top 命令的输出中，你
       
     
     </summary>
@@ -111,6 +111,30 @@
   </entry>
   
   <entry>
+    <title>产业互联网时代的企业数字化</title>
+    <link href="http://www.ithelei.com/2019/09/08/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3%E7%9A%84%E4%BC%81%E4%B8%9A%E6%95%B0%E5%AD%97%E5%8C%96/"/>
+    <id>http://www.ithelei.com/2019/09/08/产业互联网时代的企业数字化/</id>
+    <published>2019-09-08T01:20:45.000Z</published>
+    <updated>2019-09-08T13:14:27.365Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;企业数字化的主要特征包括3个方面：&lt;strong&gt;第一是连接，&lt;/strong&gt;连接员工、连接客户、连接机器设备；&lt;strong&gt;第二是数据，&lt;/strong&gt;也就是连接之后实时产生的数据；&lt;strong&gt;第三是智能，&lt;/strong&gt;是数据驱动的智能应用。&lt;/p&gt;
+&lt;p&gt;
+      
+    
+    </summary>
+    
+      <category term="产业互联网" scheme="http://www.ithelei.com/categories/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    
+    
+      <category term="产业互联网" scheme="http://www.ithelei.com/tags/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>数字营销是企业数字化转型的重要突破口</title>
     <link href="http://www.ithelei.com/2019/09/08/%E6%95%B0%E5%AD%97%E8%90%A5%E9%94%80%E6%98%AF%E4%BC%81%E4%B8%9A%E6%95%B0%E5%AD%97%E5%8C%96%E8%BD%AC%E5%9E%8B%E7%9A%84%E9%87%8D%E8%A6%81%E7%AA%81%E7%A0%B4%E5%8F%A3/"/>
     <id>http://www.ithelei.com/2019/09/08/数字营销是企业数字化转型的重要突破口/</id>
@@ -132,30 +156,6 @@
     
     
       <category term="数字营销" scheme="http://www.ithelei.com/tags/%E6%95%B0%E5%AD%97%E8%90%A5%E9%94%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>产业互联网时代的企业数字化</title>
-    <link href="http://www.ithelei.com/2019/09/08/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3%E7%9A%84%E4%BC%81%E4%B8%9A%E6%95%B0%E5%AD%97%E5%8C%96/"/>
-    <id>http://www.ithelei.com/2019/09/08/产业互联网时代的企业数字化/</id>
-    <published>2019-09-08T01:20:45.000Z</published>
-    <updated>2019-09-08T13:14:27.365Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;企业数字化的主要特征包括3个方面：&lt;strong&gt;第一是连接，&lt;/strong&gt;连接员工、连接客户、连接机器设备；&lt;strong&gt;第二是数据，&lt;/strong&gt;也就是连接之后实时产生的数据；&lt;strong&gt;第三是智能，&lt;/strong&gt;是数据驱动的智能应用。&lt;/p&gt;
-&lt;p&gt;
-      
-    
-    </summary>
-    
-      <category term="产业互联网" scheme="http://www.ithelei.com/categories/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91/"/>
-    
-    
-      <category term="产业互联网" scheme="http://www.ithelei.com/tags/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
   </entry>
   
@@ -184,29 +184,6 @@
   </entry>
   
   <entry>
-    <title>某个应用的CPU使用率居然打满,我该怎么办？</title>
-    <link href="http://www.ithelei.com/2019/09/02/CPU%E4%BD%BF%E7%94%A8%E7%8E%87%E5%B1%85%E7%84%B6%E6%89%93%E6%BB%A1/"/>
-    <id>http://www.ithelei.com/2019/09/02/CPU使用率居然打满/</id>
-    <published>2019-09-02T01:20:45.000Z</published>
-    <updated>2019-09-08T11:54:18.694Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;CPU 使用率是单位时间内 CPU 使用情况的统计，以百分比的方式展示。那么，作为最常用也是最熟悉的 CPU 指标，你能说出 CPU 使用率到底是怎么算出来的吗？再有，诸如 top、ps 之类的性能工具展示的 %user、%nice、 %system、%iowait 、%s
-      
-    
-    </summary>
-    
-      <category term="CPU" scheme="http://www.ithelei.com/categories/CPU/"/>
-    
-    
-      <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
-    
-  </entry>
-  
-  <entry>
     <title>传统xml配置方式</title>
     <link href="http://www.ithelei.com/2019/09/02/%E4%BC%A0%E7%BB%9Fxml%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F/"/>
     <id>http://www.ithelei.com/2019/09/02/传统xml配置方式/</id>
@@ -231,41 +208,17 @@
   </entry>
   
   <entry>
-    <title>能力图谱</title>
-    <link href="http://www.ithelei.com/2019/09/01/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
-    <id>http://www.ithelei.com/2019/09/01/能力图谱/</id>
-    <published>2019-09-01T01:20:45.000Z</published>
-    <updated>2019-09-01T01:24:41.711Z</updated>
+    <title>某个应用的CPU使用率居然打满,我该怎么办？</title>
+    <link href="http://www.ithelei.com/2019/09/02/CPU%E4%BD%BF%E7%94%A8%E7%8E%87%E5%B1%85%E7%84%B6%E6%89%93%E6%BB%A1/"/>
+    <id>http://www.ithelei.com/2019/09/02/CPU使用率居然打满/</id>
+    <published>2019-09-02T01:20:45.000Z</published>
+    <updated>2019-09-08T11:54:18.694Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;工程师能力图谱：&quot;&gt;&lt;a href=&quot;#工程师能力图谱：&quot; class=&quot;headerlink&quot; title=&quot;工程师能力图谱：&quot;&gt;&lt;/a&gt;工程师能力图谱：&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijin
-      
-    
-    </summary>
-    
-      <category term="能力图谱" scheme="http://www.ithelei.com/categories/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
-    
-    
-      <category term="能力图谱" scheme="http://www.ithelei.com/tags/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>经常说的-CPU-上下文切换是什么意思？（下）</title>
-    <link href="http://www.ithelei.com/2019/09/01/%E7%BB%8F%E5%B8%B8%E8%AF%B4%E7%9A%84-CPU-%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%87%E6%8D%A2%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D%EF%BC%9F%EF%BC%88%E4%B8%8B%EF%BC%89/"/>
-    <id>http://www.ithelei.com/2019/09/01/经常说的-CPU-上下文切换是什么意思？（下）/</id>
-    <published>2019-09-01T01:20:45.000Z</published>
-    <updated>2019-09-01T11:48:34.973Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;CPU 上下文切换的工作原理。简单回顾一下，CPU 上下文切换是保证 Linux 系统正常工作的一个核心功能，按照不同场景，可以分为进程上下文切换、线程上下文切换和中断上下文切换。具体的概念和区别，你也要在脑海中过一遍，忘了的话及时查看上一篇。&lt;/p&gt;
-&lt;h3 id=&quot;怎么
+        &lt;p&gt;CPU 使用率是单位时间内 CPU 使用情况的统计，以百分比的方式展示。那么，作为最常用也是最熟悉的 CPU 指标，你能说出 CPU 使用率到底是怎么算出来的吗？再有，诸如 top、ps 之类的性能工具展示的 %user、%nice、 %system、%iowait 、%s
       
     
     </summary>
@@ -274,54 +227,6 @@
     
     
       <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>方总云市场会议</title>
-    <link href="http://www.ithelei.com/2019/09/01/%E6%96%B9%E6%80%BB%E4%BA%91%E5%B8%82%E5%9C%BA%E4%BC%9A%E8%AE%AE/"/>
-    <id>http://www.ithelei.com/2019/09/01/方总云市场会议/</id>
-    <published>2019-09-01T01:20:45.000Z</published>
-    <updated>2019-09-15T14:15:16.161Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/fenghui/baidu/33.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://jishu-resource.
-      
-    
-    </summary>
-    
-      <category term="会议" scheme="http://www.ithelei.com/categories/%E4%BC%9A%E8%AE%AE/"/>
-    
-    
-      <category term="会议" scheme="http://www.ithelei.com/tags/%E4%BC%9A%E8%AE%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>京东云崔牛会</title>
-    <link href="http://www.ithelei.com/2019/09/01/%E4%BA%AC%E4%B8%9C%E4%BA%91%E5%B4%94%E7%89%9B%E4%BC%9A/"/>
-    <id>http://www.ithelei.com/2019/09/01/京东云崔牛会/</id>
-    <published>2019-09-01T01:20:45.000Z</published>
-    <updated>2019-09-15T13:19:10.187Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;（北京大兴）亦庄经济技术开发区科创十一街18号院京东集团总部&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/fenghui/jingdong/483528446391
-      
-    
-    </summary>
-    
-      <category term="峰会" scheme="http://www.ithelei.com/categories/%E5%B3%B0%E4%BC%9A/"/>
-    
-    
-      <category term="峰会" scheme="http://www.ithelei.com/tags/%E5%B3%B0%E4%BC%9A/"/>
     
   </entry>
   
@@ -370,6 +275,101 @@
     
     
       <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>京东云崔牛会</title>
+    <link href="http://www.ithelei.com/2019/09/01/%E4%BA%AC%E4%B8%9C%E4%BA%91%E5%B4%94%E7%89%9B%E4%BC%9A/"/>
+    <id>http://www.ithelei.com/2019/09/01/京东云崔牛会/</id>
+    <published>2019-09-01T01:20:45.000Z</published>
+    <updated>2019-09-15T13:19:10.187Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;（北京大兴）亦庄经济技术开发区科创十一街18号院京东集团总部&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/fenghui/jingdong/483528446391
+      
+    
+    </summary>
+    
+      <category term="峰会" scheme="http://www.ithelei.com/categories/%E5%B3%B0%E4%BC%9A/"/>
+    
+    
+      <category term="峰会" scheme="http://www.ithelei.com/tags/%E5%B3%B0%E4%BC%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>方总云市场会议</title>
+    <link href="http://www.ithelei.com/2019/09/01/%E6%96%B9%E6%80%BB%E4%BA%91%E5%B8%82%E5%9C%BA%E4%BC%9A%E8%AE%AE/"/>
+    <id>http://www.ithelei.com/2019/09/01/方总云市场会议/</id>
+    <published>2019-09-01T01:20:45.000Z</published>
+    <updated>2019-09-15T14:15:16.161Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/fenghui/baidu/33.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jishu-resource.
+      
+    
+    </summary>
+    
+      <category term="会议" scheme="http://www.ithelei.com/categories/%E4%BC%9A%E8%AE%AE/"/>
+    
+    
+      <category term="会议" scheme="http://www.ithelei.com/tags/%E4%BC%9A%E8%AE%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>经常说的-CPU-上下文切换是什么意思？（下）</title>
+    <link href="http://www.ithelei.com/2019/09/01/%E7%BB%8F%E5%B8%B8%E8%AF%B4%E7%9A%84-CPU-%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%87%E6%8D%A2%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D%EF%BC%9F%EF%BC%88%E4%B8%8B%EF%BC%89/"/>
+    <id>http://www.ithelei.com/2019/09/01/经常说的-CPU-上下文切换是什么意思？（下）/</id>
+    <published>2019-09-01T01:20:45.000Z</published>
+    <updated>2019-09-01T11:48:34.973Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;CPU 上下文切换的工作原理。简单回顾一下，CPU 上下文切换是保证 Linux 系统正常工作的一个核心功能，按照不同场景，可以分为进程上下文切换、线程上下文切换和中断上下文切换。具体的概念和区别，你也要在脑海中过一遍，忘了的话及时查看上一篇。&lt;/p&gt;
+&lt;h3 id=&quot;怎么
+      
+    
+    </summary>
+    
+      <category term="CPU" scheme="http://www.ithelei.com/categories/CPU/"/>
+    
+    
+      <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>能力图谱</title>
+    <link href="http://www.ithelei.com/2019/09/01/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
+    <id>http://www.ithelei.com/2019/09/01/能力图谱/</id>
+    <published>2019-09-01T01:20:45.000Z</published>
+    <updated>2019-09-01T01:24:41.711Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;工程师能力图谱：&quot;&gt;&lt;a href=&quot;#工程师能力图谱：&quot; class=&quot;headerlink&quot; title=&quot;工程师能力图谱：&quot;&gt;&lt;/a&gt;工程师能力图谱：&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijin
+      
+    
+    </summary>
+    
+      <category term="能力图谱" scheme="http://www.ithelei.com/categories/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
+    
+    
+      <category term="能力图谱" scheme="http://www.ithelei.com/tags/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
     
   </entry>
   
