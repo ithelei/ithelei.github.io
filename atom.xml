@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ithelei.com/"/>
-  <updated>2019-09-15T06:06:23.953Z</updated>
+  <updated>2019-09-15T06:29:22.462Z</updated>
   <id>http://www.ithelei.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>怎么理解Linux软中断？</title>
+    <link href="http://www.ithelei.com/2019/09/15/%E6%80%8E%E4%B9%88%E7%90%86%E8%A7%A3Linux%E8%BD%AF%E4%B8%AD%E6%96%AD%EF%BC%9F/"/>
+    <id>http://www.ithelei.com/2019/09/15/怎么理解Linux软中断？/</id>
+    <published>2019-09-15T01:20:45.000Z</published>
+    <updated>2019-09-15T06:29:22.462Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;从“取外卖”看中断&quot;&gt;&lt;a href=&quot;#从“取外卖”看中断&quot; class=&quot;headerlink&quot; title=&quot;从“取外卖”看中断&quot;&gt;&lt;/a&gt;从“取外卖”看中断&lt;/h3&gt;&lt;p&gt;说到中断，我在前面关于“上下文切换”的文章，简单说过中断的含义，先来回顾一下。中断是
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.ithelei.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.ithelei.com/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>系统中出现大量不可中断进程和僵尸进程怎么办？（下）</title>
@@ -38,29 +61,6 @@
     
     
       <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>怎么理解Linux软中断？</title>
-    <link href="http://www.ithelei.com/2019/09/15/%E6%80%8E%E4%B9%88%E7%90%86%E8%A7%A3Linux%E8%BD%AF%E4%B8%AD%E6%96%AD%EF%BC%9F/"/>
-    <id>http://www.ithelei.com/2019/09/15/怎么理解Linux软中断？/</id>
-    <published>2019-09-15T01:20:45.000Z</published>
-    <updated>2019-09-15T06:29:22.462Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;从“取外卖”看中断&quot;&gt;&lt;a href=&quot;#从“取外卖”看中断&quot; class=&quot;headerlink&quot; title=&quot;从“取外卖”看中断&quot;&gt;&lt;/a&gt;从“取外卖”看中断&lt;/h3&gt;&lt;p&gt;说到中断，我在前面关于“上下文切换”的文章，简单说过中断的含义，先来回顾一下。中断是
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.ithelei.com/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.ithelei.com/tags/Linux/"/>
     
   </entry>
   
@@ -231,31 +231,6 @@
   </entry>
   
   <entry>
-    <title>系统的 CPU 使用率很高，但为啥却找不到高 CPU 的应用？</title>
-    <link href="http://www.ithelei.com/2019/09/01/%E7%B3%BB%E7%BB%9F%E7%9A%84%20CPU%20%E4%BD%BF%E7%94%A8%E7%8E%87%E5%BE%88%E9%AB%98%EF%BC%8C%E4%BD%86%E4%B8%BA%E5%95%A5%E5%8D%B4%E6%89%BE%E4%B8%8D%E5%88%B0%E9%AB%98%20CPU%20%E7%9A%84%E5%BA%94%E7%94%A8%EF%BC%9F/"/>
-    <id>http://www.ithelei.com/2019/09/01/系统的 CPU 使用率很高，但为啥却找不到高 CPU 的应用？/</id>
-    <published>2019-09-01T01:20:45.000Z</published>
-    <updated>2019-09-08T11:22:52.115Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;准备&quot;&gt;&lt;a href=&quot;#准备&quot; class=&quot;headerlink&quot; title=&quot;准备&quot;&gt;&lt;/a&gt;准备&lt;/h2&gt;&lt;p&gt;本次案例还是基于 Ubuntu 18.04，同样适用于其他的 Linux 系统。我使用的案例环境如下所示：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;
-      
-    
-    </summary>
-    
-      <category term="CPU" scheme="http://www.ithelei.com/categories/CPU/"/>
-    
-    
-      <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
-    
-  </entry>
-  
-  <entry>
     <title>经常说的-CPU-上下文切换是什么意思？（上）</title>
     <link href="http://www.ithelei.com/2019/09/01/%E7%BB%8F%E5%B8%B8%E8%AF%B4%E7%9A%84-CPU-%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%87%E6%8D%A2%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D%EF%BC%9F%EF%BC%88%E4%B8%8A%EF%BC%89/"/>
     <id>http://www.ithelei.com/2019/09/01/经常说的-CPU-上下文切换是什么意思？（上）/</id>
@@ -302,26 +277,27 @@
   </entry>
   
   <entry>
-    <title>方总云市场会议</title>
-    <link href="http://www.ithelei.com/2019/09/01/%E6%96%B9%E6%80%BB%E4%BA%91%E5%B8%82%E5%9C%BA%E4%BC%9A%E8%AE%AE/"/>
-    <id>http://www.ithelei.com/2019/09/01/方总云市场会议/</id>
+    <title>系统的 CPU 使用率很高，但为啥却找不到高 CPU 的应用？</title>
+    <link href="http://www.ithelei.com/2019/09/01/%E7%B3%BB%E7%BB%9F%E7%9A%84%20CPU%20%E4%BD%BF%E7%94%A8%E7%8E%87%E5%BE%88%E9%AB%98%EF%BC%8C%E4%BD%86%E4%B8%BA%E5%95%A5%E5%8D%B4%E6%89%BE%E4%B8%8D%E5%88%B0%E9%AB%98%20CPU%20%E7%9A%84%E5%BA%94%E7%94%A8%EF%BC%9F/"/>
+    <id>http://www.ithelei.com/2019/09/01/系统的 CPU 使用率很高，但为啥却找不到高 CPU 的应用？/</id>
     <published>2019-09-01T01:20:45.000Z</published>
-    <updated>2019-09-15T14:15:16.161Z</updated>
+    <updated>2019-09-08T11:22:52.115Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/fenghui/baidu/33.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://jishu-resource.
+        &lt;h2 id=&quot;准备&quot;&gt;&lt;a href=&quot;#准备&quot; class=&quot;headerlink&quot; title=&quot;准备&quot;&gt;&lt;/a&gt;准备&lt;/h2&gt;&lt;p&gt;本次案例还是基于 Ubuntu 18.04，同样适用于其他的 Linux 系统。我使用的案例环境如下所示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;
       
     
     </summary>
     
-      <category term="会议" scheme="http://www.ithelei.com/categories/%E4%BC%9A%E8%AE%AE/"/>
+      <category term="CPU" scheme="http://www.ithelei.com/categories/CPU/"/>
     
     
-      <category term="会议" scheme="http://www.ithelei.com/tags/%E4%BC%9A%E8%AE%AE/"/>
+      <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
     
   </entry>
   
@@ -346,6 +322,30 @@
     
     
       <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>方总云市场会议</title>
+    <link href="http://www.ithelei.com/2019/09/01/%E6%96%B9%E6%80%BB%E4%BA%91%E5%B8%82%E5%9C%BA%E4%BC%9A%E8%AE%AE/"/>
+    <id>http://www.ithelei.com/2019/09/01/方总云市场会议/</id>
+    <published>2019-09-01T01:20:45.000Z</published>
+    <updated>2019-09-15T14:15:16.161Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/fenghui/baidu/33.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jishu-resource.
+      
+    
+    </summary>
+    
+      <category term="会议" scheme="http://www.ithelei.com/categories/%E4%BC%9A%E8%AE%AE/"/>
+    
+    
+      <category term="会议" scheme="http://www.ithelei.com/tags/%E4%BC%9A%E8%AE%AE/"/>
     
   </entry>
   
