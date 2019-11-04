@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ithelei.com/"/>
-  <updated>2019-09-15T06:06:23.953Z</updated>
+  <updated>2019-09-15T06:29:22.462Z</updated>
   <id>http://www.ithelei.com/</id>
   
   <author>
@@ -17,27 +17,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>系统中出现大量不可中断进程和僵尸进程怎么办？（下）</title>
-    <link href="http://www.ithelei.com/2019/09/15/%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%87%BA%E7%8E%B0%E5%A4%A7%E9%87%8F%E4%B8%8D%E5%8F%AF%E4%B8%AD%E6%96%AD%E8%BF%9B%E7%A8%8B%E5%92%8C%E5%83%B5%E5%B0%B8%E8%BF%9B%E7%A8%8B%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F%EF%BC%88%E4%B8%8B%EF%BC%89/"/>
-    <id>http://www.ithelei.com/2019/09/15/系统中出现大量不可中断进程和僵尸进程怎么办？（下）/</id>
+    <title>怎么理解Linux软中断？</title>
+    <link href="http://www.ithelei.com/2019/09/15/%E6%80%8E%E4%B9%88%E7%90%86%E8%A7%A3Linux%E8%BD%AF%E4%B8%AD%E6%96%AD%EF%BC%9F/"/>
+    <id>http://www.ithelei.com/2019/09/15/怎么理解Linux软中断？/</id>
     <published>2019-09-15T01:20:45.000Z</published>
-    <updated>2019-09-15T06:06:23.953Z</updated>
+    <updated>2019-09-15T06:29:22.462Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;使用 ps 或者 top 可以查看进程的状态，这些状态包括运行、空闲、不可中断睡眠、可中断睡眠、僵尸以及暂停等。其中，我们重点学习了不可中断状态和僵尸进程：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;不可中断状态，一般表示进程正在跟硬件交互，为了保护进程数据与硬件一致，系统不允许其他
+        &lt;h3 id=&quot;从“取外卖”看中断&quot;&gt;&lt;a href=&quot;#从“取外卖”看中断&quot; class=&quot;headerlink&quot; title=&quot;从“取外卖”看中断&quot;&gt;&lt;/a&gt;从“取外卖”看中断&lt;/h3&gt;&lt;p&gt;说到中断，我在前面关于“上下文切换”的文章，简单说过中断的含义，先来回顾一下。中断是
       
     
     </summary>
     
-      <category term="CPU" scheme="http://www.ithelei.com/categories/CPU/"/>
+      <category term="Linux" scheme="http://www.ithelei.com/categories/Linux/"/>
     
     
-      <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
+      <category term="Linux" scheme="http://www.ithelei.com/tags/Linux/"/>
     
   </entry>
   
@@ -65,25 +63,27 @@
   </entry>
   
   <entry>
-    <title>怎么理解Linux软中断？</title>
-    <link href="http://www.ithelei.com/2019/09/15/%E6%80%8E%E4%B9%88%E7%90%86%E8%A7%A3Linux%E8%BD%AF%E4%B8%AD%E6%96%AD%EF%BC%9F/"/>
-    <id>http://www.ithelei.com/2019/09/15/怎么理解Linux软中断？/</id>
+    <title>系统中出现大量不可中断进程和僵尸进程怎么办？（下）</title>
+    <link href="http://www.ithelei.com/2019/09/15/%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%87%BA%E7%8E%B0%E5%A4%A7%E9%87%8F%E4%B8%8D%E5%8F%AF%E4%B8%AD%E6%96%AD%E8%BF%9B%E7%A8%8B%E5%92%8C%E5%83%B5%E5%B0%B8%E8%BF%9B%E7%A8%8B%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F%EF%BC%88%E4%B8%8B%EF%BC%89/"/>
+    <id>http://www.ithelei.com/2019/09/15/系统中出现大量不可中断进程和僵尸进程怎么办？（下）/</id>
     <published>2019-09-15T01:20:45.000Z</published>
-    <updated>2019-09-15T06:29:22.462Z</updated>
+    <updated>2019-09-15T06:06:23.953Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;从“取外卖”看中断&quot;&gt;&lt;a href=&quot;#从“取外卖”看中断&quot; class=&quot;headerlink&quot; title=&quot;从“取外卖”看中断&quot;&gt;&lt;/a&gt;从“取外卖”看中断&lt;/h3&gt;&lt;p&gt;说到中断，我在前面关于“上下文切换”的文章，简单说过中断的含义，先来回顾一下。中断是
+        &lt;p&gt;使用 ps 或者 top 可以查看进程的状态，这些状态包括运行、空闲、不可中断睡眠、可中断睡眠、僵尸以及暂停等。其中，我们重点学习了不可中断状态和僵尸进程：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;不可中断状态，一般表示进程正在跟硬件交互，为了保护进程数据与硬件一致，系统不允许其他
       
     
     </summary>
     
-      <category term="Linux" scheme="http://www.ithelei.com/categories/Linux/"/>
+      <category term="CPU" scheme="http://www.ithelei.com/categories/CPU/"/>
     
     
-      <category term="Linux" scheme="http://www.ithelei.com/tags/Linux/"/>
+      <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
     
   </entry>
   
@@ -184,30 +184,6 @@
   </entry>
   
   <entry>
-    <title>传统xml配置方式</title>
-    <link href="http://www.ithelei.com/2019/09/02/%E4%BC%A0%E7%BB%9Fxml%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F/"/>
-    <id>http://www.ithelei.com/2019/09/02/传统xml配置方式/</id>
-    <published>2019-09-02T01:20:45.000Z</published>
-    <updated>2019-09-03T15:00:41.043Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;idea传统xml配置方式&quot;&gt;&lt;a href=&quot;#idea传统xml配置方式&quot; class=&quot;headerlink&quot; title=&quot;idea传统xml配置方式&quot;&gt;&lt;/a&gt;idea传统xml配置方式&lt;/h3&gt;&lt;p&gt;新建项目&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http
-      
-    
-    </summary>
-    
-      <category term="SpringBoot" scheme="http://www.ithelei.com/categories/SpringBoot/"/>
-    
-    
-      <category term="SpringBoot" scheme="http://www.ithelei.com/tags/SpringBoot/"/>
-    
-  </entry>
-  
-  <entry>
     <title>某个应用的CPU使用率居然打满,我该怎么办？</title>
     <link href="http://www.ithelei.com/2019/09/02/CPU%E4%BD%BF%E7%94%A8%E7%8E%87%E5%B1%85%E7%84%B6%E6%89%93%E6%BB%A1/"/>
     <id>http://www.ithelei.com/2019/09/02/CPU使用率居然打满/</id>
@@ -231,27 +207,26 @@
   </entry>
   
   <entry>
-    <title>系统的 CPU 使用率很高，但为啥却找不到高 CPU 的应用？</title>
-    <link href="http://www.ithelei.com/2019/09/01/%E7%B3%BB%E7%BB%9F%E7%9A%84%20CPU%20%E4%BD%BF%E7%94%A8%E7%8E%87%E5%BE%88%E9%AB%98%EF%BC%8C%E4%BD%86%E4%B8%BA%E5%95%A5%E5%8D%B4%E6%89%BE%E4%B8%8D%E5%88%B0%E9%AB%98%20CPU%20%E7%9A%84%E5%BA%94%E7%94%A8%EF%BC%9F/"/>
-    <id>http://www.ithelei.com/2019/09/01/系统的 CPU 使用率很高，但为啥却找不到高 CPU 的应用？/</id>
-    <published>2019-09-01T01:20:45.000Z</published>
-    <updated>2019-09-08T11:22:52.115Z</updated>
+    <title>传统xml配置方式</title>
+    <link href="http://www.ithelei.com/2019/09/02/%E4%BC%A0%E7%BB%9Fxml%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F/"/>
+    <id>http://www.ithelei.com/2019/09/02/传统xml配置方式/</id>
+    <published>2019-09-02T01:20:45.000Z</published>
+    <updated>2019-09-03T15:00:41.043Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;准备&quot;&gt;&lt;a href=&quot;#准备&quot; class=&quot;headerlink&quot; title=&quot;准备&quot;&gt;&lt;/a&gt;准备&lt;/h2&gt;&lt;p&gt;本次案例还是基于 Ubuntu 18.04，同样适用于其他的 Linux 系统。我使用的案例环境如下所示：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;
+        &lt;h3 id=&quot;idea传统xml配置方式&quot;&gt;&lt;a href=&quot;#idea传统xml配置方式&quot; class=&quot;headerlink&quot; title=&quot;idea传统xml配置方式&quot;&gt;&lt;/a&gt;idea传统xml配置方式&lt;/h3&gt;&lt;p&gt;新建项目&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http
       
     
     </summary>
     
-      <category term="CPU" scheme="http://www.ithelei.com/categories/CPU/"/>
+      <category term="SpringBoot" scheme="http://www.ithelei.com/categories/SpringBoot/"/>
     
     
-      <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
+      <category term="SpringBoot" scheme="http://www.ithelei.com/tags/SpringBoot/"/>
     
   </entry>
   
@@ -279,26 +254,50 @@
   </entry>
   
   <entry>
-    <title>京东云崔牛会</title>
-    <link href="http://www.ithelei.com/2019/09/01/%E4%BA%AC%E4%B8%9C%E4%BA%91%E5%B4%94%E7%89%9B%E4%BC%9A/"/>
-    <id>http://www.ithelei.com/2019/09/01/京东云崔牛会/</id>
+    <title>能力图谱</title>
+    <link href="http://www.ithelei.com/2019/09/01/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
+    <id>http://www.ithelei.com/2019/09/01/能力图谱/</id>
     <published>2019-09-01T01:20:45.000Z</published>
-    <updated>2019-09-15T13:19:10.187Z</updated>
+    <updated>2019-09-01T01:24:41.711Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;（北京大兴）亦庄经济技术开发区科创十一街18号院京东集团总部&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/fenghui/jingdong/483528446391
+        &lt;h3 id=&quot;工程师能力图谱：&quot;&gt;&lt;a href=&quot;#工程师能力图谱：&quot; class=&quot;headerlink&quot; title=&quot;工程师能力图谱：&quot;&gt;&lt;/a&gt;工程师能力图谱：&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijin
       
     
     </summary>
     
-      <category term="峰会" scheme="http://www.ithelei.com/categories/%E5%B3%B0%E4%BC%9A/"/>
+      <category term="能力图谱" scheme="http://www.ithelei.com/categories/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
     
     
-      <category term="峰会" scheme="http://www.ithelei.com/tags/%E5%B3%B0%E4%BC%9A/"/>
+      <category term="能力图谱" scheme="http://www.ithelei.com/tags/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>系统的 CPU 使用率很高，但为啥却找不到高 CPU 的应用？</title>
+    <link href="http://www.ithelei.com/2019/09/01/%E7%B3%BB%E7%BB%9F%E7%9A%84%20CPU%20%E4%BD%BF%E7%94%A8%E7%8E%87%E5%BE%88%E9%AB%98%EF%BC%8C%E4%BD%86%E4%B8%BA%E5%95%A5%E5%8D%B4%E6%89%BE%E4%B8%8D%E5%88%B0%E9%AB%98%20CPU%20%E7%9A%84%E5%BA%94%E7%94%A8%EF%BC%9F/"/>
+    <id>http://www.ithelei.com/2019/09/01/系统的 CPU 使用率很高，但为啥却找不到高 CPU 的应用？/</id>
+    <published>2019-09-01T01:20:45.000Z</published>
+    <updated>2019-09-08T11:22:52.115Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;准备&quot;&gt;&lt;a href=&quot;#准备&quot; class=&quot;headerlink&quot; title=&quot;准备&quot;&gt;&lt;/a&gt;准备&lt;/h2&gt;&lt;p&gt;本次案例还是基于 Ubuntu 18.04，同样适用于其他的 Linux 系统。我使用的案例环境如下所示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;
+      
+    
+    </summary>
+    
+      <category term="CPU" scheme="http://www.ithelei.com/categories/CPU/"/>
+    
+    
+      <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
     
   </entry>
   
@@ -351,25 +350,26 @@
   </entry>
   
   <entry>
-    <title>能力图谱</title>
-    <link href="http://www.ithelei.com/2019/09/01/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
-    <id>http://www.ithelei.com/2019/09/01/能力图谱/</id>
+    <title>京东云崔牛会</title>
+    <link href="http://www.ithelei.com/2019/09/01/%E4%BA%AC%E4%B8%9C%E4%BA%91%E5%B4%94%E7%89%9B%E4%BC%9A/"/>
+    <id>http://www.ithelei.com/2019/09/01/京东云崔牛会/</id>
     <published>2019-09-01T01:20:45.000Z</published>
-    <updated>2019-09-01T01:24:41.711Z</updated>
+    <updated>2019-09-15T13:19:10.187Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;工程师能力图谱：&quot;&gt;&lt;a href=&quot;#工程师能力图谱：&quot; class=&quot;headerlink&quot; title=&quot;工程师能力图谱：&quot;&gt;&lt;/a&gt;工程师能力图谱：&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijin
+        &lt;p&gt;（北京大兴）亦庄经济技术开发区科创十一街18号院京东集团总部&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/fenghui/jingdong/483528446391
       
     
     </summary>
     
-      <category term="能力图谱" scheme="http://www.ithelei.com/categories/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
+      <category term="峰会" scheme="http://www.ithelei.com/categories/%E5%B3%B0%E4%BC%9A/"/>
     
     
-      <category term="能力图谱" scheme="http://www.ithelei.com/tags/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
+      <category term="峰会" scheme="http://www.ithelei.com/tags/%E5%B3%B0%E4%BC%9A/"/>
     
   </entry>
   
@@ -477,17 +477,17 @@
   </entry>
   
   <entry>
-    <title>百度云智峰会</title>
-    <link href="http://www.ithelei.com/2019/08/29/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%99%BA%E5%B3%B0%E4%BC%9A/"/>
-    <id>http://www.ithelei.com/2019/08/29/百度云智峰会/</id>
+    <title>百度云智峰会（实战环节）</title>
+    <link href="http://www.ithelei.com/2019/08/29/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%99%BA%E5%B3%B0%E4%BC%9A%20%EF%BC%88%E5%AE%9E%E6%88%98%EF%BC%89%E6%9C%AC/"/>
+    <id>http://www.ithelei.com/2019/08/29/百度云智峰会 （实战）本/</id>
     <published>2019-08-29T01:20:45.000Z</published>
-    <updated>2019-09-01T12:36:57.939Z</updated>
+    <updated>2019-09-01T12:50:52.310Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;百度云智峰会，科技为更好。&quot;&gt;&lt;a href=&quot;#百度云智峰会，科技为更好。&quot; class=&quot;headerlink&quot; title=&quot;百度云智峰会，科技为更好。&quot;&gt;&lt;/a&gt;百度云智峰会，科技为更好。&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://jishu-re
+        &lt;h3 id=&quot;百度云智峰会，上机实战环节。&quot;&gt;&lt;a href=&quot;#百度云智峰会，上机实战环节。&quot; class=&quot;headerlink&quot; title=&quot;百度云智峰会，上机实战环节。&quot;&gt;&lt;/a&gt;百度云智峰会，上机实战环节。&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;在这里由于表现突出，得了一个
       
     
     </summary>
