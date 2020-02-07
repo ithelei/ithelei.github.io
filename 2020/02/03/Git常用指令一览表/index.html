@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="养码哥">
 <meta property="og:description" content="Git总共提供了超过100个以上的指令让我们执行各种操作（可以使用”git help -a”指令显示完整的指令列表），每一个指令又有许多选项可以搭配，但是我们不可能，也不需要完全记住这些指令。就实用性而言，只要熟练部分指令和选项的用法，就可以满足一般应用的需求。  git add . 将全部文件的内容加到Git索引，以便执行commit。这个指令不会检查文件夹中是否有文件被删除。要注意的是，只有执">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-04T14:18:34.785Z">
+<meta property="og:updated_time" content="2020-02-07T14:46:46.987Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git常用指令一览表">
 <meta name="twitter:description" content="Git总共提供了超过100个以上的指令让我们执行各种操作（可以使用”git help -a”指令显示完整的指令列表），每一个指令又有许多选项可以搭配，但是我们不可能，也不需要完全记住这些指令。就实用性而言，只要熟练部分指令和选项的用法，就可以满足一般应用的需求。  git add . 将全部文件的内容加到Git索引，以便执行commit。这个指令不会检查文件夹中是否有文件被删除。要注意的是，只有执">
@@ -334,10 +334,10 @@ var _hmt = _hmt || [];
             
             <div class="item-inner">
               <p class="item-category">
-                <a class="category-link" href="/categories/中台/">中台</a>
+                <a class="category-link" href="/categories/产业互联网/">产业互联网</a>
               </p>
               <p class="item-title">
-                <a href="/2019/09/08/中台成为构架企业数字营销的主要模式/" class="title">中台成为构架企业数字营销的主要模式</a>
+                <a href="/2019/09/08/产业互联网时代的企业数字化/" class="title">产业互联网时代的企业数字化</a>
               </p>
               <p class="item-date">
                 <time datetime="2019-09-08T01:20:45.000Z" itemprop="datePublished">2019-09-08</time>
@@ -400,10 +400,10 @@ var _hmt = _hmt || [];
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/02/03/Git常用指令一览表/#comments" class="article-comment-link">Comments</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 724(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1.3k(words)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2(minutes)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 4(minutes)</span>
 	
 
       </div>
@@ -438,6 +438,38 @@ var _hmt = _hmt || [];
 <p>1、如果最后指定了commit节点标识符或者是标签，就会从该节点“长”出分支；如果没有指定commit节点，就会从最新的commit“长”出分支。</p>
 <p>2、“git branch” 指令后边没有接任何参数时，会列出当前文档库中正在开发的所有分支。</p>
 <hr>
+<p>git branch 新分支名称 已经存在的分支</p>
+<p>从特定的分支，在长出另一个分支</p>
+<hr>
+<p>git branch -a </p>
+<p>列出文档库和远程文档库中的所有分支</p>
+<hr>
+<p>git  branch -d</p>
+<p>删除指定的分支。必须先切换到另一个分支，才能执行这个命令</p>
+<hr>
+<p>git branch -D 要删除的分支名称</p>
+<p>在一般情况下，分支应该先合并到另一个分支，之后才能被删除。如果我们要删除还没有合并的分支，git会会显示错误信息。并且停止删除分支的操作。如果确定要删除还没有合并的分支，可以使用“-D”选项，要求git强制执行删除分支的操作。</p>
+<hr>
+<p>git branch –list 分支名称样板</p>
+<p>显示符合“分支名称样板”的所有分支，例如以下指令范例会显示所有分支以“bug/” 开头的分支：</p>
+<p>git  branch –list bug/*</p>
+<hr>
+<p>git  branch -m 新的分支名称</p>
+<p>更改分支的名称，必须先切换到该分支。才能够执行这个指令。</p>
+<hr>
+<p>git checkout 文件1 文件2 … </p>
+<p>或者</p>
+<p>git checkout .</p>
+<p>git会先找索引中有没有该文件，如果有就把他取出；如果没有，就从最新的commit节点开始。按照时间顺序往前寻找，然后取出第一个找到的文件版本，每一个文件都用同样的方式处理。</p>
+<p>如果取出文档库中全部文件的最新版本，可以执行“git checkout .”。</p>
+<hr>
+<p>git checkout commit 节点标识符或者标签 \  文件1  文件2 …</p>
+<p>从git文档库的commit节点取出指定的文件。如果取出的文件和当前文档库中最新commit的文件的内容不同，这个取出的文件内容会自动记录在git索引中。下次执行“git commit” 指令时，这个取出的文件内容就会存入文档库中成为新的版本。如果要避免这种情况发生，可以在执行“git checout” 指令之后，立刻执行“git reset HEAD” 来清楚git索引。</p>
+<hr>
+<p>git checkout 分支名称 </p>
+<p>将当前操作的分支切换到指定的分支。</p>
+<hr>
+<p>251</p>
 
       
     </div>

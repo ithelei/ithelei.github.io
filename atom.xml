@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ithelei.com/"/>
-  <updated>2020-02-04T14:18:34.785Z</updated>
+  <updated>2020-02-07T14:46:46.987Z</updated>
   <id>http://www.ithelei.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.ithelei.com/2020/02/03/Git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E4%B8%80%E8%A7%88%E8%A1%A8/"/>
     <id>http://www.ithelei.com/2020/02/03/Git常用指令一览表/</id>
     <published>2020-02-03T01:20:45.000Z</published>
-    <updated>2020-02-04T14:18:34.785Z</updated>
+    <updated>2020-02-07T14:46:46.987Z</updated>
     
     <summary type="html">
     
@@ -112,29 +112,6 @@
   </entry>
   
   <entry>
-    <title>中台成为构架企业数字营销的主要模式</title>
-    <link href="http://www.ithelei.com/2019/09/08/%E4%B8%AD%E5%8F%B0%E6%88%90%E4%B8%BA%E6%9E%84%E6%9E%B6%E4%BC%81%E4%B8%9A%E6%95%B0%E5%AD%97%E8%90%A5%E9%94%80%E7%9A%84%E4%B8%BB%E8%A6%81%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.ithelei.com/2019/09/08/中台成为构架企业数字营销的主要模式/</id>
-    <published>2019-09-08T01:20:45.000Z</published>
-    <updated>2019-09-08T14:51:07.944Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;在产业互联网时代，当数字化成为企业的核心战略后，如何实现业务数据化?如何使数据赋能企业推动业务转型升级?如何提升企业数字资产的价值?这些都成为制约企业发展的难题。在此背景下，&lt;strong&gt;数字中台&lt;br&gt;成为指导企业数字化转型、实现数字营销的主流方法。&lt;/strong&gt;&lt;
-      
-    
-    </summary>
-    
-      <category term="中台" scheme="http://www.ithelei.com/categories/%E4%B8%AD%E5%8F%B0/"/>
-    
-    
-      <category term="中台" scheme="http://www.ithelei.com/tags/%E4%B8%AD%E5%8F%B0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>产业互联网时代的企业数字化</title>
     <link href="http://www.ithelei.com/2019/09/08/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3%E7%9A%84%E4%BC%81%E4%B8%9A%E6%95%B0%E5%AD%97%E5%8C%96/"/>
     <id>http://www.ithelei.com/2019/09/08/产业互联网时代的企业数字化/</id>
@@ -155,6 +132,29 @@
     
     
       <category term="产业互联网" scheme="http://www.ithelei.com/tags/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>中台成为构架企业数字营销的主要模式</title>
+    <link href="http://www.ithelei.com/2019/09/08/%E4%B8%AD%E5%8F%B0%E6%88%90%E4%B8%BA%E6%9E%84%E6%9E%B6%E4%BC%81%E4%B8%9A%E6%95%B0%E5%AD%97%E8%90%A5%E9%94%80%E7%9A%84%E4%B8%BB%E8%A6%81%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.ithelei.com/2019/09/08/中台成为构架企业数字营销的主要模式/</id>
+    <published>2019-09-08T01:20:45.000Z</published>
+    <updated>2019-09-08T14:51:07.944Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在产业互联网时代，当数字化成为企业的核心战略后，如何实现业务数据化?如何使数据赋能企业推动业务转型升级?如何提升企业数字资产的价值?这些都成为制约企业发展的难题。在此背景下，&lt;strong&gt;数字中台&lt;br&gt;成为指导企业数字化转型、实现数字营销的主流方法。&lt;/strong&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="中台" scheme="http://www.ithelei.com/categories/%E4%B8%AD%E5%8F%B0/"/>
+    
+    
+      <category term="中台" scheme="http://www.ithelei.com/tags/%E4%B8%AD%E5%8F%B0/"/>
     
   </entry>
   
@@ -255,6 +255,30 @@
   </entry>
   
   <entry>
+    <title>方总云市场会议</title>
+    <link href="http://www.ithelei.com/2019/09/01/%E6%96%B9%E6%80%BB%E4%BA%91%E5%B8%82%E5%9C%BA%E4%BC%9A%E8%AE%AE/"/>
+    <id>http://www.ithelei.com/2019/09/01/方总云市场会议/</id>
+    <published>2019-09-01T01:20:45.000Z</published>
+    <updated>2019-09-15T14:15:16.161Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/fenghui/baidu/33.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jishu-resource.
+      
+    
+    </summary>
+    
+      <category term="会议" scheme="http://www.ithelei.com/categories/%E4%BC%9A%E8%AE%AE/"/>
+    
+    
+      <category term="会议" scheme="http://www.ithelei.com/tags/%E4%BC%9A%E8%AE%AE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>京东云崔牛会</title>
     <link href="http://www.ithelei.com/2019/09/01/%E4%BA%AC%E4%B8%9C%E4%BA%91%E5%B4%94%E7%89%9B%E4%BC%9A/"/>
     <id>http://www.ithelei.com/2019/09/01/京东云崔牛会/</id>
@@ -279,26 +303,25 @@
   </entry>
   
   <entry>
-    <title>方总云市场会议</title>
-    <link href="http://www.ithelei.com/2019/09/01/%E6%96%B9%E6%80%BB%E4%BA%91%E5%B8%82%E5%9C%BA%E4%BC%9A%E8%AE%AE/"/>
-    <id>http://www.ithelei.com/2019/09/01/方总云市场会议/</id>
+    <title>能力图谱</title>
+    <link href="http://www.ithelei.com/2019/09/01/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
+    <id>http://www.ithelei.com/2019/09/01/能力图谱/</id>
     <published>2019-09-01T01:20:45.000Z</published>
-    <updated>2019-09-15T14:15:16.161Z</updated>
+    <updated>2019-09-01T01:24:41.711Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/fenghui/baidu/33.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://jishu-resource.
+        &lt;h3 id=&quot;工程师能力图谱：&quot;&gt;&lt;a href=&quot;#工程师能力图谱：&quot; class=&quot;headerlink&quot; title=&quot;工程师能力图谱：&quot;&gt;&lt;/a&gt;工程师能力图谱：&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijin
       
     
     </summary>
     
-      <category term="会议" scheme="http://www.ithelei.com/categories/%E4%BC%9A%E8%AE%AE/"/>
+      <category term="能力图谱" scheme="http://www.ithelei.com/categories/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
     
     
-      <category term="会议" scheme="http://www.ithelei.com/tags/%E4%BC%9A%E8%AE%AE/"/>
+      <category term="能力图谱" scheme="http://www.ithelei.com/tags/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
     
   </entry>
   
@@ -371,29 +394,6 @@
     
     
       <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>能力图谱</title>
-    <link href="http://www.ithelei.com/2019/09/01/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
-    <id>http://www.ithelei.com/2019/09/01/能力图谱/</id>
-    <published>2019-09-01T01:20:45.000Z</published>
-    <updated>2019-09-01T01:24:41.711Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;工程师能力图谱：&quot;&gt;&lt;a href=&quot;#工程师能力图谱：&quot; class=&quot;headerlink&quot; title=&quot;工程师能力图谱：&quot;&gt;&lt;/a&gt;工程师能力图谱：&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijin
-      
-    
-    </summary>
-    
-      <category term="能力图谱" scheme="http://www.ithelei.com/categories/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
-    
-    
-      <category term="能力图谱" scheme="http://www.ithelei.com/tags/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
     
   </entry>
   
