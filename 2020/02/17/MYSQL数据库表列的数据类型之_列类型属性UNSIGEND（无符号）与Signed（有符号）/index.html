@@ -17,16 +17,21 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>Archive: 2019/3 | 养码哥</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="养码哥">
-<meta property="og:url" content="http://www.ithelei.com/archives/2019/03/index.html">
+  <title>MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号） | 养码哥</title>
+  <meta name="description" content="下面用TINYINT类型字段来说明有符号属性和无符号属性两者之间的差别。在添加UNSIGEND后，字段的取值范围是0255，而Signed的范围是-128127。如果确定不需要负值，通常是不设置Signed，这样会充分利用存储空间。假设使用tinyint来存储一些状态值，0表示删除，1表示付款，2表示已付款，…突然来个需求——增加订单取消，如果用“-1”表示取消的话，结果该列的取值就变为了-128">
+<meta name="keywords" content="MySQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）">
+<meta property="og:url" content="http://www.ithelei.com/2020/02/17/MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）/index.html">
 <meta property="og:site_name" content="养码哥">
+<meta property="og:description" content="下面用TINYINT类型字段来说明有符号属性和无符号属性两者之间的差别。在添加UNSIGEND后，字段的取值范围是0255，而Signed的范围是-128127。如果确定不需要负值，通常是不设置Signed，这样会充分利用存储空间。假设使用tinyint来存储一些状态值，0表示删除，1表示付款，2表示已付款，…突然来个需求——增加订单取消，如果用“-1”表示取消的话，结果该列的取值就变为了-128">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-02-17T13:45:36.968Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="养码哥">
+<meta name="twitter:title" content="MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）">
+<meta name="twitter:description" content="下面用TINYINT类型字段来说明有符号属性和无符号属性两者之间的差别。在添加UNSIGEND后，字段的取值范围是0255，而Signed的范围是-128127。如果确定不需要负值，通常是不设置Signed，这样会充分利用存储空间。假设使用tinyint来存储一些状态值，0表示删除，1表示付款，2表示已付款，…突然来个需求——增加订单取消，如果用“-1”表示取消的话，结果该列的取值就变为了-128">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://www.ithelei.com/archives/2019/03/index.html">
+  <link rel="canonical" href="http://www.ithelei.com/2020/02/17/MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）/index.html">
   
     <link rel="alternate" href="/atom.xml" title="养码哥" type="application/atom+xml">
   
@@ -352,48 +357,192 @@ var _hmt = _hmt || [];
   
   
 <main class="main" role="main">
-  	<article class="content article article-archives article-type-list" itemscope="">
-	    <header class="article-header">
-	      <h1 itemprop="title">Archive: 2019/3</h1>
-	      <p class="text-muted">Total 1 articles</p>
-	    </header>
-	    <div class="article-body">
-	      
+  <div class="content">
+  <article id="post-MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
   
+    <h1 class="article-title" itemprop="name">
+      MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/02/17/MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）/" class="article-date">
+	  <time datetime="2020-02-17T13:36:45.000Z" itemprop="datePublished">2020-02-17</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/MySQL/">MySQL</a>
+  </span>
+
+
+        
+
+	<span class="article-read hidden-xs">
+    	<i class="icon icon-eye-fill" aria-hidden="true"></i>
+    	<span id="/2020/02/17/MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）/" class="leancloud_visitors"  data-flag-title="MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）">0</span>
+    </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/02/17/MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）/#comments" class="article-comment-link">Comments</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 320(words)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1(minutes)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p>下面用TINYINT类型字段来说明有符号属性和无符号属性两者之间的差别。在添加UNSIGEND后，字段的取值范围是0<del>255，而Signed的范围是-128</del>127。如果确定不需要负值，通常是不设置Signed，这样会充分利用存储空间。假设使用tinyint来存储一些状态值，0表示删除，1表示付款，2表示已付款，…突然来个需求——增加订单取消，如果用“-1”表示取消的话，结果该列的取值就变为了-128~127.因此一般情况下，不建议用“-1”表示“订单取消”，而可以用“4”或其他非负数表示订单取消。</p>
+<p>字段属性设置UNSIGEND后可能出现的问题：</p>
+<p>当select a-b from时，a为10，b为12，那这时就会出现异常情况：ERROR 1690(22017):BIGINT UNSIGEND value is out of range in(test.t.a-test.t.b),因此，要注意这种情况的发生。</p>
+<p>这两个列属性在性能上是有细微差别的。UNSIGEND的性能更好，当只存储整数的情况下，查询值在 xxxx（代表数值）以下的数据，那么mysql会将范围定义为0<del>xxxxx,而如果是Signed，则查询范围为-2147483648</del>xxxx，这就是性能细微的差别。</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://www.ithelei.com/2020/02/17/MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）/" title="MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）" target="_blank" rel="external">http://www.ithelei.com/2020/02/17/MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/ithelei" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/ithelei" target="_blank"><span class="text-dark">养码哥</span><small class="ml-1x">Developer</small></a></h3>
+        <div>喜欢读书，喜欢分享，希望有一天可以赚很多的钱，去干够风骚有意义的事情。我是养码哥，一个仍然在路上，向往自由和梦想的人！</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
   
     
+  <section id="comments">
+  	
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NjI4My8yMjc5NA">
+        <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+      </div>    
     
-      
-      
-      <section class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse2019" aria-expanded="true">
-              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
-              2019
-            </a>
-            <!-- <a href="/archives/2019" class="archive-year">2019</a> -->
-          </h3>
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2020/02/17/MYSQL数据库表列的数据类型之_TEXT与BLOG的区别/" title="MYSQL数据库表列的数据类型之_TEXT与BLOG的区别"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2020/02/16/MYSQL数据库表列的数据类型之_(数值类型)(字符串类型)/" title="MYSQL数据库表列的数据类型之_(数值类型)(字符串类型)"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>$</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>Maybe you could buy me a cup of coffee.</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open alipay app scan this qrcode, buy me a coffee!</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open wechat app scan this qrcode, buy me a coffee!</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> alipay</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> wechat payment</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div id="collapse2019" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2019">
-        <div class="panel-body">
-          <div class="collection">
-    
-    
-<a href="/2019/03/01/阿里云峰会/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2019-03-01T01:20:45.000Z" itemprop="datePublished">2019-03-01</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 参加阿里云峰会
-</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-  
-  
-    </div></div></div></section>
-  
 
-	    </div>
-  	</article>
-  	 	
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -454,6 +603,118 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+
+   
+
+
+<!-- custom analytics part create by xiamo -->
+<script defer src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+<script defer>
+AV.init({
+  appId: '',
+  appKey: ''
+});
+
+function showTime(Counter) {
+	var query = new AV.Query(Counter);
+		var visitors= $('.leancloud_visitors');
+		query.greaterThanOrEqualTo("time", 0);		
+		query.find({
+			success: function(results) {
+				if (results.length == 0) {				
+					return;
+				}
+				var data = results;
+				visitors.each(function(){
+					var url = $(this).attr('id').trim();					
+					for (var i = 0; i < data.length; i++) {
+						var object = data[i];
+						var content = object.get('time');
+						var _url = object.get('url')
+						if(url == _url){
+							$(this).text(content);
+						}
+					}
+				})
+				
+			},
+			error: function(object, error) {
+				console.log("Error: " + error.code + " " + error.message);
+			}
+		});
+}
+
+function addCount(Counter) {
+	var Counter = AV.Object.extend("Counter");
+	url = $(".leancloud_visitors").attr('id').trim();
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+	var query = new AV.Query(Counter);
+	query.equalTo("url", url);
+	query.find({
+		success: function(results) {
+			if (results.length > 0) {
+				var counter = results[0];
+				counter.fetchWhenSave(true);
+				counter.increment("time");
+				counter.save(null, {
+					success: function(counter) {
+						var content = counter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(counter, error) {
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+					}
+				});
+			} else {
+				var newcounter = new Counter();
+				newcounter.set("title", title);
+				newcounter.set("url", url);
+				newcounter.set("time", 1);
+				newcounter.save(null, {
+					success: function(newcounter) {
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+						var content = newcounter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(newcounter, error) {
+						console.log('Failed to create');
+					}
+				});
+			}
+		},
+		error: function(error) {
+			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
+$(function() {
+	var Counter = AV.Object.extend("Counter");
+	if ($('.leancloud_visitors').length == 1) {
+		addCount(Counter);
+	} else {
+		showTime(Counter);
+	}
+}); 
+</script>
+
+
+
+   
+    
+<script defer type="text/javascript">
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
 
 
 
