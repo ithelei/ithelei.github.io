@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ithelei.com/"/>
-  <updated>2020-02-17T14:10:10.101Z</updated>
+  <updated>2020-02-17T14:55:02.441Z</updated>
   <id>http://www.ithelei.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MYSQL数据库中DEFAULT（默认）使用技巧</title>
+    <link href="http://www.ithelei.com/2020/02/17/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%ADDEFAULT%EF%BC%88%E9%BB%98%E8%AE%A4%EF%BC%89%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    <id>http://www.ithelei.com/2020/02/17/MYSQL数据库中DEFAULT（默认）使用技巧/</id>
+    <published>2020-02-17T13:36:45.000Z</published>
+    <updated>2020-02-17T14:55:02.441Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;mysql创建表时，可以使用default来设置表字段的默认值，这样当向表中插入或添加数据时，如果没有为此字段设置任何值，则使用default默认值来填充该字段的值。&lt;/p&gt;
+&lt;p&gt;在使用create table创建表的时候，为字段设置默认值，如：&lt;/p&gt;
+&lt;pre&gt;&lt;co
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>MYSQL数据库表列的数据类型之_TEXT与BLOG的区别</title>
@@ -227,29 +252,6 @@
   </entry>
   
   <entry>
-    <title>系统中出现大量不可中断进程和僵尸进程怎么办？（上）</title>
-    <link href="http://www.ithelei.com/2019/09/15/%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%87%BA%E7%8E%B0%E5%A4%A7%E9%87%8F%E4%B8%8D%E5%8F%AF%E4%B8%AD%E6%96%AD%E8%BF%9B%E7%A8%8B%E5%92%8C%E5%83%B5%E5%B0%B8%E8%BF%9B%E7%A8%8B%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F%EF%BC%88%E4%B8%8A%EF%BC%89/"/>
-    <id>http://www.ithelei.com/2019/09/15/系统中出现大量不可中断进程和僵尸进程怎么办？（上）/</id>
-    <published>2019-09-15T01:20:45.000Z</published>
-    <updated>2019-09-15T05:34:08.608Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;进程状态&quot;&gt;&lt;a href=&quot;#进程状态&quot; class=&quot;headerlink&quot; title=&quot;进程状态&quot;&gt;&lt;/a&gt;进程状态&lt;/h3&gt;&lt;p&gt;当 iowait 升高时，进程很可能因为得不到硬件的响应，而长时间处于不可中断状态。从 ps 或者 top 命令的输出中，你
-      
-    
-    </summary>
-    
-      <category term="CPU" scheme="http://www.ithelei.com/categories/CPU/"/>
-    
-    
-      <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
-    
-  </entry>
-  
-  <entry>
     <title>系统中出现大量不可中断进程和僵尸进程怎么办？（下）</title>
     <link href="http://www.ithelei.com/2019/09/15/%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%87%BA%E7%8E%B0%E5%A4%A7%E9%87%8F%E4%B8%8D%E5%8F%AF%E4%B8%AD%E6%96%AD%E8%BF%9B%E7%A8%8B%E5%92%8C%E5%83%B5%E5%B0%B8%E8%BF%9B%E7%A8%8B%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F%EF%BC%88%E4%B8%8B%EF%BC%89/"/>
     <id>http://www.ithelei.com/2019/09/15/系统中出现大量不可中断进程和僵尸进程怎么办？（下）/</id>
@@ -275,26 +277,25 @@
   </entry>
   
   <entry>
-    <title>产业互联网时代的企业数字化</title>
-    <link href="http://www.ithelei.com/2019/09/08/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3%E7%9A%84%E4%BC%81%E4%B8%9A%E6%95%B0%E5%AD%97%E5%8C%96/"/>
-    <id>http://www.ithelei.com/2019/09/08/产业互联网时代的企业数字化/</id>
-    <published>2019-09-08T01:20:45.000Z</published>
-    <updated>2019-09-08T13:14:27.365Z</updated>
+    <title>系统中出现大量不可中断进程和僵尸进程怎么办？（上）</title>
+    <link href="http://www.ithelei.com/2019/09/15/%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%87%BA%E7%8E%B0%E5%A4%A7%E9%87%8F%E4%B8%8D%E5%8F%AF%E4%B8%AD%E6%96%AD%E8%BF%9B%E7%A8%8B%E5%92%8C%E5%83%B5%E5%B0%B8%E8%BF%9B%E7%A8%8B%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F%EF%BC%88%E4%B8%8A%EF%BC%89/"/>
+    <id>http://www.ithelei.com/2019/09/15/系统中出现大量不可中断进程和僵尸进程怎么办？（上）/</id>
+    <published>2019-09-15T01:20:45.000Z</published>
+    <updated>2019-09-15T05:34:08.608Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;企业数字化的主要特征包括3个方面：&lt;strong&gt;第一是连接，&lt;/strong&gt;连接员工、连接客户、连接机器设备；&lt;strong&gt;第二是数据，&lt;/strong&gt;也就是连接之后实时产生的数据；&lt;strong&gt;第三是智能，&lt;/strong&gt;是数据驱动的智能应用。&lt;/p&gt;
-&lt;p&gt;
+        &lt;h3 id=&quot;进程状态&quot;&gt;&lt;a href=&quot;#进程状态&quot; class=&quot;headerlink&quot; title=&quot;进程状态&quot;&gt;&lt;/a&gt;进程状态&lt;/h3&gt;&lt;p&gt;当 iowait 升高时，进程很可能因为得不到硬件的响应，而长时间处于不可中断状态。从 ps 或者 top 命令的输出中，你
       
     
     </summary>
     
-      <category term="产业互联网" scheme="http://www.ithelei.com/categories/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91/"/>
+      <category term="CPU" scheme="http://www.ithelei.com/categories/CPU/"/>
     
     
-      <category term="产业互联网" scheme="http://www.ithelei.com/tags/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91/"/>
+      <category term="CPU" scheme="http://www.ithelei.com/tags/CPU/"/>
     
   </entry>
   
@@ -318,6 +319,30 @@
     
     
       <category term="中台" scheme="http://www.ithelei.com/tags/%E4%B8%AD%E5%8F%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>产业互联网时代的企业数字化</title>
+    <link href="http://www.ithelei.com/2019/09/08/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3%E7%9A%84%E4%BC%81%E4%B8%9A%E6%95%B0%E5%AD%97%E5%8C%96/"/>
+    <id>http://www.ithelei.com/2019/09/08/产业互联网时代的企业数字化/</id>
+    <published>2019-09-08T01:20:45.000Z</published>
+    <updated>2019-09-08T13:14:27.365Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;企业数字化的主要特征包括3个方面：&lt;strong&gt;第一是连接，&lt;/strong&gt;连接员工、连接客户、连接机器设备；&lt;strong&gt;第二是数据，&lt;/strong&gt;也就是连接之后实时产生的数据；&lt;strong&gt;第三是智能，&lt;/strong&gt;是数据驱动的智能应用。&lt;/p&gt;
+&lt;p&gt;
+      
+    
+    </summary>
+    
+      <category term="产业互联网" scheme="http://www.ithelei.com/categories/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    
+    
+      <category term="产业互联网" scheme="http://www.ithelei.com/tags/%E4%BA%A7%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
   </entry>
   
@@ -462,29 +487,6 @@
     
     
       <category term="会议" scheme="http://www.ithelei.com/tags/%E4%BC%9A%E8%AE%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>能力图谱</title>
-    <link href="http://www.ithelei.com/2019/09/01/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
-    <id>http://www.ithelei.com/2019/09/01/能力图谱/</id>
-    <published>2019-09-01T01:20:45.000Z</published>
-    <updated>2019-09-01T01:24:41.711Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;工程师能力图谱：&quot;&gt;&lt;a href=&quot;#工程师能力图谱：&quot; class=&quot;headerlink&quot; title=&quot;工程师能力图谱：&quot;&gt;&lt;/a&gt;工程师能力图谱：&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijin
-      
-    
-    </summary>
-    
-      <category term="能力图谱" scheme="http://www.ithelei.com/categories/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
-    
-    
-      <category term="能力图谱" scheme="http://www.ithelei.com/tags/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
     
   </entry>
   
