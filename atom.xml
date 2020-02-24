@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ithelei.com/"/>
-  <updated>2020-02-24T15:11:26.142Z</updated>
+  <updated>2020-02-24T15:02:25.150Z</updated>
   <id>http://www.ithelei.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端和技术天花板</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%89%8D%E7%AB%AF%E5%92%8C%E6%8A%80%E6%9C%AF%E5%A4%A9%E8%8A%B1%E6%9D%BF/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_前端和技术天花板/</id>
+    <published>2020-02-24T01:20:45.000Z</published>
+    <updated>2020-02-24T15:02:25.150Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;进入移动互联网时代后，前端岗位的需求应该是在下降的。原因显而易见，因为用户的时间都消耗在移动端，消耗在APP上了。&lt;/p&gt;
+&lt;p&gt;前端市场开始慢慢被客户端市场吞噬。&lt;/p&gt;
+&lt;p&gt;不过这几年，又显现出了大前端的趋势，有点山水轮流转的感觉。(当然，大前端跟前端有很大不同）&lt;/
+      
+    
+    </summary>
+    
+      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+    
+    
+      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>一个复杂的团队合作事件</title>
@@ -31,31 +56,6 @@
 &lt;p&gt;比如 A 的做事理念跟数据，跟工程的同学不一致，如果就事论事地讨论，可能大家谁都无法说服谁。&lt;/p&gt;
 &lt;p&gt;我的建议是，可以找时间跟他们吃吃饭或喝杯咖啡什么的。&lt;/p&gt;
 &lt;p&gt;拉近私人关系，总可以使这种事情往正向的方向发展。&lt;/
-      
-    
-    </summary>
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>程序员心理建设</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_程序员心理建设/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T14:54:25.010Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;工作是属于公司的，而职业生涯却是属于你自己的！&lt;/p&gt;
-&lt;p&gt;你所能犯的最大错误就是相信自己是在为别人工作。这样一来你对工作的安全感已然尽失。职业发展的驱动力一定是来自个体本身。记住：工作是属于公司的，而职业生涯却是属于你自己的。–厄尔·南丁格尔&lt;/p&gt;
-&lt;p&gt;摘自《软技能
       
     
     </summary>
@@ -91,19 +91,19 @@
   </entry>
   
   <entry>
-    <title>前端和技术天花板</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%89%8D%E7%AB%AF%E5%92%8C%E6%8A%80%E6%9C%AF%E5%A4%A9%E8%8A%B1%E6%9D%BF/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_前端和技术天花板/</id>
+    <title>程序员心理建设</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_程序员心理建设/</id>
     <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:02:25.150Z</updated>
+    <updated>2020-02-24T14:54:25.010Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;进入移动互联网时代后，前端岗位的需求应该是在下降的。原因显而易见，因为用户的时间都消耗在移动端，消耗在APP上了。&lt;/p&gt;
-&lt;p&gt;前端市场开始慢慢被客户端市场吞噬。&lt;/p&gt;
-&lt;p&gt;不过这几年，又显现出了大前端的趋势，有点山水轮流转的感觉。(当然，大前端跟前端有很大不同）&lt;/
+        &lt;p&gt;工作是属于公司的，而职业生涯却是属于你自己的！&lt;/p&gt;
+&lt;p&gt;你所能犯的最大错误就是相信自己是在为别人工作。这样一来你对工作的安全感已然尽失。职业发展的驱动力一定是来自个体本身。记住：工作是属于公司的，而职业生涯却是属于你自己的。–厄尔·南丁格尔&lt;/p&gt;
+&lt;p&gt;摘自《软技能
       
     
     </summary>
@@ -258,17 +258,17 @@
   </entry>
   
   <entry>
-    <title>MYSQL数据库网站中常用数据类型介绍</title>
-    <link href="http://www.ithelei.com/2020/02/09/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BD%91%E7%AB%99%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%8B%E7%BB%8D/"/>
-    <id>http://www.ithelei.com/2020/02/09/MYSQL数据库网站中常用数据类型介绍/</id>
+    <title>MYSQL数据库中的权限列表</title>
+    <link href="http://www.ithelei.com/2020/02/09/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E7%9A%84%E6%9D%83%E9%99%90%E5%88%97%E8%A1%A8/"/>
+    <id>http://www.ithelei.com/2020/02/09/MYSQL数据库中的权限列表/</id>
     <published>2020-02-09T13:36:45.000Z</published>
-    <updated>2020-02-24T13:26:03.314Z</updated>
+    <updated>2020-02-09T14:29:36.898Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;关于网站中常用的mysql数据库列的数据类型，只能从一般意义而言。像int-varchar-text-decimal-datetime等。&quot;&gt;&lt;a href=&quot;#关于网站中常用的mysql数据库列的数据类型，只能从一般意义而言。像int-varchar-text-
+        &lt;h2 id=&quot;mysql数据库拥有的权限，既可以分配给数据库账户的操作权力。数据库中的权限见表&quot;&gt;&lt;a href=&quot;#mysql数据库拥有的权限，既可以分配给数据库账户的操作权力。数据库中的权限见表&quot; class=&quot;headerlink&quot; title=&quot;mysql数据库拥有的权
       
     
     </summary>
@@ -281,17 +281,17 @@
   </entry>
   
   <entry>
-    <title>MYSQL数据库中的权限列表</title>
-    <link href="http://www.ithelei.com/2020/02/09/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E7%9A%84%E6%9D%83%E9%99%90%E5%88%97%E8%A1%A8/"/>
-    <id>http://www.ithelei.com/2020/02/09/MYSQL数据库中的权限列表/</id>
+    <title>MYSQL数据库网站中常用数据类型介绍</title>
+    <link href="http://www.ithelei.com/2020/02/09/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BD%91%E7%AB%99%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%8B%E7%BB%8D/"/>
+    <id>http://www.ithelei.com/2020/02/09/MYSQL数据库网站中常用数据类型介绍/</id>
     <published>2020-02-09T13:36:45.000Z</published>
-    <updated>2020-02-09T14:29:36.898Z</updated>
+    <updated>2020-02-24T13:26:03.314Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;mysql数据库拥有的权限，既可以分配给数据库账户的操作权力。数据库中的权限见表&quot;&gt;&lt;a href=&quot;#mysql数据库拥有的权限，既可以分配给数据库账户的操作权力。数据库中的权限见表&quot; class=&quot;headerlink&quot; title=&quot;mysql数据库拥有的权
+        &lt;h2 id=&quot;关于网站中常用的mysql数据库列的数据类型，只能从一般意义而言。像int-varchar-text-decimal-datetime等。&quot;&gt;&lt;a href=&quot;#关于网站中常用的mysql数据库列的数据类型，只能从一般意义而言。像int-varchar-text-
       
     
     </summary>
