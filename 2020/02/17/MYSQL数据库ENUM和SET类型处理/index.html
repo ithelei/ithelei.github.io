@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="养码哥">
 <meta property="og:description" content="MYSQL数据库ENUM和SET都是比较特殊的字符串类型，他们都是从一个预先定义好的数据范围内去取值，当给此类型变更值时，不能超出此列预先规定好的那些值。 NUM类型最多可枚举65 535个成员，但只允许出现一个成员————相当于单选（n个单选按钮只能选一个） 我们经常需要给很多表增加一个‘类型’ 字段，比如人的性别有‘男’， ‘女’，学校的类型有‘幼儿园’，‘小学’，‘中学’，‘大学’，汽车的类">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-24T13:47:12.700Z">
+<meta property="og:updated_time" content="2020-02-24T14:01:41.325Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MYSQL数据库ENUM和SET类型处理">
 <meta name="twitter:description" content="MYSQL数据库ENUM和SET都是比较特殊的字符串类型，他们都是从一个预先定义好的数据范围内去取值，当给此类型变更值时，不能超出此列预先规定好的那些值。 NUM类型最多可枚举65 535个成员，但只允许出现一个成员————相当于单选（n个单选按钮只能选一个） 我们经常需要给很多表增加一个‘类型’ 字段，比如人的性别有‘男’， ‘女’，学校的类型有‘幼儿园’，‘小学’，‘中学’，‘大学’，汽车的类">
@@ -277,21 +277,6 @@ var _hmt = _hmt || [];
                 <a class="category-link" href="/categories/MySQL/">MySQL</a>
               </p>
               <p class="item-title">
-                <a href="/2020/02/17/MYSQL数据库中DEFAULT（默认）使用技巧/" class="title">MYSQL数据库中DEFAULT（默认）使用技巧</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2020-02-17T13:36:45.000Z" itemprop="datePublished">2020-02-17</time>
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                <a class="category-link" href="/categories/MySQL/">MySQL</a>
-              </p>
-              <p class="item-title">
                 <a href="/2020/02/17/MYSQL数据库ENUM和SET类型处理/" class="title">MYSQL数据库ENUM和SET类型处理</a>
               </p>
               <p class="item-date">
@@ -307,7 +292,7 @@ var _hmt = _hmt || [];
                 <a class="category-link" href="/categories/MySQL/">MySQL</a>
               </p>
               <p class="item-title">
-                <a href="/2020/02/17/MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）/" class="title">MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）</a>
+                <a href="/2020/02/17/MYSQL数据库中DEFAULT（默认）使用技巧/" class="title">MYSQL数据库中DEFAULT（默认）使用技巧</a>
               </p>
               <p class="item-date">
                 <time datetime="2020-02-17T13:36:45.000Z" itemprop="datePublished">2020-02-17</time>
@@ -323,6 +308,21 @@ var _hmt = _hmt || [];
               </p>
               <p class="item-title">
                 <a href="/2020/02/17/MYSQL数据库表列的数据类型之_TEXT与BLOG的区别/" class="title">MYSQL数据库表列的数据类型之_TEXT与BLOG的区别</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-02-17T13:36:45.000Z" itemprop="datePublished">2020-02-17</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/MySQL/">MySQL</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/02/17/MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）/" class="title">MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）</a>
               </p>
               <p class="item-date">
                 <time datetime="2020-02-17T13:36:45.000Z" itemprop="datePublished">2020-02-17</time>
@@ -400,10 +400,10 @@ var _hmt = _hmt || [];
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/02/17/MYSQL数据库ENUM和SET类型处理/#comments" class="article-comment-link">Comments</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 233(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1.1k(words)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1(minutes)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 4(minutes)</span>
 	
 
       </div>
@@ -415,6 +415,66 @@ var _hmt = _hmt || [];
 <p>我们经常需要给很多表增加一个‘类型’ 字段，比如人的性别有‘男’， ‘女’，学校的类型有‘幼儿园’，‘小学’，‘中学’，‘大学’，汽车的类型有‘轿车’，‘suv’，‘mpv’等，这种字段的本质特点是它们包含 “有限个离散值”。对于这种字段，使用enum数据类型是最合适的</p>
 <p>set最多允许64个成员，可以允许这些成员同时出现————相当于复选（n个复选框，可以选n个）</p>
 <p>set(“足球”，”唱歌”，”跳舞”)</p>
+<p>set类型通常用于存储表单中的“多选项”的值。</p>
+<p>设定形式：</p>
+<p>set(‘选项值1’, ‘选项值2’, ‘选项值3’, ….)</p>
+<p>这些选项值都对应了相应的“索引值”，其索引值从1开始，并“依次翻倍”。</p>
+<p>即这些选项的索引值分别为：1， 2， 4， 8， 16， ….. （其实就是2的n次方）</p>
+<p>set类型最多可设定64个选项值。</p>
+<p>SET 类型与 ENUM 类型相似。使用她指定一个 permitted values 列表。但是 SET 类型的字段可以写入列表范围内的多个值。通常，我们在一个字段存储一个值，例如，一个会员拥有一个name,一个town。SET 类型让我们可以在一个字段存储多个值。例如我们可以在一个字段存储会员的多个电话号码。</p>
+<p>但是 SET 类型的permitted values数目不能太多，最多只能包含64个值。</p>
+<h3 id="创建-teams-new-表，包含teamno，playerno，division字段，其中division字段为-SET-类型"><a href="#创建-teams-new-表，包含teamno，playerno，division字段，其中division字段为-SET-类型" class="headerlink" title="创建 teams_new 表，包含teamno，playerno，division字段，其中division字段为 SET 类型"></a>创建 teams_new 表，包含teamno，playerno，division字段，其中division字段为 SET 类型</h3><pre><code>`CREATE TABLE teams_new(
+teamno          INTEGER NOT NULL PRIMARY KEY,
+playerno        INTEGER NOT NULL,
+division        SET (&apos;first&apos;,&apos;second&apos;,&apos;third&apos;,&apos;fourth&apos;)
+)
+`</code></pre><p>小结：</p>
+<p>在 SET 关键字后面使用括号列出 permitted values。这些值必须是字符表达式，即使permitted values 是一个数字序列，也必须写成字符字面量形式。<br>permitted values 有时也被称作 elements。divsion 字段由4个 element 组成。</p>
+<p>插入数据行时，SET 类型的字段的元素必须在一个字符字面量中并且通过逗号分隔。</p>
+<pre><code>`mysql&gt; INSERT INTO teams_new VALUES (1, 27, &apos;first&apos;);
+Query OK, 1 row affected (0.80 sec)
+
+mysql&gt; INSERT INTO teams_new VALUES (2, 27, &apos;first,third&apos;);
+Query OK, 1 row affected (0.05 sec)
+
+mysql&gt; INSERT INTO teams_new VALUES (3, 27, &apos;first,third,sixth&apos;);
+ERROR 1265 (01000): Data truncated for column &apos;division&apos; at row 1
+mysql&gt; INSERT INTO teams_new VALUES (4, 27, &apos;first,fifth&apos;);
+ERROR 1265 (01000): Data truncated for column &apos;division&apos; at row 1
+mysql&gt; INSERT INTO teams_new VALUES (5, 27, NULL);
+Query OK, 1 row affected (0.07 sec)
+
+mysql&gt; INSERT INTO teams_new VALUES (6, 27, 7);
+Query OK, 1 row affected (0.09 sec)
+
+mysql&gt; INSERT INTO teams_new VALUES (7, 27, CONV(1001,2,10));
+Query OK, 1 row affected (0.07 sec)
+
+mysql&gt; SELECT * FROM teams_new;
++--------+----------+--------------------+
+| teamno | playerno | division           |
++--------+----------+--------------------+
+|      1 |       27 | first              |
+|      2 |       27 | first,third        |
+|      5 |       27 | NULL               |
+|      6 |       27 | first,second,third |
+|      7 |       27 | first,fourth       |
++--------+----------+--------------------+
+5 rows in set (0.00 sec)
+`</code></pre><p>小结：第一行值添加了一个值 first,第二行添加了两个值，这两个值不是指定为两个字面量，而是一个字面量，即 ‘first,third’而不是‘first’,’third’.<br>第三行，第四行包含超出范围的值，报错。第五行输入 NULL 。第六行指定了三个值。</p>
+<p>同 ENUM 类型一样，SET 类型字段并没有存储实际值，而是存储一个64个长度的二进制字符串。在这个字符串中，如果这个列的第一个值出现了，右数第1位是1，否则就是0。如果集合中第二个值出现了，右数第2位是1，否则就是0，以此类推。</p>
+<h3 id="显示-division字段内部类型"><a href="#显示-division字段内部类型" class="headerlink" title="显示 division字段内部类型"></a>显示 division字段内部类型</h3><pre><code>  `mysql&gt; SELECT teamno teamno,division * 1,BIN(division * 1) FROM teams_new;
++--------+--------------+-------------------+
+| teamno | division * 1 | BIN(division * 1) |
++--------+--------------+-------------------+
+|      1 |            1 | 1                 |
+|      2 |            5 | 101               |
+|      5 |         NULL | NULL              |
+|      6 |            7 | 111               |
+|      7 |            9 | 1001              |
++--------+--------------+-------------------+
+5 rows in set (0.00 sec)
+`</code></pre><p>小结：<br>通过 divsion * 1 ，我们可以显示内部值。使用 BIN函数把 DECIMAL值转为二进制，并且可以看到MYSQL使用的位模式。注意，这个位模式可以相当长。</p>
 
       
     </div>
@@ -472,13 +532,9 @@ var _hmt = _hmt || [];
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2020/02/17/MYSQL数据库中DEFAULT（默认）使用技巧/" title="MYSQL数据库中DEFAULT（默认）使用技巧"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/2020/02/17/MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）/" title="MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2020/02/17/MYSQL数据库中DEFAULT（默认）使用技巧/" title="MYSQL数据库中DEFAULT（默认）使用技巧"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
