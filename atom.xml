@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ithelei.com/"/>
-  <updated>2020-02-17T14:10:10.101Z</updated>
+  <updated>2020-02-17T14:55:02.441Z</updated>
   <id>http://www.ithelei.com/</id>
   
   <author>
@@ -15,30 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>MYSQL数据库表列的数据类型之_TEXT与BLOG的区别</title>
-    <link href="http://www.ithelei.com/2020/02/17/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E5%88%97%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B9%8B_TEXT%E4%B8%8EBLOG%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-    <id>http://www.ithelei.com/2020/02/17/MYSQL数据库表列的数据类型之_TEXT与BLOG的区别/</id>
-    <published>2020-02-17T13:36:45.000Z</published>
-    <updated>2020-02-17T14:10:10.101Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;一、主要差别&lt;/p&gt;
-&lt;p&gt;TEXT与BLOB的主要差别就是BLOB保存二进制数据，TEXT保存字符数据。目前几乎所有博客内容里的图片都不是以二进制存储在数据库的，而是把图片上传到服务器然后正文里使用&lt;img&gt;标签引用，这样的博客就可以使用TEXT类型。而BLOB就可以把图
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
   
   <entry>
     <title>MYSQL数据库中DEFAULT（默认）使用技巧</title>
@@ -66,6 +42,30 @@
   </entry>
   
   <entry>
+    <title>MYSQL数据库ENUM和SET类型处理</title>
+    <link href="http://www.ithelei.com/2020/02/17/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93ENUM%E5%92%8CSET%E7%B1%BB%E5%9E%8B%E5%A4%84%E7%90%86/"/>
+    <id>http://www.ithelei.com/2020/02/17/MYSQL数据库ENUM和SET类型处理/</id>
+    <published>2020-02-17T13:36:45.000Z</published>
+    <updated>2020-02-24T13:47:12.700Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;MYSQL数据库ENUM和SET都是比较特殊的字符串类型，他们都是从一个预先定义好的数据范围内去取值，当给此类型变更值时，不能超出此列预先规定好的那些值。&lt;/p&gt;
+&lt;p&gt;NUM类型最多可枚举65 535个成员，但只允许出现一个成员————相当于单选（n个单选按钮只能选一个）
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）</title>
     <link href="http://www.ithelei.com/2020/02/17/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E5%88%97%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B9%8B_%E5%88%97%E7%B1%BB%E5%9E%8B%E5%B1%9E%E6%80%A7UNSIGEND%EF%BC%88%E6%97%A0%E7%AC%A6%E5%8F%B7%EF%BC%89%E4%B8%8ESigned%EF%BC%88%E6%9C%89%E7%AC%A6%E5%8F%B7%EF%BC%89/"/>
     <id>http://www.ithelei.com/2020/02/17/MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）/</id>
@@ -77,6 +77,30 @@
       
       
         &lt;p&gt;下面用TINYINT类型字段来说明有符号属性和无符号属性两者之间的差别。在添加UNSIGEND后，字段的取值范围是0&lt;del&gt;255，而Signed的范围是-128&lt;/del&gt;127。如果确定不需要负值，通常是不设置Signed，这样会充分利用存储空间。假设使用tinyin
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MYSQL数据库表列的数据类型之_TEXT与BLOG的区别</title>
+    <link href="http://www.ithelei.com/2020/02/17/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E5%88%97%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B9%8B_TEXT%E4%B8%8EBLOG%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://www.ithelei.com/2020/02/17/MYSQL数据库表列的数据类型之_TEXT与BLOG的区别/</id>
+    <published>2020-02-17T13:36:45.000Z</published>
+    <updated>2020-02-17T14:10:10.101Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;一、主要差别&lt;/p&gt;
+&lt;p&gt;TEXT与BLOB的主要差别就是BLOB保存二进制数据，TEXT保存字符数据。目前几乎所有博客内容里的图片都不是以二进制存储在数据库的，而是把图片上传到服务器然后正文里使用&lt;img&gt;标签引用，这样的博客就可以使用TEXT类型。而BLOB就可以把图
       
     
     </summary>
@@ -462,30 +486,6 @@
     
     
       <category term="SpringBoot" scheme="http://www.ithelei.com/tags/SpringBoot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>京东云崔牛会</title>
-    <link href="http://www.ithelei.com/2019/09/01/%E4%BA%AC%E4%B8%9C%E4%BA%91%E5%B4%94%E7%89%9B%E4%BC%9A/"/>
-    <id>http://www.ithelei.com/2019/09/01/京东云崔牛会/</id>
-    <published>2019-09-01T01:20:45.000Z</published>
-    <updated>2019-09-15T13:19:10.187Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;（北京大兴）亦庄经济技术开发区科创十一街18号院京东集团总部&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://jishu-resource.oss-cn-beijing.aliyuncs.com/blog-img/fenghui/jingdong/483528446391
-      
-    
-    </summary>
-    
-      <category term="峰会" scheme="http://www.ithelei.com/categories/%E5%B3%B0%E4%BC%9A/"/>
-    
-    
-      <category term="峰会" scheme="http://www.ithelei.com/tags/%E5%B3%B0%E4%BC%9A/"/>
     
   </entry>
   

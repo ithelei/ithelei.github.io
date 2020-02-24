@@ -17,24 +17,21 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>安全复制表 | 养码哥</title>
-  <meta name="description" content="用户可以将已有表中的全部或部分信息放在一个新表中，这样就实现了表的复制。 `create table new_table1 select * from t_comments` 然后查看下表信息，可以看出复制表成功了。 注意： 使用select 方式复制是不能复制键（Key）的。 上面演示了整个表的复制，当然也可以只复制特定的列或特定行的内容。 mysql还有一种复制表的方法—-like方法,但他不">
+  <title>MYSQL数据库ENUM和SET类型处理 | 养码哥</title>
+  <meta name="description" content="MYSQL数据库ENUM和SET都是比较特殊的字符串类型，他们都是从一个预先定义好的数据范围内去取值，当给此类型变更值时，不能超出此列预先规定好的那些值。 NUM类型最多可枚举65 535个成员，但只允许出现一个成员————相当于单选（n个单选按钮只能选一个） 我们经常需要给很多表增加一个‘类型’ 字段，比如人的性别有‘男’， ‘女’，学校的类型有‘幼儿园’，‘小学’，‘中学’，‘大学’，汽车的类">
 <meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安全复制表">
-<meta property="og:url" content="http://www.ithelei.com/2020/02/01/安全复制表/index.html">
+<meta property="og:title" content="MYSQL数据库ENUM和SET类型处理">
+<meta property="og:url" content="http://www.ithelei.com/2020/02/17/MYSQL数据库ENUM和SET类型处理/index.html">
 <meta property="og:site_name" content="养码哥">
-<meta property="og:description" content="用户可以将已有表中的全部或部分信息放在一个新表中，这样就实现了表的复制。 `create table new_table1 select * from t_comments` 然后查看下表信息，可以看出复制表成功了。 注意： 使用select 方式复制是不能复制键（Key）的。 上面演示了整个表的复制，当然也可以只复制特定的列或特定行的内容。 mysql还有一种复制表的方法—-like方法,但他不">
+<meta property="og:description" content="MYSQL数据库ENUM和SET都是比较特殊的字符串类型，他们都是从一个预先定义好的数据范围内去取值，当给此类型变更值时，不能超出此列预先规定好的那些值。 NUM类型最多可枚举65 535个成员，但只允许出现一个成员————相当于单选（n个单选按钮只能选一个） 我们经常需要给很多表增加一个‘类型’ 字段，比如人的性别有‘男’， ‘女’，学校的类型有‘幼儿园’，‘小学’，‘中学’，‘大学’，汽车的类">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://blog-dt.oss-cn-beijing.aliyuncs.com/mysql/1.png">
-<meta property="og:image" content="http://blog-dt.oss-cn-beijing.aliyuncs.com/mysql/2.png">
-<meta property="og:updated_time" content="2020-02-07T15:32:07.891Z">
+<meta property="og:updated_time" content="2020-02-24T13:47:12.700Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="安全复制表">
-<meta name="twitter:description" content="用户可以将已有表中的全部或部分信息放在一个新表中，这样就实现了表的复制。 `create table new_table1 select * from t_comments` 然后查看下表信息，可以看出复制表成功了。 注意： 使用select 方式复制是不能复制键（Key）的。 上面演示了整个表的复制，当然也可以只复制特定的列或特定行的内容。 mysql还有一种复制表的方法—-like方法,但他不">
-<meta name="twitter:image" content="http://blog-dt.oss-cn-beijing.aliyuncs.com/mysql/1.png">
+<meta name="twitter:title" content="MYSQL数据库ENUM和SET类型处理">
+<meta name="twitter:description" content="MYSQL数据库ENUM和SET都是比较特殊的字符串类型，他们都是从一个预先定义好的数据范围内去取值，当给此类型变更值时，不能超出此列预先规定好的那些值。 NUM类型最多可枚举65 535个成员，但只允许出现一个成员————相当于单选（n个单选按钮只能选一个） 我们经常需要给很多表增加一个‘类型’ 字段，比如人的性别有‘男’， ‘女’，学校的类型有‘幼儿园’，‘小学’，‘中学’，‘大学’，汽车的类">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://www.ithelei.com/2020/02/01/安全复制表/index.html">
+  <link rel="canonical" href="http://www.ithelei.com/2020/02/17/MYSQL数据库ENUM和SET类型处理/index.html">
   
     <link rel="alternate" href="/atom.xml" title="养码哥" type="application/atom+xml">
   
@@ -361,14 +358,14 @@ var _hmt = _hmt || [];
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-安全复制表" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-MYSQL数据库ENUM和SET类型处理" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      安全复制表
+      MYSQL数据库ENUM和SET类型处理
     </h1>
   
 
@@ -376,8 +373,8 @@ var _hmt = _hmt || [];
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2020/02/01/安全复制表/" class="article-date">
-	  <time datetime="2020-02-01T13:36:45.000Z" itemprop="datePublished">2020-02-01</time>
+	<a href="/2020/02/17/MYSQL数据库ENUM和SET类型处理/" class="article-date">
+	  <time datetime="2020-02-17T13:36:45.000Z" itemprop="datePublished">2020-02-17</time>
 	</a>
 </span>
         
@@ -397,13 +394,13 @@ var _hmt = _hmt || [];
 
 	<span class="article-read hidden-xs">
     	<i class="icon icon-eye-fill" aria-hidden="true"></i>
-    	<span id="/2020/02/01/安全复制表/" class="leancloud_visitors"  data-flag-title="安全复制表">0</span>
+    	<span id="/2020/02/17/MYSQL数据库ENUM和SET类型处理/" class="leancloud_visitors"  data-flag-title="MYSQL数据库ENUM和SET类型处理">0</span>
     </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/02/01/安全复制表/#comments" class="article-comment-link">Comments</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/02/17/MYSQL数据库ENUM和SET类型处理/#comments" class="article-comment-link">Comments</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 137(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 233(words)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1(minutes)</span>
@@ -413,13 +410,11 @@ var _hmt = _hmt || [];
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>用户可以将已有表中的全部或部分信息放在一个新表中，这样就实现了表的复制。</p>
-<pre><code>`create table new_table1 select * from t_comments`</code></pre><p><img src="http://blog-dt.oss-cn-beijing.aliyuncs.com/mysql/1.png" alt></p>
-<p>然后查看下表信息，可以看出复制表成功了。</p>
-<p>注意：</p>
-<p>使用select 方式复制是不能复制键（Key）的。</p>
-<p>上面演示了整个表的复制，当然也可以只复制特定的列或特定行的内容。</p>
-<h3 id="mysql还有一种复制表的方法—-like方法-但他不能复制表的内容，只能复制表的结构。"><a href="#mysql还有一种复制表的方法—-like方法-但他不能复制表的内容，只能复制表的结构。" class="headerlink" title="mysql还有一种复制表的方法—-like方法,但他不能复制表的内容，只能复制表的结构。"></a>mysql还有一种复制表的方法—-like方法,但他不能复制表的内容，只能复制表的结构。</h3><p><img src="http://blog-dt.oss-cn-beijing.aliyuncs.com/mysql/2.png" alt></p>
+        <p>MYSQL数据库ENUM和SET都是比较特殊的字符串类型，他们都是从一个预先定义好的数据范围内去取值，当给此类型变更值时，不能超出此列预先规定好的那些值。</p>
+<p>NUM类型最多可枚举65 535个成员，但只允许出现一个成员————相当于单选（n个单选按钮只能选一个）</p>
+<p>我们经常需要给很多表增加一个‘类型’ 字段，比如人的性别有‘男’， ‘女’，学校的类型有‘幼儿园’，‘小学’，‘中学’，‘大学’，汽车的类型有‘轿车’，‘suv’，‘mpv’等，这种字段的本质特点是它们包含 “有限个离散值”。对于这种字段，使用enum数据类型是最合适的</p>
+<p>set最多允许64个成员，可以允许这些成员同时出现————相当于复选（n个复选框，可以选n个）</p>
+<p>set(“足球”，”唱歌”，”跳舞”)</p>
 
       
     </div>
@@ -429,7 +424,7 @@ var _hmt = _hmt || [];
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://www.ithelei.com/2020/02/01/安全复制表/" title="安全复制表" target="_blank" rel="external">http://www.ithelei.com/2020/02/01/安全复制表/</a>
+      <a href="http://www.ithelei.com/2020/02/17/MYSQL数据库ENUM和SET类型处理/" title="MYSQL数据库ENUM和SET类型处理" target="_blank" rel="external">http://www.ithelei.com/2020/02/17/MYSQL数据库ENUM和SET类型处理/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -478,12 +473,12 @@ var _hmt = _hmt || [];
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/2020/02/01/安全修改表/" title="安全修改表"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+      <a href="/2020/02/17/MYSQL数据库中DEFAULT（默认）使用技巧/" title="MYSQL数据库中DEFAULT（默认）使用技巧"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/2019/09/15/怎么理解Linux软中断？/" title="怎么理解Linux软中断？"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2020/02/17/MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）/" title="MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
