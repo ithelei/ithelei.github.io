@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ithelei.com/"/>
-  <updated>2020-02-25T13:51:50.836Z</updated>
+  <updated>2020-02-25T14:43:51.106Z</updated>
   <id>http://www.ithelei.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.ithelei.com/2020/02/25/MySQLdump%E5%A4%87%E4%BB%BD%E6%89%80%E6%9C%89%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     <id>http://www.ithelei.com/2020/02/25/MySQLdump备份所有数据库/</id>
     <published>2020-02-25T13:45:00.000Z</published>
-    <updated>2020-02-25T13:51:50.836Z</updated>
+    <updated>2020-02-25T14:43:51.106Z</updated>
     
     <summary type="html">
     
@@ -112,29 +112,27 @@
   </entry>
   
   <entry>
-    <title>我不会，但我可以学</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91%E6%88%91%E4%B8%8D%E4%BC%9A%EF%BC%8C%E4%BD%86%E6%88%91%E5%8F%AF%E4%BB%A5%E5%AD%A6/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_沈剑我不会，但我可以学/</id>
+    <title>前端和技术天花板</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%89%8D%E7%AB%AF%E5%92%8C%E6%8A%80%E6%9C%AF%E5%A4%A9%E8%8A%B1%E6%9D%BF/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_前端和技术天花板/</id>
     <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:35:15.377Z</updated>
+    <updated>2020-02-24T15:02:25.150Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;“我不会，但我可以学”&lt;/p&gt;
-&lt;p&gt;一个case。&lt;/p&gt;
-&lt;p&gt;运营提了一个紧急的需求，做一个活动落地页，实在抽不出来人手，于是安排了一个同学对接。&lt;/p&gt;
-&lt;p&gt;新同学非常认真负责，和产品运营沟通需求，做技术方案设计。&lt;/p&gt;
-&lt;p&gt;技术方案评完，新同学来找我：“有很
+        &lt;p&gt;进入移动互联网时代后，前端岗位的需求应该是在下降的。原因显而易见，因为用户的时间都消耗在移动端，消耗在APP上了。&lt;/p&gt;
+&lt;p&gt;前端市场开始慢慢被客户端市场吞噬。&lt;/p&gt;
+&lt;p&gt;不过这几年，又显现出了大前端的趋势，有点山水轮流转的感觉。(当然，大前端跟前端有很大不同）&lt;/
       
     
     </summary>
     
-      <category term="职场" scheme="http://www.ithelei.com/categories/%E8%81%8C%E5%9C%BA/"/>
+      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
     
     
-      <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
+      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
     
   </entry>
   
@@ -165,20 +163,21 @@
   </entry>
   
   <entry>
-    <title>危机感</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91%E8%81%8C%E5%9C%BA/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_沈剑职场/</id>
+    <title>我不会，但我可以学</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91%E6%88%91%E4%B8%8D%E4%BC%9A%EF%BC%8C%E4%BD%86%E6%88%91%E5%8F%AF%E4%BB%A5%E5%AD%A6/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_沈剑我不会，但我可以学/</id>
     <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:26:15.610Z</updated>
+    <updated>2020-02-24T15:35:15.377Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;有时候我会想，如果公司把我换掉，我的团队会不会变得更好。&lt;/p&gt;
-&lt;p&gt;这样的想法，会立刻消灭我内心的所有沾沾自喜，并让自己立刻有了危机感。&lt;/p&gt;
-&lt;p&gt;持续学习，持续进步，共勉。&lt;/p&gt;
-&lt;h2 id=&quot;职场&quot;&gt;&lt;a href=&quot;#职场&quot; class=&quot;headerli
+        &lt;p&gt;“我不会，但我可以学”&lt;/p&gt;
+&lt;p&gt;一个case。&lt;/p&gt;
+&lt;p&gt;运营提了一个紧急的需求，做一个活动落地页，实在抽不出来人手，于是安排了一个同学对接。&lt;/p&gt;
+&lt;p&gt;新同学非常认真负责，和产品运营沟通需求，做技术方案设计。&lt;/p&gt;
+&lt;p&gt;技术方案评完，新同学来找我：“有很
       
     
     </summary>
@@ -187,56 +186,6 @@
     
     
       <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端和技术天花板</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%89%8D%E7%AB%AF%E5%92%8C%E6%8A%80%E6%9C%AF%E5%A4%A9%E8%8A%B1%E6%9D%BF/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_前端和技术天花板/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:02:25.150Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;进入移动互联网时代后，前端岗位的需求应该是在下降的。原因显而易见，因为用户的时间都消耗在移动端，消耗在APP上了。&lt;/p&gt;
-&lt;p&gt;前端市场开始慢慢被客户端市场吞噬。&lt;/p&gt;
-&lt;p&gt;不过这几年，又显现出了大前端的趋势，有点山水轮流转的感觉。(当然，大前端跟前端有很大不同）&lt;/
-      
-    
-    </summary>
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>程序员心理建设</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_程序员心理建设/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T14:54:25.010Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;工作是属于公司的，而职业生涯却是属于你自己的！&lt;/p&gt;
-&lt;p&gt;你所能犯的最大错误就是相信自己是在为别人工作。这样一来你对工作的安全感已然尽失。职业发展的驱动力一定是来自个体本身。记住：工作是属于公司的，而职业生涯却是属于你自己的。–厄尔·南丁格尔&lt;/p&gt;
-&lt;p&gt;摘自《软技能
-      
-    
-    </summary>
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
     
   </entry>
   
@@ -266,26 +215,53 @@
   </entry>
   
   <entry>
-    <title>MYSQL数据库ENUM和SET类型处理</title>
-    <link href="http://www.ithelei.com/2020/02/17/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93ENUM%E5%92%8CSET%E7%B1%BB%E5%9E%8B%E5%A4%84%E7%90%86/"/>
-    <id>http://www.ithelei.com/2020/02/17/MYSQL数据库ENUM和SET类型处理/</id>
-    <published>2020-02-17T13:36:45.000Z</published>
-    <updated>2020-02-24T14:01:41.325Z</updated>
+    <title>危机感</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91%E8%81%8C%E5%9C%BA/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_沈剑职场/</id>
+    <published>2020-02-24T01:20:45.000Z</published>
+    <updated>2020-02-24T15:26:15.610Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;MYSQL数据库ENUM和SET都是比较特殊的字符串类型，他们都是从一个预先定义好的数据范围内去取值，当给此类型变更值时，不能超出此列预先规定好的那些值。&lt;/p&gt;
-&lt;p&gt;NUM类型最多可枚举65 535个成员，但只允许出现一个成员————相当于单选（n个单选按钮只能选一个）
+        &lt;p&gt;有时候我会想，如果公司把我换掉，我的团队会不会变得更好。&lt;/p&gt;
+&lt;p&gt;这样的想法，会立刻消灭我内心的所有沾沾自喜，并让自己立刻有了危机感。&lt;/p&gt;
+&lt;p&gt;持续学习，持续进步，共勉。&lt;/p&gt;
+&lt;h2 id=&quot;职场&quot;&gt;&lt;a href=&quot;#职场&quot; class=&quot;headerli
       
     
     </summary>
     
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
+      <category term="职场" scheme="http://www.ithelei.com/categories/%E8%81%8C%E5%9C%BA/"/>
     
     
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
+      <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>程序员心理建设</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_程序员心理建设/</id>
+    <published>2020-02-24T01:20:45.000Z</published>
+    <updated>2020-02-24T14:54:25.010Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;工作是属于公司的，而职业生涯却是属于你自己的！&lt;/p&gt;
+&lt;p&gt;你所能犯的最大错误就是相信自己是在为别人工作。这样一来你对工作的安全感已然尽失。职业发展的驱动力一定是来自个体本身。记住：工作是属于公司的，而职业生涯却是属于你自己的。–厄尔·南丁格尔&lt;/p&gt;
+&lt;p&gt;摘自《软技能
+      
+    
+    </summary>
+    
+      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+    
+    
+      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
     
   </entry>
   
@@ -303,6 +279,30 @@
         &lt;p&gt;mysql创建表时，可以使用default来设置表字段的默认值，这样当向表中插入或添加数据时，如果没有为此字段设置任何值，则使用default默认值来填充该字段的值。&lt;/p&gt;
 &lt;p&gt;在使用create table创建表的时候，为字段设置默认值，如：&lt;/p&gt;
 &lt;pre&gt;&lt;co
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MYSQL数据库ENUM和SET类型处理</title>
+    <link href="http://www.ithelei.com/2020/02/17/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93ENUM%E5%92%8CSET%E7%B1%BB%E5%9E%8B%E5%A4%84%E7%90%86/"/>
+    <id>http://www.ithelei.com/2020/02/17/MYSQL数据库ENUM和SET类型处理/</id>
+    <published>2020-02-17T13:36:45.000Z</published>
+    <updated>2020-02-24T14:01:41.325Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;MYSQL数据库ENUM和SET都是比较特殊的字符串类型，他们都是从一个预先定义好的数据范围内去取值，当给此类型变更值时，不能超出此列预先规定好的那些值。&lt;/p&gt;
+&lt;p&gt;NUM类型最多可枚举65 535个成员，但只允许出现一个成员————相当于单选（n个单选按钮只能选一个）
       
     
     </summary>
@@ -478,17 +478,18 @@
   </entry>
   
   <entry>
-    <title>安全修改表</title>
-    <link href="http://www.ithelei.com/2020/02/01/%E5%AE%89%E5%85%A8%E4%BF%AE%E6%94%B9%E8%A1%A8/"/>
-    <id>http://www.ithelei.com/2020/02/01/安全修改表/</id>
+    <title>安全复制表</title>
+    <link href="http://www.ithelei.com/2020/02/01/%E5%AE%89%E5%85%A8%E5%A4%8D%E5%88%B6%E8%A1%A8/"/>
+    <id>http://www.ithelei.com/2020/02/01/安全复制表/</id>
     <published>2020-02-01T13:36:45.000Z</published>
-    <updated>2020-02-07T16:26:46.721Z</updated>
+    <updated>2020-02-07T15:32:07.891Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;ALTER-table-命令可以对已经创建的表进行修改，如增加字段，删除字段，更改字段，增加主键等。&quot;&gt;&lt;a href=&quot;#ALTER-table-命令可以对已经创建的表进行修改，如增加字段，删除字段，更改字段，增加主键等。&quot; class=&quot;headerlink&quot;
+        &lt;p&gt;用户可以将已有表中的全部或部分信息放在一个新表中，这样就实现了表的复制。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;`create table new_table1 select * from t_comments`&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&quot;http://bl
       
     
     </summary>
