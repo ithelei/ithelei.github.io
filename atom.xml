@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ithelei.com/"/>
-  <updated>2020-02-24T15:11:26.142Z</updated>
+  <updated>2020-02-25T13:41:38.177Z</updated>
   <id>http://www.ithelei.com/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL备份与恢复</title>
+    <link href="http://www.ithelei.com/2020/02/25/MySQL%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D/"/>
+    <id>http://www.ithelei.com/2020/02/25/MySQL备份与恢复/</id>
+    <published>2020-02-25T13:45:00.000Z</published>
+    <updated>2020-02-25T13:41:38.177Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;mysql数据备份的多种操作手段&quot;&gt;&lt;a href=&quot;#mysql数据备份的多种操作手段&quot; class=&quot;headerlink&quot; title=&quot;mysql数据备份的多种操作手段&quot;&gt;&lt;/a&gt;mysql数据备份的多种操作手段&lt;/h2&gt;&lt;p&gt;数据备份时保证数据安全的最后
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>you are your time</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91you%20are%20your%20time/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_沈剑you are your time/</id>
+    <published>2020-02-24T01:20:45.000Z</published>
+    <updated>2020-02-24T15:26:56.550Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;you are your time&lt;/p&gt;
+&lt;p&gt;很多时候，我们都认为自己没有选择，或者被迫选择。&lt;/p&gt;
+&lt;p&gt;选择了工作，就没法立刻回家；选择了聚会，就没办法陪孩子；选择了看电视剧，就没办法看书。&lt;/p&gt;
+&lt;p&gt;其实，无形之中，我们做了自己的选择：在一些人的内心，工作比
+      
+    
+    </summary>
+    
+      <category term="职场" scheme="http://www.ithelei.com/categories/%E8%81%8C%E5%9C%BA/"/>
+    
+    
+      <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>一个复杂的团队合作事件</title>
@@ -66,53 +115,27 @@
   </entry>
   
   <entry>
-    <title>前端和技术天花板</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%89%8D%E7%AB%AF%E5%92%8C%E6%8A%80%E6%9C%AF%E5%A4%A9%E8%8A%B1%E6%9D%BF/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_前端和技术天花板/</id>
+    <title>比能力更重要的，是你的底层操作系统</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91%E6%AF%94%E8%83%BD%E5%8A%9B%E6%9B%B4%E9%87%8D%E8%A6%81%E7%9A%84%EF%BC%8C%E6%98%AF%E4%BD%A0%E7%9A%84%E5%BA%95%E5%B1%82%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_沈剑比能力更重要的，是你的底层操作系统/</id>
     <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:02:25.150Z</updated>
+    <updated>2020-02-24T15:29:58.052Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;进入移动互联网时代后，前端岗位的需求应该是在下降的。原因显而易见，因为用户的时间都消耗在移动端，消耗在APP上了。&lt;/p&gt;
-&lt;p&gt;前端市场开始慢慢被客户端市场吞噬。&lt;/p&gt;
-&lt;p&gt;不过这几年，又显现出了大前端的趋势，有点山水轮流转的感觉。(当然，大前端跟前端有很大不同）&lt;/
+        &lt;p&gt;“比能力更重要的，是你的底层操作系统”&lt;/p&gt;
+&lt;p&gt;什么是普通人？就是快乐没有那么强烈，痛苦也没有那么巨大。所以，他们的人生会在既定的轨道上相对平衡地运行，而不是被快乐和痛苦牵引撕扯，没完没了地折腾。&lt;/p&gt;
+&lt;p&gt;什么叫有一技之长的人？就是当他在沉下来做某件事的时候，他
       
     
     </summary>
     
-      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+      <category term="人生" scheme="http://www.ithelei.com/categories/%E4%BA%BA%E7%94%9F/"/>
     
     
-      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>you are your time</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91you%20are%20your%20time/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_沈剑you are your time/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:26:56.550Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;you are your time&lt;/p&gt;
-&lt;p&gt;很多时候，我们都认为自己没有选择，或者被迫选择。&lt;/p&gt;
-&lt;p&gt;选择了工作，就没法立刻回家；选择了聚会，就没办法陪孩子；选择了看电视剧，就没办法看书。&lt;/p&gt;
-&lt;p&gt;其实，无形之中，我们做了自己的选择：在一些人的内心，工作比
-      
-    
-    </summary>
-    
-      <category term="职场" scheme="http://www.ithelei.com/categories/%E8%81%8C%E5%9C%BA/"/>
-    
-    
-      <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
+      <category term="人生" scheme="http://www.ithelei.com/tags/%E4%BA%BA%E7%94%9F/"/>
     
   </entry>
   
@@ -140,31 +163,6 @@
     
     
       <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>比能力更重要的，是你的底层操作系统</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91%E6%AF%94%E8%83%BD%E5%8A%9B%E6%9B%B4%E9%87%8D%E8%A6%81%E7%9A%84%EF%BC%8C%E6%98%AF%E4%BD%A0%E7%9A%84%E5%BA%95%E5%B1%82%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_沈剑比能力更重要的，是你的底层操作系统/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:29:58.052Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;“比能力更重要的，是你的底层操作系统”&lt;/p&gt;
-&lt;p&gt;什么是普通人？就是快乐没有那么强烈，痛苦也没有那么巨大。所以，他们的人生会在既定的轨道上相对平衡地运行，而不是被快乐和痛苦牵引撕扯，没完没了地折腾。&lt;/p&gt;
-&lt;p&gt;什么叫有一技之长的人？就是当他在沉下来做某件事的时候，他
-      
-    
-    </summary>
-    
-      <category term="人生" scheme="http://www.ithelei.com/categories/%E4%BA%BA%E7%94%9F/"/>
-    
-    
-      <category term="人生" scheme="http://www.ithelei.com/tags/%E4%BA%BA%E7%94%9F/"/>
     
   </entry>
   
@@ -220,6 +218,31 @@
   </entry>
   
   <entry>
+    <title>前端和技术天花板</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%89%8D%E7%AB%AF%E5%92%8C%E6%8A%80%E6%9C%AF%E5%A4%A9%E8%8A%B1%E6%9D%BF/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_前端和技术天花板/</id>
+    <published>2020-02-24T01:20:45.000Z</published>
+    <updated>2020-02-24T15:02:25.150Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;进入移动互联网时代后，前端岗位的需求应该是在下降的。原因显而易见，因为用户的时间都消耗在移动端，消耗在APP上了。&lt;/p&gt;
+&lt;p&gt;前端市场开始慢慢被客户端市场吞噬。&lt;/p&gt;
+&lt;p&gt;不过这几年，又显现出了大前端的趋势，有点山水轮流转的感觉。(当然，大前端跟前端有很大不同）&lt;/
+      
+    
+    </summary>
+    
+      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+    
+    
+      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MYSQL数据库中DEFAULT（默认）使用技巧</title>
     <link href="http://www.ithelei.com/2020/02/17/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%ADDEFAULT%EF%BC%88%E9%BB%98%E8%AE%A4%EF%BC%89%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
     <id>http://www.ithelei.com/2020/02/17/MYSQL数据库中DEFAULT（默认）使用技巧/</id>
@@ -245,30 +268,6 @@
   </entry>
   
   <entry>
-    <title>MYSQL数据库ENUM和SET类型处理</title>
-    <link href="http://www.ithelei.com/2020/02/17/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93ENUM%E5%92%8CSET%E7%B1%BB%E5%9E%8B%E5%A4%84%E7%90%86/"/>
-    <id>http://www.ithelei.com/2020/02/17/MYSQL数据库ENUM和SET类型处理/</id>
-    <published>2020-02-17T13:36:45.000Z</published>
-    <updated>2020-02-24T14:01:41.325Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;MYSQL数据库ENUM和SET都是比较特殊的字符串类型，他们都是从一个预先定义好的数据范围内去取值，当给此类型变更值时，不能超出此列预先规定好的那些值。&lt;/p&gt;
-&lt;p&gt;NUM类型最多可枚举65 535个成员，但只允许出现一个成员————相当于单选（n个单选按钮只能选一个）
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
     <title>MYSQL数据库表列的数据类型之_TEXT与BLOG的区别</title>
     <link href="http://www.ithelei.com/2020/02/17/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E5%88%97%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B9%8B_TEXT%E4%B8%8EBLOG%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
     <id>http://www.ithelei.com/2020/02/17/MYSQL数据库表列的数据类型之_TEXT与BLOG的区别/</id>
@@ -281,6 +280,30 @@
       
         &lt;p&gt;一、主要差别&lt;/p&gt;
 &lt;p&gt;TEXT与BLOB的主要差别就是BLOB保存二进制数据，TEXT保存字符数据。目前几乎所有博客内容里的图片都不是以二进制存储在数据库的，而是把图片上传到服务器然后正文里使用&lt;img&gt;标签引用，这样的博客就可以使用TEXT类型。而BLOB就可以把图
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MYSQL数据库ENUM和SET类型处理</title>
+    <link href="http://www.ithelei.com/2020/02/17/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93ENUM%E5%92%8CSET%E7%B1%BB%E5%9E%8B%E5%A4%84%E7%90%86/"/>
+    <id>http://www.ithelei.com/2020/02/17/MYSQL数据库ENUM和SET类型处理/</id>
+    <published>2020-02-17T13:36:45.000Z</published>
+    <updated>2020-02-24T14:01:41.325Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;MYSQL数据库ENUM和SET都是比较特殊的字符串类型，他们都是从一个预先定义好的数据范围内去取值，当给此类型变更值时，不能超出此列预先规定好的那些值。&lt;/p&gt;
+&lt;p&gt;NUM类型最多可枚举65 535个成员，但只允许出现一个成员————相当于单选（n个单选按钮只能选一个）
       
     
     </summary>
@@ -475,29 +498,6 @@
     
     
       <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>怎么理解Linux软中断？</title>
-    <link href="http://www.ithelei.com/2019/09/15/%E6%80%8E%E4%B9%88%E7%90%86%E8%A7%A3Linux%E8%BD%AF%E4%B8%AD%E6%96%AD%EF%BC%9F/"/>
-    <id>http://www.ithelei.com/2019/09/15/怎么理解Linux软中断？/</id>
-    <published>2019-09-15T01:20:45.000Z</published>
-    <updated>2019-09-15T06:29:22.462Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;从“取外卖”看中断&quot;&gt;&lt;a href=&quot;#从“取外卖”看中断&quot; class=&quot;headerlink&quot; title=&quot;从“取外卖”看中断&quot;&gt;&lt;/a&gt;从“取外卖”看中断&lt;/h3&gt;&lt;p&gt;说到中断，我在前面关于“上下文切换”的文章，简单说过中断的含义，先来回顾一下。中断是
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.ithelei.com/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.ithelei.com/tags/Linux/"/>
     
   </entry>
   
