@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ithelei.com/"/>
-  <updated>2020-02-25T14:43:51.106Z</updated>
+  <updated>2020-02-25T14:46:46.321Z</updated>
   <id>http://www.ithelei.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.ithelei.com/2020/02/25/MySQLdump%E5%A4%87%E4%BB%BD%E6%89%80%E6%9C%89%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     <id>http://www.ithelei.com/2020/02/25/MySQLdump备份所有数据库/</id>
     <published>2020-02-25T13:45:00.000Z</published>
-    <updated>2020-02-25T14:43:51.106Z</updated>
+    <updated>2020-02-25T14:46:46.321Z</updated>
     
     <summary type="html">
     
@@ -77,29 +77,6 @@
 &lt;p&gt;比如 A 的做事理念跟数据，跟工程的同学不一致，如果就事论事地讨论，可能大家谁都无法说服谁。&lt;/p&gt;
 &lt;p&gt;我的建议是，可以找时间跟他们吃吃饭或喝杯咖啡什么的。&lt;/p&gt;
 &lt;p&gt;拉近私人关系，总可以使这种事情往正向的方向发展。&lt;/
-      
-    
-    </summary>
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何度过自己平淡无奇的青春</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%A6%82%E4%BD%95%E5%BA%A6%E8%BF%87%E8%87%AA%E5%B7%B1%E5%B9%B3%E6%B7%A1%E6%97%A0%E5%A5%87%E7%9A%84%E9%9D%92%E6%98%A5/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_如何度过自己平淡无奇的青春/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:07:44.024Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡，但相对自己，相对自己周边的人，每个人的青春都是多彩的，充满激情的！&quot;&gt;&lt;a href=&quot;#首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡
       
     
     </summary>
@@ -186,6 +163,29 @@
     
     
       <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何度过自己平淡无奇的青春</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%A6%82%E4%BD%95%E5%BA%A6%E8%BF%87%E8%87%AA%E5%B7%B1%E5%B9%B3%E6%B7%A1%E6%97%A0%E5%A5%87%E7%9A%84%E9%9D%92%E6%98%A5/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_如何度过自己平淡无奇的青春/</id>
+    <published>2020-02-24T01:20:45.000Z</published>
+    <updated>2020-02-24T15:07:44.024Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡，但相对自己，相对自己周边的人，每个人的青春都是多彩的，充满激情的！&quot;&gt;&lt;a href=&quot;#首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡
+      
+    
+    </summary>
+    
+      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+    
+    
+      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
     
   </entry>
   
@@ -478,18 +478,17 @@
   </entry>
   
   <entry>
-    <title>安全复制表</title>
-    <link href="http://www.ithelei.com/2020/02/01/%E5%AE%89%E5%85%A8%E5%A4%8D%E5%88%B6%E8%A1%A8/"/>
-    <id>http://www.ithelei.com/2020/02/01/安全复制表/</id>
+    <title>安全修改表</title>
+    <link href="http://www.ithelei.com/2020/02/01/%E5%AE%89%E5%85%A8%E4%BF%AE%E6%94%B9%E8%A1%A8/"/>
+    <id>http://www.ithelei.com/2020/02/01/安全修改表/</id>
     <published>2020-02-01T13:36:45.000Z</published>
-    <updated>2020-02-07T15:32:07.891Z</updated>
+    <updated>2020-02-07T16:26:46.721Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;用户可以将已有表中的全部或部分信息放在一个新表中，这样就实现了表的复制。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;`create table new_table1 select * from t_comments`&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&quot;http://bl
+        &lt;h2 id=&quot;ALTER-table-命令可以对已经创建的表进行修改，如增加字段，删除字段，更改字段，增加主键等。&quot;&gt;&lt;a href=&quot;#ALTER-table-命令可以对已经创建的表进行修改，如增加字段，删除字段，更改字段，增加主键等。&quot; class=&quot;headerlink&quot;
       
     
     </summary>
