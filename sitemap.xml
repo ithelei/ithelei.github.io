@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.ithelei.com/about/index.html</loc>
+    
+    <lastmod>2020-02-26T15:19:07.386Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ithelei.com/2020/02/26/NGINX_%E6%8E%A5%E5%85%A5%E5%B1%82%E9%99%90%E6%B5%81/</loc>
+    
+    <lastmod>2020-02-26T13:18:21.259Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.ithelei.com/2020/02/25/MySQLdump%E5%A4%87%E4%BB%BD%E6%89%80%E6%9C%89%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     
     <lastmod>2020-02-25T14:46:46.321Z</lastmod>
@@ -250,13 +264,6 @@
     <loc>http://www.ithelei.com/2019/09/02/%E4%BC%A0%E7%BB%9Fxml%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F/</loc>
     
     <lastmod>2019-09-03T15:00:41.043Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ithelei.com/about/index.html</loc>
-    
-    <lastmod>2019-09-02T13:33:55.787Z</lastmod>
     
   </url>
   

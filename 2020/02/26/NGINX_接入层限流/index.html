@@ -17,25 +17,21 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>MYSQL数据库表列的数据类型之_(数值类型)(字符串类型) | 养码哥</title>
-  <meta name="description" content="数值类型数值类型分为整数型和浮点型两类，整数型就是存放没有小数点的数值，如人口统计；浮点型就是用来存放有小数点的数值，如商品价格、失业率等是可以有小数点的，此类数据可以使用浮点型。 整数类型mysql提供了5种整数类型。其中整数类型包括：TINYINT、SMALLINT、MEDIUMINT、INT(INTEGER)、BIGINT  要定义一个整数类型时，要给他指定一个显示宽度，注意这个只是一个以多">
-<meta name="keywords" content="MySQL">
+  <title>接入层限流 | 养码哥</title>
+  <meta name="description" content="接入层通常指请求流量的入口，该层的主要目的有：负载均衡、非法请求过滤、请求聚合、缓存、降级、限流、A/B测试、服务质量监控等。可以参考（使用OpenResty开发高性能web应用）。 对与Nginx接入层限流可以使用Nginx自带的两个模块：连接数限流模块ngx_http_limit_conn_module和漏桶算法实现的请求限流模块ngx_http_limit_req_module。还可以使用O">
+<meta name="keywords" content="NGINX">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MYSQL数据库表列的数据类型之_(数值类型)(字符串类型)">
-<meta property="og:url" content="http://www.ithelei.com/2020/02/16/MYSQL数据库表列的数据类型之_(数值类型)(字符串类型)/index.html">
+<meta property="og:title" content="接入层限流">
+<meta property="og:url" content="http://www.ithelei.com/2020/02/26/NGINX_接入层限流/index.html">
 <meta property="og:site_name" content="养码哥">
-<meta property="og:description" content="数值类型数值类型分为整数型和浮点型两类，整数型就是存放没有小数点的数值，如人口统计；浮点型就是用来存放有小数点的数值，如商品价格、失业率等是可以有小数点的，此类数据可以使用浮点型。 整数类型mysql提供了5种整数类型。其中整数类型包括：TINYINT、SMALLINT、MEDIUMINT、INT(INTEGER)、BIGINT  要定义一个整数类型时，要给他指定一个显示宽度，注意这个只是一个以多">
+<meta property="og:description" content="接入层通常指请求流量的入口，该层的主要目的有：负载均衡、非法请求过滤、请求聚合、缓存、降级、限流、A/B测试、服务质量监控等。可以参考（使用OpenResty开发高性能web应用）。 对与Nginx接入层限流可以使用Nginx自带的两个模块：连接数限流模块ngx_http_limit_conn_module和漏桶算法实现的请求限流模块ngx_http_limit_req_module。还可以使用O">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://blog-dt.oss-cn-beijing.aliyuncs.com/mysql/4.png">
-<meta property="og:image" content="http://blog-dt.oss-cn-beijing.aliyuncs.com/mysql/5.png">
-<meta property="og:image" content="http://blog-dt.oss-cn-beijing.aliyuncs.com/mysql/6.jpg">
-<meta property="og:updated_time" content="2020-02-16T13:01:12.167Z">
+<meta property="og:updated_time" content="2020-02-26T13:18:21.259Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MYSQL数据库表列的数据类型之_(数值类型)(字符串类型)">
-<meta name="twitter:description" content="数值类型数值类型分为整数型和浮点型两类，整数型就是存放没有小数点的数值，如人口统计；浮点型就是用来存放有小数点的数值，如商品价格、失业率等是可以有小数点的，此类数据可以使用浮点型。 整数类型mysql提供了5种整数类型。其中整数类型包括：TINYINT、SMALLINT、MEDIUMINT、INT(INTEGER)、BIGINT  要定义一个整数类型时，要给他指定一个显示宽度，注意这个只是一个以多">
-<meta name="twitter:image" content="http://blog-dt.oss-cn-beijing.aliyuncs.com/mysql/4.png">
+<meta name="twitter:title" content="接入层限流">
+<meta name="twitter:description" content="接入层通常指请求流量的入口，该层的主要目的有：负载均衡、非法请求过滤、请求聚合、缓存、降级、限流、A/B测试、服务质量监控等。可以参考（使用OpenResty开发高性能web应用）。 对与Nginx接入层限流可以使用Nginx自带的两个模块：连接数限流模块ngx_http_limit_conn_module和漏桶算法实现的请求限流模块ngx_http_limit_req_module。还可以使用O">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://www.ithelei.com/2020/02/16/MYSQL数据库表列的数据类型之_(数值类型)(字符串类型)/index.html">
+  <link rel="canonical" href="http://www.ithelei.com/2020/02/26/NGINX_接入层限流/index.html">
   
     <link rel="alternate" href="/atom.xml" title="养码哥" type="application/atom+xml">
   
@@ -362,14 +358,14 @@ var _hmt = _hmt || [];
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-MYSQL数据库表列的数据类型之_(数值类型)(字符串类型)" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-NGINX_接入层限流" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      MYSQL数据库表列的数据类型之_(数值类型)(字符串类型)
+      接入层限流
     </h1>
   
 
@@ -377,20 +373,20 @@ var _hmt = _hmt || [];
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2020/02/16/MYSQL数据库表列的数据类型之_(数值类型)(字符串类型)/" class="article-date">
-	  <time datetime="2020-02-16T13:36:45.000Z" itemprop="datePublished">2020-02-16</time>
+	<a href="/2020/02/26/NGINX_接入层限流/" class="article-date">
+	  <time datetime="2020-02-26T01:20:45.000Z" itemprop="datePublished">2020-02-26</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/MySQL/">MySQL</a>
+    <a class="article-category-link" href="/categories/NGINX/">NGINX</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/MySQL/">MySQL</a>
+	<a class="article-tag-link" href="/tags/NGINX/">NGINX</a>
   </span>
 
 
@@ -398,38 +394,25 @@ var _hmt = _hmt || [];
 
 	<span class="article-read hidden-xs">
     	<i class="icon icon-eye-fill" aria-hidden="true"></i>
-    	<span id="/2020/02/16/MYSQL数据库表列的数据类型之_(数值类型)(字符串类型)/" class="leancloud_visitors"  data-flag-title="MYSQL数据库表列的数据类型之_(数值类型)(字符串类型)">0</span>
+    	<span id="/2020/02/26/NGINX_接入层限流/" class="leancloud_visitors"  data-flag-title="接入层限流">0</span>
     </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/02/16/MYSQL数据库表列的数据类型之_(数值类型)(字符串类型)/#comments" class="article-comment-link">Comments</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/02/26/NGINX_接入层限流/#comments" class="article-comment-link">Comments</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 636(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 206(words)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2(minutes)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1(minutes)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="数值类型"><a href="#数值类型" class="headerlink" title="数值类型"></a>数值类型</h2><p>数值类型分为整数型和浮点型两类，整数型就是存放没有小数点的数值，如人口统计；浮点型就是用来存放有小数点的数值，如商品价格、失业率等是可以有小数点的，此类数据可以使用浮点型。</p>
-<h3 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h3><p>mysql提供了5种整数类型。其中整数类型包括：TINYINT、SMALLINT、MEDIUMINT、INT(INTEGER)、BIGINT</p>
-<p><img src="http://blog-dt.oss-cn-beijing.aliyuncs.com/mysql/4.png" alt></p>
-<p>要定义一个整数类型时，要给他指定一个显示宽度，注意这个只是一个以多少字节宽度来显示列的内容，并不是数值的宽度。数据所占空间还是固定的。列入将bigint设置为显示4字节宽，那就这样来写bigint(4)，这并不意味着其所占空间宽度为4字节，事实上它所占的空间还是8个字节，而且她的最大取值还是不变的。</p>
-<h3 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h3><p>浮点数类型包括：FLOAT、DOUBLE</p>
-<p>定点数类型包括：DECIMAL(DEC)(M,D) </p>
-<p><img src="http://blog-dt.oss-cn-beijing.aliyuncs.com/mysql/5.png" alt></p>
-<h2 id="字符串类型"><a href="#字符串类型" class="headerlink" title="字符串类型"></a>字符串类型</h2><p><img src="http://blog-dt.oss-cn-beijing.aliyuncs.com/mysql/6.jpg" alt></p>
-<h3 id="char与varchar的区别"><a href="#char与varchar的区别" class="headerlink" title="char与varchar的区别"></a>char与varchar的区别</h3><p>char与varchar是常用的类型，char长度是固定的；varchar长度是可变的；在char (M)类型的数据列内，每个值要占M个字节，若小于M，则mysql会在他 的右边用空格来补足，但在查询时，这些空格会被去掉，而在varchar（m）类型的数据列里，除了存放数据所占用的字节，还会占用一个字节记录其内容长度（L+1个字节），多余空格将会在以后插入操作的过程中被去掉。</p>
-<p>采用char会多占用空间，造成空间的浪费。</p>
-<p>如果定义了char（100），最多可存放100个“a”或100个汉字，如实际存放一个“a”,或一个汉字“我”，那么此列实际占用的空间还是100，多出去的99个长补空格。浪费空间。</p>
-<p>如果采用varchar，则节省空间。我们还用上边的例子，把char（100）改成varchar（100），情况完全不一样了。如果实际存放一个“a”,或一个汉字“我”，那此列实际占用的空间就是1个。</p>
-<p>因此：char 类型可以舍弃而改用varchar。</p>
-<p>当实际的长度超出超出定义的长度时，二者均不允许。则会报错。</p>
-<p>如果定义了char(100)，最多可存放100个“a”,或100个汉字。如果实际存放101个“a”,或更多，或更多个汉字“我”，情况会怎样呢？ </p>
-<p>sql语句会报错。</p>
+        <p>接入层通常指请求流量的入口，该层的主要目的有：负载均衡、非法请求过滤、请求聚合、缓存、降级、限流、A/B测试、服务质量监控等。可以参考（使用OpenResty开发高性能web应用）。</p>
+<p>对与Nginx接入层限流可以使用Nginx自带的两个模块：连接数限流模块<code>ngx_http_limit_conn_module</code>和漏桶算法实现的请求限流模块<code>ngx_http_limit_req_module</code>。还可以使用OpenResty提供的Lua限流模块<code>lua-resty-limit-traffic</code>应对更复杂的限流场景。</p>
+<p>limit_conn 用来对某个key对应的总的网络连接数进行限流，可以按照如ip、域名、维度进行限流。limit_req用来对某个key对应的请求的平均速率进行限流，有两种用法：平滑模式（delay）和允许突发模式（nodelay）。</p>
 
       
     </div>
@@ -439,7 +422,7 @@ var _hmt = _hmt || [];
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://www.ithelei.com/2020/02/16/MYSQL数据库表列的数据类型之_(数值类型)(字符串类型)/" title="MYSQL数据库表列的数据类型之_(数值类型)(字符串类型)" target="_blank" rel="external">http://www.ithelei.com/2020/02/16/MYSQL数据库表列的数据类型之_(数值类型)(字符串类型)/</a>
+      <a href="http://www.ithelei.com/2020/02/26/NGINX_接入层限流/" title="接入层限流" target="_blank" rel="external">http://www.ithelei.com/2020/02/26/NGINX_接入层限流/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -487,13 +470,9 @@ var _hmt = _hmt || [];
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2020/02/17/MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）/" title="MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/2020/02/16/mysql中定义字段时zerofill属性/" title="MYSQL列类型属性ZEROFILL(填充0)"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2020/02/25/MySQLdump备份所有数据库/" title="MySQLdump备份所有数据库"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
