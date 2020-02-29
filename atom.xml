@@ -44,6 +44,30 @@
   </entry>
   
   <entry>
+    <title>MySQL命令恢复mysqldump备份的数据库</title>
+    <link href="http://www.ithelei.com/2020/02/25/MySQL%E5%91%BD%E4%BB%A4%E6%81%A2%E5%A4%8Dmysqldump%E5%A4%87%E4%BB%BD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>http://www.ithelei.com/2020/02/25/MySQL命令恢复mysqldump备份的数据库/</id>
+    <published>2020-02-25T13:45:00.000Z</published>
+    <updated>2020-02-29T10:31:32.937Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;p&gt; &lt;code&gt;mysql -u 用户名 -p 密码 -h 主机 数据库 &amp;lt;路径&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;注意：恢复要使用mysq
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MySQLdump备份所有数据库</title>
     <link href="http://www.ithelei.com/2020/02/25/MySQLdump%E5%A4%87%E4%BB%BD%E6%89%80%E6%9C%89%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     <id>http://www.ithelei.com/2020/02/25/MySQLdump备份所有数据库/</id>
@@ -90,29 +114,6 @@
   </entry>
   
   <entry>
-    <title>如何度过自己平淡无奇的青春</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%A6%82%E4%BD%95%E5%BA%A6%E8%BF%87%E8%87%AA%E5%B7%B1%E5%B9%B3%E6%B7%A1%E6%97%A0%E5%A5%87%E7%9A%84%E9%9D%92%E6%98%A5/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_如何度过自己平淡无奇的青春/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:07:44.024Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡，但相对自己，相对自己周边的人，每个人的青春都是多彩的，充满激情的！&quot;&gt;&lt;a href=&quot;#首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡
-      
-    
-    </summary>
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-  </entry>
-  
-  <entry>
     <title>一个复杂的团队合作事件</title>
     <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E4%B8%80%E4%B8%AA%E5%A4%8D%E6%9D%82%E7%9A%84%E5%9B%A2%E9%98%9F%E5%90%88%E4%BD%9C%E4%BA%8B%E4%BB%B6/"/>
     <id>http://www.ithelei.com/2020/02/24/星球_一个复杂的团队合作事件/</id>
@@ -153,6 +154,107 @@
 &lt;p&gt;很多时候，我们都认为自己没有选择，或者被迫选择。&lt;/p&gt;
 &lt;p&gt;选择了工作，就没法立刻回家；选择了聚会，就没办法陪孩子；选择了看电视剧，就没办法看书。&lt;/p&gt;
 &lt;p&gt;其实，无形之中，我们做了自己的选择：在一些人的内心，工作比
+      
+    
+    </summary>
+    
+      <category term="职场" scheme="http://www.ithelei.com/categories/%E8%81%8C%E5%9C%BA/"/>
+    
+    
+      <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何度过自己平淡无奇的青春</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%A6%82%E4%BD%95%E5%BA%A6%E8%BF%87%E8%87%AA%E5%B7%B1%E5%B9%B3%E6%B7%A1%E6%97%A0%E5%A5%87%E7%9A%84%E9%9D%92%E6%98%A5/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_如何度过自己平淡无奇的青春/</id>
+    <published>2020-02-24T01:20:45.000Z</published>
+    <updated>2020-02-24T15:07:44.024Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡，但相对自己，相对自己周边的人，每个人的青春都是多彩的，充满激情的！&quot;&gt;&lt;a href=&quot;#首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡
+      
+    
+    </summary>
+    
+      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+    
+    
+      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端和技术天花板</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%89%8D%E7%AB%AF%E5%92%8C%E6%8A%80%E6%9C%AF%E5%A4%A9%E8%8A%B1%E6%9D%BF/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_前端和技术天花板/</id>
+    <published>2020-02-24T01:20:45.000Z</published>
+    <updated>2020-02-24T15:02:25.150Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;进入移动互联网时代后，前端岗位的需求应该是在下降的。原因显而易见，因为用户的时间都消耗在移动端，消耗在APP上了。&lt;/p&gt;
+&lt;p&gt;前端市场开始慢慢被客户端市场吞噬。&lt;/p&gt;
+&lt;p&gt;不过这几年，又显现出了大前端的趋势，有点山水轮流转的感觉。(当然，大前端跟前端有很大不同）&lt;/
+      
+    
+    </summary>
+    
+      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+    
+    
+      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我不会，但我可以学</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91%E6%88%91%E4%B8%8D%E4%BC%9A%EF%BC%8C%E4%BD%86%E6%88%91%E5%8F%AF%E4%BB%A5%E5%AD%A6/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_沈剑我不会，但我可以学/</id>
+    <published>2020-02-24T01:20:45.000Z</published>
+    <updated>2020-02-24T15:35:15.377Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;“我不会，但我可以学”&lt;/p&gt;
+&lt;p&gt;一个case。&lt;/p&gt;
+&lt;p&gt;运营提了一个紧急的需求，做一个活动落地页，实在抽不出来人手，于是安排了一个同学对接。&lt;/p&gt;
+&lt;p&gt;新同学非常认真负责，和产品运营沟通需求，做技术方案设计。&lt;/p&gt;
+&lt;p&gt;技术方案评完，新同学来找我：“有很
+      
+    
+    </summary>
+    
+      <category term="职场" scheme="http://www.ithelei.com/categories/%E8%81%8C%E5%9C%BA/"/>
+    
+    
+      <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>危机感</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91%E8%81%8C%E5%9C%BA/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_沈剑职场/</id>
+    <published>2020-02-24T01:20:45.000Z</published>
+    <updated>2020-02-24T15:26:15.610Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;有时候我会想，如果公司把我换掉，我的团队会不会变得更好。&lt;/p&gt;
+&lt;p&gt;这样的想法，会立刻消灭我内心的所有沾沾自喜，并让自己立刻有了危机感。&lt;/p&gt;
+&lt;p&gt;持续学习，持续进步，共勉。&lt;/p&gt;
+&lt;h2 id=&quot;职场&quot;&gt;&lt;a href=&quot;#职场&quot; class=&quot;headerli
       
     
     </summary>
@@ -215,108 +317,6 @@
   </entry>
   
   <entry>
-    <title>我不会，但我可以学</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91%E6%88%91%E4%B8%8D%E4%BC%9A%EF%BC%8C%E4%BD%86%E6%88%91%E5%8F%AF%E4%BB%A5%E5%AD%A6/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_沈剑我不会，但我可以学/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:35:15.377Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;“我不会，但我可以学”&lt;/p&gt;
-&lt;p&gt;一个case。&lt;/p&gt;
-&lt;p&gt;运营提了一个紧急的需求，做一个活动落地页，实在抽不出来人手，于是安排了一个同学对接。&lt;/p&gt;
-&lt;p&gt;新同学非常认真负责，和产品运营沟通需求，做技术方案设计。&lt;/p&gt;
-&lt;p&gt;技术方案评完，新同学来找我：“有很
-      
-    
-    </summary>
-    
-      <category term="职场" scheme="http://www.ithelei.com/categories/%E8%81%8C%E5%9C%BA/"/>
-    
-    
-      <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端和技术天花板</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%89%8D%E7%AB%AF%E5%92%8C%E6%8A%80%E6%9C%AF%E5%A4%A9%E8%8A%B1%E6%9D%BF/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_前端和技术天花板/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:02:25.150Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;进入移动互联网时代后，前端岗位的需求应该是在下降的。原因显而易见，因为用户的时间都消耗在移动端，消耗在APP上了。&lt;/p&gt;
-&lt;p&gt;前端市场开始慢慢被客户端市场吞噬。&lt;/p&gt;
-&lt;p&gt;不过这几年，又显现出了大前端的趋势，有点山水轮流转的感觉。(当然，大前端跟前端有很大不同）&lt;/
-      
-    
-    </summary>
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>危机感</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91%E8%81%8C%E5%9C%BA/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_沈剑职场/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:26:15.610Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;有时候我会想，如果公司把我换掉，我的团队会不会变得更好。&lt;/p&gt;
-&lt;p&gt;这样的想法，会立刻消灭我内心的所有沾沾自喜，并让自己立刻有了危机感。&lt;/p&gt;
-&lt;p&gt;持续学习，持续进步，共勉。&lt;/p&gt;
-&lt;h2 id=&quot;职场&quot;&gt;&lt;a href=&quot;#职场&quot; class=&quot;headerli
-      
-    
-    </summary>
-    
-      <category term="职场" scheme="http://www.ithelei.com/categories/%E8%81%8C%E5%9C%BA/"/>
-    
-    
-      <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MYSQL数据库ENUM和SET类型处理</title>
-    <link href="http://www.ithelei.com/2020/02/17/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93ENUM%E5%92%8CSET%E7%B1%BB%E5%9E%8B%E5%A4%84%E7%90%86/"/>
-    <id>http://www.ithelei.com/2020/02/17/MYSQL数据库ENUM和SET类型处理/</id>
-    <published>2020-02-17T13:36:45.000Z</published>
-    <updated>2020-02-24T14:01:41.325Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;MYSQL数据库ENUM和SET都是比较特殊的字符串类型，他们都是从一个预先定义好的数据范围内去取值，当给此类型变更值时，不能超出此列预先规定好的那些值。&lt;/p&gt;
-&lt;p&gt;NUM类型最多可枚举65 535个成员，但只允许出现一个成员————相当于单选（n个单选按钮只能选一个）
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
     <title>MYSQL数据库中DEFAULT（默认）使用技巧</title>
     <link href="http://www.ithelei.com/2020/02/17/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%ADDEFAULT%EF%BC%88%E9%BB%98%E8%AE%A4%EF%BC%89%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
     <id>http://www.ithelei.com/2020/02/17/MYSQL数据库中DEFAULT（默认）使用技巧/</id>
@@ -354,6 +354,30 @@
       
         &lt;p&gt;一、主要差别&lt;/p&gt;
 &lt;p&gt;TEXT与BLOB的主要差别就是BLOB保存二进制数据，TEXT保存字符数据。目前几乎所有博客内容里的图片都不是以二进制存储在数据库的，而是把图片上传到服务器然后正文里使用&lt;img&gt;标签引用，这样的博客就可以使用TEXT类型。而BLOB就可以把图
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MYSQL数据库ENUM和SET类型处理</title>
+    <link href="http://www.ithelei.com/2020/02/17/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93ENUM%E5%92%8CSET%E7%B1%BB%E5%9E%8B%E5%A4%84%E7%90%86/"/>
+    <id>http://www.ithelei.com/2020/02/17/MYSQL数据库ENUM和SET类型处理/</id>
+    <published>2020-02-17T13:36:45.000Z</published>
+    <updated>2020-02-24T14:01:41.325Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;MYSQL数据库ENUM和SET都是比较特殊的字符串类型，他们都是从一个预先定义好的数据范围内去取值，当给此类型变更值时，不能超出此列预先规定好的那些值。&lt;/p&gt;
+&lt;p&gt;NUM类型最多可枚举65 535个成员，但只允许出现一个成员————相当于单选（n个单选按钮只能选一个）
       
     
     </summary>
@@ -477,30 +501,6 @@
     
     
       <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git常用指令一览表</title>
-    <link href="http://www.ithelei.com/2020/02/03/Git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E4%B8%80%E8%A7%88%E8%A1%A8/"/>
-    <id>http://www.ithelei.com/2020/02/03/Git常用指令一览表/</id>
-    <published>2020-02-03T01:20:45.000Z</published>
-    <updated>2020-02-07T14:46:46.987Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Git总共提供了超过100个以上的指令让我们执行各种操作（可以使用”git help -a”指令显示完整的指令列表），每一个指令又有许多选项可以搭配，但是我们不可能，也不需要完全记住这些指令。就实用性而言，只要熟练部分指令和选项的用法，就可以满足一般应用的需求。&lt;/p&gt;
-&lt;
-      
-    
-    </summary>
-    
-      <category term="Git" scheme="http://www.ithelei.com/categories/Git/"/>
-    
-    
-      <category term="Git" scheme="http://www.ithelei.com/tags/Git/"/>
     
   </entry>
   
