@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ithelei.com/"/>
-  <updated>2020-02-27T12:07:58.134Z</updated>
+  <updated>2020-02-29T10:56:10.709Z</updated>
   <id>http://www.ithelei.com/</id>
   
   <author>
@@ -15,6 +15,81 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RAND随机函数使用</title>
+    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94MySQL%20RAND%E9%9A%8F%E6%9C%BA%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8/"/>
+    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——MySQL RAND随机函数使用/</id>
+    <published>2020-02-29T01:20:45.000Z</published>
+    <updated>2020-02-29T10:56:10.709Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Mysql的RAND()函数在0~1之间产生一个随机数，如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;`mysql&amp;gt; select RAND() ,RAND() ,RAND() ;`&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;该函数可以根据实际需求看用在什么地方。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>REGEXP正则的使用</title>
+    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94MySQL%20REGEXP%E6%AD%A3%E5%88%99%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——MySQL REGEXP正则的使用/</id>
+    <published>2020-02-29T01:20:45.000Z</published>
+    <updated>2020-02-29T12:18:02.374Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;REGEXP的运算符&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://blog-dt.oss-cn-beijing.aliyuncs.com/mysql/9.png&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;mysql的REGEXP通配符如下。&lt;/p&gt;
+&lt;p&gt;（1） “^”字符： 匹配字符
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>终端执行SQL方式</title>
+    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94%E7%BB%88%E7%AB%AF%E6%89%A7%E8%A1%8CSQL%E6%96%B9%E5%BC%8F/"/>
+    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——终端执行SQL方式/</id>
+    <published>2020-02-29T01:20:45.000Z</published>
+    <updated>2020-02-29T10:51:22.444Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;（1） 执行编写好的SQL脚本，命令如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;`mysql&amp;gt; SOURCE d:/test.sql`&lt;/code&gt;&lt;/pre&gt;
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>接入层限流</title>
@@ -40,30 +115,6 @@
       <category term="Nginx" scheme="http://www.ithelei.com/tags/Nginx/"/>
     
       <category term="限流" scheme="http://www.ithelei.com/tags/%E9%99%90%E6%B5%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL命令恢复mysqldump备份的数据库</title>
-    <link href="http://www.ithelei.com/2020/02/25/MySQL%E5%91%BD%E4%BB%A4%E6%81%A2%E5%A4%8Dmysqldump%E5%A4%87%E4%BB%BD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    <id>http://www.ithelei.com/2020/02/25/MySQL命令恢复mysqldump备份的数据库/</id>
-    <published>2020-02-25T13:45:00.000Z</published>
-    <updated>2020-02-29T10:31:32.937Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;p&gt; &lt;code&gt;mysql -u 用户名 -p 密码 -h 主机 数据库 &amp;lt;路径&lt;/code&gt; &lt;/p&gt;
-&lt;p&gt;注意：恢复要使用mysq
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
     
   </entry>
   
@@ -114,6 +165,30 @@
   </entry>
   
   <entry>
+    <title>MySQL命令恢复mysqldump备份的数据库</title>
+    <link href="http://www.ithelei.com/2020/02/25/MySQL%E5%91%BD%E4%BB%A4%E6%81%A2%E5%A4%8Dmysqldump%E5%A4%87%E4%BB%BD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>http://www.ithelei.com/2020/02/25/MySQL命令恢复mysqldump备份的数据库/</id>
+    <published>2020-02-25T13:45:00.000Z</published>
+    <updated>2020-02-29T10:31:32.937Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;p&gt; &lt;code&gt;mysql -u 用户名 -p 密码 -h 主机 数据库 &amp;lt;路径&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;注意：恢复要使用mysq
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>一个复杂的团队合作事件</title>
     <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E4%B8%80%E4%B8%AA%E5%A4%8D%E6%9D%82%E7%9A%84%E5%9B%A2%E9%98%9F%E5%90%88%E4%BD%9C%E4%BA%8B%E4%BB%B6/"/>
     <id>http://www.ithelei.com/2020/02/24/星球_一个复杂的团队合作事件/</id>
@@ -128,55 +203,6 @@
 &lt;p&gt;比如 A 的做事理念跟数据，跟工程的同学不一致，如果就事论事地讨论，可能大家谁都无法说服谁。&lt;/p&gt;
 &lt;p&gt;我的建议是，可以找时间跟他们吃吃饭或喝杯咖啡什么的。&lt;/p&gt;
 &lt;p&gt;拉近私人关系，总可以使这种事情往正向的方向发展。&lt;/
-      
-    
-    </summary>
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>you are your time</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91you%20are%20your%20time/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_沈剑you are your time/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:26:56.550Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;you are your time&lt;/p&gt;
-&lt;p&gt;很多时候，我们都认为自己没有选择，或者被迫选择。&lt;/p&gt;
-&lt;p&gt;选择了工作，就没法立刻回家；选择了聚会，就没办法陪孩子；选择了看电视剧，就没办法看书。&lt;/p&gt;
-&lt;p&gt;其实，无形之中，我们做了自己的选择：在一些人的内心，工作比
-      
-    
-    </summary>
-    
-      <category term="职场" scheme="http://www.ithelei.com/categories/%E8%81%8C%E5%9C%BA/"/>
-    
-    
-      <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何度过自己平淡无奇的青春</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%A6%82%E4%BD%95%E5%BA%A6%E8%BF%87%E8%87%AA%E5%B7%B1%E5%B9%B3%E6%B7%A1%E6%97%A0%E5%A5%87%E7%9A%84%E9%9D%92%E6%98%A5/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_如何度过自己平淡无奇的青春/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:07:44.024Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡，但相对自己，相对自己周边的人，每个人的青春都是多彩的，充满激情的！&quot;&gt;&lt;a href=&quot;#首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡
       
     
     </summary>
@@ -214,29 +240,50 @@
   </entry>
   
   <entry>
-    <title>我不会，但我可以学</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91%E6%88%91%E4%B8%8D%E4%BC%9A%EF%BC%8C%E4%BD%86%E6%88%91%E5%8F%AF%E4%BB%A5%E5%AD%A6/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_沈剑我不会，但我可以学/</id>
+    <title>如何度过自己平淡无奇的青春</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%A6%82%E4%BD%95%E5%BA%A6%E8%BF%87%E8%87%AA%E5%B7%B1%E5%B9%B3%E6%B7%A1%E6%97%A0%E5%A5%87%E7%9A%84%E9%9D%92%E6%98%A5/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_如何度过自己平淡无奇的青春/</id>
     <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:35:15.377Z</updated>
+    <updated>2020-02-24T15:07:44.024Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;“我不会，但我可以学”&lt;/p&gt;
-&lt;p&gt;一个case。&lt;/p&gt;
-&lt;p&gt;运营提了一个紧急的需求，做一个活动落地页，实在抽不出来人手，于是安排了一个同学对接。&lt;/p&gt;
-&lt;p&gt;新同学非常认真负责，和产品运营沟通需求，做技术方案设计。&lt;/p&gt;
-&lt;p&gt;技术方案评完，新同学来找我：“有很
+        &lt;h3 id=&quot;首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡，但相对自己，相对自己周边的人，每个人的青春都是多彩的，充满激情的！&quot;&gt;&lt;a href=&quot;#首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡
       
     
     </summary>
     
-      <category term="职场" scheme="http://www.ithelei.com/categories/%E8%81%8C%E5%9C%BA/"/>
+      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
     
     
-      <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
+      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>比能力更重要的，是你的底层操作系统</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91%E6%AF%94%E8%83%BD%E5%8A%9B%E6%9B%B4%E9%87%8D%E8%A6%81%E7%9A%84%EF%BC%8C%E6%98%AF%E4%BD%A0%E7%9A%84%E5%BA%95%E5%B1%82%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_沈剑比能力更重要的，是你的底层操作系统/</id>
+    <published>2020-02-24T01:20:45.000Z</published>
+    <updated>2020-02-24T15:29:58.052Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;“比能力更重要的，是你的底层操作系统”&lt;/p&gt;
+&lt;p&gt;什么是普通人？就是快乐没有那么强烈，痛苦也没有那么巨大。所以，他们的人生会在既定的轨道上相对平衡地运行，而不是被快乐和痛苦牵引撕扯，没完没了地折腾。&lt;/p&gt;
+&lt;p&gt;什么叫有一技之长的人？就是当他在沉下来做某件事的时候，他
+      
+    
+    </summary>
+    
+      <category term="人生" scheme="http://www.ithelei.com/categories/%E4%BA%BA%E7%94%9F/"/>
+    
+    
+      <category term="人生" scheme="http://www.ithelei.com/tags/%E4%BA%BA%E7%94%9F/"/>
     
   </entry>
   
@@ -267,27 +314,55 @@
   </entry>
   
   <entry>
-    <title>比能力更重要的，是你的底层操作系统</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91%E6%AF%94%E8%83%BD%E5%8A%9B%E6%9B%B4%E9%87%8D%E8%A6%81%E7%9A%84%EF%BC%8C%E6%98%AF%E4%BD%A0%E7%9A%84%E5%BA%95%E5%B1%82%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_沈剑比能力更重要的，是你的底层操作系统/</id>
+    <title>you are your time</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91you%20are%20your%20time/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_沈剑you are your time/</id>
     <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:29:58.052Z</updated>
+    <updated>2020-02-24T15:26:56.550Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;“比能力更重要的，是你的底层操作系统”&lt;/p&gt;
-&lt;p&gt;什么是普通人？就是快乐没有那么强烈，痛苦也没有那么巨大。所以，他们的人生会在既定的轨道上相对平衡地运行，而不是被快乐和痛苦牵引撕扯，没完没了地折腾。&lt;/p&gt;
-&lt;p&gt;什么叫有一技之长的人？就是当他在沉下来做某件事的时候，他
+        &lt;p&gt;you are your time&lt;/p&gt;
+&lt;p&gt;很多时候，我们都认为自己没有选择，或者被迫选择。&lt;/p&gt;
+&lt;p&gt;选择了工作，就没法立刻回家；选择了聚会，就没办法陪孩子；选择了看电视剧，就没办法看书。&lt;/p&gt;
+&lt;p&gt;其实，无形之中，我们做了自己的选择：在一些人的内心，工作比
       
     
     </summary>
     
-      <category term="人生" scheme="http://www.ithelei.com/categories/%E4%BA%BA%E7%94%9F/"/>
+      <category term="职场" scheme="http://www.ithelei.com/categories/%E8%81%8C%E5%9C%BA/"/>
     
     
-      <category term="人生" scheme="http://www.ithelei.com/tags/%E4%BA%BA%E7%94%9F/"/>
+      <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我不会，但我可以学</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91%E6%88%91%E4%B8%8D%E4%BC%9A%EF%BC%8C%E4%BD%86%E6%88%91%E5%8F%AF%E4%BB%A5%E5%AD%A6/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_沈剑我不会，但我可以学/</id>
+    <published>2020-02-24T01:20:45.000Z</published>
+    <updated>2020-02-24T15:35:15.377Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;“我不会，但我可以学”&lt;/p&gt;
+&lt;p&gt;一个case。&lt;/p&gt;
+&lt;p&gt;运营提了一个紧急的需求，做一个活动落地页，实在抽不出来人手，于是安排了一个同学对接。&lt;/p&gt;
+&lt;p&gt;新同学非常认真负责，和产品运营沟通需求，做技术方案设计。&lt;/p&gt;
+&lt;p&gt;技术方案评完，新同学来找我：“有很
+      
+    
+    </summary>
+    
+      <category term="职场" scheme="http://www.ithelei.com/categories/%E8%81%8C%E5%9C%BA/"/>
+    
+    
+      <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
     
   </entry>
   
@@ -317,6 +392,30 @@
   </entry>
   
   <entry>
+    <title>MYSQL数据库ENUM和SET类型处理</title>
+    <link href="http://www.ithelei.com/2020/02/17/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93ENUM%E5%92%8CSET%E7%B1%BB%E5%9E%8B%E5%A4%84%E7%90%86/"/>
+    <id>http://www.ithelei.com/2020/02/17/MYSQL数据库ENUM和SET类型处理/</id>
+    <published>2020-02-17T13:36:45.000Z</published>
+    <updated>2020-02-24T14:01:41.325Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;MYSQL数据库ENUM和SET都是比较特殊的字符串类型，他们都是从一个预先定义好的数据范围内去取值，当给此类型变更值时，不能超出此列预先规定好的那些值。&lt;/p&gt;
+&lt;p&gt;NUM类型最多可枚举65 535个成员，但只允许出现一个成员————相当于单选（n个单选按钮只能选一个）
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MYSQL数据库中DEFAULT（默认）使用技巧</title>
     <link href="http://www.ithelei.com/2020/02/17/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%ADDEFAULT%EF%BC%88%E9%BB%98%E8%AE%A4%EF%BC%89%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
     <id>http://www.ithelei.com/2020/02/17/MYSQL数据库中DEFAULT（默认）使用技巧/</id>
@@ -330,6 +429,29 @@
         &lt;p&gt;mysql创建表时，可以使用default来设置表字段的默认值，这样当向表中插入或添加数据时，如果没有为此字段设置任何值，则使用default默认值来填充该字段的值。&lt;/p&gt;
 &lt;p&gt;在使用create table创建表的时候，为字段设置默认值，如：&lt;/p&gt;
 &lt;pre&gt;&lt;co
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）</title>
+    <link href="http://www.ithelei.com/2020/02/17/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E5%88%97%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B9%8B_%E5%88%97%E7%B1%BB%E5%9E%8B%E5%B1%9E%E6%80%A7UNSIGEND%EF%BC%88%E6%97%A0%E7%AC%A6%E5%8F%B7%EF%BC%89%E4%B8%8ESigned%EF%BC%88%E6%9C%89%E7%AC%A6%E5%8F%B7%EF%BC%89/"/>
+    <id>http://www.ithelei.com/2020/02/17/MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）/</id>
+    <published>2020-02-17T13:36:45.000Z</published>
+    <updated>2020-02-17T13:45:36.968Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;下面用TINYINT类型字段来说明有符号属性和无符号属性两者之间的差别。在添加UNSIGEND后，字段的取值范围是0&lt;del&gt;255，而Signed的范围是-128&lt;/del&gt;127。如果确定不需要负值，通常是不设置Signed，这样会充分利用存储空间。假设使用tinyin
       
     
     </summary>
@@ -366,53 +488,6 @@
   </entry>
   
   <entry>
-    <title>MYSQL数据库ENUM和SET类型处理</title>
-    <link href="http://www.ithelei.com/2020/02/17/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93ENUM%E5%92%8CSET%E7%B1%BB%E5%9E%8B%E5%A4%84%E7%90%86/"/>
-    <id>http://www.ithelei.com/2020/02/17/MYSQL数据库ENUM和SET类型处理/</id>
-    <published>2020-02-17T13:36:45.000Z</published>
-    <updated>2020-02-24T14:01:41.325Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;MYSQL数据库ENUM和SET都是比较特殊的字符串类型，他们都是从一个预先定义好的数据范围内去取值，当给此类型变更值时，不能超出此列预先规定好的那些值。&lt;/p&gt;
-&lt;p&gt;NUM类型最多可枚举65 535个成员，但只允许出现一个成员————相当于单选（n个单选按钮只能选一个）
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）</title>
-    <link href="http://www.ithelei.com/2020/02/17/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E5%88%97%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B9%8B_%E5%88%97%E7%B1%BB%E5%9E%8B%E5%B1%9E%E6%80%A7UNSIGEND%EF%BC%88%E6%97%A0%E7%AC%A6%E5%8F%B7%EF%BC%89%E4%B8%8ESigned%EF%BC%88%E6%9C%89%E7%AC%A6%E5%8F%B7%EF%BC%89/"/>
-    <id>http://www.ithelei.com/2020/02/17/MYSQL数据库表列的数据类型之_列类型属性UNSIGEND（无符号）与Signed（有符号）/</id>
-    <published>2020-02-17T13:36:45.000Z</published>
-    <updated>2020-02-17T13:45:36.968Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;下面用TINYINT类型字段来说明有符号属性和无符号属性两者之间的差别。在添加UNSIGEND后，字段的取值范围是0&lt;del&gt;255，而Signed的范围是-128&lt;/del&gt;127。如果确定不需要负值，通常是不设置Signed，这样会充分利用存储空间。假设使用tinyin
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
     <title>MYSQL数据库表列的数据类型之_(数值类型)(字符串类型)</title>
     <link href="http://www.ithelei.com/2020/02/16/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E5%88%97%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B9%8B_(%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B)(%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B)/"/>
     <id>http://www.ithelei.com/2020/02/16/MYSQL数据库表列的数据类型之_(数值类型)(字符串类型)/</id>
@@ -424,75 +499,6 @@
       
       
         &lt;h2 id=&quot;数值类型&quot;&gt;&lt;a href=&quot;#数值类型&quot; class=&quot;headerlink&quot; title=&quot;数值类型&quot;&gt;&lt;/a&gt;数值类型&lt;/h2&gt;&lt;p&gt;数值类型分为整数型和浮点型两类，整数型就是存放没有小数点的数值，如人口统计；浮点型就是用来存放有小数点的数值，如商品价格、失
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MYSQL列类型属性ZEROFILL(填充0)</title>
-    <link href="http://www.ithelei.com/2020/02/16/mysql%E4%B8%AD%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5%E6%97%B6zerofill%E5%B1%9E%E6%80%A7/"/>
-    <id>http://www.ithelei.com/2020/02/16/mysql中定义字段时zerofill属性/</id>
-    <published>2020-02-16T13:36:45.000Z</published>
-    <updated>2020-02-16T13:24:06.897Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;列类型属性ZEROFILL-填充0&quot;&gt;&lt;a href=&quot;#列类型属性ZEROFILL-填充0&quot; class=&quot;headerlink&quot; title=&quot;列类型属性ZEROFILL(填充0)&quot;&gt;&lt;/a&gt;列类型属性ZEROFILL(填充0)&lt;/h2&gt;&lt;p&gt;如果定义列的时候
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MYSQL数据库网站中常用数据类型介绍</title>
-    <link href="http://www.ithelei.com/2020/02/09/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BD%91%E7%AB%99%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%8B%E7%BB%8D/"/>
-    <id>http://www.ithelei.com/2020/02/09/MYSQL数据库网站中常用数据类型介绍/</id>
-    <published>2020-02-09T13:36:45.000Z</published>
-    <updated>2020-02-24T13:26:03.314Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;关于网站中常用的mysql数据库列的数据类型，只能从一般意义而言。像int-varchar-text-decimal-datetime等。&quot;&gt;&lt;a href=&quot;#关于网站中常用的mysql数据库列的数据类型，只能从一般意义而言。像int-varchar-text-
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MYSQL数据库中的权限列表</title>
-    <link href="http://www.ithelei.com/2020/02/09/MYSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E7%9A%84%E6%9D%83%E9%99%90%E5%88%97%E8%A1%A8/"/>
-    <id>http://www.ithelei.com/2020/02/09/MYSQL数据库中的权限列表/</id>
-    <published>2020-02-09T13:36:45.000Z</published>
-    <updated>2020-02-09T14:29:36.898Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;mysql数据库拥有的权限，既可以分配给数据库账户的操作权力。数据库中的权限见表&quot;&gt;&lt;a href=&quot;#mysql数据库拥有的权限，既可以分配给数据库账户的操作权力。数据库中的权限见表&quot; class=&quot;headerlink&quot; title=&quot;mysql数据库拥有的权
       
     
     </summary>
