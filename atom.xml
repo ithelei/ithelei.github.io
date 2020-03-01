@@ -94,19 +94,18 @@
   </entry>
   
   <entry>
-    <title>RAND随机函数使用</title>
-    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94MySQL%20RAND%E9%9A%8F%E6%9C%BA%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8/"/>
-    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——MySQL RAND随机函数使用/</id>
+    <title>MySQL LIKE与 NOT LIKE的用法</title>
+    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94MySQL%20LIKE%E4%B8%8E%20NOT%20LIKE%E7%9A%84%E7%94%A8%E6%B3%95/"/>
+    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——MySQL LIKE与 NOT LIKE的用法/</id>
     <published>2020-02-29T01:20:45.000Z</published>
-    <updated>2020-02-29T10:56:10.709Z</updated>
+    <updated>2020-02-29T12:57:37.340Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Mysql的RAND()函数在0~1之间产生一个随机数，如：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;`mysql&amp;gt; select RAND() ,RAND() ,RAND() ;`&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;该函数可以根据实际需求看用在什么地方。&lt;/p&gt;
-
+        &lt;h3 id=&quot;like的通配符&quot;&gt;&lt;a href=&quot;#like的通配符&quot; class=&quot;headerlink&quot; title=&quot;like的通配符&quot;&gt;&lt;/a&gt;like的通配符&lt;/h3&gt;&lt;p&gt;mysql的like语句中的通配符如下：&lt;/p&gt;
+&lt;p&gt;“%”百分号 “_”下划线 “esc
       
     
     </summary>
@@ -145,18 +144,19 @@
   </entry>
   
   <entry>
-    <title>MySQL LIKE与 NOT LIKE的用法</title>
-    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94MySQL%20LIKE%E4%B8%8E%20NOT%20LIKE%E7%9A%84%E7%94%A8%E6%B3%95/"/>
-    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——MySQL LIKE与 NOT LIKE的用法/</id>
+    <title>RAND随机函数使用</title>
+    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94MySQL%20RAND%E9%9A%8F%E6%9C%BA%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8/"/>
+    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——MySQL RAND随机函数使用/</id>
     <published>2020-02-29T01:20:45.000Z</published>
-    <updated>2020-02-29T12:57:37.340Z</updated>
+    <updated>2020-02-29T10:56:10.709Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;like的通配符&quot;&gt;&lt;a href=&quot;#like的通配符&quot; class=&quot;headerlink&quot; title=&quot;like的通配符&quot;&gt;&lt;/a&gt;like的通配符&lt;/h3&gt;&lt;p&gt;mysql的like语句中的通配符如下：&lt;/p&gt;
-&lt;p&gt;“%”百分号 “_”下划线 “esc
+        &lt;p&gt;Mysql的RAND()函数在0~1之间产生一个随机数，如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;`mysql&amp;gt; select RAND() ,RAND() ,RAND() ;`&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;该函数可以根据实际需求看用在什么地方。&lt;/p&gt;
+
       
     
     </summary>
@@ -217,6 +217,29 @@
     
     
       <category term="能力图谱" scheme="http://www.ithelei.com/tags/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>手动部署Java Web环境</title>
+    <link href="http://www.ithelei.com/2020/02/28/%E6%89%8B%E5%8A%A8%E9%83%A8%E7%BD%B2Java%20Web%E7%8E%AF%E5%A2%83/"/>
+    <id>http://www.ithelei.com/2020/02/28/手动部署Java Web环境/</id>
+    <published>2020-02-28T11:33:45.000Z</published>
+    <updated>2020-03-01T05:09:02.148Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;本篇教程在示例步骤中使用了以下版本的软件。操作时，请您以实际软件版本为准。&quot;&gt;&lt;a href=&quot;#本篇教程在示例步骤中使用了以下版本的软件。操作时，请您以实际软件版本为准。&quot; class=&quot;headerlink&quot; title=&quot;本篇教程在示例步骤中使用了以下版本的
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.ithelei.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.ithelei.com/tags/Linux/"/>
     
   </entry>
   
@@ -318,31 +341,6 @@
   </entry>
   
   <entry>
-    <title>前端和技术天花板</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%89%8D%E7%AB%AF%E5%92%8C%E6%8A%80%E6%9C%AF%E5%A4%A9%E8%8A%B1%E6%9D%BF/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_前端和技术天花板/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:02:25.150Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;进入移动互联网时代后，前端岗位的需求应该是在下降的。原因显而易见，因为用户的时间都消耗在移动端，消耗在APP上了。&lt;/p&gt;
-&lt;p&gt;前端市场开始慢慢被客户端市场吞噬。&lt;/p&gt;
-&lt;p&gt;不过这几年，又显现出了大前端的趋势，有点山水轮流转的感觉。(当然，大前端跟前端有很大不同）&lt;/
-      
-    
-    </summary>
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-  </entry>
-  
-  <entry>
     <title>一个复杂的团队合作事件</title>
     <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E4%B8%80%E4%B8%AA%E5%A4%8D%E6%9D%82%E7%9A%84%E5%9B%A2%E9%98%9F%E5%90%88%E4%BD%9C%E4%BA%8B%E4%BB%B6/"/>
     <id>http://www.ithelei.com/2020/02/24/星球_一个复杂的团队合作事件/</id>
@@ -365,32 +363,6 @@
     
     
       <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>you are your time</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91you%20are%20your%20time/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_沈剑you are your time/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:26:56.550Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;you are your time&lt;/p&gt;
-&lt;p&gt;很多时候，我们都认为自己没有选择，或者被迫选择。&lt;/p&gt;
-&lt;p&gt;选择了工作，就没法立刻回家；选择了聚会，就没办法陪孩子；选择了看电视剧，就没办法看书。&lt;/p&gt;
-&lt;p&gt;其实，无形之中，我们做了自己的选择：在一些人的内心，工作比
-      
-    
-    </summary>
-    
-      <category term="职场" scheme="http://www.ithelei.com/categories/%E8%81%8C%E5%9C%BA/"/>
-    
-    
-      <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
     
   </entry>
   
@@ -418,6 +390,31 @@
   </entry>
   
   <entry>
+    <title>前端和技术天花板</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%89%8D%E7%AB%AF%E5%92%8C%E6%8A%80%E6%9C%AF%E5%A4%A9%E8%8A%B1%E6%9D%BF/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_前端和技术天花板/</id>
+    <published>2020-02-24T01:20:45.000Z</published>
+    <updated>2020-02-24T15:02:25.150Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;进入移动互联网时代后，前端岗位的需求应该是在下降的。原因显而易见，因为用户的时间都消耗在移动端，消耗在APP上了。&lt;/p&gt;
+&lt;p&gt;前端市场开始慢慢被客户端市场吞噬。&lt;/p&gt;
+&lt;p&gt;不过这几年，又显现出了大前端的趋势，有点山水轮流转的感觉。(当然，大前端跟前端有很大不同）&lt;/
+      
+    
+    </summary>
+    
+      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+    
+    
+      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>我不会，但我可以学</title>
     <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91%E6%88%91%E4%B8%8D%E4%BC%9A%EF%BC%8C%E4%BD%86%E6%88%91%E5%8F%AF%E4%BB%A5%E5%AD%A6/"/>
     <id>http://www.ithelei.com/2020/02/24/星球_沈剑我不会，但我可以学/</id>
@@ -433,6 +430,32 @@
 &lt;p&gt;运营提了一个紧急的需求，做一个活动落地页，实在抽不出来人手，于是安排了一个同学对接。&lt;/p&gt;
 &lt;p&gt;新同学非常认真负责，和产品运营沟通需求，做技术方案设计。&lt;/p&gt;
 &lt;p&gt;技术方案评完，新同学来找我：“有很
+      
+    
+    </summary>
+    
+      <category term="职场" scheme="http://www.ithelei.com/categories/%E8%81%8C%E5%9C%BA/"/>
+    
+    
+      <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>you are your time</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91you%20are%20your%20time/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_沈剑you are your time/</id>
+    <published>2020-02-24T01:20:45.000Z</published>
+    <updated>2020-02-24T15:26:56.550Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;you are your time&lt;/p&gt;
+&lt;p&gt;很多时候，我们都认为自己没有选择，或者被迫选择。&lt;/p&gt;
+&lt;p&gt;选择了工作，就没法立刻回家；选择了聚会，就没办法陪孩子；选择了看电视剧，就没办法看书。&lt;/p&gt;
+&lt;p&gt;其实，无形之中，我们做了自己的选择：在一些人的内心，工作比
       
     
     </summary>
@@ -492,31 +515,6 @@
     
     
       <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>程序员心理建设</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_程序员心理建设/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T14:54:25.010Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;工作是属于公司的，而职业生涯却是属于你自己的！&lt;/p&gt;
-&lt;p&gt;你所能犯的最大错误就是相信自己是在为别人工作。这样一来你对工作的安全感已然尽失。职业发展的驱动力一定是来自个体本身。记住：工作是属于公司的，而职业生涯却是属于你自己的。–厄尔·南丁格尔&lt;/p&gt;
-&lt;p&gt;摘自《软技能
-      
-    
-    </summary>
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
     
   </entry>
   
