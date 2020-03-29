@@ -40,6 +40,34 @@
   </entry>
   
   <entry>
+    <title>Shell脚本监控WEB服务是否正常</title>
+    <link href="http://www.ithelei.com/2020/03/01/Shell%E8%84%9A%E6%9C%AC%E7%9B%91%E6%8E%A7WEB%E6%9C%8D%E5%8A%A1%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8/"/>
+    <id>http://www.ithelei.com/2020/03/01/Shell脚本监控WEB服务是否正常/</id>
+    <published>2020-03-01T11:33:45.000Z</published>
+    <updated>2020-03-01T04:23:52.727Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1.安装sendmail来发邮件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# yum -y install sendmail
+
+# /etc/init.d/sendmail start
+
+# chkconfig sendmail on&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;2.安装mutt邮
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.ithelei.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.ithelei.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Nginx+Tomcat动静分离及Nginx优化(企业案例)</title>
     <link href="http://www.ithelei.com/2020/03/01/Nginx+Tomcat%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB%E5%8F%8ANginx%E4%BC%98%E5%8C%96(%E4%BC%81%E4%B8%9A%E6%A1%88%E4%BE%8B)/"/>
     <id>http://www.ithelei.com/2020/03/01/Nginx+Tomcat动静分离及Nginx优化(企业案例)/</id>
@@ -90,58 +118,6 @@
   </entry>
   
   <entry>
-    <title>Shell脚本监控WEB服务是否正常</title>
-    <link href="http://www.ithelei.com/2020/03/01/Shell%E8%84%9A%E6%9C%AC%E7%9B%91%E6%8E%A7WEB%E6%9C%8D%E5%8A%A1%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8/"/>
-    <id>http://www.ithelei.com/2020/03/01/Shell脚本监控WEB服务是否正常/</id>
-    <published>2020-03-01T11:33:45.000Z</published>
-    <updated>2020-03-01T04:23:52.727Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;1.安装sendmail来发邮件&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# yum -y install sendmail
-
-# /etc/init.d/sendmail start
-
-# chkconfig sendmail on&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;2.安装mutt邮
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.ithelei.com/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.ithelei.com/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL LIKE与 NOT LIKE的用法</title>
-    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94MySQL%20LIKE%E4%B8%8E%20NOT%20LIKE%E7%9A%84%E7%94%A8%E6%B3%95/"/>
-    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——MySQL LIKE与 NOT LIKE的用法/</id>
-    <published>2020-02-29T01:20:45.000Z</published>
-    <updated>2020-02-29T12:57:37.340Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;like的通配符&quot;&gt;&lt;a href=&quot;#like的通配符&quot; class=&quot;headerlink&quot; title=&quot;like的通配符&quot;&gt;&lt;/a&gt;like的通配符&lt;/h3&gt;&lt;p&gt;mysql的like语句中的通配符如下：&lt;/p&gt;
-&lt;p&gt;“%”百分号 “_”下划线 “esc
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
     <title>RAND随机函数使用</title>
     <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94MySQL%20RAND%E9%9A%8F%E6%9C%BA%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8/"/>
     <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——MySQL RAND随机函数使用/</id>
@@ -155,6 +131,30 @@
         &lt;p&gt;Mysql的RAND()函数在0~1之间产生一个随机数，如：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;`mysql&amp;gt; select RAND() ,RAND() ,RAND() ;`&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;该函数可以根据实际需求看用在什么地方。&lt;/p&gt;
 
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>终端执行SQL方式</title>
+    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94%E7%BB%88%E7%AB%AF%E6%89%A7%E8%A1%8CSQL%E6%96%B9%E5%BC%8F/"/>
+    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——终端执行SQL方式/</id>
+    <published>2020-02-29T01:20:45.000Z</published>
+    <updated>2020-02-29T10:51:22.444Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;（1） 执行编写好的SQL脚本，命令如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;`mysql&amp;gt; SOURCE d:/test.sql`&lt;/code&gt;&lt;/pre&gt;
       
     
     </summary>
@@ -193,18 +193,18 @@
   </entry>
   
   <entry>
-    <title>终端执行SQL方式</title>
-    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94%E7%BB%88%E7%AB%AF%E6%89%A7%E8%A1%8CSQL%E6%96%B9%E5%BC%8F/"/>
-    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——终端执行SQL方式/</id>
+    <title>MySQL LIKE与 NOT LIKE的用法</title>
+    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94MySQL%20LIKE%E4%B8%8E%20NOT%20LIKE%E7%9A%84%E7%94%A8%E6%B3%95/"/>
+    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——MySQL LIKE与 NOT LIKE的用法/</id>
     <published>2020-02-29T01:20:45.000Z</published>
-    <updated>2020-02-29T10:51:22.444Z</updated>
+    <updated>2020-02-29T12:57:37.340Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;（1） 执行编写好的SQL脚本，命令如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;`mysql&amp;gt; SOURCE d:/test.sql`&lt;/code&gt;&lt;/pre&gt;
+        &lt;h3 id=&quot;like的通配符&quot;&gt;&lt;a href=&quot;#like的通配符&quot; class=&quot;headerlink&quot; title=&quot;like的通配符&quot;&gt;&lt;/a&gt;like的通配符&lt;/h3&gt;&lt;p&gt;mysql的like语句中的通配符如下：&lt;/p&gt;
+&lt;p&gt;“%”百分号 “_”下划线 “esc
       
     
     </summary>
@@ -318,18 +318,17 @@
   </entry>
   
   <entry>
-    <title>MySQL命令恢复mysqldump备份的数据库</title>
-    <link href="http://www.ithelei.com/2020/02/25/MySQL%E5%91%BD%E4%BB%A4%E6%81%A2%E5%A4%8Dmysqldump%E5%A4%87%E4%BB%BD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    <id>http://www.ithelei.com/2020/02/25/MySQL命令恢复mysqldump备份的数据库/</id>
+    <title>MySQL备份与恢复</title>
+    <link href="http://www.ithelei.com/2020/02/25/MySQL%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D/"/>
+    <id>http://www.ithelei.com/2020/02/25/MySQL备份与恢复/</id>
     <published>2020-02-25T13:45:00.000Z</published>
-    <updated>2020-02-29T10:31:32.937Z</updated>
+    <updated>2020-02-25T13:41:38.177Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;p&gt; &lt;code&gt;mysql -u 用户名 -p 密码 -h 主机 数据库 &amp;lt;路径&lt;/code&gt; &lt;/p&gt;
-&lt;p&gt;注意：恢复要使用mysq
+        &lt;h2 id=&quot;mysql数据备份的多种操作手段&quot;&gt;&lt;a href=&quot;#mysql数据备份的多种操作手段&quot; class=&quot;headerlink&quot; title=&quot;mysql数据备份的多种操作手段&quot;&gt;&lt;/a&gt;mysql数据备份的多种操作手段&lt;/h2&gt;&lt;p&gt;数据备份时保证数据安全的最后
       
     
     </summary>
@@ -342,17 +341,18 @@
   </entry>
   
   <entry>
-    <title>MySQL备份与恢复</title>
-    <link href="http://www.ithelei.com/2020/02/25/MySQL%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D/"/>
-    <id>http://www.ithelei.com/2020/02/25/MySQL备份与恢复/</id>
+    <title>MySQL命令恢复mysqldump备份的数据库</title>
+    <link href="http://www.ithelei.com/2020/02/25/MySQL%E5%91%BD%E4%BB%A4%E6%81%A2%E5%A4%8Dmysqldump%E5%A4%87%E4%BB%BD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>http://www.ithelei.com/2020/02/25/MySQL命令恢复mysqldump备份的数据库/</id>
     <published>2020-02-25T13:45:00.000Z</published>
-    <updated>2020-02-25T13:41:38.177Z</updated>
+    <updated>2020-02-29T10:31:32.937Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;mysql数据备份的多种操作手段&quot;&gt;&lt;a href=&quot;#mysql数据备份的多种操作手段&quot; class=&quot;headerlink&quot; title=&quot;mysql数据备份的多种操作手段&quot;&gt;&lt;/a&gt;mysql数据备份的多种操作手段&lt;/h2&gt;&lt;p&gt;数据备份时保证数据安全的最后
+        &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;p&gt; &lt;code&gt;mysql -u 用户名 -p 密码 -h 主机 数据库 &amp;lt;路径&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;注意：恢复要使用mysq
       
     
     </summary>
@@ -379,6 +379,29 @@
 &lt;p&gt;比如 A 的做事理念跟数据，跟工程的同学不一致，如果就事论事地讨论，可能大家谁都无法说服谁。&lt;/p&gt;
 &lt;p&gt;我的建议是，可以找时间跟他们吃吃饭或喝杯咖啡什么的。&lt;/p&gt;
 &lt;p&gt;拉近私人关系，总可以使这种事情往正向的方向发展。&lt;/
+      
+    
+    </summary>
+    
+      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+    
+    
+      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何度过自己平淡无奇的青春</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%A6%82%E4%BD%95%E5%BA%A6%E8%BF%87%E8%87%AA%E5%B7%B1%E5%B9%B3%E6%B7%A1%E6%97%A0%E5%A5%87%E7%9A%84%E9%9D%92%E6%98%A5/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_如何度过自己平淡无奇的青春/</id>
+    <published>2020-02-24T01:20:45.000Z</published>
+    <updated>2020-02-24T15:07:44.024Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡，但相对自己，相对自己周边的人，每个人的青春都是多彩的，充满激情的！&quot;&gt;&lt;a href=&quot;#首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡
       
     
     </summary>
@@ -465,29 +488,6 @@
     
     
       <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何度过自己平淡无奇的青春</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%A6%82%E4%BD%95%E5%BA%A6%E8%BF%87%E8%87%AA%E5%B7%B1%E5%B9%B3%E6%B7%A1%E6%97%A0%E5%A5%87%E7%9A%84%E9%9D%92%E6%98%A5/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_如何度过自己平淡无奇的青春/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:07:44.024Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡，但相对自己，相对自己周边的人，每个人的青春都是多彩的，充满激情的！&quot;&gt;&lt;a href=&quot;#首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡
-      
-    
-    </summary>
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
     
   </entry>
   
