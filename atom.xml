@@ -40,6 +40,30 @@
   </entry>
   
   <entry>
+    <title>编译安装Nginx</title>
+    <link href="http://www.ithelei.com/2020/03/01/Nginx%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/"/>
+    <id>http://www.ithelei.com/2020/03/01/Nginx编译安装/</id>
+    <published>2020-03-01T11:33:45.000Z</published>
+    <updated>2020-03-01T12:47:45.839Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;编译安装Nginx&quot;&gt;&lt;a href=&quot;#编译安装Nginx&quot; class=&quot;headerlink&quot; title=&quot;编译安装Nginx&quot;&gt;&lt;/a&gt;编译安装Nginx&lt;/h3&gt;&lt;p&gt;由于以前写过，这里拿过来。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.
+      
+    
+    </summary>
+    
+      <category term="Nginx" scheme="http://www.ithelei.com/categories/Nginx/"/>
+    
+    
+      <category term="Nginx" scheme="http://www.ithelei.com/tags/Nginx/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Shell脚本监控WEB服务是否正常</title>
     <link href="http://www.ithelei.com/2020/03/01/Shell%E8%84%9A%E6%9C%AC%E7%9B%91%E6%8E%A7WEB%E6%9C%8D%E5%8A%A1%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8/"/>
     <id>http://www.ithelei.com/2020/03/01/Shell脚本监控WEB服务是否正常/</id>
@@ -94,30 +118,6 @@
   </entry>
   
   <entry>
-    <title>编译安装Nginx</title>
-    <link href="http://www.ithelei.com/2020/03/01/Nginx%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/"/>
-    <id>http://www.ithelei.com/2020/03/01/Nginx编译安装/</id>
-    <published>2020-03-01T11:33:45.000Z</published>
-    <updated>2020-03-01T12:47:45.839Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;编译安装Nginx&quot;&gt;&lt;a href=&quot;#编译安装Nginx&quot; class=&quot;headerlink&quot; title=&quot;编译安装Nginx&quot;&gt;&lt;/a&gt;编译安装Nginx&lt;/h3&gt;&lt;p&gt;由于以前写过，这里拿过来。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.
-      
-    
-    </summary>
-    
-      <category term="Nginx" scheme="http://www.ithelei.com/categories/Nginx/"/>
-    
-    
-      <category term="Nginx" scheme="http://www.ithelei.com/tags/Nginx/"/>
-    
-  </entry>
-  
-  <entry>
     <title>RAND随机函数使用</title>
     <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94MySQL%20RAND%E9%9A%8F%E6%9C%BA%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8/"/>
     <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——MySQL RAND随机函数使用/</id>
@@ -131,6 +131,30 @@
         &lt;p&gt;Mysql的RAND()函数在0~1之间产生一个随机数，如：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;`mysql&amp;gt; select RAND() ,RAND() ,RAND() ;`&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;该函数可以根据实际需求看用在什么地方。&lt;/p&gt;
 
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL LIKE与 NOT LIKE的用法</title>
+    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94MySQL%20LIKE%E4%B8%8E%20NOT%20LIKE%E7%9A%84%E7%94%A8%E6%B3%95/"/>
+    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——MySQL LIKE与 NOT LIKE的用法/</id>
+    <published>2020-02-29T01:20:45.000Z</published>
+    <updated>2020-02-29T12:57:37.340Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;like的通配符&quot;&gt;&lt;a href=&quot;#like的通配符&quot; class=&quot;headerlink&quot; title=&quot;like的通配符&quot;&gt;&lt;/a&gt;like的通配符&lt;/h3&gt;&lt;p&gt;mysql的like语句中的通配符如下：&lt;/p&gt;
+&lt;p&gt;“%”百分号 “_”下划线 “esc
       
     
     </summary>
@@ -181,30 +205,6 @@
 &lt;p&gt;&lt;img src=&quot;http://blog-dt.oss-cn-beijing.aliyuncs.com/mysql/9.png&quot; alt&gt;&lt;/p&gt;
 &lt;p&gt;mysql的REGEXP通配符如下。&lt;/p&gt;
 &lt;p&gt;（1） “^”字符： 匹配字符
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL LIKE与 NOT LIKE的用法</title>
-    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94MySQL%20LIKE%E4%B8%8E%20NOT%20LIKE%E7%9A%84%E7%94%A8%E6%B3%95/"/>
-    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——MySQL LIKE与 NOT LIKE的用法/</id>
-    <published>2020-02-29T01:20:45.000Z</published>
-    <updated>2020-02-29T12:57:37.340Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;like的通配符&quot;&gt;&lt;a href=&quot;#like的通配符&quot; class=&quot;headerlink&quot; title=&quot;like的通配符&quot;&gt;&lt;/a&gt;like的通配符&lt;/h3&gt;&lt;p&gt;mysql的like语句中的通配符如下：&lt;/p&gt;
-&lt;p&gt;“%”百分号 “_”下划线 “esc
       
     
     </summary>
@@ -365,32 +365,6 @@
   </entry>
   
   <entry>
-    <title>一个复杂的团队合作事件</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E4%B8%80%E4%B8%AA%E5%A4%8D%E6%9D%82%E7%9A%84%E5%9B%A2%E9%98%9F%E5%90%88%E4%BD%9C%E4%BA%8B%E4%BB%B6/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_一个复杂的团队合作事件/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:11:26.142Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;一，沟通这个事情可以做得更好。&lt;/p&gt;
-&lt;p&gt;比如 A 的做事理念跟数据，跟工程的同学不一致，如果就事论事地讨论，可能大家谁都无法说服谁。&lt;/p&gt;
-&lt;p&gt;我的建议是，可以找时间跟他们吃吃饭或喝杯咖啡什么的。&lt;/p&gt;
-&lt;p&gt;拉近私人关系，总可以使这种事情往正向的方向发展。&lt;/
-      
-    
-    </summary>
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-  </entry>
-  
-  <entry>
     <title>如何度过自己平淡无奇的青春</title>
     <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%A6%82%E4%BD%95%E5%BA%A6%E8%BF%87%E8%87%AA%E5%B7%B1%E5%B9%B3%E6%B7%A1%E6%97%A0%E5%A5%87%E7%9A%84%E9%9D%92%E6%98%A5/"/>
     <id>http://www.ithelei.com/2020/02/24/星球_如何度过自己平淡无奇的青春/</id>
@@ -414,28 +388,28 @@
   </entry>
   
   <entry>
-    <title>you are your time</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91you%20are%20your%20time/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_沈剑you are your time/</id>
+    <title>一个复杂的团队合作事件</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E4%B8%80%E4%B8%AA%E5%A4%8D%E6%9D%82%E7%9A%84%E5%9B%A2%E9%98%9F%E5%90%88%E4%BD%9C%E4%BA%8B%E4%BB%B6/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_一个复杂的团队合作事件/</id>
     <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:26:56.550Z</updated>
+    <updated>2020-02-24T15:11:26.142Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;you are your time&lt;/p&gt;
-&lt;p&gt;很多时候，我们都认为自己没有选择，或者被迫选择。&lt;/p&gt;
-&lt;p&gt;选择了工作，就没法立刻回家；选择了聚会，就没办法陪孩子；选择了看电视剧，就没办法看书。&lt;/p&gt;
-&lt;p&gt;其实，无形之中，我们做了自己的选择：在一些人的内心，工作比
+        &lt;p&gt;一，沟通这个事情可以做得更好。&lt;/p&gt;
+&lt;p&gt;比如 A 的做事理念跟数据，跟工程的同学不一致，如果就事论事地讨论，可能大家谁都无法说服谁。&lt;/p&gt;
+&lt;p&gt;我的建议是，可以找时间跟他们吃吃饭或喝杯咖啡什么的。&lt;/p&gt;
+&lt;p&gt;拉近私人关系，总可以使这种事情往正向的方向发展。&lt;/
       
     
     </summary>
     
-      <category term="职场" scheme="http://www.ithelei.com/categories/%E8%81%8C%E5%9C%BA/"/>
+      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
     
     
-      <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
+      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
     
   </entry>
   
@@ -492,27 +466,53 @@
   </entry>
   
   <entry>
-    <title>比能力更重要的，是你的底层操作系统</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91%E6%AF%94%E8%83%BD%E5%8A%9B%E6%9B%B4%E9%87%8D%E8%A6%81%E7%9A%84%EF%BC%8C%E6%98%AF%E4%BD%A0%E7%9A%84%E5%BA%95%E5%B1%82%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_沈剑比能力更重要的，是你的底层操作系统/</id>
+    <title>you are your time</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91you%20are%20your%20time/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_沈剑you are your time/</id>
     <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:29:58.052Z</updated>
+    <updated>2020-02-24T15:26:56.550Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;“比能力更重要的，是你的底层操作系统”&lt;/p&gt;
-&lt;p&gt;什么是普通人？就是快乐没有那么强烈，痛苦也没有那么巨大。所以，他们的人生会在既定的轨道上相对平衡地运行，而不是被快乐和痛苦牵引撕扯，没完没了地折腾。&lt;/p&gt;
-&lt;p&gt;什么叫有一技之长的人？就是当他在沉下来做某件事的时候，他
+        &lt;p&gt;you are your time&lt;/p&gt;
+&lt;p&gt;很多时候，我们都认为自己没有选择，或者被迫选择。&lt;/p&gt;
+&lt;p&gt;选择了工作，就没法立刻回家；选择了聚会，就没办法陪孩子；选择了看电视剧，就没办法看书。&lt;/p&gt;
+&lt;p&gt;其实，无形之中，我们做了自己的选择：在一些人的内心，工作比
       
     
     </summary>
     
-      <category term="人生" scheme="http://www.ithelei.com/categories/%E4%BA%BA%E7%94%9F/"/>
+      <category term="职场" scheme="http://www.ithelei.com/categories/%E8%81%8C%E5%9C%BA/"/>
     
     
-      <category term="人生" scheme="http://www.ithelei.com/tags/%E4%BA%BA%E7%94%9F/"/>
+      <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>程序员心理建设</title>
+    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+    <id>http://www.ithelei.com/2020/02/24/星球_程序员心理建设/</id>
+    <published>2020-02-24T01:20:45.000Z</published>
+    <updated>2020-02-24T14:54:25.010Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;工作是属于公司的，而职业生涯却是属于你自己的！&lt;/p&gt;
+&lt;p&gt;你所能犯的最大错误就是相信自己是在为别人工作。这样一来你对工作的安全感已然尽失。职业发展的驱动力一定是来自个体本身。记住：工作是属于公司的，而职业生涯却是属于你自己的。–厄尔·南丁格尔&lt;/p&gt;
+&lt;p&gt;摘自《软技能
+      
+    
+    </summary>
+    
+      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
+    
+    
+      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
     
   </entry>
   
