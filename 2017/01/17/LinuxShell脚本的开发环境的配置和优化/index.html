@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000">
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top">
+  
+  
+  <title>LinuxShell脚本的开发环境的配置和优化 | 养码哥</title>
+  <meta name="description" content="使用vim而不是vi编辑器 vim /etc/profile alias vi=vim source /etc/profile linux 环境下的vim编辑器默认不够强大，如果进行脚本开发还要进行适当的设置。 vim编辑器有一个可以用来调整配置的配置文件，默认放在用户家目录下，全路径以及名字组合为~/.vimrc(全局路径为/etc/vimrc),这是一个隐藏文件。然后退出SSH客户端重新登录，">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LinuxShell脚本的开发环境的配置和优化">
+<meta property="og:url" content="http://www.ithelei.com/2017/01/17/LinuxShell脚本的开发环境的配置和优化/index.html">
+<meta property="og:site_name" content="养码哥">
+<meta property="og:description" content="使用vim而不是vi编辑器 vim /etc/profile alias vi=vim source /etc/profile linux 环境下的vim编辑器默认不够强大，如果进行脚本开发还要进行适当的设置。 vim编辑器有一个可以用来调整配置的配置文件，默认放在用户家目录下，全路径以及名字组合为~/.vimrc(全局路径为/etc/vimrc),这是一个隐藏文件。然后退出SSH客户端重新登录，">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-06-14T11:10:50.224Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LinuxShell脚本的开发环境的配置和优化">
+<meta name="twitter:description" content="使用vim而不是vi编辑器 vim /etc/profile alias vi=vim source /etc/profile linux 环境下的vim编辑器默认不够强大，如果进行脚本开发还要进行适当的设置。 vim编辑器有一个可以用来调整配置的配置文件，默认放在用户家目录下，全路径以及名字组合为~/.vimrc(全局路径为/etc/vimrc),这是一个隐藏文件。然后退出SSH客户端重新登录，">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://www.ithelei.com/2017/01/17/LinuxShell脚本的开发环境的配置和优化/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="养码哥" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+  
+  
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d9dcae41f39178c7c60a36178957ad6f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  
+</head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/ithelei" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">养码哥</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Developer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> BeiJing, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="Type something..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">Archives</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">Categories</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">Tags</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">Repository</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">Books</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">Links</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">About</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/ithelei" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://weibo.com/p/1005055641384163" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CPU/">CPU</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Docker/">Docker</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/性能/">性能</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">20</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nginx/">Nginx</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Nginx/限流/">限流</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Openresty/">Openresty</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tomcat/">Tomcat</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/中台/">中台</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/产业互联网/">产业互联网</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/人生/">人生</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/会议/">会议</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/安全/">安全</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/峰会/">峰会</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心理建设/">心理建设</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数字营销/">数字营销</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/职场/">职场</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能力图谱/">能力图谱</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apache-Tomcat/">Apache Tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CPU/">CPU</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS-Linux-7/">CentOS Linux 7</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a><span class="tag-list-count">20</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Openresty/">Openresty</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/">SpringBoot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中台/">中台</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/产业互联网/">产业互联网</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/人生/">人生</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/会议/">会议</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/基线/">基线</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/峰会/">峰会</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/心理建设/">心理建设</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/性能/">性能</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数字营销/">数字营销</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/职场/">职场</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/能力图谱/">能力图谱</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/限流/">限流</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Apache-Tomcat/" style="font-size: 13px;">Apache Tomcat</a> <a href="/tags/CPU/" style="font-size: 13.6px;">CPU</a> <a href="/tags/CentOS-Linux-7/" style="font-size: 13px;">CentOS Linux 7</a> <a href="/tags/Docker/" style="font-size: 13px;">Docker</a> <a href="/tags/Git/" style="font-size: 13px;">Git</a> <a href="/tags/Linux/" style="font-size: 13.8px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 14px;">MySQL</a> <a href="/tags/Nginx/" style="font-size: 13.4px;">Nginx</a> <a href="/tags/Openresty/" style="font-size: 13px;">Openresty</a> <a href="/tags/SpringBoot/" style="font-size: 13px;">SpringBoot</a> <a href="/tags/Tomcat/" style="font-size: 13.2px;">Tomcat</a> <a href="/tags/中台/" style="font-size: 13px;">中台</a> <a href="/tags/产业互联网/" style="font-size: 13px;">产业互联网</a> <a href="/tags/人生/" style="font-size: 13px;">人生</a> <a href="/tags/会议/" style="font-size: 13.2px;">会议</a> <a href="/tags/基线/" style="font-size: 13.2px;">基线</a> <a href="/tags/峰会/" style="font-size: 13.8px;">峰会</a> <a href="/tags/心理建设/" style="font-size: 13.4px;">心理建设</a> <a href="/tags/性能/" style="font-size: 13px;">性能</a> <a href="/tags/数字营销/" style="font-size: 13px;">数字营销</a> <a href="/tags/职场/" style="font-size: 13.4px;">职场</a> <a href="/tags/能力图谱/" style="font-size: 13.2px;">能力图谱</a> <a href="/tags/限流/" style="font-size: 13px;">限流</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新发表</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Linux/">Linux</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/03/01/Linux系统的ECS实例中如何对MySQL进行自动备份/" class="title">Linux系统的ECS实例中如何对MySQL进行自动备份</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-03-01T11:33:45.000Z" itemprop="datePublished">2020-03-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Nginx/">Nginx</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/03/01/Nginx编译安装/" class="title">编译安装Nginx</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-03-01T11:33:45.000Z" itemprop="datePublished">2020-03-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Nginx/">Nginx</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/03/01/Nginx+Tomcat动静分离及Nginx优化(企业案例)/" class="title">Nginx+Tomcat动静分离及Nginx优化(企业案例)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-03-01T11:33:45.000Z" itemprop="datePublished">2020-03-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Linux/">Linux</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/03/01/Shell脚本监控WEB服务是否正常/" class="title">Shell脚本监控WEB服务是否正常</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-03-01T11:33:45.000Z" itemprop="datePublished">2020-03-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/MySQL/">MySQL</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/02/29/MySQL的基本查询——终端执行SQL方式/" class="title">终端执行SQL方式</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-02-29T01:20:45.000Z" itemprop="datePublished">2020-02-29</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-LinuxShell脚本的开发环境的配置和优化" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      LinuxShell脚本的开发环境的配置和优化
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2017/01/17/LinuxShell脚本的开发环境的配置和优化/" class="article-date">
+	  <time datetime="2017-01-17T01:20:45.000Z" itemprop="datePublished">2017-01-17</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/Linux/">Linux</a>
+  </span>
+
+
+        
+
+	<span class="article-read hidden-xs">
+    	<i class="icon icon-eye-fill" aria-hidden="true"></i>
+    	<span id="/2017/01/17/LinuxShell脚本的开发环境的配置和优化/" class="leancloud_visitors"  data-flag-title="LinuxShell脚本的开发环境的配置和优化">0</span>
+    </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2017/01/17/LinuxShell脚本的开发环境的配置和优化/#comments" class="article-comment-link">Comments</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1.8k(words)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 8(minutes)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p>使用vim而不是vi编辑器</p>
+<p>vim /etc/profile</p>
+<p>alias vi=vim</p>
+<p>source /etc/profile</p>
+<p>linux 环境下的vim编辑器默认不够强大，如果进行脚本开发还要进行适当的设置。</p>
+<p>vim编辑器有一个可以用来调整配置的配置文件，默认放在用户家目录下，全路径以及名字组合为~/.vimrc(全局路径为/etc/vimrc),这是一个隐藏文件。然后退出SSH客户端重新登录，即可应用.vimrc里对应的设置。</p>
+<p>设置：</p>
+<pre><code>`set nocompatible
+set history=100
+filetype on
+filetype plugin on
+filetype indent on
+set autoread
+set mouse=a
+syntax enable
+set cursorline
+hi cursorline guibg=#00ff00
+hi CursorColumn guibg=#00ff00
+set nofen
+set fdl=0
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set smarttab
+set ai
+set si
+set wrap
+set sw=4
+set wildmenu
+set ruler
+set cmdheight=1
+set lz
+set backspace=eol,start,indent
+set whichwrap+=&lt;,&gt;,h,l
+set magic
+set noerrorbells
+set novisualbell
+set showmatch
+set mat=2
+set hlsearch
+set ignorecase
+set encoding=utf-8
+set fileencodings=utf-8
+set termencoding=utf-8
+set smartindent
+set cin
+set showmatch
+set guioptions-=T
+set guioptions-=m
+set vb t_vb=
+set laststatus=2
+set pastetoggle=&lt;F9&gt;
+set background=dark
+highlight Search ctermbg=black  ctermfg=white guifg=white guibg=black
+autocmd BufNewFile *.py,*.cc,*.sh,*.java exec &quot;:call SetTitle()&quot;
+func SetTitle()
+    if expand(&quot;%:e&quot;) == &apos;sh&apos;
+        call setline(1, &quot;#!/bin/bash&quot;)
+        call setline(2, &quot;#Author:ithelei&quot;)
+        call setline(3, &quot;#website:http://www.wayboo.com&quot;)
+        call setline(4, &quot;#Time:&quot;.strftime(&quot;%F %T&quot;))
+        call setline(5, &quot;#Name:&quot;.expand(&quot;%&quot;))
+        call setline(6, &quot;#Version:V1.0&quot;)
+        call setline(7, &quot;#Description:This is a test script.&quot;)
+    endif
+endfunc
+
+`</code></pre><ul>
+<li><p>只要是以.sh为扩展名的文件，就会自动增加版权信息；</p>
+</li>
+<li><p>当代码量较大时比较有用的高级功能——代码折叠，在命令模式下，可以将光标定位到需要折叠的开始行，然后执行zf3j（其中3是指定要折叠多少行），便可以折叠当前行及下面三行的代码，若把光标放在对应折叠后的行上，按空格键即可展开折叠的行。</p>
+</li>
+<li><p>有时从外部复制部分shell代码到当前脚本后发现缩进是乱的，可以将vim编辑器调整为命令模式（按Esc键），然后将光标定位到要调整的行开头，接下来按“v”键，然后用键盘上下键选定要调整的多行代码，选中后按“=”键即可将代码调整为规整的格式。</p>
+</li>
+</ul>
+<p>注释：</p>
+<pre><code>`&quot;关闭兼容模式
+set nocompatible
+&quot;设置历史记录步数
+set history=100
+&quot;开启相关插件
+filetype on
+filetype plugin on
+filetype indent on
+&quot;当文件在外部被修改时，自动更新该文件
+set autoread
+&quot;激活鼠标的使用
+set mouse=a
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; =&gt; 字体和颜色
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;开启语法
+syntax enable
+&quot;设置字体
+&quot;set guifont=dejaVu\ Sans\ MONO\ 10
+&quot;
+&quot;&quot;设置配色
+&quot;colorscheme desert
+&quot;高亮显示当前行
+set cursorline
+hi cursorline guibg=#00ff00
+hi CursorColumn guibg=#00ff00
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; =&gt; 代码折叠功能 by oldboy
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;激活折叠功能
+set foldenable
+&quot;设置按照语法方式折叠（可简写set fdm=XX）
+&quot;有6种折叠方法：
+&quot;manual 手工定义折叠
+&quot;indent 更多的缩进表示更高级别的折叠
+&quot;expr   用表达式来定义折叠
+&quot;syntax 用语法高亮来定义折叠
+&quot;diff   对没有更改的文本进行折叠
+&quot;marker 对文中的标志进行折叠
+set foldmethod=manual
+&quot;设置折叠区域的宽度
+&quot;如果不为0，则在屏幕左侧显示一个折叠标识列
+&quot;分别用“-”和“+”来表示打开和关闭的折叠。
+set foldcolumn=0
+&quot;设置折叠层数为3
+setlocal foldlevel=3
+&quot;设置为自动关闭折叠
+set foldclose=all
+&quot;用空格键来代替zo和zc快捷键实现开关折叠
+&quot;zo  O-pen a fold   (打开折叠)
+&quot;zc  C-lose a fold  (关闭折叠)
+&quot;zf  F-old creation (创建折叠)
+nnoremap &lt;space&gt; @=((foldclosed(line(&apos;.&apos;)) &lt; 0)  &apos;zc&apos; : &apos;zo&apos;)&lt;CR&gt;
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; =&gt; 文字处理 by oldboy
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;使用空格来替换Tab
+set expandtab
+&quot;设置所有的Tab和缩进为4个空格
+set tabstop=4
+&quot;设定 &lt;&lt; 和 &gt;&gt; 命令移动时的宽度为4
+set shiftwidth=4
+&quot;使得按退格键时可以一次删掉4个空格
+set softtabstop=4
+set smarttab
+&quot;缩进，自动缩进(继承前一行的缩进)
+&quot;set autoindent命令关闭自动缩进，是下面配置的缩写。
+&quot;可使用autoindent命令的简写，即 “:set ai” 和 “:set noai”。
+&quot;还可以使用“ :set ai sw=4”在一个命令中打开缩进并设置缩进级别。
+set ai
+&quot;智能缩进
+set si
+&quot;自动换行
+set wrap
+&quot;设置软宽度
+set sw=4
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; =&gt; Vim 界面 by oldboy
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;Turn on WiLd menu
+set wildmenu
+&quot;显示标尺
+set ruler
+&quot;设置命令行的高度
+set cmdheight=1
+&quot;显示行数
+&quot;set nu
+&quot;Do not redraw, when running macros.. lazyredraw
+set lz
+&quot;设置退格
+set backspace=eol,start,indent
+&quot;Bbackspace and cursor keys wrap to
+set whichwrap+=&lt;,&gt;,h,l
+&quot;Set magic on（设置魔术）
+set magic
+&quot;关闭遇到错误时的声音提示
+&quot;关闭错误信息响铃
+set noerrorbells
+&quot;关闭使用可视响铃代替呼叫
+set novisualbell
+&quot;显示匹配的括号([{和}])
+set showmatch
+&quot;How many tenths of a second to blink
+set mat=2
+&quot;搜索时高亮显示搜索到的内容
+set hlsearch
+&quot;搜索时不区分大小写
+&quot;还可以使用简写（“:set ic” 和 “:set noic”）
+set ignorecase
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; =&gt; 编码设置
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;设置编码
+set encoding=utf-8
+&quot;设置文件编码
+set fileencodings=utf-8
+&quot;设置终端编码
+set termencoding=utf-8
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; =&gt; 其他设置 by oldboy 2010
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;开启新行时使用智能自动缩进
+set smartindent
+set cin
+set showmatch
+&quot;隐藏工具栏
+set guioptions-=T
+&quot;隐藏菜单栏
+set guioptions-=m
+&quot;置空错误铃声的终端代码
+set vb t_vb=
+&quot;显示状态栏 (默认值为 1, 表示无法显示状态栏)
+set laststatus=2
+&quot;粘贴不换行问题的解决方法
+set pastetoggle=&lt;F9&gt;
+&quot;设置背景色
+set background=dark
+&quot;设置高亮相关
+highlight Search ctermbg=black  ctermfg=white guifg=white guibg=black
+`</code></pre>
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://www.ithelei.com/2017/01/17/LinuxShell脚本的开发环境的配置和优化/" title="LinuxShell脚本的开发环境的配置和优化" target="_blank" rel="external">http://www.ithelei.com/2017/01/17/LinuxShell脚本的开发环境的配置和优化/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/ithelei" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/ithelei" target="_blank"><span class="text-dark">养码哥</span><small class="ml-1x">Developer</small></a></h3>
+        <div>喜欢读书，喜欢分享，希望有一天可以赚很多的钱，去干够风骚有意义的事情。我是养码哥，一个仍然在路上，向往自由和梦想的人！</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NjI4My8yMjc5NA">
+        <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+      </div>    
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2018/12/08/部门开会/" title="部门开会"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+    </li>
+    
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>$</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>Maybe you could buy me a cup of coffee.</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open alipay app scan this qrcode, buy me a coffee!</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open wechat app scan this qrcode, buy me a coffee!</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> alipay</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> wechat payment</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/ithelei" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://weibo.com/p/1005055641384163" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+	 
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/ithelei" target="_blank"> ithelei </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1277959937'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1277959937%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+
+
+	</footer>
+
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="/js/plugin.min.js"></script>
+<script src="/js/application.js"></script>
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+
+
+
+
+   
+
+
+<!-- custom analytics part create by xiamo -->
+<script defer src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+<script defer>
+AV.init({
+  appId: '',
+  appKey: ''
+});
+
+function showTime(Counter) {
+	var query = new AV.Query(Counter);
+		var visitors= $('.leancloud_visitors');
+		query.greaterThanOrEqualTo("time", 0);		
+		query.find({
+			success: function(results) {
+				if (results.length == 0) {				
+					return;
+				}
+				var data = results;
+				visitors.each(function(){
+					var url = $(this).attr('id').trim();					
+					for (var i = 0; i < data.length; i++) {
+						var object = data[i];
+						var content = object.get('time');
+						var _url = object.get('url')
+						if(url == _url){
+							$(this).text(content);
+						}
+					}
+				})
+				
+			},
+			error: function(object, error) {
+				console.log("Error: " + error.code + " " + error.message);
+			}
+		});
+}
+
+function addCount(Counter) {
+	var Counter = AV.Object.extend("Counter");
+	url = $(".leancloud_visitors").attr('id').trim();
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+	var query = new AV.Query(Counter);
+	query.equalTo("url", url);
+	query.find({
+		success: function(results) {
+			if (results.length > 0) {
+				var counter = results[0];
+				counter.fetchWhenSave(true);
+				counter.increment("time");
+				counter.save(null, {
+					success: function(counter) {
+						var content = counter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(counter, error) {
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+					}
+				});
+			} else {
+				var newcounter = new Counter();
+				newcounter.set("title", title);
+				newcounter.set("url", url);
+				newcounter.set("time", 1);
+				newcounter.save(null, {
+					success: function(newcounter) {
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+						var content = newcounter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(newcounter, error) {
+						console.log('Failed to create');
+					}
+				});
+			}
+		},
+		error: function(error) {
+			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
+$(function() {
+	var Counter = AV.Object.extend("Counter");
+	if ($('.leancloud_visitors').length == 1) {
+		addCount(Counter);
+	} else {
+		showTime(Counter);
+	}
+}); 
+</script>
+
+
+
+   
+    
+<script defer type="text/javascript">
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
