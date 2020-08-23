@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ithelei.com/"/>
-  <updated>2020-03-01T04:40:47.881Z</updated>
+  <updated>2020-08-23T14:57:50.738Z</updated>
   <id>http://www.ithelei.com/</id>
   
   <author>
@@ -15,6 +15,106 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>公司目前架构</title>
+    <link href="http://www.ithelei.com/2020/08/23/%E5%85%AC%E5%8F%B8%E7%9B%AE%E5%89%8D%E6%9E%B6%E6%9E%84/"/>
+    <id>http://www.ithelei.com/2020/08/23/公司目前架构/</id>
+    <published>2020-08-23T01:20:45.000Z</published>
+    <updated>2020-08-23T14:57:50.738Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://blog-dt.oss-cn-beijing.aliyuncs.com/others/5.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;h1 id=&quot;多vpc&quot;&gt;&lt;a href=&quot;#多vpc&quot; class=&quot;headerlink&quot; title=&quot;多vpc&quot;
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>公司网络</title>
+    <link href="http://www.ithelei.com/2020/08/23/%E5%85%AC%E5%8F%B8%E7%BD%91%E7%BB%9C/"/>
+    <id>http://www.ithelei.com/2020/08/23/公司网络/</id>
+    <published>2020-08-23T01:20:45.000Z</published>
+    <updated>2020-08-23T15:09:21.780Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://blog-dt.oss-cn-beijing.aliyuncs.com/others/11.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://blog-dt.oss-cn-beijing.aliyuncs.com/othe
+      
+    
+    </summary>
+    
+      <category term="网络" scheme="http://www.ithelei.com/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="网络" scheme="http://www.ithelei.com/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>百万流量</title>
+    <link href="http://www.ithelei.com/2020/08/23/%E7%99%BE%E4%B8%87%E6%B5%81%E9%87%8F/"/>
+    <id>http://www.ithelei.com/2020/08/23/百万流量/</id>
+    <published>2020-08-23T01:20:45.000Z</published>
+    <updated>2020-08-23T14:55:36.895Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://blog-dt.oss-cn-beijing.aliyuncs.com/others/4.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;h1 id=&quot;技术为更好&quot;&gt;&lt;a href=&quot;#技术为更好&quot; class=&quot;headerlink&quot; title=&quot;技术为
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>统架构升级培训指导</title>
+    <link href="http://www.ithelei.com/2020/08/23/%E9%98%BF%E9%87%8C%E6%9D%A5%E5%85%AC%E5%8F%B8%E4%BC%9A%E8%AE%AE/"/>
+    <id>http://www.ithelei.com/2020/08/23/阿里来公司会议/</id>
+    <published>2020-08-23T01:20:45.000Z</published>
+    <updated>2020-08-23T15:04:41.706Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://blog-dt.oss-cn-beijing.aliyuncs.com/others/6.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://blog-dt.oss-cn-beijing.aliyuncs.com/other
+      
+    
+    </summary>
+    
+      <category term="会议" scheme="http://www.ithelei.com/categories/%E4%BC%9A%E8%AE%AE/"/>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E4%BC%9A%E8%AE%AE/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+      <category term="会议" scheme="http://www.ithelei.com/tags/%E4%BC%9A%E8%AE%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux系统的ECS实例中如何对MySQL进行自动备份</title>
@@ -118,30 +218,6 @@
   </entry>
   
   <entry>
-    <title>终端执行SQL方式</title>
-    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94%E7%BB%88%E7%AB%AF%E6%89%A7%E8%A1%8CSQL%E6%96%B9%E5%BC%8F/"/>
-    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——终端执行SQL方式/</id>
-    <published>2020-02-29T01:20:45.000Z</published>
-    <updated>2020-02-29T10:51:22.444Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;（1） 执行编写好的SQL脚本，命令如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;`mysql&amp;gt; SOURCE d:/test.sql`&lt;/code&gt;&lt;/pre&gt;
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
     <title>RAND随机函数使用</title>
     <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94MySQL%20RAND%E9%9A%8F%E6%9C%BA%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8/"/>
     <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——MySQL RAND随机函数使用/</id>
@@ -167,18 +243,18 @@
   </entry>
   
   <entry>
-    <title>MySQL LIKE与 NOT LIKE的用法</title>
-    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94MySQL%20LIKE%E4%B8%8E%20NOT%20LIKE%E7%9A%84%E7%94%A8%E6%B3%95/"/>
-    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——MySQL LIKE与 NOT LIKE的用法/</id>
+    <title>终端执行SQL方式</title>
+    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94%E7%BB%88%E7%AB%AF%E6%89%A7%E8%A1%8CSQL%E6%96%B9%E5%BC%8F/"/>
+    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——终端执行SQL方式/</id>
     <published>2020-02-29T01:20:45.000Z</published>
-    <updated>2020-02-29T12:57:37.340Z</updated>
+    <updated>2020-02-29T10:51:22.444Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;like的通配符&quot;&gt;&lt;a href=&quot;#like的通配符&quot; class=&quot;headerlink&quot; title=&quot;like的通配符&quot;&gt;&lt;/a&gt;like的通配符&lt;/h3&gt;&lt;p&gt;mysql的like语句中的通配符如下：&lt;/p&gt;
-&lt;p&gt;“%”百分号 “_”下划线 “esc
+        &lt;p&gt;（1） 执行编写好的SQL脚本，命令如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;`mysql&amp;gt; SOURCE d:/test.sql`&lt;/code&gt;&lt;/pre&gt;
       
     
     </summary>
@@ -205,6 +281,30 @@
 &lt;p&gt;&lt;img src=&quot;http://blog-dt.oss-cn-beijing.aliyuncs.com/mysql/9.png&quot; alt&gt;&lt;/p&gt;
 &lt;p&gt;mysql的REGEXP通配符如下。&lt;/p&gt;
 &lt;p&gt;（1） “^”字符： 匹配字符
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL LIKE与 NOT LIKE的用法</title>
+    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94MySQL%20LIKE%E4%B8%8E%20NOT%20LIKE%E7%9A%84%E7%94%A8%E6%B3%95/"/>
+    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——MySQL LIKE与 NOT LIKE的用法/</id>
+    <published>2020-02-29T01:20:45.000Z</published>
+    <updated>2020-02-29T12:57:37.340Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;like的通配符&quot;&gt;&lt;a href=&quot;#like的通配符&quot; class=&quot;headerlink&quot; title=&quot;like的通配符&quot;&gt;&lt;/a&gt;like的通配符&lt;/h3&gt;&lt;p&gt;mysql的like语句中的通配符如下：&lt;/p&gt;
+&lt;p&gt;“%”百分号 “_”下划线 “esc
       
     
     </summary>
@@ -391,29 +491,6 @@
   </entry>
   
   <entry>
-    <title>如何度过自己平淡无奇的青春</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%A6%82%E4%BD%95%E5%BA%A6%E8%BF%87%E8%87%AA%E5%B7%B1%E5%B9%B3%E6%B7%A1%E6%97%A0%E5%A5%87%E7%9A%84%E9%9D%92%E6%98%A5/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_如何度过自己平淡无奇的青春/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:07:44.024Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡，但相对自己，相对自己周边的人，每个人的青春都是多彩的，充满激情的！&quot;&gt;&lt;a href=&quot;#首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡
-      
-    
-    </summary>
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-  </entry>
-  
-  <entry>
     <title>前端和技术天花板</title>
     <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%89%8D%E7%AB%AF%E5%92%8C%E6%8A%80%E6%9C%AF%E5%A4%A9%E8%8A%B1%E6%9D%BF/"/>
     <id>http://www.ithelei.com/2020/02/24/星球_前端和技术天花板/</id>
@@ -427,84 +504,6 @@
         &lt;p&gt;进入移动互联网时代后，前端岗位的需求应该是在下降的。原因显而易见，因为用户的时间都消耗在移动端，消耗在APP上了。&lt;/p&gt;
 &lt;p&gt;前端市场开始慢慢被客户端市场吞噬。&lt;/p&gt;
 &lt;p&gt;不过这几年，又显现出了大前端的趋势，有点山水轮流转的感觉。(当然，大前端跟前端有很大不同）&lt;/
-      
-    
-    </summary>
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>you are your time</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91you%20are%20your%20time/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_沈剑you are your time/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:26:56.550Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;you are your time&lt;/p&gt;
-&lt;p&gt;很多时候，我们都认为自己没有选择，或者被迫选择。&lt;/p&gt;
-&lt;p&gt;选择了工作，就没法立刻回家；选择了聚会，就没办法陪孩子；选择了看电视剧，就没办法看书。&lt;/p&gt;
-&lt;p&gt;其实，无形之中，我们做了自己的选择：在一些人的内心，工作比
-      
-    
-    </summary>
-    
-      <category term="职场" scheme="http://www.ithelei.com/categories/%E8%81%8C%E5%9C%BA/"/>
-    
-    
-      <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我不会，但我可以学</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E6%B2%88%E5%89%91%E6%88%91%E4%B8%8D%E4%BC%9A%EF%BC%8C%E4%BD%86%E6%88%91%E5%8F%AF%E4%BB%A5%E5%AD%A6/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_沈剑我不会，但我可以学/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:35:15.377Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;“我不会，但我可以学”&lt;/p&gt;
-&lt;p&gt;一个case。&lt;/p&gt;
-&lt;p&gt;运营提了一个紧急的需求，做一个活动落地页，实在抽不出来人手，于是安排了一个同学对接。&lt;/p&gt;
-&lt;p&gt;新同学非常认真负责，和产品运营沟通需求，做技术方案设计。&lt;/p&gt;
-&lt;p&gt;技术方案评完，新同学来找我：“有很
-      
-    
-    </summary>
-    
-      <category term="职场" scheme="http://www.ithelei.com/categories/%E8%81%8C%E5%9C%BA/"/>
-    
-    
-      <category term="职场" scheme="http://www.ithelei.com/tags/%E8%81%8C%E5%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>程序员心理建设</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_程序员心理建设/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T14:54:25.010Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;工作是属于公司的，而职业生涯却是属于你自己的！&lt;/p&gt;
-&lt;p&gt;你所能犯的最大错误就是相信自己是在为别人工作。这样一来你对工作的安全感已然尽失。职业发展的驱动力一定是来自个体本身。记住：工作是属于公司的，而职业生涯却是属于你自己的。–厄尔·南丁格尔&lt;/p&gt;
-&lt;p&gt;摘自《软技能
       
     
     </summary>
