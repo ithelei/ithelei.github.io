@@ -41,6 +41,30 @@
   </entry>
   
   <entry>
+    <title>什么是vlan、三层交换机、网关、DNS、子网掩码、MAC地址</title>
+    <link href="http://www.ithelei.com/2020/08/23/%E4%BB%80%E4%B9%88%E6%98%AFvlan%E3%80%81%E4%B8%89%E5%B1%82%E4%BA%A4%E6%8D%A2%E6%9C%BA%E3%80%81%E7%BD%91%E5%85%B3%E3%80%81DNS%E3%80%81%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81%E3%80%81MAC%E5%9C%B0%E5%9D%80/"/>
+    <id>http://www.ithelei.com/2020/08/23/什么是vlan、三层交换机、网关、DNS、子网掩码、MAC地址/</id>
+    <published>2020-08-23T01:20:45.000Z</published>
+    <updated>2020-08-23T15:54:09.623Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;很多朋友多次问到什么是网关、dns、子网掩码，三层交换机，它们定位的用途；确实，因为网络技术在弱电中确实应用非常广泛，我们平时在vip技术群中也是不断的讨论到网关、vlan、三层交换机或子网掩码等问题，今天我们就一起用通俗方式一次性了解清楚。 &lt;/p&gt;
+&lt;h2 id=&quot;一、
+      
+    
+    </summary>
+    
+      <category term="网络" scheme="http://www.ithelei.com/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="网络" scheme="http://www.ithelei.com/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>公司网络</title>
     <link href="http://www.ithelei.com/2020/08/23/%E5%85%AC%E5%8F%B8%E7%BD%91%E7%BB%9C/"/>
     <id>http://www.ithelei.com/2020/08/23/公司网络/</id>
@@ -166,30 +190,6 @@
   </entry>
   
   <entry>
-    <title>编译安装Nginx</title>
-    <link href="http://www.ithelei.com/2020/03/01/Nginx%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/"/>
-    <id>http://www.ithelei.com/2020/03/01/Nginx编译安装/</id>
-    <published>2020-03-01T11:33:45.000Z</published>
-    <updated>2020-03-01T12:47:45.839Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;编译安装Nginx&quot;&gt;&lt;a href=&quot;#编译安装Nginx&quot; class=&quot;headerlink&quot; title=&quot;编译安装Nginx&quot;&gt;&lt;/a&gt;编译安装Nginx&lt;/h3&gt;&lt;p&gt;由于以前写过，这里拿过来。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.
-      
-    
-    </summary>
-    
-      <category term="Nginx" scheme="http://www.ithelei.com/categories/Nginx/"/>
-    
-    
-      <category term="Nginx" scheme="http://www.ithelei.com/tags/Nginx/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Shell脚本监控WEB服务是否正常</title>
     <link href="http://www.ithelei.com/2020/03/01/Shell%E8%84%9A%E6%9C%AC%E7%9B%91%E6%8E%A7WEB%E6%9C%8D%E5%8A%A1%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8/"/>
     <id>http://www.ithelei.com/2020/03/01/Shell脚本监控WEB服务是否正常/</id>
@@ -214,6 +214,30 @@
     
     
       <category term="Linux" scheme="http://www.ithelei.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>编译安装Nginx</title>
+    <link href="http://www.ithelei.com/2020/03/01/Nginx%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/"/>
+    <id>http://www.ithelei.com/2020/03/01/Nginx编译安装/</id>
+    <published>2020-03-01T11:33:45.000Z</published>
+    <updated>2020-03-01T12:47:45.839Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;编译安装Nginx&quot;&gt;&lt;a href=&quot;#编译安装Nginx&quot; class=&quot;headerlink&quot; title=&quot;编译安装Nginx&quot;&gt;&lt;/a&gt;编译安装Nginx&lt;/h3&gt;&lt;p&gt;由于以前写过，这里拿过来。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.
+      
+    
+    </summary>
+    
+      <category term="Nginx" scheme="http://www.ithelei.com/categories/Nginx/"/>
+    
+    
+      <category term="Nginx" scheme="http://www.ithelei.com/tags/Nginx/"/>
     
   </entry>
   
@@ -461,29 +485,6 @@
     
     
       <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何度过自己平淡无奇的青春</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E5%A6%82%E4%BD%95%E5%BA%A6%E8%BF%87%E8%87%AA%E5%B7%B1%E5%B9%B3%E6%B7%A1%E6%97%A0%E5%A5%87%E7%9A%84%E9%9D%92%E6%98%A5/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_如何度过自己平淡无奇的青春/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:07:44.024Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡，但相对自己，相对自己周边的人，每个人的青春都是多彩的，充满激情的！&quot;&gt;&lt;a href=&quot;#首先，纠正一个问题，平淡无奇是相对的。相对那些伟人，时代的引领者，普通人的青春确实平淡
-      
-    
-    </summary>
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
     
   </entry>
   
