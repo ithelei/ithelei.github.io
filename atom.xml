@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ithelei.com/"/>
-  <updated>2020-08-23T14:57:50.738Z</updated>
+  <updated>2020-08-25T14:55:39.779Z</updated>
   <id>http://www.ithelei.com/</id>
   
   <author>
@@ -15,6 +15,381 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【成为架构师2-10】章节小结：百万流量，这些技术就够了</title>
+    <link href="http://www.ithelei.com/2020/08/24/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-10%E3%80%91%E7%AB%A0%E8%8A%82%E5%B0%8F%E7%BB%93%EF%BC%9A%E7%99%BE%E4%B8%87%E6%B5%81%E9%87%8F%EF%BC%8C%E8%BF%99%E4%BA%9B%E6%8A%80%E6%9C%AF%E5%B0%B1%E5%A4%9F%E4%BA%86/"/>
+    <id>http://www.ithelei.com/2020/08/24/【成为架构师2-10】章节小结：百万流量，这些技术就够了/</id>
+    <published>2020-08-24T01:20:45.000Z</published>
+    <updated>2020-08-25T14:55:39.779Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;知识串讲&lt;/li&gt;
+&lt;li&gt;往期回顾&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;知识串讲&quot;&gt;&lt;a href=&quot;#知识串讲&quot; class=&quot;headerlink&quot; title=&quot;知识串讲&quot;&gt;&lt;/a&gt;知识串讲&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;早期单机系统的两个问题：&lt;stro
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成为架构师2-4】反向代理与DNS轮询：接入层的架构演进</title>
+    <link href="http://www.ithelei.com/2020/08/24/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-4%E3%80%91%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E4%B8%8EDNS%E8%BD%AE%E8%AF%A2%EF%BC%9A%E6%8E%A5%E5%85%A5%E5%B1%82%E7%9A%84%E6%9E%B6%E6%9E%84%E6%BC%94%E8%BF%9B/"/>
+    <id>http://www.ithelei.com/2020/08/24/【成为架构师2-4】反向代理与DNS轮询：接入层的架构演进/</id>
+    <published>2020-08-24T01:20:45.000Z</published>
+    <updated>2020-08-25T14:03:10.353Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;DNS轮询&lt;/li&gt;
+&lt;li&gt;反向代理&lt;/li&gt;
+&lt;li&gt;多层反向代理&lt;/li&gt;
+&lt;li&gt;多层反向代理，加DNS轮询&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;问题引入：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;nginx是2012年才流行起来的技术，在反向代理之前的怎么对流量承受能力进行
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成为架构师2-5】维护session一致性的四种方案</title>
+    <link href="http://www.ithelei.com/2020/08/24/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-5%E3%80%91%E7%BB%B4%E6%8A%A4session%E4%B8%80%E8%87%B4%E6%80%A7%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%96%B9%E6%A1%88/"/>
+    <id>http://www.ithelei.com/2020/08/24/【成为架构师2-5】维护session一致性的四种方案/</id>
+    <published>2020-08-24T01:20:45.000Z</published>
+    <updated>2020-08-25T14:10:25.971Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;session同步&lt;/li&gt;
+&lt;li&gt;客户端存储&lt;/li&gt;
+&lt;li&gt;反向代理&lt;/li&gt;
+&lt;li&gt;后端统一存储&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;文中所指的session是广义的session，其含义是用户的会话状态，web-server如tomcat会产生用于存储用户
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成为架构师2-6】CDN：就近访问，缓解网络拥塞</title>
+    <link href="http://www.ithelei.com/2020/08/24/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-6%E3%80%91CDN%EF%BC%9A%E5%B0%B1%E8%BF%91%E8%AE%BF%E9%97%AE%EF%BC%8C%E7%BC%93%E8%A7%A3%E7%BD%91%E7%BB%9C%E6%8B%A5%E5%A1%9E/"/>
+    <id>http://www.ithelei.com/2020/08/24/【成为架构师2-6】CDN：就近访问，缓解网络拥塞/</id>
+    <published>2020-08-24T01:20:45.000Z</published>
+    <updated>2020-08-25T14:21:50.610Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;cdn&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;就近访问&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;CDN的构成部分&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;源与镜像的一致性问题&lt;/p&gt;
+&lt;p&gt; 一致性问题的解决方案&lt;/p&gt;
+&lt;p&gt; 资源更新&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成为架构师2-8】早期性能优化-三大分离之一：动静分离</title>
+    <link href="http://www.ithelei.com/2020/08/24/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-8%E3%80%91%E6%97%A9%E6%9C%9F%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E4%B8%89%E5%A4%A7%E5%88%86%E7%A6%BB%E4%B9%8B%E4%B8%80%EF%BC%9A%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB/"/>
+    <id>http://www.ithelei.com/2020/08/24/【成为架构师2-8】早期性能优化-三大分离之一：动静分离/</id>
+    <published>2020-08-24T01:20:45.000Z</published>
+    <updated>2020-08-25T14:40:29.959Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;三大分离&lt;/li&gt;
+&lt;li&gt;动静分离&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;静态页面
+
+动态页面
+
+架构设计&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;&lt;p&gt;页面静态化&lt;/p&gt;
+&lt;p&gt;  动态页面的生成过程&lt;/p&gt;
+&lt;p&gt;  实施页面静
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成为架构师2-7】TCP负载均衡，长连接的负载均衡策略</title>
+    <link href="http://www.ithelei.com/2020/08/24/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-7%E3%80%91TCP%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%EF%BC%8C%E9%95%BF%E8%BF%9E%E6%8E%A5%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%AD%96%E7%95%A5/"/>
+    <id>http://www.ithelei.com/2020/08/24/【成为架构师2-7】TCP负载均衡，长连接的负载均衡策略/</id>
+    <published>2020-08-24T01:20:45.000Z</published>
+    <updated>2020-08-25T14:30:25.149Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;单体架构TCP连接与HTTP的负载均衡&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;客户端负载均衡（内置集群）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;服务单负载均衡（静态IP列表）&lt;/p&gt;
+&lt;p&gt;  高可用方案    &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;1
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成为架构师2-9】早期性能优化-三大分离：读写分离与前后台分离</title>
+    <link href="http://www.ithelei.com/2020/08/24/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-9%E3%80%91%E6%97%A9%E6%9C%9F%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E4%B8%89%E5%A4%A7%E5%88%86%E7%A6%BB%EF%BC%9A%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%E4%B8%8E%E5%89%8D%E5%90%8E%E5%8F%B0%E5%88%86%E7%A6%BB/"/>
+    <id>http://www.ithelei.com/2020/08/24/【成为架构师2-9】早期性能优化-三大分离：读写分离与前后台分离/</id>
+    <published>2020-08-24T01:20:45.000Z</published>
+    <updated>2020-08-25T14:49:27.382Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;读写分离&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;水平切分&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;前后台分离&lt;/p&gt;
+&lt;p&gt; 前后台介绍&lt;/p&gt;
+&lt;p&gt; 耦合的架构设计&lt;/p&gt;
+&lt;p&gt; 分离的常见设计&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;1-读写分离&quot;&gt;
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成为架构师2-3】反向代理：接入层扩容，负载均衡</title>
+    <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-3%E3%80%91%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%EF%BC%9A%E6%8E%A5%E5%85%A5%E5%B1%82%E6%89%A9%E5%AE%B9%EF%BC%8C%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/"/>
+    <id>http://www.ithelei.com/2020/08/23/【成为架构师2-3】反向代理：接入层扩容，负载均衡/</id>
+    <published>2020-08-23T01:20:45.000Z</published>
+    <updated>2020-08-24T15:44:23.362Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;单机遗留问题&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;反向代理，接入层扩容&lt;/p&gt;
+&lt;p&gt; 用什么做反向代理&lt;/p&gt;
+&lt;p&gt; 反向代理解决了什么问题&lt;/p&gt;
+&lt;p&gt; 反向代理带来了什么新问题&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;反向代理，负载均衡&lt;/p&gt;
+&lt;p&gt; 
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成为架构师1-1】技术选型：创业初期，技术如何选型</title>
+    <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%881-1%E3%80%91%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%EF%BC%9A%E5%88%9B%E4%B8%9A%E5%88%9D%E6%9C%9F%EF%BC%8C%E6%8A%80%E6%9C%AF%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/"/>
+    <id>http://www.ithelei.com/2020/08/23/【成为架构师1-1】技术选型：创业初期，技术如何选型/</id>
+    <published>2020-08-23T01:20:45.000Z</published>
+    <updated>2020-08-24T14:44:38.183Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;创业初期的系统特点&lt;/li&gt;
+&lt;li&gt;创业初期的架构特点&lt;/li&gt;
+&lt;li&gt;创业初期，推荐的技术选型&lt;/li&gt;
+&lt;li&gt;创业初期，工程师的主要矛盾&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;创业初期的系统特点&quot;&gt;&lt;a href=&quot;#创业初期的系统特点&quot; class=
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成为架构师2-1】容量设计：流量高低，对架构究竟有什么影响</title>
+    <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-1%E3%80%91%E5%AE%B9%E9%87%8F%E8%AE%BE%E8%AE%A1%EF%BC%9A%E6%B5%81%E9%87%8F%E9%AB%98%E4%BD%8E%EF%BC%8C%E5%AF%B9%E6%9E%B6%E6%9E%84%E7%A9%B6%E7%AB%9F%E6%9C%89%E4%BB%80%E4%B9%88%E5%BD%B1%E5%93%8D/"/>
+    <id>http://www.ithelei.com/2020/08/23/【成为架构师2-1】容量设计：流量高低，对架构究竟有什么影响/</id>
+    <published>2020-08-23T01:20:45.000Z</published>
+    <updated>2020-08-24T15:19:59.734Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;何时需要进行容量评估&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;哪些指标需要进行容量预估&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;架构设计的容量评估步骤（吞吐量为例）&lt;/p&gt;
+&lt;p&gt; 1、评估总访问量&lt;/p&gt;
+&lt;p&gt; 2、评估平均访问量&lt;/p&gt;
+&lt;p&gt; 3、评估高峰QP
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成为架构师1-2】技术选型：框架组件要不要自研，何时自研</title>
+    <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%881-2%E3%80%91%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%EF%BC%9A%E6%A1%86%E6%9E%B6%E7%BB%84%E4%BB%B6%E8%A6%81%E4%B8%8D%E8%A6%81%E8%87%AA%E7%A0%94%EF%BC%8C%E4%BD%95%E6%97%B6%E8%87%AA%E7%A0%94/"/>
+    <id>http://www.ithelei.com/2020/08/23/【成为架构师1-2】技术选型：框架组件要不要自研，何时自研/</id>
+    <published>2020-08-23T01:20:45.000Z</published>
+    <updated>2020-08-24T15:06:44.560Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;早期不建议自研&lt;/li&gt;
+&lt;li&gt;控制技术栈的统一&lt;/li&gt;
+&lt;li&gt;对第三方库“浅浅地封装一层”&lt;/li&gt;
+&lt;li&gt;在后期，适当地造一些轮子&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;早期不建议自研&quot;&gt;&lt;a href=&quot;#早期不建议自研&quot; class=&quot;heade
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成为架构师2-2】伪分布式与垂直拆分：快速解决单机性能问题的实践方案</title>
+    <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-2%E3%80%91%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%8E%E5%9E%82%E7%9B%B4%E6%8B%86%E5%88%86%EF%BC%9A%E5%BF%AB%E9%80%9F%E8%A7%A3%E5%86%B3%E5%8D%95%E6%9C%BA%E6%80%A7%E8%83%BD%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%9E%E8%B7%B5%E6%96%B9%E6%A1%88/"/>
+    <id>http://www.ithelei.com/2020/08/23/【成为架构师2-2】伪分布式与垂直拆分：快速解决单机性能问题的实践方案/</id>
+    <published>2020-08-23T01:20:45.000Z</published>
+    <updated>2020-08-24T15:31:38.325Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;架构演进阶段的新需求&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;单机资源瓶颈产生时的环境&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;架构演进，伪分布式，提升性能&lt;/p&gt;
+&lt;p&gt; 1、三大分离结构（图中仅两种）&lt;/p&gt;
+&lt;p&gt; 2、设计思路&lt;/p&gt;
+&lt;p&gt; 3、什么问题没有
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>公司目前架构</title>
@@ -190,34 +565,6 @@
   </entry>
   
   <entry>
-    <title>Shell脚本监控WEB服务是否正常</title>
-    <link href="http://www.ithelei.com/2020/03/01/Shell%E8%84%9A%E6%9C%AC%E7%9B%91%E6%8E%A7WEB%E6%9C%8D%E5%8A%A1%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8/"/>
-    <id>http://www.ithelei.com/2020/03/01/Shell脚本监控WEB服务是否正常/</id>
-    <published>2020-03-01T11:33:45.000Z</published>
-    <updated>2020-03-01T04:23:52.727Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;1.安装sendmail来发邮件&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# yum -y install sendmail
-
-# /etc/init.d/sendmail start
-
-# chkconfig sendmail on&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;2.安装mutt邮
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.ithelei.com/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.ithelei.com/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
     <title>编译安装Nginx</title>
     <link href="http://www.ithelei.com/2020/03/01/Nginx%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/"/>
     <id>http://www.ithelei.com/2020/03/01/Nginx编译安装/</id>
@@ -238,279 +585,6 @@
     
     
       <category term="Nginx" scheme="http://www.ithelei.com/tags/Nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL LIKE与 NOT LIKE的用法</title>
-    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94MySQL%20LIKE%E4%B8%8E%20NOT%20LIKE%E7%9A%84%E7%94%A8%E6%B3%95/"/>
-    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——MySQL LIKE与 NOT LIKE的用法/</id>
-    <published>2020-02-29T01:20:45.000Z</published>
-    <updated>2020-02-29T12:57:37.340Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;like的通配符&quot;&gt;&lt;a href=&quot;#like的通配符&quot; class=&quot;headerlink&quot; title=&quot;like的通配符&quot;&gt;&lt;/a&gt;like的通配符&lt;/h3&gt;&lt;p&gt;mysql的like语句中的通配符如下：&lt;/p&gt;
-&lt;p&gt;“%”百分号 “_”下划线 “esc
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>REGEXP正则的使用</title>
-    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94MySQL%20REGEXP%E6%AD%A3%E5%88%99%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
-    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——MySQL REGEXP正则的使用/</id>
-    <published>2020-02-29T01:20:45.000Z</published>
-    <updated>2020-02-29T12:18:02.374Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;REGEXP的运算符&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://blog-dt.oss-cn-beijing.aliyuncs.com/mysql/9.png&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;mysql的REGEXP通配符如下。&lt;/p&gt;
-&lt;p&gt;（1） “^”字符： 匹配字符
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RAND随机函数使用</title>
-    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94MySQL%20RAND%E9%9A%8F%E6%9C%BA%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8/"/>
-    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——MySQL RAND随机函数使用/</id>
-    <published>2020-02-29T01:20:45.000Z</published>
-    <updated>2020-02-29T10:56:10.709Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Mysql的RAND()函数在0~1之间产生一个随机数，如：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;`mysql&amp;gt; select RAND() ,RAND() ,RAND() ;`&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;该函数可以根据实际需求看用在什么地方。&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>终端执行SQL方式</title>
-    <link href="http://www.ithelei.com/2020/02/29/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94%E7%BB%88%E7%AB%AF%E6%89%A7%E8%A1%8CSQL%E6%96%B9%E5%BC%8F/"/>
-    <id>http://www.ithelei.com/2020/02/29/MySQL的基本查询——终端执行SQL方式/</id>
-    <published>2020-02-29T01:20:45.000Z</published>
-    <updated>2020-02-29T10:51:22.444Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;（1） 执行编写好的SQL脚本，命令如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;`mysql&amp;gt; SOURCE d:/test.sql`&lt;/code&gt;&lt;/pre&gt;
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>有多种选择才叫有能力</title>
-    <link href="http://www.ithelei.com/2020/02/29/%E6%9C%89%E5%A4%9A%E7%A7%8D%E9%80%89%E6%8B%A9%E6%89%8D%E5%8F%AB%E6%9C%89%E8%83%BD%E5%8A%9B/"/>
-    <id>http://www.ithelei.com/2020/02/29/有多种选择才叫有能力/</id>
-    <published>2020-02-29T01:20:45.000Z</published>
-    <updated>2020-02-29T13:38:25.647Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;有多种选择才叫有能力&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;做任何事情如果都能有多种选择，你就会很轻松，如果不能有多种选择或者没有选择就会很痛苦。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;例如：汇报领导交代的任务提供解决方案时就要给领导多种选择，如果只有一种选择，老
-      
-    
-    </summary>
-    
-      <category term="能力图谱" scheme="http://www.ithelei.com/categories/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
-    
-    
-      <category term="能力图谱" scheme="http://www.ithelei.com/tags/%E8%83%BD%E5%8A%9B%E5%9B%BE%E8%B0%B1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>手动部署Java Web环境</title>
-    <link href="http://www.ithelei.com/2020/02/28/%E6%89%8B%E5%8A%A8%E9%83%A8%E7%BD%B2Java%20Web%E7%8E%AF%E5%A2%83/"/>
-    <id>http://www.ithelei.com/2020/02/28/手动部署Java Web环境/</id>
-    <published>2020-02-28T11:33:45.000Z</published>
-    <updated>2020-03-01T05:09:02.148Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;本篇教程在示例步骤中使用了以下版本的软件。操作时，请您以实际软件版本为准。&quot;&gt;&lt;a href=&quot;#本篇教程在示例步骤中使用了以下版本的软件。操作时，请您以实际软件版本为准。&quot; class=&quot;headerlink&quot; title=&quot;本篇教程在示例步骤中使用了以下版本的
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.ithelei.com/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.ithelei.com/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>接入层限流</title>
-    <link href="http://www.ithelei.com/2020/02/27/Nginx-%E6%8E%A5%E5%85%A5%E5%B1%82%E9%99%90%E6%B5%81/"/>
-    <id>http://www.ithelei.com/2020/02/27/Nginx-接入层限流/</id>
-    <published>2020-02-27T01:20:45.000Z</published>
-    <updated>2020-02-27T12:07:58.134Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;接入层限流&quot;&gt;&lt;a href=&quot;#接入层限流&quot; class=&quot;headerlink&quot; title=&quot;接入层限流&quot;&gt;&lt;/a&gt;接入层限流&lt;/h1&gt;&lt;p&gt;接入层通常指请求流量的入口，该层的主要目的有：负载均衡、非法请求过滤、请求聚合、缓存、降级、限流、A/B测试、服务质
-      
-    
-    </summary>
-    
-      <category term="Nginx" scheme="http://www.ithelei.com/categories/Nginx/"/>
-    
-      <category term="限流" scheme="http://www.ithelei.com/categories/Nginx/%E9%99%90%E6%B5%81/"/>
-    
-    
-      <category term="Nginx" scheme="http://www.ithelei.com/tags/Nginx/"/>
-    
-      <category term="限流" scheme="http://www.ithelei.com/tags/%E9%99%90%E6%B5%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQLdump备份所有数据库</title>
-    <link href="http://www.ithelei.com/2020/02/25/MySQLdump%E5%A4%87%E4%BB%BD%E6%89%80%E6%9C%89%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    <id>http://www.ithelei.com/2020/02/25/MySQLdump备份所有数据库/</id>
-    <published>2020-02-25T13:45:00.000Z</published>
-    <updated>2020-02-25T14:46:46.321Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;MySQLdump备份所有数据库&quot;&gt;&lt;a href=&quot;#MySQLdump备份所有数据库&quot; class=&quot;headerlink&quot; title=&quot;MySQLdump备份所有数据库&quot;&gt;&lt;/a&gt;MySQLdump备份所有数据库&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;`mysql
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL命令恢复mysqldump备份的数据库</title>
-    <link href="http://www.ithelei.com/2020/02/25/MySQL%E5%91%BD%E4%BB%A4%E6%81%A2%E5%A4%8Dmysqldump%E5%A4%87%E4%BB%BD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    <id>http://www.ithelei.com/2020/02/25/MySQL命令恢复mysqldump备份的数据库/</id>
-    <published>2020-02-25T13:45:00.000Z</published>
-    <updated>2020-02-29T10:31:32.937Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;p&gt; &lt;code&gt;mysql -u 用户名 -p 密码 -h 主机 数据库 &amp;lt;路径&lt;/code&gt; &lt;/p&gt;
-&lt;p&gt;注意：恢复要使用mysq
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL备份与恢复</title>
-    <link href="http://www.ithelei.com/2020/02/25/MySQL%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D/"/>
-    <id>http://www.ithelei.com/2020/02/25/MySQL备份与恢复/</id>
-    <published>2020-02-25T13:45:00.000Z</published>
-    <updated>2020-02-25T13:41:38.177Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;mysql数据备份的多种操作手段&quot;&gt;&lt;a href=&quot;#mysql数据备份的多种操作手段&quot; class=&quot;headerlink&quot; title=&quot;mysql数据备份的多种操作手段&quot;&gt;&lt;/a&gt;mysql数据备份的多种操作手段&lt;/h2&gt;&lt;p&gt;数据备份时保证数据安全的最后
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://www.ithelei.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一个复杂的团队合作事件</title>
-    <link href="http://www.ithelei.com/2020/02/24/%E6%98%9F%E7%90%83_%E4%B8%80%E4%B8%AA%E5%A4%8D%E6%9D%82%E7%9A%84%E5%9B%A2%E9%98%9F%E5%90%88%E4%BD%9C%E4%BA%8B%E4%BB%B6/"/>
-    <id>http://www.ithelei.com/2020/02/24/星球_一个复杂的团队合作事件/</id>
-    <published>2020-02-24T01:20:45.000Z</published>
-    <updated>2020-02-24T15:11:26.142Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;一，沟通这个事情可以做得更好。&lt;/p&gt;
-&lt;p&gt;比如 A 的做事理念跟数据，跟工程的同学不一致，如果就事论事地讨论，可能大家谁都无法说服谁。&lt;/p&gt;
-&lt;p&gt;我的建议是，可以找时间跟他们吃吃饭或喝杯咖啡什么的。&lt;/p&gt;
-&lt;p&gt;拉近私人关系，总可以使这种事情往正向的方向发展。&lt;/
-      
-    
-    </summary>
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/categories/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
-    
-    
-      <category term="心理建设" scheme="http://www.ithelei.com/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/"/>
     
   </entry>
   
