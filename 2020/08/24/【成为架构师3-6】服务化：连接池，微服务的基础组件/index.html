@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000">
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top">
+  
+  
+  <title>【成为架构师3-6】服务化：连接池，微服务的基础组件 | 养码哥</title>
+  <meta name="description" content="如何访问下游 连接池的核心接口  初始化  拿连接  放回连接 连接池的基本架构 其它考虑因素  在互联网架构中，我们常有访问下游的需求，包括但不限于：微服务、缓存、数据库。而连接池就是这些访问中的一个重要组件，本篇主要是对微服务中的重要组件 —— 连接池的核心设计思路进行一个简单的阐释。 如何访问下游在不使用连接池的情况下 就像把大象放进冰箱一样，有三个步骤，打开冰箱，放进去，关上冰箱（虽然这">
+<meta name="keywords" content="架构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【成为架构师3-6】服务化：连接池，微服务的基础组件">
+<meta property="og:url" content="http://www.ithelei.com/2020/08/24/【成为架构师3-6】服务化：连接池，微服务的基础组件/index.html">
+<meta property="og:site_name" content="养码哥">
+<meta property="og:description" content="如何访问下游 连接池的核心接口  初始化  拿连接  放回连接 连接池的基本架构 其它考虑因素  在互联网架构中，我们常有访问下游的需求，包括但不限于：微服务、缓存、数据库。而连接池就是这些访问中的一个重要组件，本篇主要是对微服务中的重要组件 —— 连接池的核心设计思路进行一个简单的阐释。 如何访问下游在不使用连接池的情况下 就像把大象放进冰箱一样，有三个步骤，打开冰箱，放进去，关上冰箱（虽然这">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://blog-dt.oss-cn-beijing.aliyuncs.com/jiagou/a/20200803174504233.png">
+<meta property="og:updated_time" content="2020-08-26T03:34:31.018Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【成为架构师3-6】服务化：连接池，微服务的基础组件">
+<meta name="twitter:description" content="如何访问下游 连接池的核心接口  初始化  拿连接  放回连接 连接池的基本架构 其它考虑因素  在互联网架构中，我们常有访问下游的需求，包括但不限于：微服务、缓存、数据库。而连接池就是这些访问中的一个重要组件，本篇主要是对微服务中的重要组件 —— 连接池的核心设计思路进行一个简单的阐释。 如何访问下游在不使用连接池的情况下 就像把大象放进冰箱一样，有三个步骤，打开冰箱，放进去，关上冰箱（虽然这">
+<meta name="twitter:image" content="http://blog-dt.oss-cn-beijing.aliyuncs.com/jiagou/a/20200803174504233.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://www.ithelei.com/2020/08/24/【成为架构师3-6】服务化：连接池，微服务的基础组件/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="养码哥" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+  
+  
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d9dcae41f39178c7c60a36178957ad6f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  
+</head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/ithelei" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">养码哥</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Developer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> BeiJing, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="Type something..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">Archives</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">Categories</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">Tags</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">Repository</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">Books</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">Links</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">About</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/ithelei" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://weibo.com/p/1005055641384163" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CPU/">CPU</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Docker/">Docker</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/性能/">性能</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/监控/">监控</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">20</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nginx/">Nginx</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Nginx/限流/">限流</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Openresty/">Openresty</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tomcat/">Tomcat</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/中台/">中台</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/产业互联网/">产业互联网</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/人生/">人生</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/会议/">会议</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/会议/架构/">架构</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/安全/">安全</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/峰会/">峰会</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心理建设/">心理建设</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数字营销/">数字营销</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/架构/">架构</a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/网络/">网络</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/职场/">职场</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能力图谱/">能力图谱</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apache-Tomcat/">Apache Tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CPU/">CPU</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS-Linux-7/">CentOS Linux 7</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a><span class="tag-list-count">20</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Openresty/">Openresty</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/">SpringBoot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中台/">中台</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/产业互联网/">产业互联网</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/人生/">人生</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/会议/">会议</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/基线/">基线</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/峰会/">峰会</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/心理建设/">心理建设</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/性能/">性能</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数字营销/">数字营销</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/架构/">架构</a><span class="tag-list-count">22</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/监控/">监控</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络/">网络</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/职场/">职场</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/能力图谱/">能力图谱</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/限流/">限流</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Apache-Tomcat/" style="font-size: 13px;">Apache Tomcat</a> <a href="/tags/CPU/" style="font-size: 13.5px;">CPU</a> <a href="/tags/CentOS-Linux-7/" style="font-size: 13px;">CentOS Linux 7</a> <a href="/tags/Docker/" style="font-size: 13px;">Docker</a> <a href="/tags/Git/" style="font-size: 13px;">Git</a> <a href="/tags/Linux/" style="font-size: 13.75px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 13.88px;">MySQL</a> <a href="/tags/Nginx/" style="font-size: 13.38px;">Nginx</a> <a href="/tags/Openresty/" style="font-size: 13px;">Openresty</a> <a href="/tags/SpringBoot/" style="font-size: 13px;">SpringBoot</a> <a href="/tags/Tomcat/" style="font-size: 13.13px;">Tomcat</a> <a href="/tags/中台/" style="font-size: 13px;">中台</a> <a href="/tags/产业互联网/" style="font-size: 13px;">产业互联网</a> <a href="/tags/人生/" style="font-size: 13px;">人生</a> <a href="/tags/会议/" style="font-size: 13.25px;">会议</a> <a href="/tags/基线/" style="font-size: 13.13px;">基线</a> <a href="/tags/峰会/" style="font-size: 13.63px;">峰会</a> <a href="/tags/心理建设/" style="font-size: 13.38px;">心理建设</a> <a href="/tags/性能/" style="font-size: 13px;">性能</a> <a href="/tags/数字营销/" style="font-size: 13px;">数字营销</a> <a href="/tags/架构/" style="font-size: 14px;">架构</a> <a href="/tags/监控/" style="font-size: 13px;">监控</a> <a href="/tags/网络/" style="font-size: 13.13px;">网络</a> <a href="/tags/职场/" style="font-size: 13.38px;">职场</a> <a href="/tags/能力图谱/" style="font-size: 13.13px;">能力图谱</a> <a href="/tags/限流/" style="font-size: 13px;">限流</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新发表</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/架构/">架构</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/08/25/【成为架构师3-7】服务化：连接池，高可用、可扩展、负载均衡都离不开它/" class="title">【成为架构师3-7】服务化：连接池，高可用、可扩展、负载均衡都离不开它</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-08-25T01:20:45.000Z" itemprop="datePublished">2020-08-25</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/架构/">架构</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/08/24/【成为架构师2-10】章节小结：百万流量，这些技术就够了/" class="title">【成为架构师2-10】章节小结：百万流量，这些技术就够了</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-08-24T01:20:45.000Z" itemprop="datePublished">2020-08-24</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/架构/">架构</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/08/24/【成为架构师2-4】反向代理与DNS轮询：接入层的架构演进/" class="title">【成为架构师2-4】反向代理与DNS轮询：接入层的架构演进</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-08-24T01:20:45.000Z" itemprop="datePublished">2020-08-24</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/架构/">架构</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/08/24/【成为架构师2-5】维护session一致性的四种方案/" class="title">【成为架构师2-5】维护session一致性的四种方案</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-08-24T01:20:45.000Z" itemprop="datePublished">2020-08-24</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/架构/">架构</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/08/24/【成为架构师2-8】早期性能优化-三大分离之一：动静分离/" class="title">【成为架构师2-8】早期性能优化-三大分离之一：动静分离</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-08-24T01:20:45.000Z" itemprop="datePublished">2020-08-24</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-【成为架构师3-6】服务化：连接池，微服务的基础组件" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      【成为架构师3-6】服务化：连接池，微服务的基础组件
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/08/24/【成为架构师3-6】服务化：连接池，微服务的基础组件/" class="article-date">
+	  <time datetime="2020-08-24T01:20:45.000Z" itemprop="datePublished">2020-08-24</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/架构/">架构</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/架构/">架构</a>
+  </span>
+
+
+        
+
+	<span class="article-read hidden-xs">
+    	<i class="icon icon-eye-fill" aria-hidden="true"></i>
+    	<span id="/2020/08/24/【成为架构师3-6】服务化：连接池，微服务的基础组件/" class="leancloud_visitors"  data-flag-title="【成为架构师3-6】服务化：连接池，微服务的基础组件">0</span>
+    </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/08/24/【成为架构师3-6】服务化：连接池，微服务的基础组件/#comments" class="article-comment-link">Comments</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 872(words)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 3(minutes)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <ol>
+<li>如何访问下游</li>
+<li>连接池的核心接口</li>
+</ol>
+<pre><code>初始化
+
+拿连接
+
+放回连接</code></pre><ol start="3">
+<li>连接池的基本架构</li>
+<li>其它考虑因素</li>
+</ol>
+<p>在互联网架构中，我们常有访问下游的需求，包括但不限于：微服务、缓存、数据库。而连接池就是这些访问中的一个重要组件，本篇主要是对微服务中的重要组件 —— 连接池的核心设计思路进行一个简单的阐释。</p>
+<h3 id="如何访问下游"><a href="#如何访问下游" class="headerlink" title="如何访问下游"></a>如何访问下游</h3><p><strong>在不使用连接池的情况下</strong></p>
+<p>就像把大象放进冰箱一样，有三个步骤，打开冰箱，放进去，关上冰箱（虽然这是讽刺空谈）但现实就是如此，在没有连接池的情况下，我们调用下游服务通常就是：</p>
+<ol>
+<li>建立连接（Connection）</li>
+<li>通过连接，收发请求</li>
+<li>关闭连接</li>
+</ol>
+<p>在早期使用jdbc的时候，我们都会下载一个比如说mysql-jdbc的driver，然后根据官方文档，学习如何建立连接，通过连接访问数据库，进行增删查改，操作完之后释放连接，简单来讲，也就是上述三步。1、3两步我们可以称之为new和close</p>
+<p><strong>有连接池的情况</strong></p>
+<p>有连接池的情况，访问下游服务也是三步：</p>
+<ol>
+<li>拿一个连接</li>
+<li>通过链接，收发请求</li>
+<li>放回连接</li>
+</ol>
+<p>这次的1、3两步我们可以称之为get和free，连接池事先建立好了比如说与数据库的连接，维护这个连接的数组就是连接池的核心数据结构</p>
+<h3 id="连接池的核心接口"><a href="#连接池的核心接口" class="headerlink" title="连接池的核心接口"></a>连接池的核心接口</h3><p>连接池操作有三个核心接口，分别是<strong>初始化、拿连接、放回连接</strong></p>
+<p><strong>初始化</strong></p>
+<p>初始化的伪代码如下：</p>
+<pre><code>`init() {
+for i to N {
+    Array DBClientConnection[i] = new()
+    Array DBClientConnection[i] -&gt; connect()
+    Array lock[i] = 0
+     }
+}`</code></pre><p>数据结构很简单，总共是两个数组，一个是表示所有真正连接的数组，还有一个是第三行出现的一个lock数组，lock数组的作用即是表征下标对应的连接的状态，当前是否被占用。</p>
+<p><strong>拿连接</strong></p>
+<p>拿连接的过程也非常简单，首先就是遍历锁数组，如果为0，那么设置锁为1，返回连接即可，伪代码如下：</p>
+<pre><code>GetConnection() {
+for i to N {
+    if(Array lock[i] == 0) {
+        Array lock[i] = 1
+        return Array DBClientConnection[i]
+    }
+}
+}</code></pre><p><strong>放回连接</strong></p>
+<p>放回连接只需要把lock设置为0就可以了</p>
+<pre><code>`FreeConnection(c) {
+for i to N {
+    if(Array DBClientConnection[i] == c) {
+        Array lock[i] = 0
+    }
+  }
+}`</code></pre><p>###连接池的基本架构</p>
+<p>上述简化的操作表示为架构就是这个样子：</p>
+<p><img src="http://blog-dt.oss-cn-beijing.aliyuncs.com/jiagou/a/20200803174504233.png" alt></p>
+<p><strong>其它考虑因素</strong></p>
+<p>上面只是最简单的连接池的数据结构和实现原理，真实的情况当然不可能就是这么简单的</p>
+<ol>
+<li>比如说在数据结构上就有可以优化的，可以使用一个表征可用连接的链表来实现去连接的O(1) 复杂度，使用connectMap来对放回连接实现O(1) 的复杂度</li>
+<li>连接的<strong>可用性检测</strong>，如果连接失效了，要进行重连</li>
+<li>如果下游服务故障，失效连接需要剔除，以实现<strong>故障的自动转移</strong></li>
+<li>要保证连接选取的概率，<strong>实现负载均衡</strong>，比如动态负载均衡就是实施在连接池层面的</li>
+<li>如果下游有新增的节点，需要动态扩充连接池，以实现<strong>服务自动发现</strong></li>
+</ol>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://www.ithelei.com/2020/08/24/【成为架构师3-6】服务化：连接池，微服务的基础组件/" title="【成为架构师3-6】服务化：连接池，微服务的基础组件" target="_blank" rel="external">http://www.ithelei.com/2020/08/24/【成为架构师3-6】服务化：连接池，微服务的基础组件/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/ithelei" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/ithelei" target="_blank"><span class="text-dark">养码哥</span><small class="ml-1x">Developer</small></a></h3>
+        <div>喜欢读书，喜欢分享，希望有一天可以赚很多的钱，去干够风骚有意义的事情。我是养码哥，一个仍然在路上，向往自由和梦想的人！</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NjI4My8yMjc5NA">
+        <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+      </div>    
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2020/08/24/【成为架构师3-5】服务化：必须搞定负载均衡/" title="【成为架构师3-5】服务化：必须搞定负载均衡"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2020/08/24/【成为架构师2-6】CDN：就近访问，缓解网络拥塞/" title="【成为架构师2-6】CDN：就近访问，缓解网络拥塞"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>$</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>Maybe you could buy me a cup of coffee.</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open alipay app scan this qrcode, buy me a coffee!</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open wechat app scan this qrcode, buy me a coffee!</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> alipay</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> wechat payment</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/ithelei" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://weibo.com/p/1005055641384163" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+	 
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/ithelei" target="_blank"> ithelei </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1277959937'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1277959937%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+
+
+	</footer>
+
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="/js/plugin.min.js"></script>
+<script src="/js/application.js"></script>
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+
+
+
+
+   
+
+
+<!-- custom analytics part create by xiamo -->
+<script defer src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+<script defer>
+AV.init({
+  appId: '',
+  appKey: ''
+});
+
+function showTime(Counter) {
+	var query = new AV.Query(Counter);
+		var visitors= $('.leancloud_visitors');
+		query.greaterThanOrEqualTo("time", 0);		
+		query.find({
+			success: function(results) {
+				if (results.length == 0) {				
+					return;
+				}
+				var data = results;
+				visitors.each(function(){
+					var url = $(this).attr('id').trim();					
+					for (var i = 0; i < data.length; i++) {
+						var object = data[i];
+						var content = object.get('time');
+						var _url = object.get('url')
+						if(url == _url){
+							$(this).text(content);
+						}
+					}
+				})
+				
+			},
+			error: function(object, error) {
+				console.log("Error: " + error.code + " " + error.message);
+			}
+		});
+}
+
+function addCount(Counter) {
+	var Counter = AV.Object.extend("Counter");
+	url = $(".leancloud_visitors").attr('id').trim();
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+	var query = new AV.Query(Counter);
+	query.equalTo("url", url);
+	query.find({
+		success: function(results) {
+			if (results.length > 0) {
+				var counter = results[0];
+				counter.fetchWhenSave(true);
+				counter.increment("time");
+				counter.save(null, {
+					success: function(counter) {
+						var content = counter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(counter, error) {
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+					}
+				});
+			} else {
+				var newcounter = new Counter();
+				newcounter.set("title", title);
+				newcounter.set("url", url);
+				newcounter.set("time", 1);
+				newcounter.save(null, {
+					success: function(newcounter) {
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+						var content = newcounter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(newcounter, error) {
+						console.log('Failed to create');
+					}
+				});
+			}
+		},
+		error: function(error) {
+			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
+$(function() {
+	var Counter = AV.Object.extend("Counter");
+	if ($('.leancloud_visitors').length == 1) {
+		addCount(Counter);
+	} else {
+		showTime(Counter);
+	}
+}); 
+</script>
+
+
+
+   
+    
+<script defer type="text/javascript">
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ithelei.com/"/>
-  <updated>2020-08-25T14:55:39.779Z</updated>
+  <updated>2020-08-27T01:05:31.807Z</updated>
   <id>http://www.ithelei.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【成为架构师3-7】服务化：连接池，高可用、可扩展、负载均衡都离不开它</title>
+    <link href="http://www.ithelei.com/2020/08/25/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%883-7%E3%80%91%E6%9C%8D%E5%8A%A1%E5%8C%96%EF%BC%9A%E8%BF%9E%E6%8E%A5%E6%B1%A0%EF%BC%8C%E9%AB%98%E5%8F%AF%E7%94%A8%E3%80%81%E5%8F%AF%E6%89%A9%E5%B1%95%E3%80%81%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E9%83%BD%E7%A6%BB%E4%B8%8D%E5%BC%80%E5%AE%83/"/>
+    <id>http://www.ithelei.com/2020/08/25/【成为架构师3-7】服务化：连接池，高可用、可扩展、负载均衡都离不开它/</id>
+    <published>2020-08-25T01:20:45.000Z</published>
+    <updated>2020-08-27T01:05:31.807Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;高可用：剔除失效连接，故障自动转移&lt;/li&gt;
+&lt;li&gt;扩展性：服务发现：自动载入新服务节点配置、动态连接池&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;监听配置文件的md5，如果改变则重新载入
+
+使用配置中心的回调机制，新的节点注册到配置中心，配置中心回调通知服
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>【成为架构师2-10】章节小结：百万流量，这些技术就够了</title>
@@ -105,6 +134,230 @@
   </entry>
   
   <entry>
+    <title>【成为架构师2-8】早期性能优化-三大分离之一：动静分离</title>
+    <link href="http://www.ithelei.com/2020/08/24/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-8%E3%80%91%E6%97%A9%E6%9C%9F%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E4%B8%89%E5%A4%A7%E5%88%86%E7%A6%BB%E4%B9%8B%E4%B8%80%EF%BC%9A%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB/"/>
+    <id>http://www.ithelei.com/2020/08/24/【成为架构师2-8】早期性能优化-三大分离之一：动静分离/</id>
+    <published>2020-08-24T01:20:45.000Z</published>
+    <updated>2020-08-25T14:40:29.959Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;三大分离&lt;/li&gt;
+&lt;li&gt;动静分离&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;静态页面
+
+动态页面
+
+架构设计&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;&lt;p&gt;页面静态化&lt;/p&gt;
+&lt;p&gt;  动态页面的生成过程&lt;/p&gt;
+&lt;p&gt;  实施页面静
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成为架构师3-3】服务化：必须保证高可用</title>
+    <link href="http://www.ithelei.com/2020/08/24/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%883-3%E3%80%91%E6%9C%8D%E5%8A%A1%E5%8C%96%EF%BC%9A%E5%BF%85%E9%A1%BB%E4%BF%9D%E8%AF%81%E9%AB%98%E5%8F%AF%E7%94%A8/"/>
+    <id>http://www.ithelei.com/2020/08/24/【成为架构师3-3】服务化：必须保证高可用/</id>
+    <published>2020-08-24T01:20:45.000Z</published>
+    <updated>2020-08-26T02:57:37.386Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;高可用的常用手段&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;端到反向代理的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;反向代理到站点&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;站点应用到微服务&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;服务到缓存&lt;/p&gt;
+&lt;p&gt; memcache缓存&lt;/
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成为架构师3-1】服务化：微服务架构，究竟解决什么问题</title>
+    <link href="http://www.ithelei.com/2020/08/24/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%883-1%E3%80%91%E6%9C%8D%E5%8A%A1%E5%8C%96%EF%BC%9A%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%EF%BC%8C%E7%A9%B6%E7%AB%9F%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98/"/>
+    <id>http://www.ithelei.com/2020/08/24/【成为架构师3-1】服务化：微服务架构，究竟解决什么问题/</id>
+    <published>2020-08-24T01:20:45.000Z</published>
+    <updated>2020-08-25T15:05:57.224Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;本篇作为微服务的开篇，只是简单的阐述一下微服务架构能带来的优势，以及微服务架构的弊端&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;早期架构的痛点&lt;/li&gt;
+&lt;li&gt;微服务架构的好处&lt;/li&gt;
+&lt;li&gt;微服务架构带来的问题&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;早期架构的痛点&quot;&gt;&lt;a href
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成为架构师3-2】服务化：微服务的粒度，究竟要细到什么程度</title>
+    <link href="http://www.ithelei.com/2020/08/24/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%883-2%E3%80%91%E6%9C%8D%E5%8A%A1%E5%8C%96%EF%BC%9A%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9A%84%E7%B2%92%E5%BA%A6%EF%BC%8C%E7%A9%B6%E7%AB%9F%E8%A6%81%E7%BB%86%E5%88%B0%E4%BB%80%E4%B9%88%E7%A8%8B%E5%BA%A6/"/>
+    <id>http://www.ithelei.com/2020/08/24/【成为架构师3-2】服务化：微服务的粒度，究竟要细到什么程度/</id>
+    <published>2020-08-24T01:20:45.000Z</published>
+    <updated>2020-08-26T02:03:48.145Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;统一服务层&lt;/li&gt;
+&lt;li&gt;子业务服务&lt;/li&gt;
+&lt;li&gt;一个数据库一个服务&lt;/li&gt;
+&lt;li&gt;一个接口一个服务&lt;/li&gt;
+&lt;li&gt;常用的最佳实践&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;统一服务层&quot;&gt;&lt;a href=&quot;#统一服务层&quot; class=&quot;header
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成为架构师3-4】服务化：必须支持高并发</title>
+    <link href="http://www.ithelei.com/2020/08/24/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%883-4%E3%80%91%E6%9C%8D%E5%8A%A1%E5%8C%96%EF%BC%9A%E5%BF%85%E9%A1%BB%E6%94%AF%E6%8C%81%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
+    <id>http://www.ithelei.com/2020/08/24/【成为架构师3-4】服务化：必须支持高并发/</id>
+    <published>2020-08-24T01:20:45.000Z</published>
+    <updated>2020-08-26T03:03:52.623Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;高并发指标&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;垂直扩展（Scale up）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;水平扩展（Scale out） &lt;/p&gt;
+&lt;p&gt; 数据库的水平扩展&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;本篇是对微服务架构中高并发一个通用思路的
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成为架构师3-5】服务化：必须搞定负载均衡</title>
+    <link href="http://www.ithelei.com/2020/08/24/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%883-5%E3%80%91%E6%9C%8D%E5%8A%A1%E5%8C%96%EF%BC%9A%E5%BF%85%E9%A1%BB%E6%90%9E%E5%AE%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/"/>
+    <id>http://www.ithelei.com/2020/08/24/【成为架构师3-5】服务化：必须搞定负载均衡/</id>
+    <published>2020-08-24T01:20:45.000Z</published>
+    <updated>2020-08-26T03:18:34.346Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;负载均衡方法论&lt;/li&gt;
+&lt;li&gt;同构环境下的负载均衡&lt;/li&gt;
+&lt;li&gt;静态权重&lt;/li&gt;
+&lt;li&gt;动态权重&lt;/li&gt;
+&lt;li&gt;过载保护&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;本篇是对微服务架构中实现负载均衡的一个通用思路的阐述&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;负载均衡方
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成为架构师3-6】服务化：连接池，微服务的基础组件</title>
+    <link href="http://www.ithelei.com/2020/08/24/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%883-6%E3%80%91%E6%9C%8D%E5%8A%A1%E5%8C%96%EF%BC%9A%E8%BF%9E%E6%8E%A5%E6%B1%A0%EF%BC%8C%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/"/>
+    <id>http://www.ithelei.com/2020/08/24/【成为架构师3-6】服务化：连接池，微服务的基础组件/</id>
+    <published>2020-08-24T01:20:45.000Z</published>
+    <updated>2020-08-26T03:34:31.018Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;如何访问下游&lt;/li&gt;
+&lt;li&gt;连接池的核心接口&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;初始化
+
+拿连接
+
+放回连接&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;连接池的基本架构&lt;/li&gt;
+&lt;li&gt;其它考虑因素&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【成为架构师2-6】CDN：就近访问，缓解网络拥塞</title>
     <link href="http://www.ithelei.com/2020/08/24/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-6%E3%80%91CDN%EF%BC%9A%E5%B0%B1%E8%BF%91%E8%AE%BF%E9%97%AE%EF%BC%8C%E7%BC%93%E8%A7%A3%E7%BD%91%E7%BB%9C%E6%8B%A5%E5%A1%9E/"/>
     <id>http://www.ithelei.com/2020/08/24/【成为架构师2-6】CDN：就近访问，缓解网络拥塞/</id>
@@ -128,40 +381,6 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 
-      
-    
-    </summary>
-    
-      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
-    
-    
-      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【成为架构师2-8】早期性能优化-三大分离之一：动静分离</title>
-    <link href="http://www.ithelei.com/2020/08/24/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-8%E3%80%91%E6%97%A9%E6%9C%9F%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E4%B8%89%E5%A4%A7%E5%88%86%E7%A6%BB%E4%B9%8B%E4%B8%80%EF%BC%9A%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB/"/>
-    <id>http://www.ithelei.com/2020/08/24/【成为架构师2-8】早期性能优化-三大分离之一：动静分离/</id>
-    <published>2020-08-24T01:20:45.000Z</published>
-    <updated>2020-08-25T14:40:29.959Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;三大分离&lt;/li&gt;
-&lt;li&gt;动静分离&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;静态页面
-
-动态页面
-
-架构设计&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&quot;3&quot;&gt;
-&lt;li&gt;&lt;p&gt;页面静态化&lt;/p&gt;
-&lt;p&gt;  动态页面的生成过程&lt;/p&gt;
-&lt;p&gt;  实施页面静
       
     
     </summary>
@@ -240,38 +459,6 @@
   </entry>
   
   <entry>
-    <title>【成为架构师2-3】反向代理：接入层扩容，负载均衡</title>
-    <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-3%E3%80%91%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%EF%BC%9A%E6%8E%A5%E5%85%A5%E5%B1%82%E6%89%A9%E5%AE%B9%EF%BC%8C%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/"/>
-    <id>http://www.ithelei.com/2020/08/23/【成为架构师2-3】反向代理：接入层扩容，负载均衡/</id>
-    <published>2020-08-23T01:20:45.000Z</published>
-    <updated>2020-08-24T15:44:23.362Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;单机遗留问题&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;反向代理，接入层扩容&lt;/p&gt;
-&lt;p&gt; 用什么做反向代理&lt;/p&gt;
-&lt;p&gt; 反向代理解决了什么问题&lt;/p&gt;
-&lt;p&gt; 反向代理带来了什么新问题&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;反向代理，负载均衡&lt;/p&gt;
-&lt;p&gt; 
-      
-    
-    </summary>
-    
-      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
-    
-    
-      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
     <title>【成为架构师1-1】技术选型：创业初期，技术如何选型</title>
     <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%881-1%E3%80%91%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%EF%BC%9A%E5%88%9B%E4%B8%9A%E5%88%9D%E6%9C%9F%EF%BC%8C%E6%8A%80%E6%9C%AF%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/"/>
     <id>http://www.ithelei.com/2020/08/23/【成为架构师1-1】技术选型：创业初期，技术如何选型/</id>
@@ -332,6 +519,37 @@
   </entry>
   
   <entry>
+    <title>【成为架构师2-2】伪分布式与垂直拆分：快速解决单机性能问题的实践方案</title>
+    <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-2%E3%80%91%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%8E%E5%9E%82%E7%9B%B4%E6%8B%86%E5%88%86%EF%BC%9A%E5%BF%AB%E9%80%9F%E8%A7%A3%E5%86%B3%E5%8D%95%E6%9C%BA%E6%80%A7%E8%83%BD%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%9E%E8%B7%B5%E6%96%B9%E6%A1%88/"/>
+    <id>http://www.ithelei.com/2020/08/23/【成为架构师2-2】伪分布式与垂直拆分：快速解决单机性能问题的实践方案/</id>
+    <published>2020-08-23T01:20:45.000Z</published>
+    <updated>2020-08-24T15:31:38.325Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;架构演进阶段的新需求&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;单机资源瓶颈产生时的环境&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;架构演进，伪分布式，提升性能&lt;/p&gt;
+&lt;p&gt; 1、三大分离结构（图中仅两种）&lt;/p&gt;
+&lt;p&gt; 2、设计思路&lt;/p&gt;
+&lt;p&gt; 3、什么问题没有
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【成为架构师1-2】技术选型：框架组件要不要自研，何时自研</title>
     <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%881-2%E3%80%91%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%EF%BC%9A%E6%A1%86%E6%9E%B6%E7%BB%84%E4%BB%B6%E8%A6%81%E4%B8%8D%E8%A6%81%E8%87%AA%E7%A0%94%EF%BC%8C%E4%BD%95%E6%97%B6%E8%87%AA%E7%A0%94/"/>
     <id>http://www.ithelei.com/2020/08/23/【成为架构师1-2】技术选型：框架组件要不要自研，何时自研/</id>
@@ -361,25 +579,26 @@
   </entry>
   
   <entry>
-    <title>【成为架构师2-2】伪分布式与垂直拆分：快速解决单机性能问题的实践方案</title>
-    <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-2%E3%80%91%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%8E%E5%9E%82%E7%9B%B4%E6%8B%86%E5%88%86%EF%BC%9A%E5%BF%AB%E9%80%9F%E8%A7%A3%E5%86%B3%E5%8D%95%E6%9C%BA%E6%80%A7%E8%83%BD%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%9E%E8%B7%B5%E6%96%B9%E6%A1%88/"/>
-    <id>http://www.ithelei.com/2020/08/23/【成为架构师2-2】伪分布式与垂直拆分：快速解决单机性能问题的实践方案/</id>
+    <title>【成为架构师2-3】反向代理：接入层扩容，负载均衡</title>
+    <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-3%E3%80%91%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%EF%BC%9A%E6%8E%A5%E5%85%A5%E5%B1%82%E6%89%A9%E5%AE%B9%EF%BC%8C%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/"/>
+    <id>http://www.ithelei.com/2020/08/23/【成为架构师2-3】反向代理：接入层扩容，负载均衡/</id>
     <published>2020-08-23T01:20:45.000Z</published>
-    <updated>2020-08-24T15:31:38.325Z</updated>
+    <updated>2020-08-24T15:44:23.362Z</updated>
     
     <summary type="html">
     
       
       
         &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;架构演进阶段的新需求&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;单机遗留问题&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;单机资源瓶颈产生时的环境&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;反向代理，接入层扩容&lt;/p&gt;
+&lt;p&gt; 用什么做反向代理&lt;/p&gt;
+&lt;p&gt; 反向代理解决了什么问题&lt;/p&gt;
+&lt;p&gt; 反向代理带来了什么新问题&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;架构演进，伪分布式，提升性能&lt;/p&gt;
-&lt;p&gt; 1、三大分离结构（图中仅两种）&lt;/p&gt;
-&lt;p&gt; 2、设计思路&lt;/p&gt;
-&lt;p&gt; 3、什么问题没有
+&lt;li&gt;&lt;p&gt;反向代理，负载均衡&lt;/p&gt;
+&lt;p&gt; 
       
     
     </summary>
@@ -412,179 +631,6 @@
     
     
       <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>什么是vlan、三层交换机、网关、DNS、子网掩码、MAC地址</title>
-    <link href="http://www.ithelei.com/2020/08/23/%E4%BB%80%E4%B9%88%E6%98%AFvlan%E3%80%81%E4%B8%89%E5%B1%82%E4%BA%A4%E6%8D%A2%E6%9C%BA%E3%80%81%E7%BD%91%E5%85%B3%E3%80%81DNS%E3%80%81%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81%E3%80%81MAC%E5%9C%B0%E5%9D%80/"/>
-    <id>http://www.ithelei.com/2020/08/23/什么是vlan、三层交换机、网关、DNS、子网掩码、MAC地址/</id>
-    <published>2020-08-23T01:20:45.000Z</published>
-    <updated>2020-08-23T15:54:09.623Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;很多朋友多次问到什么是网关、dns、子网掩码，三层交换机，它们定位的用途；确实，因为网络技术在弱电中确实应用非常广泛，我们平时在vip技术群中也是不断的讨论到网关、vlan、三层交换机或子网掩码等问题，今天我们就一起用通俗方式一次性了解清楚。 &lt;/p&gt;
-&lt;h2 id=&quot;一、
-      
-    
-    </summary>
-    
-      <category term="网络" scheme="http://www.ithelei.com/categories/%E7%BD%91%E7%BB%9C/"/>
-    
-    
-      <category term="网络" scheme="http://www.ithelei.com/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>公司网络</title>
-    <link href="http://www.ithelei.com/2020/08/23/%E5%85%AC%E5%8F%B8%E7%BD%91%E7%BB%9C/"/>
-    <id>http://www.ithelei.com/2020/08/23/公司网络/</id>
-    <published>2020-08-23T01:20:45.000Z</published>
-    <updated>2020-08-23T15:09:21.780Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;http://blog-dt.oss-cn-beijing.aliyuncs.com/others/11.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://blog-dt.oss-cn-beijing.aliyuncs.com/othe
-      
-    
-    </summary>
-    
-      <category term="网络" scheme="http://www.ithelei.com/categories/%E7%BD%91%E7%BB%9C/"/>
-    
-    
-      <category term="网络" scheme="http://www.ithelei.com/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>百万流量</title>
-    <link href="http://www.ithelei.com/2020/08/23/%E7%99%BE%E4%B8%87%E6%B5%81%E9%87%8F/"/>
-    <id>http://www.ithelei.com/2020/08/23/百万流量/</id>
-    <published>2020-08-23T01:20:45.000Z</published>
-    <updated>2020-08-23T14:55:36.895Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;http://blog-dt.oss-cn-beijing.aliyuncs.com/others/4.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;h1 id=&quot;技术为更好&quot;&gt;&lt;a href=&quot;#技术为更好&quot; class=&quot;headerlink&quot; title=&quot;技术为
-      
-    
-    </summary>
-    
-      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
-    
-    
-      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>系统架构升级培训指导</title>
-    <link href="http://www.ithelei.com/2020/08/23/%E9%98%BF%E9%87%8C%E6%9D%A5%E5%85%AC%E5%8F%B8%E4%BC%9A%E8%AE%AE/"/>
-    <id>http://www.ithelei.com/2020/08/23/阿里来公司会议/</id>
-    <published>2020-08-23T01:20:45.000Z</published>
-    <updated>2020-08-23T15:21:57.020Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;http://blog-dt.oss-cn-beijing.aliyuncs.com/others/6.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://blog-dt.oss-cn-beijing.aliyuncs.com/other
-      
-    
-    </summary>
-    
-      <category term="会议" scheme="http://www.ithelei.com/categories/%E4%BC%9A%E8%AE%AE/"/>
-    
-      <category term="架构" scheme="http://www.ithelei.com/categories/%E4%BC%9A%E8%AE%AE/%E6%9E%B6%E6%9E%84/"/>
-    
-    
-      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
-    
-      <category term="会议" scheme="http://www.ithelei.com/tags/%E4%BC%9A%E8%AE%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux系统的ECS实例中如何对MySQL进行自动备份</title>
-    <link href="http://www.ithelei.com/2020/03/01/Linux%E7%B3%BB%E7%BB%9F%E7%9A%84ECS%E5%AE%9E%E4%BE%8B%E4%B8%AD%E5%A6%82%E4%BD%95%E5%AF%B9MySQL%E8%BF%9B%E8%A1%8C%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD/"/>
-    <id>http://www.ithelei.com/2020/03/01/Linux系统的ECS实例中如何对MySQL进行自动备份/</id>
-    <published>2020-03-01T11:33:45.000Z</published>
-    <updated>2020-03-01T04:40:47.881Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;主要介绍Linux系统的ECS实例中如何对MySQL进行自动备份。&quot;&gt;&lt;a href=&quot;#主要介绍Linux系统的ECS实例中如何对MySQL进行自动备份。&quot; class=&quot;headerlink&quot; title=&quot;主要介绍Linux系统的ECS实例中如何对MySQL
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.ithelei.com/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.ithelei.com/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Nginx+Tomcat动静分离及Nginx优化(企业案例)</title>
-    <link href="http://www.ithelei.com/2020/03/01/Nginx+Tomcat%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB%E5%8F%8ANginx%E4%BC%98%E5%8C%96(%E4%BC%81%E4%B8%9A%E6%A1%88%E4%BE%8B)/"/>
-    <id>http://www.ithelei.com/2020/03/01/Nginx+Tomcat动静分离及Nginx优化(企业案例)/</id>
-    <published>2020-03-01T11:33:45.000Z</published>
-    <updated>2020-03-01T12:47:37.519Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;目的：&lt;/p&gt;
-&lt;p&gt;Nginx处理用户请求的静态页面，tomcat处理用户请求jsp页面，来实现动态分离，nginx处理静态页面效率远高于tomcat，这样一来就能更好的提高并发，处理性能。&lt;/p&gt;
-&lt;p&gt;准备软件：&lt;/p&gt;
-&lt;p&gt;下载jdk1.7：&lt;a href=&quot;ht
-      
-    
-    </summary>
-    
-      <category term="Nginx" scheme="http://www.ithelei.com/categories/Nginx/"/>
-    
-    
-      <category term="Nginx" scheme="http://www.ithelei.com/tags/Nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>编译安装Nginx</title>
-    <link href="http://www.ithelei.com/2020/03/01/Nginx%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/"/>
-    <id>http://www.ithelei.com/2020/03/01/Nginx编译安装/</id>
-    <published>2020-03-01T11:33:45.000Z</published>
-    <updated>2020-03-01T12:47:45.839Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;编译安装Nginx&quot;&gt;&lt;a href=&quot;#编译安装Nginx&quot; class=&quot;headerlink&quot; title=&quot;编译安装Nginx&quot;&gt;&lt;/a&gt;编译安装Nginx&lt;/h3&gt;&lt;p&gt;由于以前写过，这里拿过来。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.
-      
-    
-    </summary>
-    
-      <category term="Nginx" scheme="http://www.ithelei.com/categories/Nginx/"/>
-    
-    
-      <category term="Nginx" scheme="http://www.ithelei.com/tags/Nginx/"/>
     
   </entry>
   

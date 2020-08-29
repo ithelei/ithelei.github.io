@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000">
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top">
+  
+  
+  <title>【成为架构师3-5】服务化：必须搞定负载均衡 | 养码哥</title>
+  <meta name="description" content="负载均衡方法论 同构环境下的负载均衡 静态权重 动态权重 过载保护  本篇是对微服务架构中实现负载均衡的一个通用思路的阐述 负载均衡方法论  同构环境下，重点在于 “均匀” 异构环境下，重点在于 “负载与能力匹配”  同构环境下的负载均衡 在同构环境下，负载均衡的实现基本上不需要额外的支持，在实现高并发、高可用的基础设施中：客户端到反向代理由dns轮询完成；反向代理到站点由nginx来完成；站点">
+<meta name="keywords" content="架构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【成为架构师3-5】服务化：必须搞定负载均衡">
+<meta property="og:url" content="http://www.ithelei.com/2020/08/24/【成为架构师3-5】服务化：必须搞定负载均衡/index.html">
+<meta property="og:site_name" content="养码哥">
+<meta property="og:description" content="负载均衡方法论 同构环境下的负载均衡 静态权重 动态权重 过载保护  本篇是对微服务架构中实现负载均衡的一个通用思路的阐述 负载均衡方法论  同构环境下，重点在于 “均匀” 异构环境下，重点在于 “负载与能力匹配”  同构环境下的负载均衡 在同构环境下，负载均衡的实现基本上不需要额外的支持，在实现高并发、高可用的基础设施中：客户端到反向代理由dns轮询完成；反向代理到站点由nginx来完成；站点">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://blog-dt.oss-cn-beijing.aliyuncs.com/jiagou/a/20200730163721887.png">
+<meta property="og:updated_time" content="2020-08-26T03:18:34.346Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【成为架构师3-5】服务化：必须搞定负载均衡">
+<meta name="twitter:description" content="负载均衡方法论 同构环境下的负载均衡 静态权重 动态权重 过载保护  本篇是对微服务架构中实现负载均衡的一个通用思路的阐述 负载均衡方法论  同构环境下，重点在于 “均匀” 异构环境下，重点在于 “负载与能力匹配”  同构环境下的负载均衡 在同构环境下，负载均衡的实现基本上不需要额外的支持，在实现高并发、高可用的基础设施中：客户端到反向代理由dns轮询完成；反向代理到站点由nginx来完成；站点">
+<meta name="twitter:image" content="http://blog-dt.oss-cn-beijing.aliyuncs.com/jiagou/a/20200730163721887.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://www.ithelei.com/2020/08/24/【成为架构师3-5】服务化：必须搞定负载均衡/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="养码哥" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+  
+  
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d9dcae41f39178c7c60a36178957ad6f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  
+</head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/ithelei" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">养码哥</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Developer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> BeiJing, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="Type something..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">Archives</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">Categories</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">Tags</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">Repository</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">Books</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">Links</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">About</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/ithelei" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://weibo.com/p/1005055641384163" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CPU/">CPU</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Docker/">Docker</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/性能/">性能</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/监控/">监控</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">20</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nginx/">Nginx</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Nginx/限流/">限流</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Openresty/">Openresty</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tomcat/">Tomcat</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/中台/">中台</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/产业互联网/">产业互联网</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/人生/">人生</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/会议/">会议</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/会议/架构/">架构</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/安全/">安全</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/峰会/">峰会</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心理建设/">心理建设</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数字营销/">数字营销</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/架构/">架构</a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/网络/">网络</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/职场/">职场</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能力图谱/">能力图谱</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apache-Tomcat/">Apache Tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CPU/">CPU</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS-Linux-7/">CentOS Linux 7</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a><span class="tag-list-count">20</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Openresty/">Openresty</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/">SpringBoot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中台/">中台</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/产业互联网/">产业互联网</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/人生/">人生</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/会议/">会议</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/基线/">基线</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/峰会/">峰会</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/心理建设/">心理建设</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/性能/">性能</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数字营销/">数字营销</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/架构/">架构</a><span class="tag-list-count">22</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/监控/">监控</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络/">网络</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/职场/">职场</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/能力图谱/">能力图谱</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/限流/">限流</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Apache-Tomcat/" style="font-size: 13px;">Apache Tomcat</a> <a href="/tags/CPU/" style="font-size: 13.5px;">CPU</a> <a href="/tags/CentOS-Linux-7/" style="font-size: 13px;">CentOS Linux 7</a> <a href="/tags/Docker/" style="font-size: 13px;">Docker</a> <a href="/tags/Git/" style="font-size: 13px;">Git</a> <a href="/tags/Linux/" style="font-size: 13.75px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 13.88px;">MySQL</a> <a href="/tags/Nginx/" style="font-size: 13.38px;">Nginx</a> <a href="/tags/Openresty/" style="font-size: 13px;">Openresty</a> <a href="/tags/SpringBoot/" style="font-size: 13px;">SpringBoot</a> <a href="/tags/Tomcat/" style="font-size: 13.13px;">Tomcat</a> <a href="/tags/中台/" style="font-size: 13px;">中台</a> <a href="/tags/产业互联网/" style="font-size: 13px;">产业互联网</a> <a href="/tags/人生/" style="font-size: 13px;">人生</a> <a href="/tags/会议/" style="font-size: 13.25px;">会议</a> <a href="/tags/基线/" style="font-size: 13.13px;">基线</a> <a href="/tags/峰会/" style="font-size: 13.63px;">峰会</a> <a href="/tags/心理建设/" style="font-size: 13.38px;">心理建设</a> <a href="/tags/性能/" style="font-size: 13px;">性能</a> <a href="/tags/数字营销/" style="font-size: 13px;">数字营销</a> <a href="/tags/架构/" style="font-size: 14px;">架构</a> <a href="/tags/监控/" style="font-size: 13px;">监控</a> <a href="/tags/网络/" style="font-size: 13.13px;">网络</a> <a href="/tags/职场/" style="font-size: 13.38px;">职场</a> <a href="/tags/能力图谱/" style="font-size: 13.13px;">能力图谱</a> <a href="/tags/限流/" style="font-size: 13px;">限流</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新发表</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/架构/">架构</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/08/25/【成为架构师3-7】服务化：连接池，高可用、可扩展、负载均衡都离不开它/" class="title">【成为架构师3-7】服务化：连接池，高可用、可扩展、负载均衡都离不开它</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-08-25T01:20:45.000Z" itemprop="datePublished">2020-08-25</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/架构/">架构</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/08/24/【成为架构师2-10】章节小结：百万流量，这些技术就够了/" class="title">【成为架构师2-10】章节小结：百万流量，这些技术就够了</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-08-24T01:20:45.000Z" itemprop="datePublished">2020-08-24</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/架构/">架构</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/08/24/【成为架构师2-4】反向代理与DNS轮询：接入层的架构演进/" class="title">【成为架构师2-4】反向代理与DNS轮询：接入层的架构演进</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-08-24T01:20:45.000Z" itemprop="datePublished">2020-08-24</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/架构/">架构</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/08/24/【成为架构师2-5】维护session一致性的四种方案/" class="title">【成为架构师2-5】维护session一致性的四种方案</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-08-24T01:20:45.000Z" itemprop="datePublished">2020-08-24</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/架构/">架构</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/08/24/【成为架构师2-8】早期性能优化-三大分离之一：动静分离/" class="title">【成为架构师2-8】早期性能优化-三大分离之一：动静分离</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-08-24T01:20:45.000Z" itemprop="datePublished">2020-08-24</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-【成为架构师3-5】服务化：必须搞定负载均衡" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      【成为架构师3-5】服务化：必须搞定负载均衡
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/08/24/【成为架构师3-5】服务化：必须搞定负载均衡/" class="article-date">
+	  <time datetime="2020-08-24T01:20:45.000Z" itemprop="datePublished">2020-08-24</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/架构/">架构</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/架构/">架构</a>
+  </span>
+
+
+        
+
+	<span class="article-read hidden-xs">
+    	<i class="icon icon-eye-fill" aria-hidden="true"></i>
+    	<span id="/2020/08/24/【成为架构师3-5】服务化：必须搞定负载均衡/" class="leancloud_visitors"  data-flag-title="【成为架构师3-5】服务化：必须搞定负载均衡">0</span>
+    </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/08/24/【成为架构师3-5】服务化：必须搞定负载均衡/#comments" class="article-comment-link">Comments</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 928(words)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 3(minutes)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <ol>
+<li>负载均衡方法论</li>
+<li>同构环境下的负载均衡</li>
+<li>静态权重</li>
+<li>动态权重</li>
+<li>过载保护</li>
+</ol>
+<p>本篇是对微服务架构中实现负载均衡的一个通用思路的阐述</p>
+<p><strong>负载均衡方法论</strong></p>
+<ol>
+<li>同构环境下，重点在于 <strong>“均匀”</strong></li>
+<li>异构环境下，重点在于 <strong>“负载与能力匹配”</strong></li>
+</ol>
+<p><strong>同构环境下的负载均衡</strong></p>
+<p>在同构环境下，负载均衡的实现基本上不需要额外的支持，在实现高并发、高可用的基础设施中：客户端到反向代理由dns轮询完成；反向代理到站点由nginx来完成；站点到服务由连接池完成；服务到数据层也是由数据层框架的客户端提供的连接池来完成。</p>
+<p>因为是同构的，所以均衡策略是简单，轮询，随机的方式都可以实现。</p>
+<p>本篇的重点是异构环境下的负载均衡。</p>
+<p><strong>静态权重</strong></p>
+<p>静态权重和同构环境下的“均衡方式”几乎是一样的，若按照 1：1：1配置下游的权重，那么就是均衡，可以说均衡是静态权重的一个特殊例子</p>
+<p><img src="http://blog-dt.oss-cn-beijing.aliyuncs.com/jiagou/a/20200730163721887.png" alt></p>
+<p>静态权重一个最大的问题它是静态的，它是无法实时变化的，过载保护等也无法进行实施，但它是最快的也是成本最低的。</p>
+<p><strong>动态权重</strong></p>
+<p>动态权重有两个要点：</p>
+<ol>
+<li>如何标识服务的处理能力</li>
+<li>如何设计动态权重</li>
+</ol>
+<p><strong>服务的处理能力由调用方说了算</strong>，如果服务能够正常返回那么说明能力可以，如果超时了说明服务不能承受当前的流量压力</p>
+<p>设计动态权重的原则就是：<strong>成功加小分，失败减大分</strong></p>
+<p>举个例子，先规定分值区间为【0，100】假设三个集群的下游服务service-1、service-2、service-3，三个服务的初始分值都是60，也就是说，在最初<strong>负载是均匀</strong>的。</p>
+<p>随着时间的推移：</p>
+<ol>
+<li>处理能力强的服务处理成功的请求越来越多</li>
+<li>处理能力相对弱的服务偶尔有超时</li>
+</ol>
+<p>最后动态权重的增减，变化为：service1-100分，service2-60分，service3-40分</p>
+<p>那么这三个service<strong>负载比就是：5：3：2</strong>，service1会处理一半的请求，符合按照能力进行负载均衡。</p>
+<h3 id="过载保护"><a href="#过载保护" class="headerlink" title="过载保护"></a>过载保护</h3><p>什么是过载保护：当服务过载的时候很有可能造成我们说的“雪崩”，服务的流量到达处理能力的峰值，随之再增加流量，处理成功的请求直线下降，服务进入不可用的状态。</p>
+<p>过载保护也有两种方式，一种是静态的，一种是动态的。</p>
+<p>静态的过载就是设定一个流量阈值，超过这个阈值就不会再有多的请求了。</p>
+<p><strong>动态的过载保护和动态的负载均衡策略是相似的：</strong></p>
+<ol>
+<li>连接代表服务，分值代表服务（连接）的处理能力</li>
+<li>处理成功加小分，处理失败减大分</li>
+<li>临界边界喘口小气（减少流量、短时）</li>
+<li>死亡状态喘口大气（没有流量、可能时间较长）</li>
+</ol>
+<p>过载保护的核心是为了不掉底，过载保护是实施在集群中的某一个节点的，本来应该由该节点处理的流量转由其它节点处理。</p>
+<p>如果整个集群达到过载状态，那么只能依靠丢弃请求来实现自我保护，集群的过载保护策略和某一节点的策略是不同的。</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://www.ithelei.com/2020/08/24/【成为架构师3-5】服务化：必须搞定负载均衡/" title="【成为架构师3-5】服务化：必须搞定负载均衡" target="_blank" rel="external">http://www.ithelei.com/2020/08/24/【成为架构师3-5】服务化：必须搞定负载均衡/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/ithelei" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/ithelei" target="_blank"><span class="text-dark">养码哥</span><small class="ml-1x">Developer</small></a></h3>
+        <div>喜欢读书，喜欢分享，希望有一天可以赚很多的钱，去干够风骚有意义的事情。我是养码哥，一个仍然在路上，向往自由和梦想的人！</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NjI4My8yMjc5NA">
+        <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+      </div>    
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2020/08/24/【成为架构师3-4】服务化：必须支持高并发/" title="【成为架构师3-4】服务化：必须支持高并发"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2020/08/24/【成为架构师3-6】服务化：连接池，微服务的基础组件/" title="【成为架构师3-6】服务化：连接池，微服务的基础组件"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>$</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>Maybe you could buy me a cup of coffee.</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open alipay app scan this qrcode, buy me a coffee!</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open wechat app scan this qrcode, buy me a coffee!</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> alipay</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> wechat payment</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/ithelei" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://weibo.com/p/1005055641384163" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+	 
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/ithelei" target="_blank"> ithelei </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1277959937'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1277959937%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+
+
+	</footer>
+
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="/js/plugin.min.js"></script>
+<script src="/js/application.js"></script>
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+
+
+
+
+   
+
+
+<!-- custom analytics part create by xiamo -->
+<script defer src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+<script defer>
+AV.init({
+  appId: '',
+  appKey: ''
+});
+
+function showTime(Counter) {
+	var query = new AV.Query(Counter);
+		var visitors= $('.leancloud_visitors');
+		query.greaterThanOrEqualTo("time", 0);		
+		query.find({
+			success: function(results) {
+				if (results.length == 0) {				
+					return;
+				}
+				var data = results;
+				visitors.each(function(){
+					var url = $(this).attr('id').trim();					
+					for (var i = 0; i < data.length; i++) {
+						var object = data[i];
+						var content = object.get('time');
+						var _url = object.get('url')
+						if(url == _url){
+							$(this).text(content);
+						}
+					}
+				})
+				
+			},
+			error: function(object, error) {
+				console.log("Error: " + error.code + " " + error.message);
+			}
+		});
+}
+
+function addCount(Counter) {
+	var Counter = AV.Object.extend("Counter");
+	url = $(".leancloud_visitors").attr('id').trim();
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+	var query = new AV.Query(Counter);
+	query.equalTo("url", url);
+	query.find({
+		success: function(results) {
+			if (results.length > 0) {
+				var counter = results[0];
+				counter.fetchWhenSave(true);
+				counter.increment("time");
+				counter.save(null, {
+					success: function(counter) {
+						var content = counter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(counter, error) {
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+					}
+				});
+			} else {
+				var newcounter = new Counter();
+				newcounter.set("title", title);
+				newcounter.set("url", url);
+				newcounter.set("time", 1);
+				newcounter.save(null, {
+					success: function(newcounter) {
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+						var content = newcounter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(newcounter, error) {
+						console.log('Failed to create');
+					}
+				});
+			}
+		},
+		error: function(error) {
+			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
+$(function() {
+	var Counter = AV.Object.extend("Counter");
+	if ($('.leancloud_visitors').length == 1) {
+		addCount(Counter);
+	} else {
+		showTime(Counter);
+	}
+}); 
+</script>
+
+
+
+   
+    
+<script defer type="text/javascript">
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
