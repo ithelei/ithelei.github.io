@@ -46,6 +46,36 @@
   </entry>
   
   <entry>
+    <title>【成为架构师3-2】服务化：微服务的粒度，究竟要细到什么程度</title>
+    <link href="http://www.ithelei.com/2020/08/27/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%883-2%E3%80%91%E6%9C%8D%E5%8A%A1%E5%8C%96%EF%BC%9A%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9A%84%E7%B2%92%E5%BA%A6%EF%BC%8C%E7%A9%B6%E7%AB%9F%E8%A6%81%E7%BB%86%E5%88%B0%E4%BB%80%E4%B9%88%E7%A8%8B%E5%BA%A6/"/>
+    <id>http://www.ithelei.com/2020/08/27/【成为架构师3-2】服务化：微服务的粒度，究竟要细到什么程度/</id>
+    <published>2020-08-27T01:20:45.000Z</published>
+    <updated>2020-08-30T00:25:41.580Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;统一服务层&lt;/li&gt;
+&lt;li&gt;子业务服务&lt;/li&gt;
+&lt;li&gt;一个数据库一个服务&lt;/li&gt;
+&lt;li&gt;一个接口一个服务&lt;/li&gt;
+&lt;li&gt;常用的最佳实践&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;统一服务层&quot;&gt;&lt;a href=&quot;#统一服务层&quot; class=&quot;header
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【成为架构师3-3】服务化：必须保证高可用</title>
     <link href="http://www.ithelei.com/2020/08/27/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%883-3%E3%80%91%E6%9C%8D%E5%8A%A1%E5%8C%96%EF%BC%9A%E5%BF%85%E9%A1%BB%E4%BF%9D%E8%AF%81%E9%AB%98%E5%8F%AF%E7%94%A8/"/>
     <id>http://www.ithelei.com/2020/08/27/【成为架构师3-3】服务化：必须保证高可用/</id>
@@ -67,36 +97,6 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;服务到缓存&lt;/p&gt;
 &lt;p&gt; memcache缓存&lt;/
-      
-    
-    </summary>
-    
-      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
-    
-    
-      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【成为架构师3-2】服务化：微服务的粒度，究竟要细到什么程度</title>
-    <link href="http://www.ithelei.com/2020/08/27/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%883-2%E3%80%91%E6%9C%8D%E5%8A%A1%E5%8C%96%EF%BC%9A%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9A%84%E7%B2%92%E5%BA%A6%EF%BC%8C%E7%A9%B6%E7%AB%9F%E8%A6%81%E7%BB%86%E5%88%B0%E4%BB%80%E4%B9%88%E7%A8%8B%E5%BA%A6/"/>
-    <id>http://www.ithelei.com/2020/08/27/【成为架构师3-2】服务化：微服务的粒度，究竟要细到什么程度/</id>
-    <published>2020-08-27T01:20:45.000Z</published>
-    <updated>2020-08-30T00:25:41.580Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;统一服务层&lt;/li&gt;
-&lt;li&gt;子业务服务&lt;/li&gt;
-&lt;li&gt;一个数据库一个服务&lt;/li&gt;
-&lt;li&gt;一个接口一个服务&lt;/li&gt;
-&lt;li&gt;常用的最佳实践&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;统一服务层&quot;&gt;&lt;a href=&quot;#统一服务层&quot; class=&quot;header
       
     
     </summary>
@@ -236,65 +236,6 @@
   </entry>
   
   <entry>
-    <title>【成为架构师2-10】章节小结：百万流量，这些技术就够了</title>
-    <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-10%E3%80%91%E7%AB%A0%E8%8A%82%E5%B0%8F%E7%BB%93%EF%BC%9A%E7%99%BE%E4%B8%87%E6%B5%81%E9%87%8F%EF%BC%8C%E8%BF%99%E4%BA%9B%E6%8A%80%E6%9C%AF%E5%B0%B1%E5%A4%9F%E4%BA%86/"/>
-    <id>http://www.ithelei.com/2020/08/23/【成为架构师2-10】章节小结：百万流量，这些技术就够了/</id>
-    <published>2020-08-23T01:20:45.000Z</published>
-    <updated>2020-08-30T00:25:07.694Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;知识串讲&lt;/li&gt;
-&lt;li&gt;往期回顾&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;知识串讲&quot;&gt;&lt;a href=&quot;#知识串讲&quot; class=&quot;headerlink&quot; title=&quot;知识串讲&quot;&gt;&lt;/a&gt;知识串讲&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;早期单机系统的两个问题：&lt;stro
-      
-    
-    </summary>
-    
-      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
-    
-    
-      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【成为架构师2-2】伪分布式与垂直拆分：快速解决单机性能问题的实践方案</title>
-    <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-2%E3%80%91%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%8E%E5%9E%82%E7%9B%B4%E6%8B%86%E5%88%86%EF%BC%9A%E5%BF%AB%E9%80%9F%E8%A7%A3%E5%86%B3%E5%8D%95%E6%9C%BA%E6%80%A7%E8%83%BD%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%9E%E8%B7%B5%E6%96%B9%E6%A1%88/"/>
-    <id>http://www.ithelei.com/2020/08/23/【成为架构师2-2】伪分布式与垂直拆分：快速解决单机性能问题的实践方案/</id>
-    <published>2020-08-23T01:20:45.000Z</published>
-    <updated>2020-08-24T15:31:38.325Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;架构演进阶段的新需求&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;单机资源瓶颈产生时的环境&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;架构演进，伪分布式，提升性能&lt;/p&gt;
-&lt;p&gt; 1、三大分离结构（图中仅两种）&lt;/p&gt;
-&lt;p&gt; 2、设计思路&lt;/p&gt;
-&lt;p&gt; 3、什么问题没有
-      
-    
-    </summary>
-    
-      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
-    
-    
-      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
     <title>【成为架构师2-1】容量设计：流量高低，对架构究竟有什么影响</title>
     <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-1%E3%80%91%E5%AE%B9%E9%87%8F%E8%AE%BE%E8%AE%A1%EF%BC%9A%E6%B5%81%E9%87%8F%E9%AB%98%E4%BD%8E%EF%BC%8C%E5%AF%B9%E6%9E%B6%E6%9E%84%E7%A9%B6%E7%AB%9F%E6%9C%89%E4%BB%80%E4%B9%88%E5%BD%B1%E5%93%8D/"/>
     <id>http://www.ithelei.com/2020/08/23/【成为架构师2-1】容量设计：流量高低，对架构究竟有什么影响/</id>
@@ -314,6 +255,34 @@
 &lt;p&gt; 1、评估总访问量&lt;/p&gt;
 &lt;p&gt; 2、评估平均访问量&lt;/p&gt;
 &lt;p&gt; 3、评估高峰QP
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成为架构师2-10】章节小结：百万流量，这些技术就够了</title>
+    <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-10%E3%80%91%E7%AB%A0%E8%8A%82%E5%B0%8F%E7%BB%93%EF%BC%9A%E7%99%BE%E4%B8%87%E6%B5%81%E9%87%8F%EF%BC%8C%E8%BF%99%E4%BA%9B%E6%8A%80%E6%9C%AF%E5%B0%B1%E5%A4%9F%E4%BA%86/"/>
+    <id>http://www.ithelei.com/2020/08/23/【成为架构师2-10】章节小结：百万流量，这些技术就够了/</id>
+    <published>2020-08-23T01:20:45.000Z</published>
+    <updated>2020-08-30T00:25:07.694Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;知识串讲&lt;/li&gt;
+&lt;li&gt;往期回顾&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;知识串讲&quot;&gt;&lt;a href=&quot;#知识串讲&quot; class=&quot;headerlink&quot; title=&quot;知识串讲&quot;&gt;&lt;/a&gt;知识串讲&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;早期单机系统的两个问题：&lt;stro
       
     
     </summary>
@@ -346,6 +315,37 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;反向代理，负载均衡&lt;/p&gt;
 &lt;p&gt; 
+      
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.ithelei.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成为架构师2-2】伪分布式与垂直拆分：快速解决单机性能问题的实践方案</title>
+    <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-2%E3%80%91%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%8E%E5%9E%82%E7%9B%B4%E6%8B%86%E5%88%86%EF%BC%9A%E5%BF%AB%E9%80%9F%E8%A7%A3%E5%86%B3%E5%8D%95%E6%9C%BA%E6%80%A7%E8%83%BD%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%9E%E8%B7%B5%E6%96%B9%E6%A1%88/"/>
+    <id>http://www.ithelei.com/2020/08/23/【成为架构师2-2】伪分布式与垂直拆分：快速解决单机性能问题的实践方案/</id>
+    <published>2020-08-23T01:20:45.000Z</published>
+    <updated>2020-08-24T15:31:38.325Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;架构演进阶段的新需求&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;单机资源瓶颈产生时的环境&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;架构演进，伪分布式，提升性能&lt;/p&gt;
+&lt;p&gt; 1、三大分离结构（图中仅两种）&lt;/p&gt;
+&lt;p&gt; 2、设计思路&lt;/p&gt;
+&lt;p&gt; 3、什么问题没有
       
     
     </summary>
@@ -453,28 +453,26 @@
   </entry>
   
   <entry>
-    <title>【成为架构师2-9】早期性能优化-三大分离：读写分离与前后台分离</title>
-    <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-9%E3%80%91%E6%97%A9%E6%9C%9F%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E4%B8%89%E5%A4%A7%E5%88%86%E7%A6%BB%EF%BC%9A%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%E4%B8%8E%E5%89%8D%E5%90%8E%E5%8F%B0%E5%88%86%E7%A6%BB/"/>
-    <id>http://www.ithelei.com/2020/08/23/【成为架构师2-9】早期性能优化-三大分离：读写分离与前后台分离/</id>
+    <title>【成为架构师2-7】TCP负载均衡，长连接的负载均衡策略</title>
+    <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-7%E3%80%91TCP%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%EF%BC%8C%E9%95%BF%E8%BF%9E%E6%8E%A5%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%AD%96%E7%95%A5/"/>
+    <id>http://www.ithelei.com/2020/08/23/【成为架构师2-7】TCP负载均衡，长连接的负载均衡策略/</id>
     <published>2020-08-23T01:20:45.000Z</published>
-    <updated>2020-08-30T00:24:58.061Z</updated>
+    <updated>2020-08-30T00:24:31.263Z</updated>
     
     <summary type="html">
     
       
       
         &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;读写分离&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;单体架构TCP连接与HTTP的负载均衡&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;水平切分&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;客户端负载均衡（内置集群）&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;前后台分离&lt;/p&gt;
-&lt;p&gt; 前后台介绍&lt;/p&gt;
-&lt;p&gt; 耦合的架构设计&lt;/p&gt;
-&lt;p&gt; 分离的常见设计&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;服务单负载均衡（静态IP列表）&lt;/p&gt;
+&lt;p&gt;  高可用方案    &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&quot;1-读写分离&quot;&gt;
+&lt;h3 id=&quot;1
       
     
     </summary>
@@ -521,26 +519,28 @@
   </entry>
   
   <entry>
-    <title>【成为架构师2-7】TCP负载均衡，长连接的负载均衡策略</title>
-    <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-7%E3%80%91TCP%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%EF%BC%8C%E9%95%BF%E8%BF%9E%E6%8E%A5%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%AD%96%E7%95%A5/"/>
-    <id>http://www.ithelei.com/2020/08/23/【成为架构师2-7】TCP负载均衡，长连接的负载均衡策略/</id>
+    <title>【成为架构师2-9】早期性能优化-三大分离：读写分离与前后台分离</title>
+    <link href="http://www.ithelei.com/2020/08/23/%E3%80%90%E6%88%90%E4%B8%BA%E6%9E%B6%E6%9E%84%E5%B8%882-9%E3%80%91%E6%97%A9%E6%9C%9F%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E4%B8%89%E5%A4%A7%E5%88%86%E7%A6%BB%EF%BC%9A%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%E4%B8%8E%E5%89%8D%E5%90%8E%E5%8F%B0%E5%88%86%E7%A6%BB/"/>
+    <id>http://www.ithelei.com/2020/08/23/【成为架构师2-9】早期性能优化-三大分离：读写分离与前后台分离/</id>
     <published>2020-08-23T01:20:45.000Z</published>
-    <updated>2020-08-30T00:24:31.263Z</updated>
+    <updated>2020-08-30T00:24:58.061Z</updated>
     
     <summary type="html">
     
       
       
         &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;单体架构TCP连接与HTTP的负载均衡&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;读写分离&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;客户端负载均衡（内置集群）&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;水平切分&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;服务单负载均衡（静态IP列表）&lt;/p&gt;
-&lt;p&gt;  高可用方案    &lt;/p&gt;
+&lt;li&gt;&lt;p&gt;前后台分离&lt;/p&gt;
+&lt;p&gt; 前后台介绍&lt;/p&gt;
+&lt;p&gt; 耦合的架构设计&lt;/p&gt;
+&lt;p&gt; 分离的常见设计&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&quot;1
+&lt;h3 id=&quot;1-读写分离&quot;&gt;
       
     
     </summary>
@@ -549,6 +549,30 @@
     
     
       <category term="架构" scheme="http://www.ithelei.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么是vlan、三层交换机、网关、DNS、子网掩码、MAC地址</title>
+    <link href="http://www.ithelei.com/2020/08/23/%E4%BB%80%E4%B9%88%E6%98%AFvlan%E3%80%81%E4%B8%89%E5%B1%82%E4%BA%A4%E6%8D%A2%E6%9C%BA%E3%80%81%E7%BD%91%E5%85%B3%E3%80%81DNS%E3%80%81%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81%E3%80%81MAC%E5%9C%B0%E5%9D%80/"/>
+    <id>http://www.ithelei.com/2020/08/23/什么是vlan、三层交换机、网关、DNS、子网掩码、MAC地址/</id>
+    <published>2020-08-23T01:20:45.000Z</published>
+    <updated>2020-08-23T15:54:09.623Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;很多朋友多次问到什么是网关、dns、子网掩码，三层交换机，它们定位的用途；确实，因为网络技术在弱电中确实应用非常广泛，我们平时在vip技术群中也是不断的讨论到网关、vlan、三层交换机或子网掩码等问题，今天我们就一起用通俗方式一次性了解清楚。 &lt;/p&gt;
+&lt;h2 id=&quot;一、
+      
+    
+    </summary>
+    
+      <category term="网络" scheme="http://www.ithelei.com/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="网络" scheme="http://www.ithelei.com/tags/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
@@ -589,30 +613,6 @@
       
         &lt;p&gt;&lt;img src=&quot;http://blog-dt.oss-cn-beijing.aliyuncs.com/others/11.jpg&quot; alt&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://blog-dt.oss-cn-beijing.aliyuncs.com/othe
-      
-    
-    </summary>
-    
-      <category term="网络" scheme="http://www.ithelei.com/categories/%E7%BD%91%E7%BB%9C/"/>
-    
-    
-      <category term="网络" scheme="http://www.ithelei.com/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>什么是vlan、三层交换机、网关、DNS、子网掩码、MAC地址</title>
-    <link href="http://www.ithelei.com/2020/08/23/%E4%BB%80%E4%B9%88%E6%98%AFvlan%E3%80%81%E4%B8%89%E5%B1%82%E4%BA%A4%E6%8D%A2%E6%9C%BA%E3%80%81%E7%BD%91%E5%85%B3%E3%80%81DNS%E3%80%81%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81%E3%80%81MAC%E5%9C%B0%E5%9D%80/"/>
-    <id>http://www.ithelei.com/2020/08/23/什么是vlan、三层交换机、网关、DNS、子网掩码、MAC地址/</id>
-    <published>2020-08-23T01:20:45.000Z</published>
-    <updated>2020-08-23T15:54:09.623Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;很多朋友多次问到什么是网关、dns、子网掩码，三层交换机，它们定位的用途；确实，因为网络技术在弱电中确实应用非常广泛，我们平时在vip技术群中也是不断的讨论到网关、vlan、三层交换机或子网掩码等问题，今天我们就一起用通俗方式一次性了解清楚。 &lt;/p&gt;
-&lt;h2 id=&quot;一、
       
     
     </summary>
