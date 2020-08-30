@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000">
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top">
+  
+  
+  <title>【成为架构师2-6】CDN：就近访问，缓解网络拥塞 | 养码哥</title>
+  <meta name="description" content="cdn  就近访问  CDN的构成部分  源与镜像的一致性问题  一致性问题的解决方案  资源更新   1 CDNCDN（content delivery network）即内容分发网络，它的核心就是实现就近访问 CDN非常适合用于静态资源的加速访问（js、css、html、多媒体文件等） 2 就近访问那么什么是就近访问呢，就近的实际含义就是物理网络的”地理位置“近  假设有一个静态资源 abc">
+<meta name="keywords" content="架构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【成为架构师2-6】CDN：就近访问，缓解网络拥塞">
+<meta property="og:url" content="http://www.ithelei.com/2020/08/23/【成为架构师2-6】CDN：就近访问，缓解网络拥塞/index.html">
+<meta property="og:site_name" content="养码哥">
+<meta property="og:description" content="cdn  就近访问  CDN的构成部分  源与镜像的一致性问题  一致性问题的解决方案  资源更新   1 CDNCDN（content delivery network）即内容分发网络，它的核心就是实现就近访问 CDN非常适合用于静态资源的加速访问（js、css、html、多媒体文件等） 2 就近访问那么什么是就近访问呢，就近的实际含义就是物理网络的”地理位置“近  假设有一个静态资源 abc">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://blog-dt.oss-cn-beijing.aliyuncs.com/jiagou/20200703123551328.png">
+<meta property="og:image" content="http://blog-dt.oss-cn-beijing.aliyuncs.com/jiagou/20200703124037519.png">
+<meta property="og:image" content="http://blog-dt.oss-cn-beijing.aliyuncs.com/jiagou/20200703124301860.png">
+<meta property="og:updated_time" content="2020-08-30T00:24:22.357Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【成为架构师2-6】CDN：就近访问，缓解网络拥塞">
+<meta name="twitter:description" content="cdn  就近访问  CDN的构成部分  源与镜像的一致性问题  一致性问题的解决方案  资源更新   1 CDNCDN（content delivery network）即内容分发网络，它的核心就是实现就近访问 CDN非常适合用于静态资源的加速访问（js、css、html、多媒体文件等） 2 就近访问那么什么是就近访问呢，就近的实际含义就是物理网络的”地理位置“近  假设有一个静态资源 abc">
+<meta name="twitter:image" content="http://blog-dt.oss-cn-beijing.aliyuncs.com/jiagou/20200703123551328.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://www.ithelei.com/2020/08/23/【成为架构师2-6】CDN：就近访问，缓解网络拥塞/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="养码哥" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+  
+  
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d9dcae41f39178c7c60a36178957ad6f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  
+</head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/ithelei" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">养码哥</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Developer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> BeiJing, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="Type something..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">Archives</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">Categories</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">Tags</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">Repository</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">Books</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">Links</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">About</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/ithelei" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://weibo.com/p/1005055641384163" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CPU/">CPU</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Docker/">Docker</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/性能/">性能</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/监控/">监控</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">20</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nginx/">Nginx</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Nginx/限流/">限流</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Openresty/">Openresty</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tomcat/">Tomcat</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/中台/">中台</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/产业互联网/">产业互联网</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/人生/">人生</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/会议/">会议</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/会议/架构/">架构</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/安全/">安全</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/峰会/">峰会</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心理建设/">心理建设</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数字营销/">数字营销</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/架构/">架构</a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/网络/">网络</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/职场/">职场</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能力图谱/">能力图谱</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apache-Tomcat/">Apache Tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CPU/">CPU</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS-Linux-7/">CentOS Linux 7</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a><span class="tag-list-count">20</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Openresty/">Openresty</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/">SpringBoot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中台/">中台</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/产业互联网/">产业互联网</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/人生/">人生</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/会议/">会议</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/基线/">基线</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/峰会/">峰会</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/心理建设/">心理建设</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/性能/">性能</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数字营销/">数字营销</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/架构/">架构</a><span class="tag-list-count">22</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/监控/">监控</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络/">网络</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/职场/">职场</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/能力图谱/">能力图谱</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/限流/">限流</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Apache-Tomcat/" style="font-size: 13px;">Apache Tomcat</a> <a href="/tags/CPU/" style="font-size: 13.5px;">CPU</a> <a href="/tags/CentOS-Linux-7/" style="font-size: 13px;">CentOS Linux 7</a> <a href="/tags/Docker/" style="font-size: 13px;">Docker</a> <a href="/tags/Git/" style="font-size: 13px;">Git</a> <a href="/tags/Linux/" style="font-size: 13.75px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 13.88px;">MySQL</a> <a href="/tags/Nginx/" style="font-size: 13.38px;">Nginx</a> <a href="/tags/Openresty/" style="font-size: 13px;">Openresty</a> <a href="/tags/SpringBoot/" style="font-size: 13px;">SpringBoot</a> <a href="/tags/Tomcat/" style="font-size: 13.13px;">Tomcat</a> <a href="/tags/中台/" style="font-size: 13px;">中台</a> <a href="/tags/产业互联网/" style="font-size: 13px;">产业互联网</a> <a href="/tags/人生/" style="font-size: 13px;">人生</a> <a href="/tags/会议/" style="font-size: 13.25px;">会议</a> <a href="/tags/基线/" style="font-size: 13.13px;">基线</a> <a href="/tags/峰会/" style="font-size: 13.63px;">峰会</a> <a href="/tags/心理建设/" style="font-size: 13.38px;">心理建设</a> <a href="/tags/性能/" style="font-size: 13px;">性能</a> <a href="/tags/数字营销/" style="font-size: 13px;">数字营销</a> <a href="/tags/架构/" style="font-size: 14px;">架构</a> <a href="/tags/监控/" style="font-size: 13px;">监控</a> <a href="/tags/网络/" style="font-size: 13.13px;">网络</a> <a href="/tags/职场/" style="font-size: 13.38px;">职场</a> <a href="/tags/能力图谱/" style="font-size: 13.13px;">能力图谱</a> <a href="/tags/限流/" style="font-size: 13px;">限流</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新发表</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/架构/">架构</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/08/27/【成为架构师3-1】服务化：微服务架构，究竟解决什么问题/" class="title">【成为架构师3-1】服务化：微服务架构，究竟解决什么问题</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-08-27T01:20:45.000Z" itemprop="datePublished">2020-08-27</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/架构/">架构</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/08/27/【成为架构师3-3】服务化：必须保证高可用/" class="title">【成为架构师3-3】服务化：必须保证高可用</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-08-27T01:20:45.000Z" itemprop="datePublished">2020-08-27</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/架构/">架构</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/08/27/【成为架构师3-2】服务化：微服务的粒度，究竟要细到什么程度/" class="title">【成为架构师3-2】服务化：微服务的粒度，究竟要细到什么程度</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-08-27T01:20:45.000Z" itemprop="datePublished">2020-08-27</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/架构/">架构</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/08/27/【成为架构师3-4】服务化：必须支持高并发/" class="title">【成为架构师3-4】服务化：必须支持高并发</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-08-27T01:20:45.000Z" itemprop="datePublished">2020-08-27</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/架构/">架构</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/08/27/【成为架构师3-6】服务化：连接池，微服务的基础组件/" class="title">【成为架构师3-6】服务化：连接池，微服务的基础组件</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-08-27T01:20:45.000Z" itemprop="datePublished">2020-08-27</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-【成为架构师2-6】CDN：就近访问，缓解网络拥塞" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      【成为架构师2-6】CDN：就近访问，缓解网络拥塞
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/08/23/【成为架构师2-6】CDN：就近访问，缓解网络拥塞/" class="article-date">
+	  <time datetime="2020-08-23T01:20:45.000Z" itemprop="datePublished">2020-08-23</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/架构/">架构</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/架构/">架构</a>
+  </span>
+
+
+        
+
+	<span class="article-read hidden-xs">
+    	<i class="icon icon-eye-fill" aria-hidden="true"></i>
+    	<span id="/2020/08/23/【成为架构师2-6】CDN：就近访问，缓解网络拥塞/" class="leancloud_visitors"  data-flag-title="【成为架构师2-6】CDN：就近访问，缓解网络拥塞">0</span>
+    </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/08/23/【成为架构师2-6】CDN：就近访问，缓解网络拥塞/#comments" class="article-comment-link">Comments</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 891(words)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 3(minutes)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <ol>
+<li><p>cdn</p>
+</li>
+<li><p>就近访问</p>
+</li>
+<li><p>CDN的构成部分</p>
+</li>
+<li><p>源与镜像的一致性问题</p>
+<p> 一致性问题的解决方案</p>
+<p> 资源更新</p>
+</li>
+</ol>
+<h3 id="1-CDN"><a href="#1-CDN" class="headerlink" title="1 CDN"></a>1 CDN</h3><p>CDN（content delivery network）即内容分发网络，它的核心就是实现就近访问</p>
+<p>CDN非常适合用于静态资源的加速访问（js、css、html、多媒体文件等）</p>
+<h3 id="2-就近访问"><a href="#2-就近访问" class="headerlink" title="2 就近访问"></a>2 就近访问</h3><p>那么什么是就近访问呢，就近的实际含义就是物理网络的”地理位置“近</p>
+<p><img src="http://blog-dt.oss-cn-beijing.aliyuncs.com/jiagou/20200703123551328.png" alt></p>
+<p>假设有一个静态资源 abc.jpg在不同地理区域的机房都有存放，那么当北京用户试图访问这一资源的时候浏览器的请求就会被解析到北京机房，或许你会有疑问，请求根本就没到服务器，怎么会知道要到那个机房呢？</p>
+<p>这一过程的实现依赖的<strong>DNS的解析服务</strong>，DNS解析可以根据请求的ip，依照一定的配置规则，将域名解析为不同的nginx的公网ip，比如北京的ip，<a href="http://www.daojia.com的域名就会被解析为北京机房的公网ip" target="_blank" rel="noopener">www.daojia.com的域名就会被解析为北京机房的公网ip</a></p>
+<p><img src="http://blog-dt.oss-cn-beijing.aliyuncs.com/jiagou/20200703124037519.png" alt></p>
+<p><strong>地理位置是CDN最常用的一种边缘网络配置规则</strong></p>
+<h3 id="3-CDN的构成部分"><a href="#3-CDN的构成部分" class="headerlink" title="3 CDN的构成部分"></a>3 CDN的构成部分</h3><p>从CDN的就近访问实现来看，我们可以知道dns-server是这一过程的核心，除了dns-server，CDN作为一个分发网络，还需要其他的组成部分</p>
+<p><img src="http://blog-dt.oss-cn-beijing.aliyuncs.com/jiagou/20200703124301860.png" alt></p>
+<p>CDN网络的主要构成：</p>
+<ol>
+<li>源：主数据库，所有的、最新的资源</li>
+<li>镜像：多个”穿透缓存“，源的复制</li>
+<li>智能DNS，决定我们访问哪一个</li>
+</ol>
+<h3 id="4-源与镜像的一致性问题"><a href="#4-源与镜像的一致性问题" class="headerlink" title="4 源与镜像的一致性问题"></a>4 源与镜像的一致性问题</h3><p><strong>一致性问题的解决方案</strong></p>
+<p><strong>数据在多处存储，就一定会有一致性问题，而一致性问题的解决有共性，又有具体问题具体分析的个性，每种场景下都有适合它的更优方案</strong></p>
+<p>假如源里更新了abc.js，但是镜像没有更新，数据不一致了，如何处理？</p>
+<p>这是一致性问题属于（分布式）缓存的不一致问题，通常有两种方案：</p>
+<ol>
+<li>源更新的时候，过期掉镜像里的abc.js （缓存淘汰）</li>
+<li>等待镜像里的abc.js过期（缓存过期）</li>
+</ol>
+<p>就方案一来说，考虑这要如何实现，源需要维护一份镜像的List，然后for循环这一List对缓存进行淘汰，这是典型的<strong>反向依赖，源依赖了镜像</strong>在增加或者减少减少镜像节点的时候都要修改源的配置，是不合理的</p>
+<p>来看方案二，在缓存未过期的时间段内，将有很长一段时间客户端会得到脏数据，这让人也不太能接受</p>
+<p>在这一场景下，有一种更加的实践：<strong>使用文件版本号</strong></p>
+<p>为每一个静态文件的命名带上版本号，若原先的abc_v1.2.3.js升级为abc_v1.2.4，那么dns-server在解析域名试图获取这一文件的时候就能知道镜像里并不存在，就可以直接去源里取得数据，十分的高效</p>
+<p><strong>资源更新</strong></p>
+<p>资源更新无外乎两种方式：</p>
+<ol>
+<li>资源更新的时候，源一次性推送所有镜像</li>
+<li>发现资源缺失的时候，镜像主动去拉取源</li>
+</ol>
+<p>方案一如前文所说的，发生了反向依赖的问题，所以在CDN的实践中通常采取第二种，即拉取的策略，镜像可以定时主动与源进行同步</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://www.ithelei.com/2020/08/23/【成为架构师2-6】CDN：就近访问，缓解网络拥塞/" title="【成为架构师2-6】CDN：就近访问，缓解网络拥塞" target="_blank" rel="external">http://www.ithelei.com/2020/08/23/【成为架构师2-6】CDN：就近访问，缓解网络拥塞/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/ithelei" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/ithelei" target="_blank"><span class="text-dark">养码哥</span><small class="ml-1x">Developer</small></a></h3>
+        <div>喜欢读书，喜欢分享，希望有一天可以赚很多的钱，去干够风骚有意义的事情。我是养码哥，一个仍然在路上，向往自由和梦想的人！</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NjI4My8yMjc5NA">
+        <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+      </div>    
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2020/08/23/【成为架构师2-5】维护session一致性的四种方案/" title="【成为架构师2-5】维护session一致性的四种方案"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2020/08/23/【成为架构师2-9】早期性能优化-三大分离：读写分离与前后台分离/" title="【成为架构师2-9】早期性能优化-三大分离：读写分离与前后台分离"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>$</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>Maybe you could buy me a cup of coffee.</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open alipay app scan this qrcode, buy me a coffee!</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open wechat app scan this qrcode, buy me a coffee!</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> alipay</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> wechat payment</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/ithelei" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://weibo.com/p/1005055641384163" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+	 
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/ithelei" target="_blank"> ithelei </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1277959937'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1277959937%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+
+
+	</footer>
+
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="/js/plugin.min.js"></script>
+<script src="/js/application.js"></script>
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+
+
+
+
+   
+
+
+<!-- custom analytics part create by xiamo -->
+<script defer src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+<script defer>
+AV.init({
+  appId: '',
+  appKey: ''
+});
+
+function showTime(Counter) {
+	var query = new AV.Query(Counter);
+		var visitors= $('.leancloud_visitors');
+		query.greaterThanOrEqualTo("time", 0);		
+		query.find({
+			success: function(results) {
+				if (results.length == 0) {				
+					return;
+				}
+				var data = results;
+				visitors.each(function(){
+					var url = $(this).attr('id').trim();					
+					for (var i = 0; i < data.length; i++) {
+						var object = data[i];
+						var content = object.get('time');
+						var _url = object.get('url')
+						if(url == _url){
+							$(this).text(content);
+						}
+					}
+				})
+				
+			},
+			error: function(object, error) {
+				console.log("Error: " + error.code + " " + error.message);
+			}
+		});
+}
+
+function addCount(Counter) {
+	var Counter = AV.Object.extend("Counter");
+	url = $(".leancloud_visitors").attr('id').trim();
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+	var query = new AV.Query(Counter);
+	query.equalTo("url", url);
+	query.find({
+		success: function(results) {
+			if (results.length > 0) {
+				var counter = results[0];
+				counter.fetchWhenSave(true);
+				counter.increment("time");
+				counter.save(null, {
+					success: function(counter) {
+						var content = counter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(counter, error) {
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+					}
+				});
+			} else {
+				var newcounter = new Counter();
+				newcounter.set("title", title);
+				newcounter.set("url", url);
+				newcounter.set("time", 1);
+				newcounter.save(null, {
+					success: function(newcounter) {
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+						var content = newcounter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(newcounter, error) {
+						console.log('Failed to create');
+					}
+				});
+			}
+		},
+		error: function(error) {
+			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
+$(function() {
+	var Counter = AV.Object.extend("Counter");
+	if ($('.leancloud_visitors').length == 1) {
+		addCount(Counter);
+	} else {
+		showTime(Counter);
+	}
+}); 
+</script>
+
+
+
+   
+    
+<script defer type="text/javascript">
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
